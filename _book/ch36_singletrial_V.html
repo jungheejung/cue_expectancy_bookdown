@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 27 [fMRI] Vicarious signature ~ single trial | behavioral_ICC</title>
+  <meta name="description" content="<p>This is a logbook of all the mixed model analyses in one setting.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 27 [fMRI] Vicarious signature ~ single trial | behavioral_ICC" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a logbook of all the mixed model analyses in one setting.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 27 [fMRI] Vicarious signature ~ single trial | behavioral_ICC" />
+  
+  <meta name="twitter:description" content="<p>This is a logbook of all the mixed model analyses in one setting.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+<meta name="author" content="Heejung Jung" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="ch35_singletrial_P.html"/>
+<link rel="next" href="ch37_singletrial_C.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Analysis logbook: cue-expectancy</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [ beh] expectation ~ cue</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ch2_expect.html"><a href="ch2_expect.html#pain"><i class="fa fa-check"></i><b>2.1</b> Pain</a></li>
+<li class="chapter" data-level="2.2" data-path="ch2_expect.html"><a href="ch2_expect.html#vicarious"><i class="fa fa-check"></i><b>2.2</b> Vicarious</a></li>
+<li class="chapter" data-level="2.3" data-path="ch2_expect.html"><a href="ch2_expect.html#cognitive"><i class="fa fa-check"></i><b>2.3</b> Cognitive</a></li>
+<li class="chapter" data-level="2.4" data-path="ch2_expect.html"><a href="ch2_expect.html#individual-difference-analysis"><i class="fa fa-check"></i><b>2.4</b> Individual difference analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [ beh ] outcome ~ cue</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="ch03_cue.html"><a href="ch03_cue.html#pain-1"><i class="fa fa-check"></i><b>3.1</b> Pain</a></li>
+<li class="chapter" data-level="3.2" data-path="ch03_cue.html"><a href="ch03_cue.html#vicarious-1"><i class="fa fa-check"></i><b>3.2</b> Vicarious</a></li>
+<li class="chapter" data-level="3.3" data-path="ch03_cue.html"><a href="ch03_cue.html#cognitive-1"><i class="fa fa-check"></i><b>3.3</b> Cognitive</a></li>
+<li class="chapter" data-level="3.4" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-random-cue-effects"><i class="fa fa-check"></i><b>3.4</b> Individual differences analysis: random cue effects</a></li>
+<li class="chapter" data-level="3.5" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-2-random-intercept-random-slopes-of-cue-effect"><i class="fa fa-check"></i><b>3.5</b> Individual differences analysis 2: random intercept + random slopes of cue effect</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [ beh ] outcome ~ stimulus_intensity</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#pain-2"><i class="fa fa-check"></i><b>4.1</b> Pain</a></li>
+<li class="chapter" data-level="4.2" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#vicarious-2"><i class="fa fa-check"></i><b>4.2</b> Vicarious</a></li>
+<li class="chapter" data-level="4.3" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#cognitive-2"><i class="fa fa-check"></i><b>4.3</b> Cognitive</a></li>
+<li class="chapter" data-level="4.4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#for-loop"><i class="fa fa-check"></i><b>4.4</b> for loop</a></li>
+<li class="chapter" data-level="4.5" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#lineplot"><i class="fa fa-check"></i><b>4.5</b> Lineplot</a></li>
+<li class="chapter" data-level="4.6" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#individual-differences-in-outcome-rating-cue-effect"><i class="fa fa-check"></i><b>4.6</b> individual differences in outcome rating cue effect</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> outcome_rating ~ cue * stim</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#what-is-the-purpose-of-this-notebook-3"><i class="fa fa-check"></i><b>5.1</b> What is the purpose of this notebook?</a></li>
+<li class="chapter" data-level="5.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.2</b> model 03 iv-cuecontrast dv-actual</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.2.1</b> model 03 3-2. individual difference</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.2.2</b> model 04 iv-cue-stim dv-actual</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.2.3</b> model 04 4-2 individual differences in cue effects</a></li>
+<li class="chapter" data-level="5.2.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.2.4</b> model 04 4-3 scatter plot</a></li>
+<li class="chapter" data-level="5.2.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.2.5</b> model 04 4-4 lineplot</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html"><i class="fa fa-check"></i><b>6</b> expect-actual ~ cue * trial</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#overview"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#plot-1---one-run-average-across-participants"><i class="fa fa-check"></i><b>6.2</b> plot 1 - one run, average across participants</a></li>
+<li class="chapter" data-level="6.3" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#plot-2---average-across-participant-but-spread-all-6-runs-in-one-x-axis"><i class="fa fa-check"></i><b>6.3</b> plot 2 - average across participant, but spread all 6 runs in one x axis</a></li>
+<li class="chapter" data-level="6.4" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#do-current-expectation-ratings-predict-outcome-ratings"><i class="fa fa-check"></i><b>6.4</b> Do current expectation ratings predict outcome ratings?</a></li>
+<li class="chapter" data-level="6.5" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#additional-analysis"><i class="fa fa-check"></i><b>6.5</b> Additional analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> RT ~ cue</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#parameters"><i class="fa fa-check"></i><b>7.0.1</b> parameters</a></li>
+<li class="chapter" data-level="7.0.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-data"><i class="fa fa-check"></i><b>7.0.2</b> 1) plot RT data</a></li>
+<li class="chapter" data-level="7.0.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-distribution-per-participant"><i class="fa fa-check"></i><b>7.0.3</b> plot RT distribution per participant</a></li>
+<li class="chapter" data-level="7.0.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#exclude-participants-with-rt-of-5-seconds"><i class="fa fa-check"></i><b>7.0.4</b> exclude participants with RT of 5 seconds</a></li>
+<li class="chapter" data-level="7.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1"><i class="fa fa-check"></i><b>7.1</b> model 1:</a></li>
+<li class="chapter" data-level="7.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-1"><i class="fa fa-check"></i><b>7.2</b> model 1-1</a></li>
+<li class="chapter" data-level="7.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-2"><i class="fa fa-check"></i><b>7.3</b> model 1-2:</a></li>
+<li class="chapter" data-level="7.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-2"><i class="fa fa-check"></i><b>7.4</b> model 2:</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [fMRI] RT ~ cue * stim</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#overview-model-05-iv-cue-dv-rt-summary"><i class="fa fa-check"></i><b>8.1</b> Overview model 05 iv-cue dv-RT summary</a></li>
+<li class="chapter" data-level="8.2" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#prepare-data-and-preprocess"><i class="fa fa-check"></i><b>8.2</b> Prepare data and preprocess</a></li>
+<li class="chapter" data-level="8.3" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#model-1-3"><i class="fa fa-check"></i><b>8.3</b> model 1:</a></li>
+<li class="chapter" data-level="8.4" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#model-1-1-1"><i class="fa fa-check"></i><b>8.4</b> model 1-1</a></li>
+<li class="chapter" data-level="8.5" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#model-1-2-1"><i class="fa fa-check"></i><b>8.5</b> model 1-2:</a></li>
+<li class="chapter" data-level="8.6" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#model-2-log-transformation"><i class="fa fa-check"></i><b>8.6</b> model 2: Log transformation</a></li>
+<li class="chapter" data-level="8.7" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#conclusion-across-model-1-and-2"><i class="fa fa-check"></i><b>8.7</b> Conclusion across model 1 and 2</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html"><i class="fa fa-check"></i><b>9</b> cognitive RT tradeoff ~ cue * stim (withinsubject)</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#overview-1"><i class="fa fa-check"></i><b>9.1</b> Overview</a></li>
+<li class="chapter" data-level="9.2" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#why-use-multilevel-models"><i class="fa fa-check"></i><b>9.2</b> Why use multilevel models?</a></li>
+<li class="chapter" data-level="9.3" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#terminology"><i class="fa fa-check"></i><b>9.3</b> Terminology</a></li>
+<li class="chapter" data-level="9.4" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#model-versions"><i class="fa fa-check"></i><b>9.4</b> Model versions</a></li>
+<li class="chapter" data-level="9.5" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#method-1-one-sample-t"><i class="fa fa-check"></i><b>9.5</b> Method 1 one-sample t</a></li>
+<li class="chapter" data-level="9.6" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#method-1-1-aov"><i class="fa fa-check"></i><b>9.6</b> Method 1-1 aov</a></li>
+<li class="chapter" data-level="9.7" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#method-1-2-aov-contrast-coding"><i class="fa fa-check"></i><b>9.7</b> Method 1-2 aov contrast-coding</a></li>
+<li class="chapter" data-level="9.8" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#method-1-effectsize-1"><i class="fa fa-check"></i><b>9.8</b> Method 1 effectsize</a></li>
+<li class="chapter" data-level="9.9" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#method-2-matlab"><i class="fa fa-check"></i><b>9.9</b> Method 2 matlab</a></li>
+<li class="chapter" data-level="9.10" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#method-3-multilevel-modeling"><i class="fa fa-check"></i><b>9.10</b> Method 3 multilevel modeling</a></li>
+<li class="chapter" data-level="" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#conclusion-method-1-vs-method-3"><i class="fa fa-check"></i>Conclusion: Method 1 vs Method 3</a></li>
+<li class="chapter" data-level="9.11" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#references"><i class="fa fa-check"></i><b>9.11</b> References</a></li>
+<li class="chapter" data-level="9.12" data-path="ch09_tradeoff-cueXstim.html"><a href="ch09_tradeoff-cueXstim.html#other-links"><i class="fa fa-check"></i><b>9.12</b> Other links</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ch10_icc.html"><a href="ch10_icc.html"><i class="fa fa-check"></i><b>10</b> [beh] outcome_rating ~ session (“behavioral ICC”)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ch10_icc.html"><a href="ch10_icc.html#functions"><i class="fa fa-check"></i><b>10.1</b> Functions</a></li>
+<li class="chapter" data-level="10.2" data-path="ch10_icc.html"><a href="ch10_icc.html#todo"><i class="fa fa-check"></i><b>10.2</b> TODO:</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> N-1 outcome rating ~ N expectation rating</a>
+<ul>
+<li class="chapter" data-level="11.0.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#done"><i class="fa fa-check"></i><b>11.0.1</b> DONE</a></li>
+<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#overview-2"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>11.2</b> Do previous outcome ratings predict current expectation ratings?</a></li>
+<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#additional-analysis-1"><i class="fa fa-check"></i><b>11.3</b> Additional analysis</a></li>
+<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.4</b> Let’s demean the ratings.</a></li>
+<li class="chapter" data-level="11.5" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.5</b> DEMEAN AND THEN DISCRETIZE</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings-1"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
+<li class="chapter" data-level="12.2" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-these-models-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>12.2</b> Do these models differ as a function of cue?</a></li>
+<li class="chapter" data-level="12.3" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#demean-and-discretize"><i class="fa fa-check"></i><b>12.3</b> Demean and discretize</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> outcome ~ expect Jayazeri (2018)</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#overview-4"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
+<li class="chapter" data-level="13.2" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#do-expectation-ratings-predict-current-outcome-ratings-does-this-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>13.2</b> Do expectation ratings predict current outcome ratings? Does this differ as a function of cue?</a></li>
+<li class="chapter" data-level="13.3" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#task-pain-hlm-modeling"><i class="fa fa-check"></i><b>13.3</b> task-pain, HLM modeling</a></li>
+<li class="chapter" data-level="13.4" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#fig.-expectation-ratings-predict-outcome-ratings"><i class="fa fa-check"></i><b>13.4</b> Fig. Expectation ratings predict outcome ratings</a></li>
+<li class="chapter" data-level="13.5" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#binned-expectation-ratings-per-task"><i class="fa fa-check"></i><b>13.5</b> binned expectation ratings per task</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#pain-binned-expectation-ratings"><i class="fa fa-check"></i><b>13.5.1</b> Pain: binned expectation ratings</a></li>
+<li class="chapter" data-level="13.5.2" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#vicarious-binned-expectation-ratings"><i class="fa fa-check"></i><b>13.5.2</b> Vicarious: binned expectation ratings</a></li>
+<li class="chapter" data-level="13.5.3" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#cognitive-binned-expectation-ratings"><i class="fa fa-check"></i><b>13.5.3</b> Cognitive: binned expectation ratings</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#not-splitting-into-cue-groups"><i class="fa fa-check"></i><b>13.6</b> not splitting into cue groups</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [ beh ] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="ch14_factorize.html"><a href="ch14_factorize.html#original-motivation"><i class="fa fa-check"></i><b>14.1</b> Original motivation:</a></li>
+<li class="chapter" data-level="14.2" data-path="ch14_factorize.html"><a href="ch14_factorize.html#pain-3"><i class="fa fa-check"></i><b>14.2</b> Pain</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="ch14_factorize.html"><a href="ch14_factorize.html#pain-plot-parameters"><i class="fa fa-check"></i><b>14.2.1</b> pain plot parameters</a></li>
+<li class="chapter" data-level="14.2.2" data-path="ch14_factorize.html"><a href="ch14_factorize.html#loess"><i class="fa fa-check"></i><b>14.2.2</b> loess</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="ch14_factorize.html"><a href="ch14_factorize.html#vicarious-3"><i class="fa fa-check"></i><b>14.3</b> Vicarious</a></li>
+<li class="chapter" data-level="14.4" data-path="ch14_factorize.html"><a href="ch14_factorize.html#cognitive-3"><i class="fa fa-check"></i><b>14.4</b> Cognitive</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="ch14_factorize.html"><a href="ch14_factorize.html#cognitive-parameters"><i class="fa fa-check"></i><b>14.4.1</b> cognitive parameters</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="ch15_demean_per_sub.html"><a href="ch15_demean_per_sub.html"><i class="fa fa-check"></i><b>15</b> [ beh ] outcome_demean ~ cue * stim * expectrating * n-1outcomerating</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="ch15_demean_per_sub.html"><a href="ch15_demean_per_sub.html#linear-model-1"><i class="fa fa-check"></i><b>15.1</b> linear model</a></li>
+<li class="chapter" data-level="15.2" data-path="ch15_demean_per_sub.html"><a href="ch15_demean_per_sub.html#q.-are-those-overestimating-for-high-cues-also-underestimators-for-low-cues"><i class="fa fa-check"></i><b>15.2</b> Q. Are those overestimating for high cues also underestimators for low cues?</a></li>
+<li class="chapter" data-level="15.3" data-path="ch15_demean_per_sub.html"><a href="ch15_demean_per_sub.html#pain-run-collapsed-across-stimulus-intensity-1"><i class="fa fa-check"></i><b>15.3</b> pain run, collapsed across stimulus intensity</a></li>
+<li class="chapter" data-level="15.4" data-path="ch15_demean_per_sub.html"><a href="ch15_demean_per_sub.html#vicarious-4"><i class="fa fa-check"></i><b>15.4</b> vicarious</a></li>
+<li class="chapter" data-level="15.5" data-path="ch15_demean_per_sub.html"><a href="ch15_demean_per_sub.html#cognitive-4"><i class="fa fa-check"></i><b>15.5</b> cognitive</a></li>
+<li class="chapter" data-level="15.6" data-path="ch15_demean_per_sub.html"><a href="ch15_demean_per_sub.html#across-tasks-pvc-is-the-slope-for-highvslow-cue-the-sametor-question"><i class="fa fa-check"></i><b>15.6</b> across tasks (PVC), is the slope for (highvslow cue) the same?Tor question</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="ch16_demean_per_run.html"><a href="ch16_demean_per_run.html"><i class="fa fa-check"></i><b>16</b> [beh] outcome_demean_per_run ~ cue x stim x expectrating x n-1outcomerating</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="ch16_demean_per_run.html"><a href="ch16_demean_per_run.html#pain-4"><i class="fa fa-check"></i><b>16.1</b> Pain</a></li>
+<li class="chapter" data-level="16.2" data-path="ch16_demean_per_run.html"><a href="ch16_demean_per_run.html#linear-model-with-three-factors-cue-x-stim-x-expectation-rating"><i class="fa fa-check"></i><b>16.2</b> Linear model with three factors: cue X stim X expectation rating</a></li>
+<li class="chapter" data-level="16.3" data-path="ch16_demean_per_run.html"><a href="ch16_demean_per_run.html#pain-run-collapsed-across-stimulus-intensity-2"><i class="fa fa-check"></i><b>16.3</b> Pain run, collapsed across stimulus intensity</a></li>
+<li class="chapter" data-level="16.4" data-path="ch16_demean_per_run.html"><a href="ch16_demean_per_run.html#vicarious-5"><i class="fa fa-check"></i><b>16.4</b> Vicarious</a></li>
+<li class="chapter" data-level="16.5" data-path="ch16_demean_per_run.html"><a href="ch16_demean_per_run.html#cognitive-5"><i class="fa fa-check"></i><b>16.5</b> Cognitive</a></li>
+<li class="chapter" data-level="16.6" data-path="ch16_demean_per_run.html"><a href="ch16_demean_per_run.html#across-tasks-pvc-is-the-slope-for-highvslow-cue-the-sametor-question-1"><i class="fa fa-check"></i><b>16.6</b> across tasks (PVC), is the slope for (highvslow cue) the same?Tor question</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="ch17_mediation.html"><a href="ch17_mediation.html"><i class="fa fa-check"></i><b>17</b> [beh] Mediation outcome ~ cue * stim * expectrating * n-1outcomerating</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="ch17_mediation.html"><a href="ch17_mediation.html#mediation"><i class="fa fa-check"></i><b>17.1</b> mediation</a></li>
+<li class="chapter" data-level="17.2" data-path="ch17_mediation.html"><a href="ch17_mediation.html#mediation-2"><i class="fa fa-check"></i><b>17.2</b> mediation 2</a></li>
+<li class="chapter" data-level="17.3" data-path="ch17_mediation.html"><a href="ch17_mediation.html#mediation-3-test-same-model-using-mediation-from-mbess"><i class="fa fa-check"></i><b>17.3</b> mediation 3: Test same model using mediation() from MBESS</a></li>
+<li class="chapter" data-level="17.4" data-path="ch17_mediation.html"><a href="ch17_mediation.html#mediation-4-test-library-mediation"><i class="fa fa-check"></i><b>17.4</b> mediation 4: Test library mediation</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="nps_contrast_notscaled.html"><a href="nps_contrast_notscaled.html"><i class="fa fa-check"></i><b>18</b> NPS_contrast_notscaled ~ cue * stim</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="nps_contrast_notscaled.html"><a href="nps_contrast_notscaled.html#overview-5"><i class="fa fa-check"></i><b>18.1</b> Overview</a></li>
+<li class="chapter" data-level="18.2" data-path="nps_contrast_notscaled.html"><a href="nps_contrast_notscaled.html#regressors-and-contrasts"><i class="fa fa-check"></i><b>18.2</b> regressors and contrasts</a></li>
+<li class="chapter" data-level="18.3" data-path="nps_contrast_notscaled.html"><a href="nps_contrast_notscaled.html#main-effect-stim-linear-high-low"><i class="fa fa-check"></i><b>18.3</b> main effect: stim-linear high &gt; low</a></li>
+<li class="chapter" data-level="18.4" data-path="nps_contrast_notscaled.html"><a href="nps_contrast_notscaled.html#main_effect-stim-quadratic-med-highlow"><i class="fa fa-check"></i><b>18.4</b> main_effect: stim-quadratic med &gt; high&amp;low</a></li>
+<li class="chapter" data-level="18.5" data-path="nps_contrast_notscaled.html"><a href="nps_contrast_notscaled.html#interaction-cue-x-stim-linear"><i class="fa fa-check"></i><b>18.5</b> interaction: cue X stim-linear</a></li>
+<li class="chapter" data-level="18.6" data-path="nps_contrast_notscaled.html"><a href="nps_contrast_notscaled.html#interaction-cue-x-stim-quadratic"><i class="fa fa-check"></i><b>18.6</b> interaction: cue X stim-quadratic</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="ch31_npscontrast.html"><a href="ch31_npscontrast.html"><i class="fa fa-check"></i><b>19</b> [fMRI] NPS_contrast ~ cue * stim</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="ch31_npscontrast.html"><a href="ch31_npscontrast.html#overview-6"><i class="fa fa-check"></i><b>19.1</b> Overview</a></li>
+<li class="chapter" data-level="19.2" data-path="ch31_npscontrast.html"><a href="ch31_npscontrast.html#regressors-and-contrasts-1"><i class="fa fa-check"></i><b>19.2</b> regressors and contrasts</a></li>
+<li class="chapter" data-level="19.3" data-path="ch31_npscontrast.html"><a href="ch31_npscontrast.html#main-effect-stim-linear-high-low-1"><i class="fa fa-check"></i><b>19.3</b> main effect: stim-linear high &gt; low</a></li>
+<li class="chapter" data-level="19.4" data-path="ch31_npscontrast.html"><a href="ch31_npscontrast.html#main_effect-stim-quadratic-med-highlow-1"><i class="fa fa-check"></i><b>19.4</b> main_effect: stim-quadratic med &gt; high&amp;low</a></li>
+<li class="chapter" data-level="19.5" data-path="ch31_npscontrast.html"><a href="ch31_npscontrast.html#interaction-cue-x-stim-linear-1"><i class="fa fa-check"></i><b>19.5</b> interaction: cue X stim-linear</a></li>
+<li class="chapter" data-level="19.6" data-path="ch31_npscontrast.html"><a href="ch31_npscontrast.html#interaction-cue-x-stim-quadratic-1"><i class="fa fa-check"></i><b>19.6</b> interaction: cue X stim-quadratic</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="nps_dummy_notscaled.html"><a href="nps_dummy_notscaled.html"><i class="fa fa-check"></i><b>20</b> [fMRI] nps_contrast ~ cue * stim (“error, contrast not scaled”)</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="nps_dummy_notscaled.html"><a href="nps_dummy_notscaled.html#overview-7"><i class="fa fa-check"></i><b>20.1</b> Overview</a></li>
+<li class="chapter" data-level="20.2" data-path="nps_dummy_notscaled.html"><a href="nps_dummy_notscaled.html#contrast-plot"><i class="fa fa-check"></i><b>20.2</b> contrast plot</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="ch32_nps_dummy.html"><a href="ch32_nps_dummy.html"><i class="fa fa-check"></i><b>21</b> [fMRI] nps_contrast ~ cue * stim</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="ch32_nps_dummy.html"><a href="ch32_nps_dummy.html#overview-8"><i class="fa fa-check"></i><b>21.1</b> Overview</a></li>
+<li class="chapter" data-level="21.2" data-path="ch32_nps_dummy.html"><a href="ch32_nps_dummy.html#for-loop-for-all-the-pvc-dummy-codes-1"><i class="fa fa-check"></i><b>21.2</b> For loop for all the pvc dummy codes</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="nps_stim.html"><a href="nps_stim.html"><i class="fa fa-check"></i><b>22</b> nps_dummy ~ stim</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="nps_stim.html"><a href="nps_stim.html#todo-2"><i class="fa fa-check"></i><b>22.1</b> TODO</a></li>
+<li class="chapter" data-level="22.2" data-path="nps_stim.html"><a href="nps_stim.html#regressors-and-contrasts-2"><i class="fa fa-check"></i><b>22.2</b> regressors and contrasts</a></li>
+<li class="chapter" data-level="22.3" data-path="nps_stim.html"><a href="nps_stim.html#functions-1"><i class="fa fa-check"></i><b>22.3</b> Functions</a></li>
+<li class="chapter" data-level="22.4" data-path="nps_stim.html"><a href="nps_stim.html#pain-5"><i class="fa fa-check"></i><b>22.4</b> Pain</a></li>
+<li class="chapter" data-level="22.5" data-path="nps_stim.html"><a href="nps_stim.html#vicarious-6"><i class="fa fa-check"></i><b>22.5</b> Vicarious</a></li>
+<li class="chapter" data-level="22.6" data-path="nps_stim.html"><a href="nps_stim.html#cognitive-6"><i class="fa fa-check"></i><b>22.6</b> Cognitive</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> biomarker NPS ~ cue * stim (2022)</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="nps_22.html"><a href="nps_22.html#load-libraries"><i class="fa fa-check"></i><b>23.1</b> load libraries</a>
+<ul>
+<li class="chapter" data-level="23.1.1" data-path="nps_22.html"><a href="nps_22.html#nps-cue-effect"><i class="fa fa-check"></i><b>23.1.1</b> NPS cue effect</a></li>
+</ul></li>
+<li class="chapter" data-level="23.2" data-path="nps_22.html"><a href="nps_22.html#nps-stim-effect"><i class="fa fa-check"></i><b>23.2</b> NPS stim effect</a></li>
+<li class="chapter" data-level="23.3" data-path="nps_22.html"><a href="nps_22.html#vps"><i class="fa fa-check"></i><b>23.3</b> VPS</a></li>
+<li class="chapter" data-level="23.4" data-path="nps_22.html"><a href="nps_22.html#vps-cue-effect"><i class="fa fa-check"></i><b>23.4</b> VPS cue effect</a></li>
+<li class="chapter" data-level="23.5" data-path="nps_22.html"><a href="nps_22.html#vps-stim-effect"><i class="fa fa-check"></i><b>23.5</b> VPS stim effect</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
+<li class="chapter" data-level="25" data-path="nps_stim_task.html"><a href="nps_stim_task.html"><i class="fa fa-check"></i><b>25</b> NPSdummy ~ stim * task (contrast-scaled)</a>
+<ul>
+<li class="chapter" data-level="25.1" data-path="nps_stim_task.html"><a href="nps_stim_task.html#raincloud-plots-1"><i class="fa fa-check"></i><b>25.1</b> Raincloud plots</a></li>
+<li class="chapter" data-level="25.2" data-path="nps_stim_task.html"><a href="nps_stim_task.html#line-plots-1"><i class="fa fa-check"></i><b>25.2</b> Line plots</a></li>
+</ul></li>
+<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [ fMRI ] Pain signature ~ single trial</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pvc-all-task-comparison"><i class="fa fa-check"></i><b>26.1</b> PVC all task comparison</a></li>
+<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>26.2</b> Pain only Stim x cue interaction</a>
+<ul>
+<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.1</b> 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-2"><i class="fa fa-check"></i><b>26.2.2</b> Linear model</a></li>
+<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-intensity-cohens-d-1.287"><i class="fa fa-check"></i><b>26.2.3</b> NPS stimulus intensity Cohen’s d = 1.287</a></li>
+<li class="chapter" data-level="26.2.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-cue-effect-size-stim_d-1.16-cue_d-0.45"><i class="fa fa-check"></i><b>26.2.4</b> NPS stimulus &amp; cue effect size: stim_d = 1.16, cue_d = 0.45</a></li>
+<li class="chapter" data-level="26.2.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#lineplots"><i class="fa fa-check"></i><b>26.2.5</b> Lineplots</a></li>
+<li class="chapter" data-level="26.2.6" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-1-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.6</b> Session 1: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="26.2.7" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-3-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.7</b> Session 3: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="26.2.8" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-4-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.8</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+</ul></li>
+<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-outcome-ratings-nps"><i class="fa fa-check"></i><b>26.3</b> Pain only: Outcome ratings &amp; NPS</a>
+<ul>
+<li class="chapter" data-level="26.3.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-cue"><i class="fa fa-check"></i><b>26.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="26.3.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-stim-cue"><i class="fa fa-check"></i><b>26.3.2</b> outcome ratings * stim * cue</a></li>
+</ul></li>
+<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>26.4</b> Pain only: Expectation ratings &amp; NPS</a></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] Vicarious signature ~ single trial</a>
+<ul>
+<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#pvc-all-task-comparison-1"><i class="fa fa-check"></i><b>27.1</b> PVC all task comparison</a></li>
+<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>27.2</b> Vicarious only Stim x cue interaction</a>
+<ul>
+<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.1</b> 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-3"><i class="fa fa-check"></i><b>27.2.2</b> Linear model</a></li>
+<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-intensity-cohens-d-0.2131521"><i class="fa fa-check"></i><b>27.2.3</b> VPS stimulus intensity Cohen’s d = 0.2131521</a></li>
+<li class="chapter" data-level="27.2.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-cue-effect-size-stim_d-0.217-cue_d-0.013"><i class="fa fa-check"></i><b>27.2.4</b> VPS stimulus &amp; cue effect size: stim_d = 0.217, cue_d = 0.013</a></li>
+<li class="chapter" data-level="27.2.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#lineplots-1"><i class="fa fa-check"></i><b>27.2.5</b> Lineplots</a></li>
+<li class="chapter" data-level="27.2.6" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-with-stim-x-cue-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
+<li class="chapter" data-level="27.2.7" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-1-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="27.2.8" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-3-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="27.2.9" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-4-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+</ul></li>
+<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-outcome-ratings-vps"><i class="fa fa-check"></i><b>27.3</b> Vicarious only: Outcome ratings &amp; VPS</a>
+<ul>
+<li class="chapter" data-level="27.3.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome-ratings-cue-1"><i class="fa fa-check"></i><b>27.3.1</b> outcome ratings * cue</a></li>
+</ul></li>
+<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-expectation-ratings-vps"><i class="fa fa-check"></i><b>27.4</b> Vicarious only: Expectation ratings &amp; VPS</a></li>
+</ul></li>
+<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Cognitive signature ~ single trial</a>
+<ul>
+<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#pvc-all-task-comparison-2"><i class="fa fa-check"></i><b>28.1</b> PVC all task comparison</a></li>
+<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>28.2</b> Cognitive only Stim x cue interaction</a>
+<ul>
+<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.1</b> 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-4"><i class="fa fa-check"></i><b>28.2.2</b> Linear model</a></li>
+<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cog-stimulus-intensity-cohens-d-0.72"><i class="fa fa-check"></i><b>28.2.3</b> Cog stimulus intensity Cohen’s d = 0.72</a></li>
+<li class="chapter" data-level="28.2.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-stimulus-cue-effect-size-stim_d-0.73-cue_d-0.069"><i class="fa fa-check"></i><b>28.2.4</b> Cognitive stimulus &amp; cue effect size: stim_d = 0.73, cue_d = 0.069</a></li>
+<li class="chapter" data-level="28.2.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#lineplots-2"><i class="fa fa-check"></i><b>28.2.5</b> Lineplots</a></li>
+<li class="chapter" data-level="28.2.6" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-with-stim-x-cue-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
+<li class="chapter" data-level="28.2.7" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-1-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="28.2.8" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-3-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="28.2.9" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-4-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+</ul></li>
+<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-outcome-ratings-kragel-2018"><i class="fa fa-check"></i><b>28.3</b> Cognitive only: Outcome ratings &amp; Kragel 2018</a>
+<ul>
+<li class="chapter" data-level="28.3.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome-ratings-cue-2"><i class="fa fa-check"></i><b>28.3.1</b> outcome ratings * cue</a></li>
+</ul></li>
+<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>28.4</b> Cognitive only: Expectation ratings &amp; NPS</a></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html"><i class="fa fa-check"></i><b>29</b> [fMRI] Single trial correlation between cue and stim</a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#stack-data"><i class="fa fa-check"></i><b>29.1</b> Stack data</a></li>
+<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.2</b> plot correlation (one-sample-t)</a></li>
+<li class="chapter" data-level="29.3" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.3</b> Lineplot</a></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html"><i class="fa fa-check"></i><b>30</b> [fMRI] Signature effect size ~ single trial</a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#effeect-size"><i class="fa fa-check"></i><b>30.1</b> effeect size</a></li>
+<li class="chapter" data-level="30.2" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#contrastt-stim-intensity"><i class="fa fa-check"></i><b>30.2</b> contrastt (stim intensity)</a></li>
+<li class="chapter" data-level="30.3" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#layer-in-metadata"><i class="fa fa-check"></i><b>30.3</b> layer in metadata</a></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="ch40_vif.html"><a href="ch40_vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
+<li class="chapter" data-level="32" data-path="load-in-the-datamatrix-and-calculate-the-vif.html"><a href="load-in-the-datamatrix-and-calculate-the-vif.html"><i class="fa fa-check"></i><b>32</b> load in the datamatrix and calculate the vif</a></li>
+<li class="chapter" data-level="33" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>33</b> vif</a></li>
+<li class="chapter" data-level="34" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html"><i class="fa fa-check"></i><b>34</b> [fMRI] Cognitive signature ~ single trial</a>
+<ul>
+<li class="chapter" data-level="34.1" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#load-behavioral-data-2"><i class="fa fa-check"></i><b>34.1</b> load behavioral data</a></li>
+<li class="chapter" data-level="34.2" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#dfmerge-stats"><i class="fa fa-check"></i><b>34.2</b> dfmerge stats</a></li>
+<li class="chapter" data-level="34.3" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#expect-nps-as-a-function-of-cue"><i class="fa fa-check"></i><b>34.3</b> expect &amp; NPS as a function of cue</a></li>
+<li class="chapter" data-level="34.4" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#x3-stimcue"><i class="fa fa-check"></i><b>34.4</b> 2x3 stim*cue</a></li>
+<li class="chapter" data-level="34.5" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#lineplot-2"><i class="fa fa-check"></i><b>34.5</b> lineplot</a></li>
+</ul></li>
+<li class="chapter" data-level="35" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html"><i class="fa fa-check"></i><b>35</b> [fMRI] Vicarious signature ~ single trial</a>
+<ul>
+<li class="chapter" data-level="35.1" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#load-behavioral-data-3"><i class="fa fa-check"></i><b>35.1</b> load behavioral data</a></li>
+<li class="chapter" data-level="35.2" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#expect-nps-as-a-function-of-cue-1"><i class="fa fa-check"></i><b>35.2</b> expect &amp; NPS as a function of cue</a></li>
+<li class="chapter" data-level="35.3" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#x3-stimcue-1"><i class="fa fa-check"></i><b>35.3</b> 2x3 stim*cue</a></li>
+</ul></li>
+<li class="chapter" data-level="36" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html"><i class="fa fa-check"></i><b>36</b> [fMRI] Pain signature ~ single trial</a>
+<ul>
+<li class="chapter" data-level="36.1" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#load-behavioral-data-4"><i class="fa fa-check"></i><b>36.1</b> load behavioral data</a></li>
+<li class="chapter" data-level="36.2" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#expect-nps-as-a-function-of-cue-2"><i class="fa fa-check"></i><b>36.2</b> expect &amp; NPS as a function of cue</a></li>
+<li class="chapter" data-level="36.3" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#x3-stimcue-2"><i class="fa fa-check"></i><b>36.3</b> 2x3 stim*cue</a></li>
+<li class="chapter" data-level="36.4" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#lineplots-3"><i class="fa fa-check"></i><b>36.4</b> lineplots</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">behavioral_ICC</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ch36_singletrial_V" class="section level1 hasAnchor" number="27">
+<h1><span class="header-section-number">Chapter 27</span> [fMRI] Vicarious signature ~ single trial<a href="ch36_singletrial_V.html#ch36_singletrial_V" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<pre><code>author: &quot;Heejung Jung
+date: &quot;2023-03-04&quot;</code></pre>
+<p>color_scheme = c(“#C6FF8A”, “#63C76E”, “#008F51”)</p>
+<div id="function-2" class="section level2 unlisted unnumbered hasAnchor">
+<h2>Function<a href="ch36_singletrial_V.html#function-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="step-1-common-parameters" class="section level2 unlisted unnumbered hasAnchor">
+<h2>Step 1: Common parameters<a href="ch36_singletrial_V.html#step-1-common-parameters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb861"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb861-1"><a href="ch36_singletrial_V.html#cb861-1" aria-hidden="true" tabindex="-1"></a><span class="co"># step 1: load data</span></span>
+<span id="cb861-2"><a href="ch36_singletrial_V.html#cb861-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (signature_key <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;VPS&quot;</span>)) {</span>
+<span id="cb861-3"><a href="ch36_singletrial_V.html#cb861-3" aria-hidden="true" tabindex="-1"></a>     <span class="co">#c(&quot;NPS&quot;, &quot;NPSpos&quot;, &quot;NPSneg&quot;, &quot;VPS&quot;, #&quot;VPSnooccip&quot;, &quot;ThermalPain&quot;, &quot;MechPain&quot;, &quot;GeneralAversive&quot;, &quot;AversiveVisual&quot;</span></span>
+<span id="cb861-4"><a href="ch36_singletrial_V.html#cb861-4" aria-hidden="true" tabindex="-1"></a>                      <span class="co">#  &quot;ZhouVPS&quot;, &quot;PINES&quot;,  &quot;GSR&quot;, &quot;GeuterPaincPDM&quot;)) {</span></span>
+<span id="cb861-5"><a href="ch36_singletrial_V.html#cb861-5" aria-hidden="true" tabindex="-1"></a>  dv_keyword <span class="ot">=</span> signature_key</span>
+<span id="cb861-6"><a href="ch36_singletrial_V.html#cb861-6" aria-hidden="true" tabindex="-1"></a>  signature_name <span class="ot">=</span> signature_key</span>
+<span id="cb861-7"><a href="ch36_singletrial_V.html#cb861-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># step 1: common parameters _______</span></span>
+<span id="cb861-8"><a href="ch36_singletrial_V.html#cb861-8" aria-hidden="true" tabindex="-1"></a>  main_dir <span class="ot">&lt;-</span> <span class="fu">dirname</span>(<span class="fu">dirname</span>(<span class="fu">getwd</span>()))</span>
+<span id="cb861-9"><a href="ch36_singletrial_V.html#cb861-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb861-10"><a href="ch36_singletrial_V.html#cb861-10" aria-hidden="true" tabindex="-1"></a>  analysis_folder  <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&quot;model36_iv-task-stim_dv-&quot;</span>, signature_key)</span>
+<span id="cb861-11"><a href="ch36_singletrial_V.html#cb861-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb861-12"><a href="ch36_singletrial_V.html#cb861-12" aria-hidden="true" tabindex="-1"></a>  sig_name <span class="ot">&lt;-</span></span>
+<span id="cb861-13"><a href="ch36_singletrial_V.html#cb861-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.glob</span>(<span class="fu">file.path</span>(</span>
+<span id="cb861-14"><a href="ch36_singletrial_V.html#cb861-14" aria-hidden="true" tabindex="-1"></a>      main_dir,</span>
+<span id="cb861-15"><a href="ch36_singletrial_V.html#cb861-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;analysis/fmri/nilearn/signature_extract&quot;</span>,</span>
+<span id="cb861-16"><a href="ch36_singletrial_V.html#cb861-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(</span>
+<span id="cb861-17"><a href="ch36_singletrial_V.html#cb861-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;signature-&quot;</span>,</span>
+<span id="cb861-18"><a href="ch36_singletrial_V.html#cb861-18" aria-hidden="true" tabindex="-1"></a>        signature_key,</span>
+<span id="cb861-19"><a href="ch36_singletrial_V.html#cb861-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;_sub-all_runtype-pvc_event-stimulus.tsv&quot;</span></span>
+<span id="cb861-20"><a href="ch36_singletrial_V.html#cb861-20" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb861-21"><a href="ch36_singletrial_V.html#cb861-21" aria-hidden="true" tabindex="-1"></a>    )) <span class="co"># nolint</span></span>
+<span id="cb861-22"><a href="ch36_singletrial_V.html#cb861-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(sig_name)</span>
+<span id="cb861-23"><a href="ch36_singletrial_V.html#cb861-23" aria-hidden="true" tabindex="-1"></a>  analysis_dir <span class="ot">&lt;-</span></span>
+<span id="cb861-24"><a href="ch36_singletrial_V.html#cb861-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">file.path</span>(main_dir,</span>
+<span id="cb861-25"><a href="ch36_singletrial_V.html#cb861-25" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;analysis&quot;</span>,</span>
+<span id="cb861-26"><a href="ch36_singletrial_V.html#cb861-26" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;mixedeffect&quot;</span>,</span>
+<span id="cb861-27"><a href="ch36_singletrial_V.html#cb861-27" aria-hidden="true" tabindex="-1"></a>              analysis_folder,</span>
+<span id="cb861-28"><a href="ch36_singletrial_V.html#cb861-28" aria-hidden="true" tabindex="-1"></a>              <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>())) <span class="co"># nolint</span></span>
+<span id="cb861-29"><a href="ch36_singletrial_V.html#cb861-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(analysis_dir,</span>
+<span id="cb861-30"><a href="ch36_singletrial_V.html#cb861-30" aria-hidden="true" tabindex="-1"></a>             <span class="at">showWarnings =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb861-31"><a href="ch36_singletrial_V.html#cb861-31" aria-hidden="true" tabindex="-1"></a>             <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb861-32"><a href="ch36_singletrial_V.html#cb861-32" aria-hidden="true" tabindex="-1"></a>  savedir <span class="ot">&lt;-</span> analysis_dir</span>
+<span id="cb861-33"><a href="ch36_singletrial_V.html#cb861-33" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-34"><a href="ch36_singletrial_V.html#cb861-34" aria-hidden="true" tabindex="-1"></a>  <span class="co"># step 2: load data</span></span>
+<span id="cb861-35"><a href="ch36_singletrial_V.html#cb861-35" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">=</span> <span class="fu">read.csv</span>(sig_name)</span>
+<span id="cb861-36"><a href="ch36_singletrial_V.html#cb861-36" aria-hidden="true" tabindex="-1"></a>  sig_df <span class="ot">=</span> df <span class="sc">%&gt;%</span> <span class="fu">separate</span>(</span>
+<span id="cb861-37"><a href="ch36_singletrial_V.html#cb861-37" aria-hidden="true" tabindex="-1"></a>    singletrial_fname,</span>
+<span id="cb861-38"><a href="ch36_singletrial_V.html#cb861-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>,</span>
+<span id="cb861-39"><a href="ch36_singletrial_V.html#cb861-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb861-40"><a href="ch36_singletrial_V.html#cb861-40" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sub&quot;</span>,</span>
+<span id="cb861-41"><a href="ch36_singletrial_V.html#cb861-41" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;ses&quot;</span>,</span>
+<span id="cb861-42"><a href="ch36_singletrial_V.html#cb861-42" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;run&quot;</span>,</span>
+<span id="cb861-43"><a href="ch36_singletrial_V.html#cb861-43" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;runtype&quot;</span>,</span>
+<span id="cb861-44"><a href="ch36_singletrial_V.html#cb861-44" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;event&quot;</span>,</span>
+<span id="cb861-45"><a href="ch36_singletrial_V.html#cb861-45" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;trial&quot;</span>,</span>
+<span id="cb861-46"><a href="ch36_singletrial_V.html#cb861-46" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;cuetype&quot;</span>,</span>
+<span id="cb861-47"><a href="ch36_singletrial_V.html#cb861-47" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;stimintensity&quot;</span></span>
+<span id="cb861-48"><a href="ch36_singletrial_V.html#cb861-48" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb861-49"><a href="ch36_singletrial_V.html#cb861-49" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb861-50"><a href="ch36_singletrial_V.html#cb861-50" aria-hidden="true" tabindex="-1"></a>  sig_df <span class="ot">=</span> sig_df <span class="sc">%&gt;%</span> <span class="fu">separate</span>(</span>
+<span id="cb861-51"><a href="ch36_singletrial_V.html#cb861-51" aria-hidden="true" tabindex="-1"></a>    stimintensity,</span>
+<span id="cb861-52"><a href="ch36_singletrial_V.html#cb861-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">into =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">&quot;stimintensity&quot;</span>),</span>
+<span id="cb861-53"><a href="ch36_singletrial_V.html#cb861-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">extra =</span> <span class="st">&quot;drop&quot;</span>,</span>
+<span id="cb861-54"><a href="ch36_singletrial_V.html#cb861-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;left&quot;</span></span>
+<span id="cb861-55"><a href="ch36_singletrial_V.html#cb861-55" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb861-56"><a href="ch36_singletrial_V.html#cb861-56" aria-hidden="true" tabindex="-1"></a>  pvc <span class="ot">&lt;-</span> <span class="fu">simple_contrasts_singletrial</span>(sig_df)</span>
+<span id="cb861-57"><a href="ch36_singletrial_V.html#cb861-57" aria-hidden="true" tabindex="-1"></a>  pvc<span class="sc">$</span>task[pvc<span class="sc">$</span>runtype <span class="sc">==</span> <span class="st">&quot;runtype-pain&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;pain&quot;</span></span>
+<span id="cb861-58"><a href="ch36_singletrial_V.html#cb861-58" aria-hidden="true" tabindex="-1"></a>  pvc<span class="sc">$</span>task[pvc<span class="sc">$</span>runtype <span class="sc">==</span> <span class="st">&quot;runtype-vicarious&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;vicarious&quot;</span></span>
+<span id="cb861-59"><a href="ch36_singletrial_V.html#cb861-59" aria-hidden="true" tabindex="-1"></a>  pvc<span class="sc">$</span>task[pvc<span class="sc">$</span>runtype <span class="sc">==</span> <span class="st">&quot;runtype-cognitive&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;cognitive&quot;</span></span>
+<span id="cb861-60"><a href="ch36_singletrial_V.html#cb861-60" aria-hidden="true" tabindex="-1"></a>  pvc<span class="sc">$</span>task <span class="ot">&lt;-</span> <span class="fu">factor</span>(pvc<span class="sc">$</span>task)</span>
+<span id="cb861-61"><a href="ch36_singletrial_V.html#cb861-61" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-62"><a href="ch36_singletrial_V.html#cb861-62" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-63"><a href="ch36_singletrial_V.html#cb861-63" aria-hidden="true" tabindex="-1"></a>  <span class="co"># step 3: parameters</span></span>
+<span id="cb861-64"><a href="ch36_singletrial_V.html#cb861-64" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-65"><a href="ch36_singletrial_V.html#cb861-65" aria-hidden="true" tabindex="-1"></a>  taskname <span class="ot">=</span> <span class="st">&quot;all&quot;</span></span>
+<span id="cb861-66"><a href="ch36_singletrial_V.html#cb861-66" aria-hidden="true" tabindex="-1"></a>  plot_keyword <span class="ot">=</span> <span class="st">&quot;stimulusintensity&quot;</span></span>
+<span id="cb861-67"><a href="ch36_singletrial_V.html#cb861-67" aria-hidden="true" tabindex="-1"></a>  ggtitle_phrase <span class="ot">=</span>  <span class="st">&quot;(3 tasks x 3 stimulus intensity)&quot;</span></span>
+<span id="cb861-68"><a href="ch36_singletrial_V.html#cb861-68" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-69"><a href="ch36_singletrial_V.html#cb861-69" aria-hidden="true" tabindex="-1"></a>  pvc<span class="sc">$</span>task <span class="ot">=</span> <span class="fu">factor</span>(pvc<span class="sc">$</span>task)</span>
+<span id="cb861-70"><a href="ch36_singletrial_V.html#cb861-70" aria-hidden="true" tabindex="-1"></a>  plot_keys <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb861-71"><a href="ch36_singletrial_V.html#cb861-71" aria-hidden="true" tabindex="-1"></a>    <span class="at">sub_mean =</span> <span class="st">&quot;mean_per_sub&quot;</span>,</span>
+<span id="cb861-72"><a href="ch36_singletrial_V.html#cb861-72" aria-hidden="true" tabindex="-1"></a>    <span class="at">group_mean =</span> <span class="st">&quot;mean_per_sub_norm_mean&quot;</span>,</span>
+<span id="cb861-73"><a href="ch36_singletrial_V.html#cb861-73" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend_keyword =</span> <span class="st">&quot;stimulus intensity&quot;</span>,</span>
+<span id="cb861-74"><a href="ch36_singletrial_V.html#cb861-74" aria-hidden="true" tabindex="-1"></a>    <span class="at">se =</span> <span class="st">&quot;se&quot;</span>,</span>
+<span id="cb861-75"><a href="ch36_singletrial_V.html#cb861-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">subject =</span> <span class="st">&quot;sub&quot;</span>,</span>
+<span id="cb861-76"><a href="ch36_singletrial_V.html#cb861-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">ggtitle =</span> <span class="fu">paste0</span>(</span>
+<span id="cb861-77"><a href="ch36_singletrial_V.html#cb861-77" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_to_title</span>(signature_key),</span>
+<span id="cb861-78"><a href="ch36_singletrial_V.html#cb861-78" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot; dot product: &quot;</span>,</span>
+<span id="cb861-79"><a href="ch36_singletrial_V.html#cb861-79" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_to_title</span>(taskname),</span>
+<span id="cb861-80"><a href="ch36_singletrial_V.html#cb861-80" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39; &#39;</span>,</span>
+<span id="cb861-81"><a href="ch36_singletrial_V.html#cb861-81" aria-hidden="true" tabindex="-1"></a>      ggtitle_phrase,</span>
+<span id="cb861-82"><a href="ch36_singletrial_V.html#cb861-82" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot; (N = &quot;</span>,</span>
+<span id="cb861-83"><a href="ch36_singletrial_V.html#cb861-83" aria-hidden="true" tabindex="-1"></a>      <span class="fu">length</span>(<span class="fu">unique</span>(pvc<span class="sc">$</span>sub)),</span>
+<span id="cb861-84"><a href="ch36_singletrial_V.html#cb861-84" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;)&quot;</span></span>
+<span id="cb861-85"><a href="ch36_singletrial_V.html#cb861-85" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb861-86"><a href="ch36_singletrial_V.html#cb861-86" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">paste0</span>(</span>
+<span id="cb861-87"><a href="ch36_singletrial_V.html#cb861-87" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_to_title</span>(signature_key),</span>
+<span id="cb861-88"><a href="ch36_singletrial_V.html#cb861-88" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot; - &quot;</span>,</span>
+<span id="cb861-89"><a href="ch36_singletrial_V.html#cb861-89" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_to_title</span>(plot_keyword)</span>
+<span id="cb861-90"><a href="ch36_singletrial_V.html#cb861-90" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb861-91"><a href="ch36_singletrial_V.html#cb861-91" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb861-92"><a href="ch36_singletrial_V.html#cb861-92" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab =</span> <span class="fu">paste</span>(signature_key, <span class="st">&quot; (dot product)&quot;</span>),</span>
+<span id="cb861-93"><a href="ch36_singletrial_V.html#cb861-93" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">250</span>, <span class="dv">500</span>)</span>
+<span id="cb861-94"><a href="ch36_singletrial_V.html#cb861-94" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb861-95"><a href="ch36_singletrial_V.html#cb861-95" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-96"><a href="ch36_singletrial_V.html#cb861-96" aria-hidden="true" tabindex="-1"></a>  <span class="co"># step 4: within between summary</span></span>
+<span id="cb861-97"><a href="ch36_singletrial_V.html#cb861-97" aria-hidden="true" tabindex="-1"></a>  groupwise <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
+<span id="cb861-98"><a href="ch36_singletrial_V.html#cb861-98" aria-hidden="true" tabindex="-1"></a>  subjectwise <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
+<span id="cb861-99"><a href="ch36_singletrial_V.html#cb861-99" aria-hidden="true" tabindex="-1"></a>  summary <span class="ot">&lt;-</span> <span class="fu">summary_for_plots_PVC</span>(</span>
+<span id="cb861-100"><a href="ch36_singletrial_V.html#cb861-100" aria-hidden="true" tabindex="-1"></a>    <span class="at">df =</span> pvc,</span>
+<span id="cb861-101"><a href="ch36_singletrial_V.html#cb861-101" aria-hidden="true" tabindex="-1"></a>    <span class="co"># taskname = taskname,</span></span>
+<span id="cb861-102"><a href="ch36_singletrial_V.html#cb861-102" aria-hidden="true" tabindex="-1"></a>    <span class="at">groupwise_measurevar =</span> plot_keys<span class="sc">$</span>sub_mean,</span>
+<span id="cb861-103"><a href="ch36_singletrial_V.html#cb861-103" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &quot;mean_per_sub&quot;,</span></span>
+<span id="cb861-104"><a href="ch36_singletrial_V.html#cb861-104" aria-hidden="true" tabindex="-1"></a>    <span class="at">subject_keyword =</span> plot_keys<span class="sc">$</span>subject,</span>
+<span id="cb861-105"><a href="ch36_singletrial_V.html#cb861-105" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &quot;sub&quot;,</span></span>
+<span id="cb861-106"><a href="ch36_singletrial_V.html#cb861-106" aria-hidden="true" tabindex="-1"></a>    <span class="at">model_iv1 =</span>  <span class="st">&quot;task&quot;</span>,</span>
+<span id="cb861-107"><a href="ch36_singletrial_V.html#cb861-107" aria-hidden="true" tabindex="-1"></a>    <span class="at">model_iv2 =</span>  <span class="st">&quot;stim_ordered&quot;</span>,</span>
+<span id="cb861-108"><a href="ch36_singletrial_V.html#cb861-108" aria-hidden="true" tabindex="-1"></a>    <span class="at">dv =</span> signature_key <span class="co">#&quot;VPS&quot;</span></span>
+<span id="cb861-109"><a href="ch36_singletrial_V.html#cb861-109" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb861-110"><a href="ch36_singletrial_V.html#cb861-110" aria-hidden="true" tabindex="-1"></a>  subjectwise <span class="ot">&lt;&lt;-</span> <span class="fu">as.data.frame</span>(summary[[<span class="dv">1</span>]])</span>
+<span id="cb861-111"><a href="ch36_singletrial_V.html#cb861-111" aria-hidden="true" tabindex="-1"></a>  groupwise <span class="ot">&lt;&lt;-</span> <span class="fu">as.data.frame</span>(summary[[<span class="dv">2</span>]])</span>
+<span id="cb861-112"><a href="ch36_singletrial_V.html#cb861-112" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">startsWith</span>(dv_keyword, <span class="fu">c</span>(<span class="st">&quot;expect&quot;</span>, <span class="st">&quot;Expect&quot;</span>)))) {</span>
+<span id="cb861-113"><a href="ch36_singletrial_V.html#cb861-113" aria-hidden="true" tabindex="-1"></a>    plot_keys<span class="sc">$</span>color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#1B9E77&quot;</span>, <span class="st">&quot;#D95F02&quot;</span>, <span class="st">&quot;#D95F02&quot;</span>)</span>
+<span id="cb861-114"><a href="ch36_singletrial_V.html#cb861-114" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb861-115"><a href="ch36_singletrial_V.html#cb861-115" aria-hidden="true" tabindex="-1"></a>    plot_keys<span class="sc">$</span>color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#4575B4&quot;</span>, <span class="st">&quot;#FFA500&quot;</span>, <span class="st">&quot;#D73027&quot;</span>)</span>
+<span id="cb861-116"><a href="ch36_singletrial_V.html#cb861-116" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb861-117"><a href="ch36_singletrial_V.html#cb861-117" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-118"><a href="ch36_singletrial_V.html#cb861-118" aria-hidden="true" tabindex="-1"></a>  <span class="co"># step 5: plot</span></span>
+<span id="cb861-119"><a href="ch36_singletrial_V.html#cb861-119" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-120"><a href="ch36_singletrial_V.html#cb861-120" aria-hidden="true" tabindex="-1"></a>  iv2 <span class="ot">=</span> <span class="st">&quot;stim_ordered&quot;</span></span>
+<span id="cb861-121"><a href="ch36_singletrial_V.html#cb861-121" aria-hidden="true" tabindex="-1"></a>  iv1 <span class="ot">=</span> <span class="st">&quot;task&quot;</span></span>
+<span id="cb861-122"><a href="ch36_singletrial_V.html#cb861-122" aria-hidden="true" tabindex="-1"></a>  taskname <span class="ot">=</span> <span class="st">&quot;all&quot;</span></span>
+<span id="cb861-123"><a href="ch36_singletrial_V.html#cb861-123" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">startsWith</span>(dv_keyword, <span class="fu">c</span>(<span class="st">&quot;expect&quot;</span>, <span class="st">&quot;Expect&quot;</span>)))) {</span>
+<span id="cb861-124"><a href="ch36_singletrial_V.html#cb861-124" aria-hidden="true" tabindex="-1"></a>    color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#1B9E77&quot;</span>, <span class="st">&quot;#D95F02&quot;</span>, <span class="st">&quot;#D95F02&quot;</span>)</span>
+<span id="cb861-125"><a href="ch36_singletrial_V.html#cb861-125" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb861-126"><a href="ch36_singletrial_V.html#cb861-126" aria-hidden="true" tabindex="-1"></a>    color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#4575B4&quot;</span>, <span class="st">&quot;#FFA500&quot;</span>, <span class="st">&quot;#D73027&quot;</span>)</span>
+<span id="cb861-127"><a href="ch36_singletrial_V.html#cb861-127" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb861-128"><a href="ch36_singletrial_V.html#cb861-128" aria-hidden="true" tabindex="-1"></a>  subject_mean <span class="ot">&lt;-</span> <span class="st">&quot;mean_per_sub&quot;</span></span>
+<span id="cb861-129"><a href="ch36_singletrial_V.html#cb861-129" aria-hidden="true" tabindex="-1"></a>  sub_mean <span class="ot">=</span> subject_mean</span>
+<span id="cb861-130"><a href="ch36_singletrial_V.html#cb861-130" aria-hidden="true" tabindex="-1"></a>  group_mean <span class="ot">&lt;-</span> <span class="st">&quot;mean_per_sub_norm_mean&quot;</span></span>
+<span id="cb861-131"><a href="ch36_singletrial_V.html#cb861-131" aria-hidden="true" tabindex="-1"></a>  se <span class="ot">&lt;-</span> <span class="st">&quot;se&quot;</span></span>
+<span id="cb861-132"><a href="ch36_singletrial_V.html#cb861-132" aria-hidden="true" tabindex="-1"></a>  ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">25</span>, <span class="dv">26</span>)</span>
+<span id="cb861-133"><a href="ch36_singletrial_V.html#cb861-133" aria-hidden="true" tabindex="-1"></a>  subject <span class="ot">&lt;-</span> <span class="st">&quot;sub&quot;</span></span>
+<span id="cb861-134"><a href="ch36_singletrial_V.html#cb861-134" aria-hidden="true" tabindex="-1"></a>  ggtitle_phrase <span class="ot">&lt;-</span>  <span class="st">&quot;(3 tasks x 3 stimulus intensity)&quot;</span></span>
+<span id="cb861-135"><a href="ch36_singletrial_V.html#cb861-135" aria-hidden="true" tabindex="-1"></a>  ggtitle <span class="ot">&lt;-</span></span>
+<span id="cb861-136"><a href="ch36_singletrial_V.html#cb861-136" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(</span>
+<span id="cb861-137"><a href="ch36_singletrial_V.html#cb861-137" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_to_title</span>(signature_name),</span>
+<span id="cb861-138"><a href="ch36_singletrial_V.html#cb861-138" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot; dot product: &quot;</span>,</span>
+<span id="cb861-139"><a href="ch36_singletrial_V.html#cb861-139" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_to_title</span>(taskname),</span>
+<span id="cb861-140"><a href="ch36_singletrial_V.html#cb861-140" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39; &#39;</span>,</span>
+<span id="cb861-141"><a href="ch36_singletrial_V.html#cb861-141" aria-hidden="true" tabindex="-1"></a>      ggtitle_phrase,</span>
+<span id="cb861-142"><a href="ch36_singletrial_V.html#cb861-142" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot; (N = &quot;</span>,</span>
+<span id="cb861-143"><a href="ch36_singletrial_V.html#cb861-143" aria-hidden="true" tabindex="-1"></a>      <span class="fu">length</span>(<span class="fu">unique</span>(pvc<span class="sc">$</span>sub)),</span>
+<span id="cb861-144"><a href="ch36_singletrial_V.html#cb861-144" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;)&quot;</span></span>
+<span id="cb861-145"><a href="ch36_singletrial_V.html#cb861-145" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb861-146"><a href="ch36_singletrial_V.html#cb861-146" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb861-147"><a href="ch36_singletrial_V.html#cb861-147" aria-hidden="true" tabindex="-1"></a>  title <span class="ot">&lt;-</span></span>
+<span id="cb861-148"><a href="ch36_singletrial_V.html#cb861-148" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(<span class="fu">str_to_title</span>(dv_keyword),</span>
+<span id="cb861-149"><a href="ch36_singletrial_V.html#cb861-149" aria-hidden="true" tabindex="-1"></a>           <span class="st">&quot; - &quot;</span>,</span>
+<span id="cb861-150"><a href="ch36_singletrial_V.html#cb861-150" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_to_title</span>(plot_keys<span class="sc">$</span>legend_keyword))</span>
+<span id="cb861-151"><a href="ch36_singletrial_V.html#cb861-151" aria-hidden="true" tabindex="-1"></a>  xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb861-152"><a href="ch36_singletrial_V.html#cb861-152" aria-hidden="true" tabindex="-1"></a>  plot_keyword <span class="ot">=</span> <span class="st">&quot;stimintensity&quot;</span></span>
+<span id="cb861-153"><a href="ch36_singletrial_V.html#cb861-153" aria-hidden="true" tabindex="-1"></a>  ylab <span class="ot">&lt;-</span> <span class="fu">paste</span>(signature_name, <span class="st">&quot; (dot product)&quot;</span>)</span>
+<span id="cb861-154"><a href="ch36_singletrial_V.html#cb861-154" aria-hidden="true" tabindex="-1"></a>  plot2_savefname <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
+<span id="cb861-155"><a href="ch36_singletrial_V.html#cb861-155" aria-hidden="true" tabindex="-1"></a>    analysis_dir,</span>
+<span id="cb861-156"><a href="ch36_singletrial_V.html#cb861-156" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(</span>
+<span id="cb861-157"><a href="ch36_singletrial_V.html#cb861-157" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;signature_task-&quot;</span>,</span>
+<span id="cb861-158"><a href="ch36_singletrial_V.html#cb861-158" aria-hidden="true" tabindex="-1"></a>      taskname,</span>
+<span id="cb861-159"><a href="ch36_singletrial_V.html#cb861-159" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;_event-&quot;</span>,</span>
+<span id="cb861-160"><a href="ch36_singletrial_V.html#cb861-160" aria-hidden="true" tabindex="-1"></a>      plot_keyword,</span>
+<span id="cb861-161"><a href="ch36_singletrial_V.html#cb861-161" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;_dv-&quot;</span>,</span>
+<span id="cb861-162"><a href="ch36_singletrial_V.html#cb861-162" aria-hidden="true" tabindex="-1"></a>      signature_key,</span>
+<span id="cb861-163"><a href="ch36_singletrial_V.html#cb861-163" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;_&quot;</span>,</span>
+<span id="cb861-164"><a href="ch36_singletrial_V.html#cb861-164" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()),</span>
+<span id="cb861-165"><a href="ch36_singletrial_V.html#cb861-165" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;.png&quot;</span>,</span>
+<span id="cb861-166"><a href="ch36_singletrial_V.html#cb861-166" aria-hidden="true" tabindex="-1"></a>      <span class="at">sep =</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb861-167"><a href="ch36_singletrial_V.html#cb861-167" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb861-168"><a href="ch36_singletrial_V.html#cb861-168" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb861-169"><a href="ch36_singletrial_V.html#cb861-169" aria-hidden="true" tabindex="-1"></a>  p <span class="ot">&lt;-</span> <span class="fu">plot_halfrainclouds_twofactor</span>(</span>
+<span id="cb861-170"><a href="ch36_singletrial_V.html#cb861-170" aria-hidden="true" tabindex="-1"></a>    subjectwise,</span>
+<span id="cb861-171"><a href="ch36_singletrial_V.html#cb861-171" aria-hidden="true" tabindex="-1"></a>    groupwise,</span>
+<span id="cb861-172"><a href="ch36_singletrial_V.html#cb861-172" aria-hidden="true" tabindex="-1"></a>    iv1,</span>
+<span id="cb861-173"><a href="ch36_singletrial_V.html#cb861-173" aria-hidden="true" tabindex="-1"></a>    iv2,</span>
+<span id="cb861-174"><a href="ch36_singletrial_V.html#cb861-174" aria-hidden="true" tabindex="-1"></a>    subject_mean,</span>
+<span id="cb861-175"><a href="ch36_singletrial_V.html#cb861-175" aria-hidden="true" tabindex="-1"></a>    group_mean,</span>
+<span id="cb861-176"><a href="ch36_singletrial_V.html#cb861-176" aria-hidden="true" tabindex="-1"></a>    se,</span>
+<span id="cb861-177"><a href="ch36_singletrial_V.html#cb861-177" aria-hidden="true" tabindex="-1"></a>    subject,</span>
+<span id="cb861-178"><a href="ch36_singletrial_V.html#cb861-178" aria-hidden="true" tabindex="-1"></a>    ggtitle,</span>
+<span id="cb861-179"><a href="ch36_singletrial_V.html#cb861-179" aria-hidden="true" tabindex="-1"></a>    title,</span>
+<span id="cb861-180"><a href="ch36_singletrial_V.html#cb861-180" aria-hidden="true" tabindex="-1"></a>    xlab,</span>
+<span id="cb861-181"><a href="ch36_singletrial_V.html#cb861-181" aria-hidden="true" tabindex="-1"></a>    ylab,</span>
+<span id="cb861-182"><a href="ch36_singletrial_V.html#cb861-182" aria-hidden="true" tabindex="-1"></a>    taskname,</span>
+<span id="cb861-183"><a href="ch36_singletrial_V.html#cb861-183" aria-hidden="true" tabindex="-1"></a>    ylim,</span>
+<span id="cb861-184"><a href="ch36_singletrial_V.html#cb861-184" aria-hidden="true" tabindex="-1"></a>    <span class="at">w =</span> <span class="dv">10</span>,</span>
+<span id="cb861-185"><a href="ch36_singletrial_V.html#cb861-185" aria-hidden="true" tabindex="-1"></a>    <span class="at">h =</span> <span class="dv">6</span>,</span>
+<span id="cb861-186"><a href="ch36_singletrial_V.html#cb861-186" aria-hidden="true" tabindex="-1"></a>    dv_keyword,</span>
+<span id="cb861-187"><a href="ch36_singletrial_V.html#cb861-187" aria-hidden="true" tabindex="-1"></a>    color,</span>
+<span id="cb861-188"><a href="ch36_singletrial_V.html#cb861-188" aria-hidden="true" tabindex="-1"></a>    plot2_savefname</span>
+<span id="cb861-189"><a href="ch36_singletrial_V.html#cb861-189" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb861-190"><a href="ch36_singletrial_V.html#cb861-190" aria-hidden="true" tabindex="-1"></a>  p</span>
+<span id="cb861-191"><a href="ch36_singletrial_V.html#cb861-191" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;/Users/h/Dropbox (Dartmouth College)/projects_dropbox/social_influence_analysis/analysis/fmri/nilearn/signature_extract/signature-VPS_sub-all_runtype-pvc_event-stimulus.tsv&quot;</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (`geom_half_violin()`).</code></pre>
+<div id="load-behavioral-data" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Load behavioral data<a href="ch36_singletrial_V.html#load-behavioral-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb864"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb864-1"><a href="ch36_singletrial_V.html#cb864-1" aria-hidden="true" tabindex="-1"></a>main_dir <span class="ot">=</span> <span class="fu">dirname</span>(<span class="fu">dirname</span>(<span class="fu">getwd</span>()))</span>
+<span id="cb864-2"><a href="ch36_singletrial_V.html#cb864-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(main_dir)</span></code></pre></div>
+<pre><code>## [1] &quot;/Users/h/Dropbox (Dartmouth College)/projects_dropbox/social_influence_analysis&quot;</code></pre>
+<div class="sourceCode" id="cb866"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb866-1"><a href="ch36_singletrial_V.html#cb866-1" aria-hidden="true" tabindex="-1"></a>datadir <span class="ot">=</span> <span class="fu">file.path</span>(main_dir, <span class="st">&#39;data&#39;</span>, <span class="st">&#39;beh&#39;</span>, <span class="st">&#39;beh02_preproc&#39;</span>)</span>
+<span id="cb866-2"><a href="ch36_singletrial_V.html#cb866-2" aria-hidden="true" tabindex="-1"></a>taskname <span class="ot">=</span> <span class="st">&#39;*&#39;</span></span>
+<span id="cb866-3"><a href="ch36_singletrial_V.html#cb866-3" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
+<span id="cb866-4"><a href="ch36_singletrial_V.html#cb866-4" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_stimulus_type&quot;</span>; </span>
+<span id="cb866-5"><a href="ch36_singletrial_V.html#cb866-5" aria-hidden="true" tabindex="-1"></a>iv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;stim&quot;</span>; </span>
+<span id="cb866-6"><a href="ch36_singletrial_V.html#cb866-6" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event04_actual_angle&quot;</span>; dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;outcome&quot;</span></span>
+<span id="cb866-7"><a href="ch36_singletrial_V.html#cb866-7" aria-hidden="true" tabindex="-1"></a>exclude <span class="ot">&lt;-</span> <span class="st">&quot;sub-0001|sub-0003|sub-0004|sub-0005|sub-0025|sub-0999&quot;</span></span>
+<span id="cb866-8"><a href="ch36_singletrial_V.html#cb866-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb866-9"><a href="ch36_singletrial_V.html#cb866-9" aria-hidden="true" tabindex="-1"></a>p.df <span class="ot">&lt;-</span> <span class="fu">load_task_social_df</span>(datadir, <span class="at">taskname =</span> <span class="st">&quot;pain&quot;</span>, subject_varkey, iv, dv, exclude)</span>
+<span id="cb866-10"><a href="ch36_singletrial_V.html#cb866-10" aria-hidden="true" tabindex="-1"></a>v.df <span class="ot">&lt;-</span> <span class="fu">load_task_social_df</span>(datadir, <span class="at">taskname =</span> <span class="st">&quot;vicarious&quot;</span>, subject_varkey, iv, dv, exclude)</span>
+<span id="cb866-11"><a href="ch36_singletrial_V.html#cb866-11" aria-hidden="true" tabindex="-1"></a>c.df <span class="ot">&lt;-</span> <span class="fu">load_task_social_df</span>(datadir, <span class="at">taskname =</span> <span class="st">&quot;cognitive&quot;</span>, subject_varkey, iv, dv, exclude)</span>
+<span id="cb866-12"><a href="ch36_singletrial_V.html#cb866-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb866-13"><a href="ch36_singletrial_V.html#cb866-13" aria-hidden="true" tabindex="-1"></a>p.df2<span class="ot">=</span> p.df <span class="sc">%&gt;%</span></span>
+<span id="cb866-14"><a href="ch36_singletrial_V.html#cb866-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(src_subject_id ) <span class="sc">%&gt;%</span></span>
+<span id="cb866-15"><a href="ch36_singletrial_V.html#cb866-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id) <span class="sc">%&gt;%</span></span>
+<span id="cb866-16"><a href="ch36_singletrial_V.html#cb866-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">trial_index =</span> <span class="fu">row_number</span>())</span>
+<span id="cb866-17"><a href="ch36_singletrial_V.html#cb866-17" aria-hidden="true" tabindex="-1"></a>data_p <span class="ot">&lt;-</span> p.df2 <span class="sc">%&gt;%</span> </span>
+<span id="cb866-18"><a href="ch36_singletrial_V.html#cb866-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id, session_id, param_run_num) <span class="sc">%&gt;%</span> </span>
+<span id="cb866-19"><a href="ch36_singletrial_V.html#cb866-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">trial_index =</span> <span class="fu">row_number</span>(param_run_num))</span>
+<span id="cb866-20"><a href="ch36_singletrial_V.html#cb866-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb866-21"><a href="ch36_singletrial_V.html#cb866-21" aria-hidden="true" tabindex="-1"></a>v.df2<span class="ot">=</span> v.df <span class="sc">%&gt;%</span></span>
+<span id="cb866-22"><a href="ch36_singletrial_V.html#cb866-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(src_subject_id ) <span class="sc">%&gt;%</span></span>
+<span id="cb866-23"><a href="ch36_singletrial_V.html#cb866-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id) <span class="sc">%&gt;%</span></span>
+<span id="cb866-24"><a href="ch36_singletrial_V.html#cb866-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">trial_index =</span> <span class="fu">row_number</span>())</span>
+<span id="cb866-25"><a href="ch36_singletrial_V.html#cb866-25" aria-hidden="true" tabindex="-1"></a>data_v <span class="ot">&lt;-</span> v.df2 <span class="sc">%&gt;%</span> </span>
+<span id="cb866-26"><a href="ch36_singletrial_V.html#cb866-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id, session_id, param_run_num) <span class="sc">%&gt;%</span> </span>
+<span id="cb866-27"><a href="ch36_singletrial_V.html#cb866-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">trial_index =</span> <span class="fu">row_number</span>(param_run_num))</span>
+<span id="cb866-28"><a href="ch36_singletrial_V.html#cb866-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb866-29"><a href="ch36_singletrial_V.html#cb866-29" aria-hidden="true" tabindex="-1"></a>c.df2<span class="ot">=</span> c.df <span class="sc">%&gt;%</span></span>
+<span id="cb866-30"><a href="ch36_singletrial_V.html#cb866-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(src_subject_id ) <span class="sc">%&gt;%</span></span>
+<span id="cb866-31"><a href="ch36_singletrial_V.html#cb866-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id) <span class="sc">%&gt;%</span></span>
+<span id="cb866-32"><a href="ch36_singletrial_V.html#cb866-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">trial_index =</span> <span class="fu">row_number</span>()<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb866-33"><a href="ch36_singletrial_V.html#cb866-33" aria-hidden="true" tabindex="-1"></a>data_c <span class="ot">&lt;-</span> c.df2 <span class="sc">%&gt;%</span> </span>
+<span id="cb866-34"><a href="ch36_singletrial_V.html#cb866-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id, session_id, param_run_num) <span class="sc">%&gt;%</span> </span>
+<span id="cb866-35"><a href="ch36_singletrial_V.html#cb866-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">trial_index =</span> <span class="fu">row_number</span>(param_run_num) )</span>
+<span id="cb866-36"><a href="ch36_singletrial_V.html#cb866-36" aria-hidden="true" tabindex="-1"></a>p.sub <span class="ot">&lt;-</span> data_p[,<span class="fu">c</span>(<span class="st">&quot;src_subject_id&quot;</span>, <span class="st">&quot;session_id&quot;</span>, <span class="st">&quot;param_run_num&quot;</span>, <span class="st">&quot;param_task_name&quot;</span>, <span class="st">&quot;event02_expect_angle&quot;</span>, <span class="st">&quot;param_cue_type&quot;</span>, <span class="st">&quot;param_stimulus_type&quot;</span>, <span class="st">&quot;event04_actual_angle&quot;</span>, <span class="st">&quot;trial_index&quot;</span>)]</span>
+<span id="cb866-37"><a href="ch36_singletrial_V.html#cb866-37" aria-hidden="true" tabindex="-1"></a>v.sub <span class="ot">&lt;-</span> data_v[,<span class="fu">c</span>(<span class="st">&quot;src_subject_id&quot;</span>, <span class="st">&quot;session_id&quot;</span>, <span class="st">&quot;param_run_num&quot;</span>, <span class="st">&quot;param_task_name&quot;</span>, <span class="st">&quot;event02_expect_angle&quot;</span>, <span class="st">&quot;param_cue_type&quot;</span>, <span class="st">&quot;param_stimulus_type&quot;</span>, <span class="st">&quot;event04_actual_angle&quot;</span>, <span class="st">&quot;trial_index&quot;</span>)]</span>
+<span id="cb866-38"><a href="ch36_singletrial_V.html#cb866-38" aria-hidden="true" tabindex="-1"></a>c.sub <span class="ot">&lt;-</span> data_c[,<span class="fu">c</span>(<span class="st">&quot;src_subject_id&quot;</span>, <span class="st">&quot;session_id&quot;</span>, <span class="st">&quot;param_run_num&quot;</span>, <span class="st">&quot;param_task_name&quot;</span>, <span class="st">&quot;event02_expect_angle&quot;</span>, <span class="st">&quot;param_cue_type&quot;</span>, <span class="st">&quot;param_stimulus_type&quot;</span>, <span class="st">&quot;event04_actual_angle&quot;</span>, <span class="st">&quot;trial_index&quot;</span>)]</span>
+<span id="cb866-39"><a href="ch36_singletrial_V.html#cb866-39" aria-hidden="true" tabindex="-1"></a><span class="co"># sub, ses, run, runtype, event, trial, cuetype, stimintensity</span></span>
+<span id="cb866-40"><a href="ch36_singletrial_V.html#cb866-40" aria-hidden="true" tabindex="-1"></a><span class="co"># src_subject_id, session_id, param_run_num, param_task_name, event02_expect_angle, param_cue_type, param_stimulus_type, event04_actual_angle</span></span>
+<span id="cb866-41"><a href="ch36_singletrial_V.html#cb866-41" aria-hidden="true" tabindex="-1"></a>pvc.sub <span class="ot">=</span> <span class="fu">rbind</span>(p.sub, v.sub, c.sub)</span></code></pre></div>
+<div class="sourceCode" id="cb867"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb867-1"><a href="ch36_singletrial_V.html#cb867-1" aria-hidden="true" tabindex="-1"></a>pvc.sub<span class="sc">$</span>trial_ind <span class="ot">&lt;-</span> pvc.sub<span class="sc">$</span>trial_index <span class="sc">-</span><span class="dv">1</span> </span>
+<span id="cb867-2"><a href="ch36_singletrial_V.html#cb867-2" aria-hidden="true" tabindex="-1"></a>pvc.sub<span class="sc">$</span>sub <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">&quot;sub-%04d&quot;</span>, pvc.sub<span class="sc">$</span>src_subject_id)</span>
+<span id="cb867-3"><a href="ch36_singletrial_V.html#cb867-3" aria-hidden="true" tabindex="-1"></a>pvc.sub<span class="sc">$</span>ses <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">&quot;ses-%02d&quot;</span>, pvc.sub<span class="sc">$</span>session_id)</span>
+<span id="cb867-4"><a href="ch36_singletrial_V.html#cb867-4" aria-hidden="true" tabindex="-1"></a>pvc.sub<span class="sc">$</span>run <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">&quot;run-%02d&quot;</span>, pvc.sub<span class="sc">$</span>param_run_num)</span>
+<span id="cb867-5"><a href="ch36_singletrial_V.html#cb867-5" aria-hidden="true" tabindex="-1"></a>pvc.sub<span class="sc">$</span>runtype <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">&quot;runtype-%s&quot;</span>, pvc.sub<span class="sc">$</span>param_task_name)</span>
+<span id="cb867-6"><a href="ch36_singletrial_V.html#cb867-6" aria-hidden="true" tabindex="-1"></a>pvc.sub<span class="sc">$</span>trial <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">&quot;trial-%03d&quot;</span>, pvc.sub<span class="sc">$</span>trial_ind)</span>
+<span id="cb867-7"><a href="ch36_singletrial_V.html#cb867-7" aria-hidden="true" tabindex="-1"></a>pvc.sub[<span class="fu">c</span>(<span class="st">&#39;cue&#39;</span>, <span class="st">&#39;DEPc&#39;</span>)]  <span class="ot">&lt;-</span> <span class="fu">str_split_fixed</span>(pvc.sub<span class="sc">$</span>param_cue_type , <span class="st">&#39;_&#39;</span>, <span class="dv">2</span>)</span>
+<span id="cb867-8"><a href="ch36_singletrial_V.html#cb867-8" aria-hidden="true" tabindex="-1"></a>pvc.sub<span class="sc">$</span>cuetype <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">&quot;cuetype-%s&quot;</span>, pvc.sub<span class="sc">$</span>cue)</span>
+<span id="cb867-9"><a href="ch36_singletrial_V.html#cb867-9" aria-hidden="true" tabindex="-1"></a>pvc.sub[<span class="fu">c</span>(<span class="st">&#39;stimintensity&#39;</span>, <span class="st">&#39;DEP&#39;</span>)]  <span class="ot">&lt;-</span> <span class="fu">str_split_fixed</span>(pvc.sub<span class="sc">$</span>param_stimulus_type , <span class="st">&#39;_&#39;</span>, <span class="dv">2</span>)</span>
+<span id="cb867-10"><a href="ch36_singletrial_V.html#cb867-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb867-11"><a href="ch36_singletrial_V.html#cb867-11" aria-hidden="true" tabindex="-1"></a><span class="co"># merge</span></span>
+<span id="cb867-12"><a href="ch36_singletrial_V.html#cb867-12" aria-hidden="true" tabindex="-1"></a>pvc.beh <span class="ot">&lt;-</span> pvc.sub[,<span class="fu">c</span>(<span class="st">&quot;sub&quot;</span>, <span class="st">&quot;ses&quot;</span>, <span class="st">&quot;run&quot;</span>, <span class="st">&quot;runtype&quot;</span>, <span class="st">&quot;trial&quot;</span>, <span class="st">&quot;cuetype&quot;</span>, <span class="st">&quot;stimintensity&quot;</span>,<span class="st">&quot;event02_expect_angle&quot;</span>, <span class="st">&quot;event04_actual_angle&quot;</span>)]</span>
+<span id="cb867-13"><a href="ch36_singletrial_V.html#cb867-13" aria-hidden="true" tabindex="-1"></a>df_merge <span class="ot">&lt;-</span> <span class="fu">merge</span>(pvc, pvc.beh, </span>
+<span id="cb867-14"><a href="ch36_singletrial_V.html#cb867-14" aria-hidden="true" tabindex="-1"></a>                  <span class="at">by.x =</span> <span class="fu">c</span>(<span class="st">&quot;sub&quot;</span>, <span class="st">&quot;ses&quot;</span>, <span class="st">&quot;run&quot;</span>, <span class="st">&quot;runtype&quot;</span>, <span class="st">&quot;trial&quot;</span>, <span class="st">&quot;cuetype&quot;</span>, <span class="st">&quot;stimintensity&quot;</span>),</span>
+<span id="cb867-15"><a href="ch36_singletrial_V.html#cb867-15" aria-hidden="true" tabindex="-1"></a>                  <span class="at">by.y =</span> <span class="fu">c</span>(<span class="st">&quot;sub&quot;</span>, <span class="st">&quot;ses&quot;</span>, <span class="st">&quot;run&quot;</span>, <span class="st">&quot;runtype&quot;</span>, <span class="st">&quot;trial&quot;</span>, <span class="st">&quot;cuetype&quot;</span>, <span class="st">&quot;stimintensity&quot;</span>)</span>
+<span id="cb867-16"><a href="ch36_singletrial_V.html#cb867-16" aria-hidden="true" tabindex="-1"></a>                  )</span></code></pre></div>
+</div>
+</div>
+<div id="pvc-all-task-comparison-1" class="section level2 hasAnchor" number="27.1">
+<h2><span class="header-section-number">27.1</span> PVC all task comparison<a href="ch36_singletrial_V.html#pvc-all-task-comparison-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb868"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb868-1"><a href="ch36_singletrial_V.html#cb868-1" aria-hidden="true" tabindex="-1"></a>model.alltask <span class="ot">&lt;-</span></span>
+<span id="cb868-2"><a href="ch36_singletrial_V.html#cb868-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lmer</span>(VPS <span class="sc">~</span> task_con_linear<span class="sc">*</span>stim_factor <span class="sc">+</span> </span>
+<span id="cb868-3"><a href="ch36_singletrial_V.html#cb868-3" aria-hidden="true" tabindex="-1"></a>         task_con_quad<span class="sc">*</span>stim_factor <span class="sc">+</span> (task<span class="sc">|</span>sub), <span class="at">data =</span> pvc)</span>
+<span id="cb868-4"><a href="ch36_singletrial_V.html#cb868-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model.alltask)</span></code></pre></div>
+<pre class="bg-warning"><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
+## lmerModLmerTest]
+## Formula: VPS ~ task_con_linear * stim_factor + task_con_quad * stim_factor +  
+##     (task | sub)
+##    Data: pvc
+## 
+## REML criterion at convergence: 139761.6
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -9.1820 -0.5261  0.0098  0.5486  8.9135 
+## 
+## Random effects:
+##  Groups   Name          Variance Std.Dev. Corr       
+##  sub      (Intercept)   16.59    4.074               
+##           taskpain      35.89    5.991    -0.51      
+##           taskvicarious 16.74    4.091    -0.68  0.36
+##  Residual               74.67    8.641               
+## Number of obs: 19428, groups:  sub, 111
+## 
+## Fixed effects:
+##                                  Estimate Std. Error         df t value
+## (Intercept)                        1.2430     0.3015   130.6173   4.123
+## task_con_linear                   -5.3018     0.9419   164.6488  -5.629
+## stim_factorlow                     0.2913     0.1522 19090.4418   1.914
+## stim_factormed                     0.2269     0.1522 19090.4418   1.491
+## task_con_quad                     -2.1060     0.9129   148.6413  -2.307
+## task_con_linear:stim_factorlow    -0.5887     0.7313 19090.4422  -0.805
+## task_con_linear:stim_factormed    -1.5442     0.7313 19090.4422  -2.112
+## stim_factorlow:task_con_quad       2.6128     0.6391 19090.4422   4.088
+## stim_factormed:task_con_quad       2.2080     0.6391 19090.4422   3.455
+##                                Pr(&gt;|t|)    
+## (Intercept)                    6.61e-05 ***
+## task_con_linear                7.65e-08 ***
+## stim_factorlow                 0.055677 .  
+## stim_factormed                 0.136103    
+## task_con_quad                  0.022436 *  
+## task_con_linear:stim_factorlow 0.420798    
+## task_con_linear:stim_factormed 0.034733 *  
+## stim_factorlow:task_con_quad   4.36e-05 ***
+## stim_factormed:task_con_quad   0.000552 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Correlation of Fixed Effects:
+##                      (Intr) tsk_cn_l stm_fctrl stm_fctrm tsk_cn_q
+## task_cn_lnr          -0.192                                      
+## stim_fctrlw          -0.252  0.010                               
+## stim_fctrmd          -0.252  0.010    0.500                      
+## task_con_qd           0.289 -0.766   -0.019    -0.019            
+## tsk_cn_lnr:stm_fctrl  0.006 -0.388   -0.025    -0.012     0.300  
+## tsk_cn_lnr:stm_fctrm  0.006 -0.388   -0.012    -0.025     0.300  
+## stm_fctrl:__         -0.014  0.333    0.054     0.027    -0.350  
+## stm_fctrm:__         -0.014  0.333    0.027     0.054    -0.350  
+##                      tsk_cn_lnr:stm_fctrl tsk_cn_lnr:stm_fctrm stm_fctrl:__
+## task_cn_lnr                                                                
+## stim_fctrlw                                                                
+## stim_fctrmd                                                                
+## task_con_qd                                                                
+## tsk_cn_lnr:stm_fctrl                                                       
+## tsk_cn_lnr:stm_fctrm  0.500                                                
+## stm_fctrl:__         -0.858               -0.429                           
+## stm_fctrm:__         -0.429               -0.858                0.500</code></pre>
+<div class="sourceCode" id="cb870"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb870-1"><a href="ch36_singletrial_V.html#cb870-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;eta squared&quot;</span>)</span></code></pre></div>
+<pre class="bg-warning"><code>## [1] &quot;eta squared&quot;</code></pre>
+<div class="sourceCode" id="cb872"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb872-1"><a href="ch36_singletrial_V.html#cb872-1" aria-hidden="true" tabindex="-1"></a><span class="fu">eta_squared</span>(model.alltask, <span class="at">partial =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre class="bg-warning"><code>## # Effect Size for ANOVA (Type III)
+## 
+## Parameter                   | Eta2 (partial) |       95% CI
+## -----------------------------------------------------------
+## task_con_linear             |           0.33 | [0.21, 1.00]
+## stim_factor                 |       2.12e-04 | [0.00, 1.00]
+## task_con_quad               |       3.42e-03 | [0.00, 1.00]
+## task_con_linear:stim_factor |       2.38e-04 | [0.00, 1.00]
+## stim_factor:task_con_quad   |       1.01e-03 | [0.00, 1.00]
+## 
+## - One-sided CIs: upper bound fixed at [1.00].</code></pre>
+<div class="sourceCode" id="cb874"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb874-1"><a href="ch36_singletrial_V.html#cb874-1" aria-hidden="true" tabindex="-1"></a>parameters<span class="sc">::</span><span class="fu">model_parameters</span>(model.alltask)</span></code></pre></div>
+<pre class="bg-warning"><code>## # Fixed Effects
+## 
+## Parameter                           | Coefficient |   SE |         95% CI | t(19412) |      p
+## ---------------------------------------------------------------------------------------------
+## (Intercept)                         |        1.24 | 0.30 | [ 0.65,  1.83] |     4.12 | &lt; .001
+## task con linear                     |       -5.30 | 0.94 | [-7.15, -3.46] |    -5.63 | &lt; .001
+## stim factor [low]                   |        0.29 | 0.15 | [-0.01,  0.59] |     1.91 | 0.056 
+## stim factor [med]                   |        0.23 | 0.15 | [-0.07,  0.53] |     1.49 | 0.136 
+## task con quad                       |       -2.11 | 0.91 | [-3.90, -0.32] |    -2.31 | 0.021 
+## task con linear * stim factor [low] |       -0.59 | 0.73 | [-2.02,  0.84] |    -0.81 | 0.421 
+## task con linear * stim factor [med] |       -1.54 | 0.73 | [-2.98, -0.11] |    -2.11 | 0.035 
+## stim factor [low] * task con quad   |        2.61 | 0.64 | [ 1.36,  3.87] |     4.09 | &lt; .001
+## stim factor [med] * task con quad   |        2.21 | 0.64 | [ 0.96,  3.46] |     3.45 | &lt; .001
+## 
+## # Random Effects
+## 
+## Parameter                          | Coefficient
+## ------------------------------------------------
+## SD (Intercept: sub)                |        4.07
+## SD (taskpain: sub)                 |        5.99
+## SD (taskvicarious: sub)            |        4.09
+## Cor (Intercept~taskpain: sub)      |       -0.51
+## Cor (Intercept~taskvicarious: sub) |       -0.68
+## Cor (taskpain~taskvicarious: sub)  |        0.36
+## SD (Residual)                      |        8.64</code></pre>
+<pre><code>## 
+## Uncertainty intervals (equal-tailed) and p-values (two-tailed) computed
+##   using a Wald t-distribution approximation.</code></pre>
+<div class="sourceCode" id="cb877"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb877-1"><a href="ch36_singletrial_V.html#cb877-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lme.dscore</span>(model.alltask, pvc, <span class="at">type =</span> <span class="st">&quot;lme4&quot;</span>)</span></code></pre></div>
+<pre class="bg-warning"><code>##                                         t         df           d
+## task_con_linear                -5.6291153   164.6488 -0.87738633
+## stim_factorlow                  1.9136684 19090.4418  0.02770057
+## stim_factormed                  1.4905241 19090.4418  0.02157551
+## task_con_quad                  -2.3069934   148.6413 -0.37844832
+## task_con_linear:stim_factorlow -0.8050546 19090.4422 -0.01165326
+## task_con_linear:stim_factormed -2.1116090 19090.4422 -0.03056578
+## stim_factorlow:task_con_quad    4.0883679 19090.4422  0.05917959
+## stim_factormed:task_con_quad    3.4549197 19090.4422  0.05001036</code></pre>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="vicarious-only-stim-x-cue-interaction" class="section level2 hasAnchor" number="27.2">
+<h2><span class="header-section-number">27.2</span> Vicarious only Stim x cue interaction<a href="ch36_singletrial_V.html#vicarious-only-stim-x-cue-interaction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="x3-stimulus-intensity-cue-1" class="section level3 hasAnchor" number="27.2.1">
+<h3><span class="header-section-number">27.2.1</span> 2x3 stimulus intensity * cue<a href="ch36_singletrial_V.html#x3-stimulus-intensity-cue-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="linear-model-3" class="section level3 hasAnchor" number="27.2.2">
+<h3><span class="header-section-number">27.2.2</span> Linear model<a href="ch36_singletrial_V.html#linear-model-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## [1] &quot;model:  Vps  ratings -  vicarious&quot;
+## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
+## lmerModLmerTest]
+## Formula: as.formula(model_string)
+##    Data: data
+## 
+## REML criterion at convergence: 30671.7
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -5.6737 -0.5707  0.0062  0.5748  8.2022 
+## 
+## Random effects:
+##  Groups   Name                       Variance Std.Dev. Corr                   
+##  sub      (Intercept)                12.0560  3.4722                          
+##           social_cue                  0.1352  0.3677    0.42                  
+##           stim_con_linear             0.8497  0.9218    0.49  0.47            
+##           stim_con_quad               0.7899  0.8888   -0.15 -0.63 -0.88      
+##           social_cue:stim_con_linear  2.6145  1.6169    0.10 -0.72 -0.63  0.92
+##           social_cue:stim_con_quad    0.6420  0.8012   -0.65  0.08  0.32 -0.65
+##  Residual                            55.4371  7.4456                          
+##       
+##       
+##       
+##       
+##       
+##       
+##  -0.74
+##       
+## Number of obs: 4438, groups:  sub, 104
+## 
+## Fixed effects:
+##                             Estimate Std. Error        df t value Pr(&gt;|t|)    
+## (Intercept)                  1.54307    0.36375  96.80309   4.242 5.07e-05 ***
+## social_cue                   0.06073    0.22720 310.35883   0.267    0.789    
+## stim_con_linear              0.39210    0.29027 127.42101   1.351    0.179    
+## stim_con_quad               -0.22162    0.25817 152.40459  -0.858    0.392    
+## social_cue:stim_con_linear  -0.05307    0.57324 184.18191  -0.093    0.926    
+## social_cue:stim_con_quad    -0.08882    0.48805 551.63068  -0.182    0.856    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Correlation of Fixed Effects:
+##                (Intr) socl_c stm_cn_l stm_cn_q scl_c:stm_cn_l
+## social_cue      0.061                                        
+## stim_cn_lnr     0.153  0.035                                 
+## stim_con_qd    -0.045 -0.038 -0.114                          
+## scl_c:stm_cn_l  0.031 -0.028 -0.074    0.094                 
+## scl_c:stm_cn_q -0.100  0.010  0.016   -0.052   -0.044        
+## optimizer (nloptwrap) convergence code: 0 (OK)
+## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+</div>
+<div id="vps-stimulus-intensity-cohens-d-0.2131521" class="section level3 hasAnchor" number="27.2.3">
+<h3><span class="header-section-number">27.2.3</span> VPS stimulus intensity Cohen’s d = 0.2131521<a href="ch36_singletrial_V.html#vps-stimulus-intensity-cohens-d-0.2131521" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
+## lmerModLmerTest]
+## Formula: 
+## VPS ~ stim_con_linear + stim_con_quad + (stim_con_linear + stim_con_quad |  
+##     sub)
+##    Data: data_screen
+## 
+## REML criterion at convergence: 30557.2
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -5.6636 -0.5740  0.0071  0.5821  8.2935 
+## 
+## Random effects:
+##  Groups   Name            Variance Std.Dev. Corr       
+##  sub      (Intercept)     12.0464  3.4708              
+##           stim_con_linear  0.6547  0.8091    0.56      
+##           stim_con_quad    0.4444  0.6667   -0.18 -0.92
+##  Residual                 55.7439  7.4662              
+## Number of obs: 4420, groups:  sub, 104
+## 
+## Fixed effects:
+##                 Estimate Std. Error       df t value Pr(&gt;|t|)    
+## (Intercept)       1.5395     0.3638  96.9481   4.232 5.27e-05 ***
+## stim_con_linear   0.3853     0.2876 157.9802   1.340    0.182    
+## stim_con_quad    -0.2258     0.2518 146.0413  -0.897    0.371    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Correlation of Fixed Effects:
+##             (Intr) stm_cn_l
+## stim_cn_lnr  0.153         
+## stim_con_qd -0.042 -0.085  
+## optimizer (nloptwrap) convergence code: 0 (OK)
+## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+<pre><code>## [1] &quot;eta squared&quot;</code></pre>
+<pre><code>## # Effect Size for ANOVA (Type III)
+## 
+## Parameter       | Eta2 (partial) |       95% CI
+## -----------------------------------------------
+## stim_con_linear |           0.01 | [0.00, 1.00]
+## stim_con_quad   |       5.47e-03 | [0.00, 1.00]
+## 
+## - One-sided CIs: upper bound fixed at [1.00].</code></pre>
+<pre><code>## # Fixed Effects
+## 
+## Parameter       | Coefficient |   SE |        95% CI | t(4410) |      p
+## -----------------------------------------------------------------------
+## (Intercept)     |        1.54 | 0.36 | [ 0.83, 2.25] |    4.23 | &lt; .001
+## stim con linear |        0.39 | 0.29 | [-0.18, 0.95] |    1.34 | 0.180 
+## stim con quad   |       -0.23 | 0.25 | [-0.72, 0.27] |   -0.90 | 0.370 
+## 
+## # Random Effects
+## 
+## Parameter                                | Coefficient
+## ------------------------------------------------------
+## SD (Intercept: sub)                      |        3.47
+## SD (stim_con_linear: sub)                |        0.81
+## SD (stim_con_quad: sub)                  |        0.67
+## Cor (Intercept~stim_con_linear: sub)     |        0.56
+## Cor (Intercept~stim_con_quad: sub)       |       -0.18
+## Cor (stim_con_linear~stim_con_quad: sub) |       -0.92
+## SD (Residual)                            |        7.47</code></pre>
+<pre><code>##                          t       df          d
+## stim_con_linear  1.3395560 157.9802  0.2131521
+## stim_con_quad   -0.8965857 146.0413 -0.1483829</code></pre>
+</div>
+<div id="vps-stimulus-cue-effect-size-stim_d-0.217-cue_d-0.013" class="section level3 hasAnchor" number="27.2.4">
+<h3><span class="header-section-number">27.2.4</span> VPS stimulus &amp; cue effect size: stim_d = 0.217, cue_d = 0.013<a href="ch36_singletrial_V.html#vps-stimulus-cue-effect-size-stim_d-0.217-cue_d-0.013" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
+## lmerModLmerTest]
+## Formula: 
+## VPS ~ cue_con * stim_con_linear + cue_con * stim_con_quad + (cue_con +  
+##     stim_factor | sub)
+##    Data: data_screen
+## 
+## REML criterion at convergence: 30556.8
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -5.6760 -0.5728  0.0047  0.5794  8.2526 
+## 
+## Random effects:
+##  Groups   Name           Variance Std.Dev. Corr             
+##  sub      (Intercept)    14.25491 3.7756                    
+##           cue_con         0.02276 0.1509    0.97            
+##           stim_factorlow  0.65847 0.8115   -0.67 -0.48      
+##           stim_factormed  1.08257 1.0405   -0.47 -0.25  0.97
+##  Residual                55.77751 7.4684                    
+## Number of obs: 4420, groups:  sub, 104
+## 
+## Fixed effects:
+##                           Estimate Std. Error         df t value Pr(&gt;|t|)    
+## (Intercept)                1.53878    0.36362   96.91906   4.232 5.27e-05 ***
+## cue_con                    0.08422    0.22548 2920.30961   0.374    0.709    
+## stim_con_linear            0.38699    0.28783  153.46942   1.345    0.181    
+## stim_con_quad             -0.22599    0.25176  138.57153  -0.898    0.371    
+## cue_con:stim_con_linear    0.02662    0.54974 4231.82383   0.048    0.961    
+## cue_con:stim_con_quad     -0.08653    0.48351 4233.57506  -0.179    0.858    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Correlation of Fixed Effects:
+##               (Intr) cue_cn stm_cn_l stm_cn_q c_cn:stm_cn_l
+## cue_con        0.059                                       
+## stim_cn_lnr    0.154  0.020                                
+## stim_con_qd   -0.044 -0.003 -0.084                         
+## c_cn:stm_cn_l  0.006  0.011 -0.009   -0.008                
+## c_cn:stm_cn_q  0.002  0.007 -0.006   -0.011   -0.007       
+## optimizer (nloptwrap) convergence code: 0 (OK)
+## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+<pre><code>## [1] &quot;eta squared&quot;</code></pre>
+<pre><code>## # Effect Size for ANOVA (Type III)
+## 
+## Parameter               | Eta2 (partial) |       95% CI
+## -------------------------------------------------------
+## cue_con                 |       4.78e-05 | [0.00, 1.00]
+## stim_con_linear         |           0.01 | [0.00, 1.00]
+## stim_con_quad           |       5.78e-03 | [0.00, 1.00]
+## cue_con:stim_con_linear |       5.54e-07 | [0.00, 1.00]
+## cue_con:stim_con_quad   |       7.56e-06 | [0.00, 1.00]
+## 
+## - One-sided CIs: upper bound fixed at [1.00].</code></pre>
+<pre><code>##                                   t        df            d
+## cue_con                  0.37351722 2920.3096  0.013823760
+## stim_con_linear          1.34450856  153.4694  0.217061418
+## stim_con_quad           -0.89765922  138.5715 -0.152512167
+## cue_con:stim_con_linear  0.04842557 4231.8238  0.001488816
+## cue_con:stim_con_quad   -0.17895831 4233.5751 -0.005500830</code></pre>
+</div>
+<div id="lineplots-1" class="section level3 hasAnchor" number="27.2.5">
+<h3><span class="header-section-number">27.2.5</span> Lineplots<a href="ch36_singletrial_V.html#lineplots-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb889"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb889-1"><a href="ch36_singletrial_V.html#cb889-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_lineplot_twofactor</span>(actual_groupwise, <span class="at">taskname =</span> <span class="st">&quot;vicarious&quot;</span>, </span>
+<span id="cb889-2"><a href="ch36_singletrial_V.html#cb889-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">iv1 =</span> <span class="st">&quot;stim_ordered&quot;</span>, <span class="at">iv2 =</span> <span class="st">&quot;cue_ordered&quot;</span>, </span>
+<span id="cb889-3"><a href="ch36_singletrial_V.html#cb889-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">mean =</span> <span class="st">&quot;mean_per_sub_norm_mean&quot;</span>, <span class="at">error =</span> <span class="st">&quot;se&quot;</span>,</span>
+<span id="cb889-4"><a href="ch36_singletrial_V.html#cb889-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;#4575B4&quot;</span>, <span class="st">&quot;#D73027&quot;</span>), <span class="at">ggtitle =</span> <span class="st">&quot;placeholder&quot;</span>, </span>
+<span id="cb889-5"><a href="ch36_singletrial_V.html#cb889-5" aria-hidden="true" tabindex="-1"></a>                        <span class="at">xlab =</span> <span class="st">&quot;Stimulus intensity&quot;</span>, <span class="at">ylab =</span> <span class="fu">paste</span>(signature_key, <span class="st">&quot; (dot product)&quot;</span>))</span></code></pre></div>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="linear-model-with-stim-x-cue-x-expectation-rating" class="section level3 hasAnchor" number="27.2.6">
+<h3><span class="header-section-number">27.2.6</span> Linear model with Stim x Cue x Expectation rating<a href="ch36_singletrial_V.html#linear-model-with-stim-x-cue-x-expectation-rating" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb890"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb890-1"><a href="ch36_singletrial_V.html#cb890-1" aria-hidden="true" tabindex="-1"></a>model.vps3factor <span class="ot">&lt;-</span> <span class="fu">lmer</span>(VPS <span class="sc">~</span> cue_con<span class="sc">*</span>stim_con_linear<span class="sc">*</span>event02_expect_angle <span class="sc">+</span> cue_con<span class="sc">*</span>stim_con_quad<span class="sc">*</span>event02_expect_angle <span class="sc">+</span> (cue_con<span class="sc">|</span>sub), <span class="at">data =</span> data_screen)</span></code></pre></div>
+<pre><code>## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+<div class="sourceCode" id="cb892"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb892-1"><a href="ch36_singletrial_V.html#cb892-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model.vps3factor)</span></code></pre></div>
+<pre><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
+## lmerModLmerTest]
+## Formula: VPS ~ cue_con * stim_con_linear * event02_expect_angle + cue_con *  
+##     stim_con_quad * event02_expect_angle + (cue_con | sub)
+##    Data: data_screen
+## 
+## REML criterion at convergence: 29312.5
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -5.8143 -0.5715  0.0017  0.5741  8.0847 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev. Corr
+##  sub      (Intercept) 12.03471 3.4691       
+##           cue_con      0.01688 0.1299   1.00
+##  Residual             56.37759 7.5085       
+## Number of obs: 4230, groups:  sub, 104
+## 
+## Fixed effects:
+##                                                Estimate Std. Error         df
+## (Intercept)                                   1.237e+00  4.276e-01  1.753e+02
+## cue_con                                      -1.486e-01  4.825e-01  3.376e+03
+## stim_con_linear                               3.205e-01  5.562e-01  4.123e+03
+## event02_expect_angle                          1.098e-02  7.785e-03  3.439e+03
+## stim_con_quad                                -1.352e-01  4.869e-01  4.120e+03
+## cue_con:stim_con_linear                       3.279e-01  1.113e+00  4.125e+03
+## cue_con:event02_expect_angle                 -2.978e-03  1.461e-02  3.433e+03
+## stim_con_linear:event02_expect_angle          8.301e-03  1.695e-02  4.125e+03
+## cue_con:stim_con_quad                         3.254e-01  9.743e-01  4.120e+03
+## event02_expect_angle:stim_con_quad           -5.259e-03  1.400e-02  4.121e+03
+## cue_con:stim_con_linear:event02_expect_angle -2.059e-02  3.394e-02  4.127e+03
+## cue_con:event02_expect_angle:stim_con_quad    3.381e-04  2.801e-02  4.121e+03
+##                                              t value Pr(&gt;|t|)   
+## (Intercept)                                    2.893   0.0043 **
+## cue_con                                       -0.308   0.7581   
+## stim_con_linear                                0.576   0.5645   
+## event02_expect_angle                           1.411   0.1584   
+## stim_con_quad                                 -0.278   0.7813   
+## cue_con:stim_con_linear                        0.295   0.7684   
+## cue_con:event02_expect_angle                  -0.204   0.8385   
+## stim_con_linear:event02_expect_angle           0.490   0.6243   
+## cue_con:stim_con_quad                          0.334   0.7384   
+## event02_expect_angle:stim_con_quad            -0.376   0.7073   
+## cue_con:stim_con_linear:event02_expect_angle  -0.607   0.5440   
+## cue_con:event02_expect_angle:stim_con_quad     0.012   0.9904   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Correlation of Fixed Effects:
+##               (Intr) cue_cn stm_cn_l ev02__ stm_cn_q c_cn:stm_cn_l c_c:02__
+## cue_con        0.307                                                       
+## stim_cn_lnr    0.009  0.024                                                
+## evnt02_xpc_   -0.449 -0.140 -0.015                                         
+## stim_con_qd    0.003  0.013 -0.014    0.025                                
+## c_cn:stm_cn_l  0.016  0.018  0.469   -0.008 -0.021                         
+## c_cn:vn02__   -0.042 -0.724 -0.015   -0.424 -0.014   -0.027                
+## stm_c_:02__   -0.014 -0.007 -0.728    0.056  0.018   -0.108        -0.034  
+## c_cn:stm_cn_q  0.008  0.007 -0.023   -0.007  0.476   -0.015         0.021  
+## evnt02__:__    0.018 -0.011  0.019   -0.081 -0.730    0.012         0.056  
+## c_c:__:02__   -0.007 -0.029 -0.110   -0.031  0.011   -0.729         0.069  
+## c_c:02__:__   -0.006  0.028  0.013    0.046 -0.124    0.020        -0.079  
+##               s__:02 c_cn:stm_cn_q e02__: c_:__:
+## cue_con                                         
+## stim_cn_lnr                                     
+## evnt02_xpc_                                     
+## stim_con_qd                                     
+## c_cn:stm_cn_l                                   
+## c_cn:vn02__                                     
+## stm_c_:02__                                     
+## c_cn:stm_cn_q  0.013                            
+## evnt02__:__   -0.046 -0.124                     
+## c_c:__:02__   -0.421  0.017         0.020       
+## c_c:02__:__    0.018 -0.730        -0.400 -0.046
+## optimizer (nloptwrap) convergence code: 0 (OK)
+## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+<div class="sourceCode" id="cb894"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb894-1"><a href="ch36_singletrial_V.html#cb894-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;eta squared&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;eta squared&quot;</code></pre>
+<div class="sourceCode" id="cb896"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb896-1"><a href="ch36_singletrial_V.html#cb896-1" aria-hidden="true" tabindex="-1"></a><span class="fu">eta_squared</span>(model.vps3factor, <span class="at">partial =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## # Effect Size for ANOVA (Type III)
+## 
+## Parameter                                    | Eta2 (partial) |       95% CI
+## ----------------------------------------------------------------------------
+## cue_con                                      |       2.81e-05 | [0.00, 1.00]
+## stim_con_linear                              |       8.05e-05 | [0.00, 1.00]
+## event02_expect_angle                         |       5.78e-04 | [0.00, 1.00]
+## stim_con_quad                                |       1.87e-05 | [0.00, 1.00]
+## cue_con:stim_con_linear                      |       2.10e-05 | [0.00, 1.00]
+## cue_con:event02_expect_angle                 |       1.21e-05 | [0.00, 1.00]
+## stim_con_linear:event02_expect_angle         |       5.82e-05 | [0.00, 1.00]
+## cue_con:stim_con_quad                        |       2.71e-05 | [0.00, 1.00]
+## event02_expect_angle:stim_con_quad           |       3.42e-05 | [0.00, 1.00]
+## cue_con:stim_con_linear:event02_expect_angle |       8.92e-05 | [0.00, 1.00]
+## cue_con:event02_expect_angle:stim_con_quad   |       3.53e-08 | [0.00, 1.00]
+## 
+## - One-sided CIs: upper bound fixed at [1.00].</code></pre>
+<div class="sourceCode" id="cb898"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb898-1"><a href="ch36_singletrial_V.html#cb898-1" aria-hidden="true" tabindex="-1"></a><span class="co">#parameters::model_parameters(model.vps3factor)</span></span>
+<span id="cb898-2"><a href="ch36_singletrial_V.html#cb898-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lme.dscore</span>(model.vps3factor, data_screen, <span class="at">type =</span> <span class="st">&quot;lme4&quot;</span>)</span></code></pre></div>
+<pre><code>## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+<pre><code>##                                                        t       df             d
+## cue_con                                      -0.30798646 3375.733 -0.0106017499
+## stim_con_linear                               0.57627798 4122.869  0.0179499090
+## event02_expect_angle                          1.41074769 3438.911  0.0481137115
+## stim_con_quad                                -0.27769899 4120.037 -0.0086527414
+## cue_con:stim_con_linear                       0.29454204 4124.835  0.0091722107
+## cue_con:event02_expect_angle                 -0.20381014 3432.844 -0.0069571080
+## stim_con_linear:event02_expect_angle          0.48977791 4124.654  0.0152523026
+## cue_con:stim_con_quad                         0.33395313 4120.459  0.0104050147
+## event02_expect_angle:stim_con_quad           -0.37557287 4121.327 -0.0117005343
+## cue_con:stim_con_linear:event02_expect_angle -0.60681060 4126.822 -0.0188918854
+## cue_con:event02_expect_angle:stim_con_quad    0.01206889 4121.074  0.0003760037</code></pre>
+</div>
+<div id="session-1-2x3-stimulus-intensity-cue-1" class="section level3 hasAnchor" number="27.2.7">
+<h3><span class="header-section-number">27.2.7</span> Session 1: 2x3 stimulus intensity * cue<a href="ch36_singletrial_V.html#session-1-2x3-stimulus-intensity-cue-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="session-3-2x3-stimulus-intensity-cue-1" class="section level3 hasAnchor" number="27.2.8">
+<h3><span class="header-section-number">27.2.8</span> Session 3: 2x3 stimulus intensity * cue<a href="ch36_singletrial_V.html#session-3-2x3-stimulus-intensity-cue-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="session-4-2x3-stimulus-intensity-cue-1" class="section level3 hasAnchor" number="27.2.9">
+<h3><span class="header-section-number">27.2.9</span> Session 4: 2x3 stimulus intensity * cue<a href="ch36_singletrial_V.html#session-4-2x3-stimulus-intensity-cue-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+</div>
+<div id="vicarious-only-outcome-ratings-vps" class="section level2 hasAnchor" number="27.3">
+<h2><span class="header-section-number">27.3</span> Vicarious only: Outcome ratings &amp; VPS<a href="ch36_singletrial_V.html#vicarious-only-outcome-ratings-vps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb901"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb901-1"><a href="ch36_singletrial_V.html#cb901-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot parameters</span></span>
+<span id="cb901-2"><a href="ch36_singletrial_V.html#cb901-2" aria-hidden="true" tabindex="-1"></a>iv1 <span class="ot">=</span> <span class="st">&quot;event04_actual_angle&quot;</span>; iv2 <span class="ot">=</span> signature_key</span>
+<span id="cb901-3"><a href="ch36_singletrial_V.html#cb901-3" aria-hidden="true" tabindex="-1"></a>subject <span class="ot">=</span> <span class="st">&quot;sub&quot;</span></span>
+<span id="cb901-4"><a href="ch36_singletrial_V.html#cb901-4" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">=</span> <span class="st">&quot;Outcome rating&quot;</span>; ylab <span class="ot">=</span> signature_key</span>
+<span id="cb901-5"><a href="ch36_singletrial_V.html#cb901-5" aria-hidden="true" tabindex="-1"></a>ggtitle <span class="ot">=</span> <span class="st">&quot;All stimulus intensity&quot;</span></span>
+<span id="cb901-6"><a href="ch36_singletrial_V.html#cb901-6" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.8</span>; lm_method <span class="ot">=</span> <span class="st">&quot;lm&quot;</span></span>
+<span id="cb901-7"><a href="ch36_singletrial_V.html#cb901-7" aria-hidden="true" tabindex="-1"></a>p.sig <span class="ot">&lt;-</span> df_merge[df_merge<span class="sc">$</span>runtype <span class="sc">==</span> <span class="st">&quot;runtype-vicarious&quot;</span>,]</span>
+<span id="cb901-8"><a href="ch36_singletrial_V.html#cb901-8" aria-hidden="true" tabindex="-1"></a>df_dropna <span class="ot">&lt;-</span> p.sig[<span class="sc">!</span><span class="fu">is.na</span>(p.sig[, iv1]) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(p.sig[, iv2]), ]</span>
+<span id="cb901-9"><a href="ch36_singletrial_V.html#cb901-9" aria-hidden="true" tabindex="-1"></a>subjectwise_2dv <span class="ot">&lt;-</span> <span class="fu">meanSummary_2dv</span>(</span>
+<span id="cb901-10"><a href="ch36_singletrial_V.html#cb901-10" aria-hidden="true" tabindex="-1"></a>        df_dropna,</span>
+<span id="cb901-11"><a href="ch36_singletrial_V.html#cb901-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">c</span>(subject),</span>
+<span id="cb901-12"><a href="ch36_singletrial_V.html#cb901-12" aria-hidden="true" tabindex="-1"></a>        iv1, iv2</span>
+<span id="cb901-13"><a href="ch36_singletrial_V.html#cb901-13" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb901-14"><a href="ch36_singletrial_V.html#cb901-14" aria-hidden="true" tabindex="-1"></a>    subjectwise_naomit_2dv <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(subjectwise_2dv)</span>
+<span id="cb901-15"><a href="ch36_singletrial_V.html#cb901-15" aria-hidden="true" tabindex="-1"></a>    g <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
+<span id="cb901-16"><a href="ch36_singletrial_V.html#cb901-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> subjectwise_naomit_2dv,</span>
+<span id="cb901-17"><a href="ch36_singletrial_V.html#cb901-17" aria-hidden="true" tabindex="-1"></a>        <span class="fu">aes</span>(</span>
+<span id="cb901-18"><a href="ch36_singletrial_V.html#cb901-18" aria-hidden="true" tabindex="-1"></a>            <span class="at">x =</span> .data[[<span class="st">&quot;DV1_mean_per_sub&quot;</span>]],</span>
+<span id="cb901-19"><a href="ch36_singletrial_V.html#cb901-19" aria-hidden="true" tabindex="-1"></a>            <span class="at">y =</span> .data[[<span class="st">&quot;DV2_mean_per_sub&quot;</span>]],</span>
+<span id="cb901-20"><a href="ch36_singletrial_V.html#cb901-20" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb901-21"><a href="ch36_singletrial_V.html#cb901-21" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb901-22"><a href="ch36_singletrial_V.html#cb901-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>(</span>
+<span id="cb901-23"><a href="ch36_singletrial_V.html#cb901-23" aria-hidden="true" tabindex="-1"></a>          <span class="at">size =</span> <span class="dv">2</span>,</span>
+<span id="cb901-24"><a href="ch36_singletrial_V.html#cb901-24" aria-hidden="true" tabindex="-1"></a>            <span class="at">alpha =</span> alpha) <span class="sc">+</span></span>
+<span id="cb901-25"><a href="ch36_singletrial_V.html#cb901-25" aria-hidden="true" tabindex="-1"></a>        <span class="co"># geom_abline(</span></span>
+<span id="cb901-26"><a href="ch36_singletrial_V.html#cb901-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     intercept = 0, slope = 1, color = &quot;green&quot;,</span></span>
+<span id="cb901-27"><a href="ch36_singletrial_V.html#cb901-27" aria-hidden="true" tabindex="-1"></a>        <span class="co">#     linetype = &quot;dashed&quot;, linewidth = 0.5</span></span>
+<span id="cb901-28"><a href="ch36_singletrial_V.html#cb901-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ) +</span></span>
+<span id="cb901-29"><a href="ch36_singletrial_V.html#cb901-29" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb901-30"><a href="ch36_singletrial_V.html#cb901-30" aria-hidden="true" tabindex="-1"></a>        <span class="co">#scale_color_manual(values = color_scheme) +</span></span>
+<span id="cb901-31"><a href="ch36_singletrial_V.html#cb901-31" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">17</span>)) <span class="sc">+</span></span>
+<span id="cb901-32"><a href="ch36_singletrial_V.html#cb901-32" aria-hidden="true" tabindex="-1"></a>        <span class="fu">xlab</span>(xlab) <span class="sc">+</span></span>
+<span id="cb901-33"><a href="ch36_singletrial_V.html#cb901-33" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ylab</span>(ylab) <span class="sc">+</span></span>
+<span id="cb901-34"><a href="ch36_singletrial_V.html#cb901-34" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">30</span>) <span class="sc">+</span></span>
+<span id="cb901-35"><a href="ch36_singletrial_V.html#cb901-35" aria-hidden="true" tabindex="-1"></a>        <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">180</span>) <span class="sc">+</span></span>
+<span id="cb901-36"><a href="ch36_singletrial_V.html#cb901-36" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggtitle</span>(ggtitle) <span class="sc">+</span></span>
+<span id="cb901-37"><a href="ch36_singletrial_V.html#cb901-37" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(</span>
+<span id="cb901-38"><a href="ch36_singletrial_V.html#cb901-38" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;grey50&quot;</span>),</span>
+<span id="cb901-39"><a href="ch36_singletrial_V.html#cb901-39" aria-hidden="true" tabindex="-1"></a>            <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb901-40"><a href="ch36_singletrial_V.html#cb901-40" aria-hidden="true" tabindex="-1"></a>            <span class="at">plot.subtitle =</span> ggtext<span class="sc">::</span><span class="fu">element_textbox_simple</span>(<span class="at">size =</span> <span class="dv">11</span>)</span>
+<span id="cb901-41"><a href="ch36_singletrial_V.html#cb901-41" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">+</span></span>
+<span id="cb901-42"><a href="ch36_singletrial_V.html#cb901-42" aria-hidden="true" tabindex="-1"></a>              <span class="fu">geom_ribbon</span>(<span class="at">stat =</span> <span class="st">&quot;smooth&quot;</span>, <span class="at">method =</span> lm_method, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">alpha =</span> <span class="fl">0.1</span>,</span>
+<span id="cb901-43"><a href="ch36_singletrial_V.html#cb901-43" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">color =</span> <span class="cn">NULL</span>)) <span class="sc">+</span></span>
+<span id="cb901-44"><a href="ch36_singletrial_V.html#cb901-44" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="at">stat =</span> <span class="st">&quot;smooth&quot;</span>, <span class="at">method =</span> lm_method, <span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">size =</span> <span class="fl">1.5</span>)</span></code></pre></div>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.</code></pre>
+<div class="sourceCode" id="cb903"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb903-1"><a href="ch36_singletrial_V.html#cb903-1" aria-hidden="true" tabindex="-1"></a>    g</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;
+## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div id="outcome-ratings-cue-1" class="section level3 hasAnchor" number="27.3.1">
+<h3><span class="header-section-number">27.3.1</span> outcome ratings * cue<a href="ch36_singletrial_V.html#outcome-ratings-cue-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb905"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb905-1"><a href="ch36_singletrial_V.html#cb905-1" aria-hidden="true" tabindex="-1"></a>p.sig <span class="ot">&lt;-</span> df_merge[df_merge<span class="sc">$</span>runtype <span class="sc">==</span> <span class="st">&quot;runtype-vicarious&quot;</span>,]</span>
+<span id="cb905-2"><a href="ch36_singletrial_V.html#cb905-2" aria-hidden="true" tabindex="-1"></a>iv2 <span class="ot">=</span> <span class="st">&quot;event04_actual_angle&quot;</span>; iv1 <span class="ot">=</span> signature_key</span>
+<span id="cb905-3"><a href="ch36_singletrial_V.html#cb905-3" aria-hidden="true" tabindex="-1"></a>df_dropna <span class="ot">&lt;-</span></span>
+<span id="cb905-4"><a href="ch36_singletrial_V.html#cb905-4" aria-hidden="true" tabindex="-1"></a>  p.sig[<span class="sc">!</span><span class="fu">is.na</span>(p.sig<span class="sc">$</span>event04_actual_angle) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(p.sig<span class="sc">$</span>VPS),]</span>
+<span id="cb905-5"><a href="ch36_singletrial_V.html#cb905-5" aria-hidden="true" tabindex="-1"></a>total <span class="ot">&lt;-</span></span>
+<span id="cb905-6"><a href="ch36_singletrial_V.html#cb905-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_twovariable</span>(</span>
+<span id="cb905-7"><a href="ch36_singletrial_V.html#cb905-7" aria-hidden="true" tabindex="-1"></a>    df_dropna, iv1, iv2,</span>
+<span id="cb905-8"><a href="ch36_singletrial_V.html#cb905-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="st">&quot;cuetype&quot;</span>, <span class="at">subject =</span> <span class="st">&quot;sub&quot;</span>,</span>
+<span id="cb905-9"><a href="ch36_singletrial_V.html#cb905-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span><span class="dv">0</span>, <span class="at">ymax =</span> <span class="dv">100</span>, <span class="at">xmin =</span> <span class="sc">-</span><span class="dv">10</span>, <span class="at">xmax =</span> <span class="dv">20</span>,</span>
+<span id="cb905-10"><a href="ch36_singletrial_V.html#cb905-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab =</span> <span class="st">&quot;outcome rating&quot;</span>,</span>
+<span id="cb905-11"><a href="ch36_singletrial_V.html#cb905-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab =</span> signature_key, </span>
+<span id="cb905-12"><a href="ch36_singletrial_V.html#cb905-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">ggtitle =</span> <span class="st">&quot;all stimulus intensity&quot;</span>, </span>
+<span id="cb905-13"><a href="ch36_singletrial_V.html#cb905-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color_scheme =</span> <span class="fu">c</span>(<span class="st">&quot;cuetype-high&quot;</span> <span class="ot">=</span><span class="st">&quot;#008F51&quot;</span>,<span class="st">&quot;cuetype-low&quot;</span> <span class="ot">=</span>  <span class="st">&quot;#BBBBBB&quot;</span>), </span>
+<span id="cb905-14"><a href="ch36_singletrial_V.html#cb905-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">8</span>, <span class="at">fit_lm =</span> <span class="cn">TRUE</span>, <span class="at">lm_method =</span><span class="st">&quot;lm&quot;</span></span>
+<span id="cb905-15"><a href="ch36_singletrial_V.html#cb905-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb905-16"><a href="ch36_singletrial_V.html#cb905-16" aria-hidden="true" tabindex="-1"></a>total <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span><span class="fu">paste0</span>(<span class="st">&quot;task-&quot;</span>,taskname, <span class="st">&quot;- What is the pattern for VPS pos dotproduct and expect ratings? </span><span class="sc">\n</span><span class="st">How is does this pattern differ depending on high vs low cues?</span><span class="sc">\n\n</span><span class="st">&quot;</span>)</span>
+<span id="cb905-17"><a href="ch36_singletrial_V.html#cb905-17" aria-hidden="true" tabindex="-1"></a>          )</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;
+## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+### outcome ratings * stim * cue
+<img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+</div>
+<div id="vicarious-only-expectation-ratings-vps" class="section level2 hasAnchor" number="27.4">
+<h2><span class="header-section-number">27.4</span> Vicarious only: Expectation ratings &amp; VPS<a href="ch36_singletrial_V.html#vicarious-only-expectation-ratings-vps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb907"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb907-1"><a href="ch36_singletrial_V.html#cb907-1" aria-hidden="true" tabindex="-1"></a>p.sig <span class="ot">&lt;-</span> df_merge[df_merge<span class="sc">$</span>runtype <span class="sc">==</span> <span class="st">&quot;runtype-vicarious&quot;</span>,]</span>
+<span id="cb907-2"><a href="ch36_singletrial_V.html#cb907-2" aria-hidden="true" tabindex="-1"></a>iv1 <span class="ot">=</span> <span class="st">&quot;event02_expect_angle&quot;</span>; iv2 <span class="ot">=</span> signature_key</span>
+<span id="cb907-3"><a href="ch36_singletrial_V.html#cb907-3" aria-hidden="true" tabindex="-1"></a>df_dropna <span class="ot">&lt;-</span></span>
+<span id="cb907-4"><a href="ch36_singletrial_V.html#cb907-4" aria-hidden="true" tabindex="-1"></a>  p.sig[<span class="sc">!</span><span class="fu">is.na</span>(p.sig<span class="sc">$</span>event02_expect_angle) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(p.sig<span class="sc">$</span>VPS),]</span>
+<span id="cb907-5"><a href="ch36_singletrial_V.html#cb907-5" aria-hidden="true" tabindex="-1"></a>total <span class="ot">&lt;-</span></span>
+<span id="cb907-6"><a href="ch36_singletrial_V.html#cb907-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_twovariable</span>(</span>
+<span id="cb907-7"><a href="ch36_singletrial_V.html#cb907-7" aria-hidden="true" tabindex="-1"></a>    df_dropna, iv1, iv2,</span>
+<span id="cb907-8"><a href="ch36_singletrial_V.html#cb907-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="st">&quot;cuetype&quot;</span>, <span class="at">subject =</span> <span class="st">&quot;sub&quot;</span>,</span>
+<span id="cb907-9"><a href="ch36_singletrial_V.html#cb907-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span><span class="dv">0</span>, <span class="at">xmax =</span> <span class="dv">100</span>, <span class="at">ymin =</span> <span class="sc">-</span><span class="dv">10</span>, <span class="at">ymax =</span> <span class="dv">20</span>,</span>
+<span id="cb907-10"><a href="ch36_singletrial_V.html#cb907-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab =</span> <span class="st">&quot;expectation rating&quot;</span>,</span>
+<span id="cb907-11"><a href="ch36_singletrial_V.html#cb907-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab =</span> signature_key, </span>
+<span id="cb907-12"><a href="ch36_singletrial_V.html#cb907-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">ggtitle =</span> <span class="st">&quot;all stimulus intensity&quot;</span>, </span>
+<span id="cb907-13"><a href="ch36_singletrial_V.html#cb907-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color_scheme =</span> <span class="fu">c</span>(<span class="st">&quot;cuetype-high&quot;</span> <span class="ot">=</span><span class="st">&quot;#008F51&quot;</span>,<span class="st">&quot;cuetype-low&quot;</span> <span class="ot">=</span>  <span class="st">&quot;#BBBBBB&quot;</span>), </span>
+<span id="cb907-14"><a href="ch36_singletrial_V.html#cb907-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">8</span>, <span class="at">fit_lm =</span> <span class="cn">TRUE</span>, <span class="at">lm_method =</span> <span class="st">&quot;lm&quot;</span></span>
+<span id="cb907-15"><a href="ch36_singletrial_V.html#cb907-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb907-16"><a href="ch36_singletrial_V.html#cb907-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb907-17"><a href="ch36_singletrial_V.html#cb907-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb907-18"><a href="ch36_singletrial_V.html#cb907-18" aria-hidden="true" tabindex="-1"></a>total <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span><span class="fu">paste0</span>(<span class="st">&quot;task-&quot;</span>,taskname, <span class="st">&quot;- What is the pattern for VPS pos dotproduct and expect ratings? </span><span class="sc">\n</span><span class="st">How is does this pattern differ depending on high vs low cues?</span><span class="sc">\n\n</span><span class="st">&quot;</span>)</span>
+<span id="cb907-19"><a href="ch36_singletrial_V.html#cb907-19" aria-hidden="true" tabindex="-1"></a>          )</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;
+## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<div class="sourceCode" id="cb909"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb909-1"><a href="ch36_singletrial_V.html#cb909-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># geom_line(method=&quot;lm&quot;, alpha=0.3, size=1, span=0.5) # geom_smooth(method=lm, se = TRUE) </span></span>
+<span id="cb909-2"><a href="ch36_singletrial_V.html#cb909-2" aria-hidden="true" tabindex="-1"></a><span class="co"># +geom_smooth(method = &quot;lm&quot;, alpha=0.1, size=0, span=0.5)</span></span></code></pre></div>
+<p><img src="36_iv-task-stim_dv-vps_singletrial_files/figure-html/rawoutcome_pain_stimuluswise-1.png" width="672" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="ch35_singletrial_P.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ch37_singletrial_C.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/36_iv-task-stim_dv-vps_singletrial.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
