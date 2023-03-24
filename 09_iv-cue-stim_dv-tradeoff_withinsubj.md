@@ -589,20 +589,50 @@ cohens_f(model_1_1)
 ```
 
 ```r
-eta_squared(model_1_1, partial = FALSE)
+kableExtra::kable_styling(
+  knitr::kable(
+    eta_squared(model_1_1, partial = FALSE),
+    "html"), "striped", position = "left", font_size = 15)
 ```
 
-```
-## # Effect Size for ANOVA (Type I)
-## 
-## Group  |                                          Parameter |     Eta2 |       95% CI
-## -------------------------------------------------------------------------------------
-## Within |                             factor(param_cue_type) | 8.24e-04 | [0.00, 1.00]
-## Within |                        factor(param_stimulus_type) |     0.25 | [0.20, 1.00]
-## Within | factor(param_cue_type):factor(param_stimulus_type) | 7.94e-03 | [0.00, 1.00]
-## 
-## - One-sided CIs: upper bound fixed at [1.00].
-```
+<table class="table table-striped" style="font-size: 15px; ">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Group </th>
+   <th style="text-align:left;"> Parameter </th>
+   <th style="text-align:right;"> Eta2 </th>
+   <th style="text-align:right;"> CI </th>
+   <th style="text-align:right;"> CI_low </th>
+   <th style="text-align:right;"> CI_high </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> factor(param_cue_type) </td>
+   <td style="text-align:right;"> 0.0008237 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.000000 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> factor(param_stimulus_type) </td>
+   <td style="text-align:right;"> 0.2485773 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.196943 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> factor(param_cue_type):factor(param_stimulus_type) </td>
+   <td style="text-align:right;"> 0.0079416 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.000000 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+</tbody>
+</table>
 
 ## Method 1-2 aov contrast-coding
 
@@ -796,20 +826,50 @@ cohens_f(model_1_1)
 ```
 
 ```r
-eta_squared(model_1_1, partial = FALSE)
+kableExtra::kable_styling(
+  knitr::kable(
+    eta_squared(model_1_1, partial = FALSE),
+    "html"), "striped", position = "left", font_size = 15)
 ```
 
-```
-## # Effect Size for ANOVA (Type I)
-## 
-## Group  |                                          Parameter |     Eta2 |       95% CI
-## -------------------------------------------------------------------------------------
-## Within |                             factor(param_cue_type) | 8.24e-04 | [0.00, 1.00]
-## Within |                        factor(param_stimulus_type) |     0.25 | [0.20, 1.00]
-## Within | factor(param_cue_type):factor(param_stimulus_type) | 7.94e-03 | [0.00, 1.00]
-## 
-## - One-sided CIs: upper bound fixed at [1.00].
-```
+<table class="table table-striped" style="font-size: 15px; ">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Group </th>
+   <th style="text-align:left;"> Parameter </th>
+   <th style="text-align:right;"> Eta2 </th>
+   <th style="text-align:right;"> CI </th>
+   <th style="text-align:right;"> CI_low </th>
+   <th style="text-align:right;"> CI_high </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> factor(param_cue_type) </td>
+   <td style="text-align:right;"> 0.0008237 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.000000 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> factor(param_stimulus_type) </td>
+   <td style="text-align:right;"> 0.2485773 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.196943 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> factor(param_cue_type):factor(param_stimulus_type) </td>
+   <td style="text-align:right;"> 0.0079416 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.000000 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+</tbody>
+</table>
 
 ### Method 1-2 effectsize estimate (one-sample t-test) {.unlisted .unnumbered}
 
@@ -833,22 +893,66 @@ cohens_f(model_1_2)
 ```
 
 ```r
-eta_squared(model_1_2, partial = FALSE)
+kableExtra::kable_styling(
+  knitr::kable(
+    eta_squared(model_1_2, partial = FALSE),
+    "html"), "striped", position = "left", font_size = 15)
 ```
 
-```
-## # Effect Size for ANOVA (Type I)
-## 
-## Group  |                  Parameter |     Eta2 |       95% CI
-## -------------------------------------------------------------
-## Within |                 cue_factor | 8.24e-04 | [0.00, 1.00]
-## Within |            stim_con_linear |     0.23 | [0.18, 1.00]
-## Within |              stim_con_quad |     0.02 | [0.00, 1.00]
-## Within | cue_factor:stim_con_linear | 7.93e-03 | [0.00, 1.00]
-## Within |   cue_factor:stim_con_quad | 9.23e-06 | [0.00, 1.00]
-## 
-## - One-sided CIs: upper bound fixed at [1.00].
-```
+<table class="table table-striped" style="font-size: 15px; ">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Group </th>
+   <th style="text-align:left;"> Parameter </th>
+   <th style="text-align:right;"> Eta2 </th>
+   <th style="text-align:right;"> CI </th>
+   <th style="text-align:right;"> CI_low </th>
+   <th style="text-align:right;"> CI_high </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> cue_factor </td>
+   <td style="text-align:right;"> 0.0008237 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> stim_con_linear </td>
+   <td style="text-align:right;"> 0.2285747 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.1789197 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> stim_con_quad </td>
+   <td style="text-align:right;"> 0.0200026 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.0049177 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> cue_factor:stim_con_linear </td>
+   <td style="text-align:right;"> 0.0079324 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.0001505 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Within </td>
+   <td style="text-align:left;"> cue_factor:stim_con_quad </td>
+   <td style="text-align:right;"> 0.0000092 </td>
+   <td style="text-align:right;"> 0.95 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+</tbody>
+</table>
 
 Note that the effectsize of the cue effect ("cue_factor") is 5.64e-04.
 We'll check that this is equivalent to the effectsize estimate in the

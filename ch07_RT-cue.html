@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 RT ~ cue | behavioral_ICC</title>
+  <title>Chapter 7 [beh] RT ~ cue | behavioral_ICC</title>
   <meta name="description" content="<p>This is a logbook of all the mixed model analyses in one setting.
 set in the _output.yml file.
 The HTML output format for this example is bookdown::gitbook,</p>" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 RT ~ cue | behavioral_ICC" />
+  <meta property="og:title" content="Chapter 7 [beh] RT ~ cue | behavioral_ICC" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a logbook of all the mixed model analyses in one setting.
@@ -19,7 +19,7 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 RT ~ cue | behavioral_ICC" />
+  <meta name="twitter:title" content="Chapter 7 [beh] RT ~ cue | behavioral_ICC" />
   
   <meta name="twitter:description" content="<p>This is a logbook of all the mixed model analyses in one setting.
 set in the _output.yml file.
@@ -64,6 +64,8 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -152,14 +154,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [ beh] expectation ~ cue</a>
+<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [beh] expectation ~ cue</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="ch2_expect.html"><a href="ch2_expect.html#pain"><i class="fa fa-check"></i><b>2.1</b> Pain</a></li>
 <li class="chapter" data-level="2.2" data-path="ch2_expect.html"><a href="ch2_expect.html#vicarious"><i class="fa fa-check"></i><b>2.2</b> Vicarious</a></li>
 <li class="chapter" data-level="2.3" data-path="ch2_expect.html"><a href="ch2_expect.html#cognitive"><i class="fa fa-check"></i><b>2.3</b> Cognitive</a></li>
 <li class="chapter" data-level="2.4" data-path="ch2_expect.html"><a href="ch2_expect.html#individual-difference-analysis"><i class="fa fa-check"></i><b>2.4</b> Individual difference analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [ beh ] outcome ~ cue</a>
+<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [beh] outcome ~ cue</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="ch03_cue.html"><a href="ch03_cue.html#pain-1"><i class="fa fa-check"></i><b>3.1</b> Pain</a></li>
 <li class="chapter" data-level="3.2" data-path="ch03_cue.html"><a href="ch03_cue.html#vicarious-1"><i class="fa fa-check"></i><b>3.2</b> Vicarious</a></li>
@@ -167,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-random-cue-effects"><i class="fa fa-check"></i><b>3.4</b> Individual differences analysis: random cue effects</a></li>
 <li class="chapter" data-level="3.5" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-2-random-intercept-random-slopes-of-cue-effect"><i class="fa fa-check"></i><b>3.5</b> Individual differences analysis 2: random intercept + random slopes of cue effect</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [ beh ] outcome ~ stimulus_intensity</a>
+<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [beh] outcome ~ stimulus_intensity</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#pain-2"><i class="fa fa-check"></i><b>4.1</b> Pain</a></li>
 <li class="chapter" data-level="4.2" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#vicarious-2"><i class="fa fa-check"></i><b>4.2</b> Vicarious</a></li>
@@ -176,16 +178,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#lineplot"><i class="fa fa-check"></i><b>4.5</b> Lineplot</a></li>
 <li class="chapter" data-level="4.6" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#individual-differences-in-outcome-rating-cue-effect"><i class="fa fa-check"></i><b>4.6</b> individual differences in outcome rating cue effect</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> outcome_rating ~ cue * stim</a>
+<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> [beh] outcome_rating ~ cue * stim</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#what-is-the-purpose-of-this-notebook-3"><i class="fa fa-check"></i><b>5.1</b> What is the purpose of this notebook?</a></li>
-<li class="chapter" data-level="5.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.2</b> model 03 iv-cuecontrast dv-actual</a>
+<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.1</b> model 03 iv-cuecontrast dv-actual</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.2.1</b> model 03 3-2. individual difference</a></li>
-<li class="chapter" data-level="5.2.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.2.2</b> model 04 iv-cue-stim dv-actual</a></li>
-<li class="chapter" data-level="5.2.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.2.3</b> model 04 4-2 individual differences in cue effects</a></li>
-<li class="chapter" data-level="5.2.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.2.4</b> model 04 4-3 scatter plot</a></li>
-<li class="chapter" data-level="5.2.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.2.5</b> model 04 4-4 lineplot</a></li>
+<li class="chapter" data-level="5.1.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.1.1</b> model 03 3-2. individual difference</a></li>
+<li class="chapter" data-level="5.1.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.1.2</b> model 04 iv-cue-stim dv-actual</a></li>
+<li class="chapter" data-level="5.1.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.1.3</b> model 04 4-2 individual differences in cue effects</a></li>
+<li class="chapter" data-level="5.1.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.1.4</b> model 04 4-3 scatter plot</a></li>
+<li class="chapter" data-level="5.1.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.1.5</b> model 04 4-4 lineplot</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html"><i class="fa fa-check"></i><b>6</b> expect-actual ~ cue * trial</a>
@@ -196,18 +197,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#do-current-expectation-ratings-predict-outcome-ratings"><i class="fa fa-check"></i><b>6.4</b> Do current expectation ratings predict outcome ratings?</a></li>
 <li class="chapter" data-level="6.5" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#additional-analysis"><i class="fa fa-check"></i><b>6.5</b> Additional analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> RT ~ cue</a>
+<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> [beh] RT ~ cue</a>
 <ul>
-<li class="chapter" data-level="7.0.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#parameters"><i class="fa fa-check"></i><b>7.0.1</b> parameters</a></li>
-<li class="chapter" data-level="7.0.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-data"><i class="fa fa-check"></i><b>7.0.2</b> 1) plot RT data</a></li>
-<li class="chapter" data-level="7.0.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-distribution-per-participant"><i class="fa fa-check"></i><b>7.0.3</b> plot RT distribution per participant</a></li>
-<li class="chapter" data-level="7.0.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#exclude-participants-with-rt-of-5-seconds"><i class="fa fa-check"></i><b>7.0.4</b> exclude participants with RT of 5 seconds</a></li>
 <li class="chapter" data-level="7.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1"><i class="fa fa-check"></i><b>7.1</b> model 1:</a></li>
 <li class="chapter" data-level="7.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-1"><i class="fa fa-check"></i><b>7.2</b> model 1-1</a></li>
 <li class="chapter" data-level="7.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-2"><i class="fa fa-check"></i><b>7.3</b> model 1-2:</a></li>
 <li class="chapter" data-level="7.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-2"><i class="fa fa-check"></i><b>7.4</b> model 2:</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [fMRI] RT ~ cue * stim</a>
+<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [beh] RT ~ cue * stim</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#overview-model-05-iv-cue-dv-rt-summary"><i class="fa fa-check"></i><b>8.1</b> Overview model 05 iv-cue dv-RT summary</a></li>
 <li class="chapter" data-level="8.2" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#prepare-data-and-preprocess"><i class="fa fa-check"></i><b>8.2</b> Prepare data and preprocess</a></li>
@@ -238,22 +235,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.1" data-path="ch10_icc.html"><a href="ch10_icc.html#functions"><i class="fa fa-check"></i><b>10.1</b> Functions</a></li>
 <li class="chapter" data-level="10.2" data-path="ch10_icc.html"><a href="ch10_icc.html#todo"><i class="fa fa-check"></i><b>10.2</b> TODO:</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> N-1 outcome rating ~ N expectation rating</a>
+<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> [beh] N-1 outcome rating ~ N expectation rating</a>
 <ul>
-<li class="chapter" data-level="11.0.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#done"><i class="fa fa-check"></i><b>11.0.1</b> DONE</a></li>
-<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#overview-2"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>11.2</b> Do previous outcome ratings predict current expectation ratings?</a></li>
-<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#additional-analysis-1"><i class="fa fa-check"></i><b>11.3</b> Additional analysis</a></li>
-<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.4</b> Let’s demean the ratings.</a></li>
-<li class="chapter" data-level="11.5" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.5</b> DEMEAN AND THEN DISCRETIZE</a></li>
+<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#expectation_rating-n-1_outcome_rating"><i class="fa fa-check"></i><b>11.1</b> expectation_rating ~ N-1_outcome_rating</a></li>
+<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#current-expectation_rating-n-1_outcomerating-cue"><i class="fa fa-check"></i><b>11.2</b> Current expectation_rating ~ N-1_outcomerating * cue</a></li>
+<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.3</b> Let’s demean the ratings.</a></li>
+<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.4</b> DEMEAN AND THEN DISCRETIZE</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
+<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> [beh] (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings-1"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
+<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
 <li class="chapter" data-level="12.2" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-these-models-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>12.2</b> Do these models differ as a function of cue?</a></li>
 <li class="chapter" data-level="12.3" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#demean-and-discretize"><i class="fa fa-check"></i><b>12.3</b> Demean and discretize</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> outcome ~ expect Jayazeri (2018)</a>
+<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> [beh] outcome ~ expect Jayazeri (2018)</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#overview-4"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
 <li class="chapter" data-level="13.2" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#do-expectation-ratings-predict-current-outcome-ratings-does-this-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>13.2</b> Do expectation ratings predict current outcome ratings? Does this differ as a function of cue?</a></li>
@@ -267,7 +262,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="13.6" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#not-splitting-into-cue-groups"><i class="fa fa-check"></i><b>13.6</b> not splitting into cue groups</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [ beh ] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
+<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [beh] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="ch14_factorize.html"><a href="ch14_factorize.html#original-motivation"><i class="fa fa-check"></i><b>14.1</b> Original motivation:</a></li>
 <li class="chapter" data-level="14.2" data-path="ch14_factorize.html"><a href="ch14_factorize.html#pain-3"><i class="fa fa-check"></i><b>14.2</b> Pain</a>
@@ -343,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="22.5" data-path="nps_stim.html"><a href="nps_stim.html#vicarious-6"><i class="fa fa-check"></i><b>22.5</b> Vicarious</a></li>
 <li class="chapter" data-level="22.6" data-path="nps_stim.html"><a href="nps_stim.html#cognitive-6"><i class="fa fa-check"></i><b>22.6</b> Cognitive</a></li>
 </ul></li>
-<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> biomarker NPS ~ cue * stim (2022)</a>
+<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> [fMRI] biomarker NPS ~ cue * stim (2022)</a>
 <ul>
 <li class="chapter" data-level="23.1" data-path="nps_22.html"><a href="nps_22.html#load-libraries"><i class="fa fa-check"></i><b>23.1</b> load libraries</a>
 <ul>
@@ -354,80 +349,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="23.4" data-path="nps_22.html"><a href="nps_22.html#vps-cue-effect"><i class="fa fa-check"></i><b>23.4</b> VPS cue effect</a></li>
 <li class="chapter" data-level="23.5" data-path="nps_22.html"><a href="nps_22.html#vps-stim-effect"><i class="fa fa-check"></i><b>23.5</b> VPS stim effect</a></li>
 </ul></li>
-<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
+<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> [fMRI] NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
 <li class="chapter" data-level="25" data-path="nps_stim_task.html"><a href="nps_stim_task.html"><i class="fa fa-check"></i><b>25</b> NPSdummy ~ stim * task (contrast-scaled)</a>
 <ul>
 <li class="chapter" data-level="25.1" data-path="nps_stim_task.html"><a href="nps_stim_task.html#raincloud-plots-1"><i class="fa fa-check"></i><b>25.1</b> Raincloud plots</a></li>
 <li class="chapter" data-level="25.2" data-path="nps_stim_task.html"><a href="nps_stim_task.html#line-plots-1"><i class="fa fa-check"></i><b>25.2</b> Line plots</a></li>
 </ul></li>
-<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [ fMRI ] Pain signature ~ single trial</a>
+<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [fMRI] NPS ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pvc-all-task-comparison"><i class="fa fa-check"></i><b>26.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>26.2</b> Pain only Stim x cue interaction</a>
+<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>26.1</b> NPS ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-paintask-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>26.2</b> NPS ~ paintask: 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-2"><i class="fa fa-check"></i><b>26.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-intensity-cohens-d-1.287"><i class="fa fa-check"></i><b>26.2.3</b> NPS stimulus intensity Cohen’s d = 1.287</a></li>
-<li class="chapter" data-level="26.2.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-cue-effect-size-stim_d-1.16-cue_d-0.45"><i class="fa fa-check"></i><b>26.2.4</b> NPS stimulus &amp; cue effect size: stim_d = 1.16, cue_d = 0.45</a></li>
-<li class="chapter" data-level="26.2.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#lineplots"><i class="fa fa-check"></i><b>26.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="26.2.6" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-1-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.6</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.7" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-3-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.7</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.8" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-4-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.8</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-ver-1-nps-stimulus_intensity"><i class="fa fa-check"></i><b>26.2.1</b> Linear model ver 1: NPS ~ stimulus_intensity</a></li>
+<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-ver-2-nps-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>26.2.2</b> Linear model ver 2: NPS ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#cue-3-stimulus_intensity-expectation_rating"><i class="fa fa-check"></i><b>26.2.3</b> 2 cue * 3 stimulus_intensity * expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-outcome-ratings-nps"><i class="fa fa-check"></i><b>26.3</b> Pain only: Outcome ratings &amp; NPS</a>
+<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>26.3</b> NPS ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-outcome_rating"><i class="fa fa-check"></i><b>26.4</b> NPS ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="26.3.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-cue"><i class="fa fa-check"></i><b>26.3.1</b> outcome ratings * cue</a></li>
-<li class="chapter" data-level="26.3.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-stim-cue"><i class="fa fa-check"></i><b>26.3.2</b> outcome ratings * stim * cue</a></li>
+<li class="chapter" data-level="26.4.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome_rating-cue"><i class="fa fa-check"></i><b>26.4.1</b> outcome_rating * cue</a></li>
+<li class="chapter" data-level="26.4.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome_ratings-stimulus_intensity-cue"><i class="fa fa-check"></i><b>26.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>26.4</b> Pain only: Expectation ratings &amp; NPS</a></li>
+<li class="chapter" data-level="26.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-expectation_rating"><i class="fa fa-check"></i><b>26.5</b> NPS ~ expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] Vicarious signature ~ single trial</a>
+<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] VPS ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#pvc-all-task-comparison-1"><i class="fa fa-check"></i><b>27.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>27.2</b> Vicarious only Stim x cue interaction</a>
+<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>27.1</b> VPS ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-vicarious-task-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>27.2</b> VPS ~ vicarious task: 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-3"><i class="fa fa-check"></i><b>27.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-intensity-cohens-d-0.2131521"><i class="fa fa-check"></i><b>27.2.3</b> VPS stimulus intensity Cohen’s d = 0.2131521</a></li>
-<li class="chapter" data-level="27.2.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-cue-effect-size-stim_d-0.217-cue_d-0.013"><i class="fa fa-check"></i><b>27.2.4</b> VPS stimulus &amp; cue effect size: stim_d = 0.217, cue_d = 0.013</a></li>
-<li class="chapter" data-level="27.2.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#lineplots-1"><i class="fa fa-check"></i><b>27.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="27.2.6" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-with-stim-x-cue-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
-<li class="chapter" data-level="27.2.7" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-1-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.8" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-3-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.9" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-4-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-ver-1-vps-stimulus_intensity"><i class="fa fa-check"></i><b>27.2.1</b> Linear model ver 1: VPS ~ stimulus_intensity</a></li>
+<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-ver-2-vps-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>27.2.2</b> Linear model ver 2: VPS ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#cue-x-3-stimulus-intensity-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.3</b> 2 Cue x 3 Stimulus intensity x Expectation rating</a></li>
 </ul></li>
-<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-outcome-ratings-vps"><i class="fa fa-check"></i><b>27.3</b> Vicarious only: Outcome ratings &amp; VPS</a>
+<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>27.3</b> VPS ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-outcome_rating"><i class="fa fa-check"></i><b>27.4</b> VPS ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="27.3.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome-ratings-cue-1"><i class="fa fa-check"></i><b>27.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="27.4.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome_ratings-cue"><i class="fa fa-check"></i><b>27.4.1</b> outcome_ratings * cue</a></li>
+<li class="chapter" data-level="27.4.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome_ratings-stimulus_intensity-cue-1"><i class="fa fa-check"></i><b>27.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-expectation-ratings-vps"><i class="fa fa-check"></i><b>27.4</b> Vicarious only: Expectation ratings &amp; VPS</a></li>
+<li class="chapter" data-level="27.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-expectation_rating"><i class="fa fa-check"></i><b>27.5</b> VPS ~ expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Cognitive signature ~ single trial</a>
+<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Kragel2018 ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#pvc-all-task-comparison-2"><i class="fa fa-check"></i><b>28.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>28.2</b> Cognitive only Stim x cue interaction</a>
+<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>28.1</b> Kragel2018 ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>28.2</b> Kragel2018 ~ 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-4"><i class="fa fa-check"></i><b>28.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cog-stimulus-intensity-cohens-d-0.72"><i class="fa fa-check"></i><b>28.2.3</b> Cog stimulus intensity Cohen’s d = 0.72</a></li>
-<li class="chapter" data-level="28.2.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-stimulus-cue-effect-size-stim_d-0.73-cue_d-0.069"><i class="fa fa-check"></i><b>28.2.4</b> Cognitive stimulus &amp; cue effect size: stim_d = 0.73, cue_d = 0.069</a></li>
-<li class="chapter" data-level="28.2.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#lineplots-2"><i class="fa fa-check"></i><b>28.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="28.2.6" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-with-stim-x-cue-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
-<li class="chapter" data-level="28.2.7" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-1-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.8" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-3-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.9" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-4-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-ver-1-kragel2018-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>28.2.1</b> Linear model ver 1: Kragel2018 ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-ver-2-kragel2018-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>28.2.2</b> Linear model ver 2: Kragel2018 ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cue-x-3-stimulus-intensity-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.3</b> 2 Cue x 3 Stimulus intensity x Expectation rating</a></li>
 </ul></li>
-<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-outcome-ratings-kragel-2018"><i class="fa fa-check"></i><b>28.3</b> Cognitive only: Outcome ratings &amp; Kragel 2018</a>
+<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>28.3</b> Kragel2018 ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-outcome_rating"><i class="fa fa-check"></i><b>28.4</b> Kragel2018 ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="28.3.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome-ratings-cue-2"><i class="fa fa-check"></i><b>28.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="28.4.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome_ratings-cue-1"><i class="fa fa-check"></i><b>28.4.1</b> outcome_ratings * cue</a></li>
+<li class="chapter" data-level="28.4.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome_ratings-stimulus_intensity-cue-2"><i class="fa fa-check"></i><b>28.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>28.4</b> Cognitive only: Expectation ratings &amp; NPS</a></li>
+<li class="chapter" data-level="28.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-expectation_rating"><i class="fa fa-check"></i><b>28.5</b> Kragel2018 ~ expectation_rating</a></li>
 </ul></li>
 <li class="chapter" data-level="29" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html"><i class="fa fa-check"></i><b>29</b> [fMRI] Single trial correlation between cue and stim</a>
 <ul>
-<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#stack-data"><i class="fa fa-check"></i><b>29.1</b> Stack data</a></li>
-<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.2</b> plot correlation (one-sample-t)</a></li>
-<li class="chapter" data-level="29.3" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.3</b> Lineplot</a></li>
+<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.1</b> plot correlation (one-sample-t)</a></li>
+<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.2</b> Lineplot</a></li>
 </ul></li>
 <li class="chapter" data-level="30" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html"><i class="fa fa-check"></i><b>30</b> [fMRI] Signature effect size ~ single trial</a>
 <ul>
@@ -435,30 +417,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="30.2" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#contrastt-stim-intensity"><i class="fa fa-check"></i><b>30.2</b> contrastt (stim intensity)</a></li>
 <li class="chapter" data-level="30.3" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#layer-in-metadata"><i class="fa fa-check"></i><b>30.3</b> layer in metadata</a></li>
 </ul></li>
-<li class="chapter" data-level="31" data-path="ch40_vif.html"><a href="ch40_vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
-<li class="chapter" data-level="32" data-path="load-in-the-datamatrix-and-calculate-the-vif.html"><a href="load-in-the-datamatrix-and-calculate-the-vif.html"><i class="fa fa-check"></i><b>32</b> load in the datamatrix and calculate the vif</a></li>
-<li class="chapter" data-level="33" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>33</b> vif</a></li>
-<li class="chapter" data-level="34" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html"><i class="fa fa-check"></i><b>34</b> [fMRI] Cognitive signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="34.1" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#load-behavioral-data-2"><i class="fa fa-check"></i><b>34.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="34.2" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#dfmerge-stats"><i class="fa fa-check"></i><b>34.2</b> dfmerge stats</a></li>
-<li class="chapter" data-level="34.3" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#expect-nps-as-a-function-of-cue"><i class="fa fa-check"></i><b>34.3</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="34.4" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#x3-stimcue"><i class="fa fa-check"></i><b>34.4</b> 2x3 stim*cue</a></li>
-<li class="chapter" data-level="34.5" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#lineplot-2"><i class="fa fa-check"></i><b>34.5</b> lineplot</a></li>
-</ul></li>
-<li class="chapter" data-level="35" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html"><i class="fa fa-check"></i><b>35</b> [fMRI] Vicarious signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="35.1" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#load-behavioral-data-3"><i class="fa fa-check"></i><b>35.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="35.2" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#expect-nps-as-a-function-of-cue-1"><i class="fa fa-check"></i><b>35.2</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="35.3" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#x3-stimcue-1"><i class="fa fa-check"></i><b>35.3</b> 2x3 stim*cue</a></li>
-</ul></li>
-<li class="chapter" data-level="36" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html"><i class="fa fa-check"></i><b>36</b> [fMRI] Pain signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="36.1" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#load-behavioral-data-4"><i class="fa fa-check"></i><b>36.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="36.2" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#expect-nps-as-a-function-of-cue-2"><i class="fa fa-check"></i><b>36.2</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="36.3" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#x3-stimcue-2"><i class="fa fa-check"></i><b>36.3</b> 2x3 stim*cue</a></li>
-<li class="chapter" data-level="36.4" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#lineplots-3"><i class="fa fa-check"></i><b>36.4</b> lineplots</a></li>
-</ul></li>
+<li class="chapter" data-level="31" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -480,10 +439,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="ch07_RT-cue" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">Chapter 7</span> RT ~ cue<a href="ch07_RT-cue.html#ch07_RT-cue" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>““”
-This Rmarkdown tests the cue effect (high vs. low) on Reaction time and performance in the cogntive, mental-rotation tasks
-““”</p>
+<h1><span class="header-section-number">Chapter 7</span> [beh] RT ~ cue<a href="ch07_RT-cue.html#ch07_RT-cue" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="what-is-the-purpose-of-this-notebook-4" class="section level2 unlisted unnumbered hasAnchor">
+<h2>What is the purpose of this notebook?<a href="ch07_RT-cue.html#what-is-the-purpose-of-this-notebook-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here, I test the cue effect (high vs. low) on Reaction time and performance in the cogntive, mental-rotation tasks</p>
 <ul>
 <li>left = diff, right = same</li>
 <li>model 1: Does RT differ as a function of cue type?</li>
@@ -496,29 +455,29 @@ This Rmarkdown tests the cue effect (high vs. low) on Reaction time and perform
 </div>
 <div id="plot-rt-data" class="section level3 hasAnchor" number="7.0.2">
 <h3><span class="header-section-number">7.0.2</span> 1) plot RT data<a href="ch07_RT-cue.html#plot-rt-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="ch07_RT-cue.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters _____________________________________ # nolint</span></span>
-<span id="cb158-2"><a href="ch07_RT-cue.html#cb158-2" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
-<span id="cb158-3"><a href="ch07_RT-cue.html#cb158-3" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_cue_type&quot;</span></span>
-<span id="cb158-4"><a href="ch07_RT-cue.html#cb158-4" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event03_RT&quot;</span></span>
-<span id="cb158-5"><a href="ch07_RT-cue.html#cb158-5" aria-hidden="true" tabindex="-1"></a>dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;RT&quot;</span></span>
-<span id="cb158-6"><a href="ch07_RT-cue.html#cb158-6" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb158-7"><a href="ch07_RT-cue.html#cb158-7" aria-hidden="true" tabindex="-1"></a>taskname <span class="ot">&lt;-</span> <span class="st">&quot;cognitive&quot;</span></span>
-<span id="cb158-8"><a href="ch07_RT-cue.html#cb158-8" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">&quot;ratings (degree)&quot;</span></span>
-<span id="cb158-9"><a href="ch07_RT-cue.html#cb158-9" aria-hidden="true" tabindex="-1"></a>subject <span class="ot">&lt;-</span> <span class="st">&quot;subject&quot;</span></span>
-<span id="cb158-10"><a href="ch07_RT-cue.html#cb158-10" aria-hidden="true" tabindex="-1"></a>exclude <span class="ot">&lt;-</span> <span class="st">&quot;sub-0999|sub-0001|sub-0002|sub-0003|sub-0004|sub-0005|sub-0006|sub-0007|sub-0008|sub-0009|sub-0010|sub-0011&quot;</span></span>
-<span id="cb158-11"><a href="ch07_RT-cue.html#cb158-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb158-12"><a href="ch07_RT-cue.html#cb158-12" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">load_task_social_df</span>(datadir, <span class="at">taskname =</span> taskname, <span class="at">subject_varkey =</span> subject_varkey, <span class="at">iv =</span> iv,  <span class="at">exclude =</span> exclude)</span>
-<span id="cb158-13"><a href="ch07_RT-cue.html#cb158-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>event03_RT <span class="ot">&lt;-</span> data<span class="sc">$</span>event03_stimulusC_reseponseonset <span class="sc">-</span> data<span class="sc">$</span>event03_stimulus_displayonset</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="ch07_RT-cue.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters _____________________________________ # nolint</span></span>
+<span id="cb96-2"><a href="ch07_RT-cue.html#cb96-2" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
+<span id="cb96-3"><a href="ch07_RT-cue.html#cb96-3" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_cue_type&quot;</span></span>
+<span id="cb96-4"><a href="ch07_RT-cue.html#cb96-4" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event03_RT&quot;</span></span>
+<span id="cb96-5"><a href="ch07_RT-cue.html#cb96-5" aria-hidden="true" tabindex="-1"></a>dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;RT&quot;</span></span>
+<span id="cb96-6"><a href="ch07_RT-cue.html#cb96-6" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb96-7"><a href="ch07_RT-cue.html#cb96-7" aria-hidden="true" tabindex="-1"></a>taskname <span class="ot">&lt;-</span> <span class="st">&quot;cognitive&quot;</span></span>
+<span id="cb96-8"><a href="ch07_RT-cue.html#cb96-8" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">&quot;ratings (degree)&quot;</span></span>
+<span id="cb96-9"><a href="ch07_RT-cue.html#cb96-9" aria-hidden="true" tabindex="-1"></a>subject <span class="ot">&lt;-</span> <span class="st">&quot;subject&quot;</span></span>
+<span id="cb96-10"><a href="ch07_RT-cue.html#cb96-10" aria-hidden="true" tabindex="-1"></a>exclude <span class="ot">&lt;-</span> <span class="st">&quot;sub-0999|sub-0001|sub-0002|sub-0003|sub-0004|sub-0005|sub-0006|sub-0007|sub-0008|sub-0009|sub-0010|sub-0011&quot;</span></span>
+<span id="cb96-11"><a href="ch07_RT-cue.html#cb96-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-12"><a href="ch07_RT-cue.html#cb96-12" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">load_task_social_df</span>(datadir, <span class="at">taskname =</span> taskname, <span class="at">subject_varkey =</span> subject_varkey, <span class="at">iv =</span> iv,  <span class="at">exclude =</span> exclude)</span>
+<span id="cb96-13"><a href="ch07_RT-cue.html#cb96-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>event03_RT <span class="ot">&lt;-</span> data<span class="sc">$</span>event03_stimulusC_reseponseonset <span class="sc">-</span> data<span class="sc">$</span>event03_stimulus_displayonset</span></code></pre></div>
 </div>
 <div id="plot-rt-distribution-per-participant" class="section level3 hasAnchor" number="7.0.3">
 <h3><span class="header-section-number">7.0.3</span> plot RT distribution per participant<a href="ch07_RT-cue.html#plot-rt-distribution-per-participant" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>the purpose is to identify whether RTs are distributed from 0-5 sec or not</li>
 </ul>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="ch07_RT-cue.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data,<span class="fu">aes</span>(<span class="at">x=</span>event03_RT, <span class="at">group =</span> subject)) <span class="sc">+</span></span>
-<span id="cb159-2"><a href="ch07_RT-cue.html#cb159-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">&quot;darkblue&quot;</span>, <span class="at">fill=</span><span class="st">&quot;lightblue&quot;</span>, <span class="at">binwidth=</span><span class="fl">0.25</span>, <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span> </span>
-<span id="cb159-3"><a href="ch07_RT-cue.html#cb159-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>subject, <span class="at">ncol =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
-<span id="cb159-4"><a href="ch07_RT-cue.html#cb159-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">5</span>),<span class="at">text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">6</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="ch07_RT-cue.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data,<span class="fu">aes</span>(<span class="at">x=</span>event03_RT, <span class="at">group =</span> subject)) <span class="sc">+</span></span>
+<span id="cb97-2"><a href="ch07_RT-cue.html#cb97-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color=</span><span class="st">&quot;darkblue&quot;</span>, <span class="at">fill=</span><span class="st">&quot;lightblue&quot;</span>, <span class="at">binwidth=</span><span class="fl">0.25</span>, <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span> </span>
+<span id="cb97-3"><a href="ch07_RT-cue.html#cb97-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>subject, <span class="at">ncol =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb97-4"><a href="ch07_RT-cue.html#cb97-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">5</span>),<span class="at">text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">6</span>))</span></code></pre></div>
 <pre><code>## Warning: Removed 591 rows containing non-finite values (`stat_bin()`).</code></pre>
 <p><img src="07_iv-cue_dv-RT_FIX_files/figure-html/plot_RT_distribution_6-1.png" width="672" /></p>
 <ul>
@@ -530,30 +489,31 @@ This Rmarkdown tests the cue effect (high vs. low) on Reaction time and perform
 </div>
 <div id="exclude-participants-with-rt-of-5-seconds" class="section level3 hasAnchor" number="7.0.4">
 <h3><span class="header-section-number">7.0.4</span> exclude participants with RT of 5 seconds<a href="ch07_RT-cue.html#exclude-participants-with-rt-of-5-seconds" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="ch07_RT-cue.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters _____________________________________ # nolint</span></span>
-<span id="cb161-2"><a href="ch07_RT-cue.html#cb161-2" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
-<span id="cb161-3"><a href="ch07_RT-cue.html#cb161-3" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_cue_type&quot;</span></span>
-<span id="cb161-4"><a href="ch07_RT-cue.html#cb161-4" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event03_RT&quot;</span></span>
-<span id="cb161-5"><a href="ch07_RT-cue.html#cb161-5" aria-hidden="true" tabindex="-1"></a>dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;RT&quot;</span></span>
-<span id="cb161-6"><a href="ch07_RT-cue.html#cb161-6" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb161-7"><a href="ch07_RT-cue.html#cb161-7" aria-hidden="true" tabindex="-1"></a>taskname <span class="ot">&lt;-</span> <span class="st">&quot;cognitive&quot;</span></span>
-<span id="cb161-8"><a href="ch07_RT-cue.html#cb161-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb161-9"><a href="ch07_RT-cue.html#cb161-9" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">&quot;ratings (degree)&quot;</span></span>
-<span id="cb161-10"><a href="ch07_RT-cue.html#cb161-10" aria-hidden="true" tabindex="-1"></a>subject <span class="ot">&lt;-</span> <span class="st">&quot;subject&quot;</span></span>
-<span id="cb161-11"><a href="ch07_RT-cue.html#cb161-11" aria-hidden="true" tabindex="-1"></a>exclude <span class="ot">&lt;-</span> <span class="st">&quot;sub-0999|sub-0001|sub-0002|sub-0003|sub-0004|sub-0005|sub-0006|sub-0007|sub-0008|sub-0009|sub-0010|sub-0011&quot;</span></span>
-<span id="cb161-12"><a href="ch07_RT-cue.html#cb161-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb161-13"><a href="ch07_RT-cue.html#cb161-13" aria-hidden="true" tabindex="-1"></a><span class="co"># load data _____________________________________</span></span>
-<span id="cb161-14"><a href="ch07_RT-cue.html#cb161-14" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">load_task_social_df</span>(datadir, <span class="at">taskname =</span> taskname, <span class="at">subject_varkey =</span> subject_varkey, <span class="at">iv =</span> iv, <span class="at">exclude =</span> exclude)</span>
-<span id="cb161-15"><a href="ch07_RT-cue.html#cb161-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>event03_RT <span class="ot">&lt;-</span> data<span class="sc">$</span>event03_stimulusC_reseponseonset <span class="sc">-</span> data<span class="sc">$</span>event03_stimulus_displayonset</span>
-<span id="cb161-16"><a href="ch07_RT-cue.html#cb161-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb161-17"><a href="ch07_RT-cue.html#cb161-17" aria-hidden="true" tabindex="-1"></a>analysis_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(main_dir, <span class="st">&quot;analysis&quot;</span>, <span class="st">&quot;mixedeffect&quot;</span>, <span class="st">&quot;model05_iv-cue_dv-RT&quot;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()))</span>
-<span id="cb161-18"><a href="ch07_RT-cue.html#cb161-18" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(analysis_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb161-19"><a href="ch07_RT-cue.html#cb161-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb161-20"><a href="ch07_RT-cue.html#cb161-20" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>event03_response_samediff <span class="ot">&lt;-</span> <span class="fu">mapvalues</span>(data<span class="sc">$</span>event03_stimulusC_response,</span>
-<span id="cb161-21"><a href="ch07_RT-cue.html#cb161-21" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">from =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb161-22"><a href="ch07_RT-cue.html#cb161-22" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">to =</span> <span class="fu">c</span>(<span class="st">&quot;diff&quot;</span>, <span class="st">&quot;same&quot;</span>))</span>
-<span id="cb161-23"><a href="ch07_RT-cue.html#cb161-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb161-24"><a href="ch07_RT-cue.html#cb161-24" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>event03_correct <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>event03_C_stim_match <span class="sc">==</span> data<span class="sc">$</span>event03_response_samediff, <span class="dv">1</span>, <span class="fu">ifelse</span>(data<span class="sc">$</span>event03_C_stim_match <span class="sc">!=</span> data<span class="sc">$</span>event03_response_samediff, <span class="dv">0</span>, <span class="st">&quot;NA&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="ch07_RT-cue.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters _____________________________________ # nolint</span></span>
+<span id="cb99-2"><a href="ch07_RT-cue.html#cb99-2" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
+<span id="cb99-3"><a href="ch07_RT-cue.html#cb99-3" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_cue_type&quot;</span></span>
+<span id="cb99-4"><a href="ch07_RT-cue.html#cb99-4" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event03_RT&quot;</span></span>
+<span id="cb99-5"><a href="ch07_RT-cue.html#cb99-5" aria-hidden="true" tabindex="-1"></a>dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;RT&quot;</span></span>
+<span id="cb99-6"><a href="ch07_RT-cue.html#cb99-6" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb99-7"><a href="ch07_RT-cue.html#cb99-7" aria-hidden="true" tabindex="-1"></a>taskname <span class="ot">&lt;-</span> <span class="st">&quot;cognitive&quot;</span></span>
+<span id="cb99-8"><a href="ch07_RT-cue.html#cb99-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-9"><a href="ch07_RT-cue.html#cb99-9" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">&quot;ratings (degree)&quot;</span></span>
+<span id="cb99-10"><a href="ch07_RT-cue.html#cb99-10" aria-hidden="true" tabindex="-1"></a>subject <span class="ot">&lt;-</span> <span class="st">&quot;subject&quot;</span></span>
+<span id="cb99-11"><a href="ch07_RT-cue.html#cb99-11" aria-hidden="true" tabindex="-1"></a>exclude <span class="ot">&lt;-</span> <span class="st">&quot;sub-0999|sub-0001|sub-0002|sub-0003|sub-0004|sub-0005|sub-0006|sub-0007|sub-0008|sub-0009|sub-0010|sub-0011&quot;</span></span>
+<span id="cb99-12"><a href="ch07_RT-cue.html#cb99-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-13"><a href="ch07_RT-cue.html#cb99-13" aria-hidden="true" tabindex="-1"></a><span class="co"># load data _____________________________________</span></span>
+<span id="cb99-14"><a href="ch07_RT-cue.html#cb99-14" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">load_task_social_df</span>(datadir, <span class="at">taskname =</span> taskname, <span class="at">subject_varkey =</span> subject_varkey, <span class="at">iv =</span> iv, <span class="at">exclude =</span> exclude)</span>
+<span id="cb99-15"><a href="ch07_RT-cue.html#cb99-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>event03_RT <span class="ot">&lt;-</span> data<span class="sc">$</span>event03_stimulusC_reseponseonset <span class="sc">-</span> data<span class="sc">$</span>event03_stimulus_displayonset</span>
+<span id="cb99-16"><a href="ch07_RT-cue.html#cb99-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-17"><a href="ch07_RT-cue.html#cb99-17" aria-hidden="true" tabindex="-1"></a>analysis_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(main_dir, <span class="st">&quot;analysis&quot;</span>, <span class="st">&quot;mixedeffect&quot;</span>, <span class="st">&quot;model05_iv-cue_dv-RT&quot;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()))</span>
+<span id="cb99-18"><a href="ch07_RT-cue.html#cb99-18" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(analysis_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb99-19"><a href="ch07_RT-cue.html#cb99-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-20"><a href="ch07_RT-cue.html#cb99-20" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>event03_response_samediff <span class="ot">&lt;-</span> <span class="fu">mapvalues</span>(data<span class="sc">$</span>event03_stimulusC_response,</span>
+<span id="cb99-21"><a href="ch07_RT-cue.html#cb99-21" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">from =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb99-22"><a href="ch07_RT-cue.html#cb99-22" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">to =</span> <span class="fu">c</span>(<span class="st">&quot;diff&quot;</span>, <span class="st">&quot;same&quot;</span>))</span>
+<span id="cb99-23"><a href="ch07_RT-cue.html#cb99-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-24"><a href="ch07_RT-cue.html#cb99-24" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>event03_correct <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>event03_C_stim_match <span class="sc">==</span> data<span class="sc">$</span>event03_response_samediff, <span class="dv">1</span>, <span class="fu">ifelse</span>(data<span class="sc">$</span>event03_C_stim_match <span class="sc">!=</span> data<span class="sc">$</span>event03_response_samediff, <span class="dv">0</span>, <span class="st">&quot;NA&quot;</span>))</span></code></pre></div>
+</div>
 </div>
 <div id="model-1" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> model 1:<a href="ch07_RT-cue.html#model-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -562,33 +522,33 @@ This Rmarkdown tests the cue effect (high vs. low) on Reaction time and perform
 <li>Does RT differ as a function of high vs. low cue?</li>
 <li>conclusion: No. RT does not differ as a function of cue</li>
 </ul>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="ch07_RT-cue.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters ________________________________</span></span>
-<span id="cb162-2"><a href="ch07_RT-cue.html#cb162-2" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
-<span id="cb162-3"><a href="ch07_RT-cue.html#cb162-3" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_cue_type&quot;</span></span>
-<span id="cb162-4"><a href="ch07_RT-cue.html#cb162-4" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event03_RT&quot;</span></span>
-<span id="cb162-5"><a href="ch07_RT-cue.html#cb162-5" aria-hidden="true" tabindex="-1"></a>dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;RT&quot;</span></span>
-<span id="cb162-6"><a href="ch07_RT-cue.html#cb162-6" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb162-7"><a href="ch07_RT-cue.html#cb162-7" aria-hidden="true" tabindex="-1"></a>taskname <span class="ot">&lt;-</span> <span class="st">&quot;cognitive&quot;</span></span>
-<span id="cb162-8"><a href="ch07_RT-cue.html#cb162-8" aria-hidden="true" tabindex="-1"></a>ylim <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
-<span id="cb162-9"><a href="ch07_RT-cue.html#cb162-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb162-10"><a href="ch07_RT-cue.html#cb162-10" aria-hidden="true" tabindex="-1"></a><span class="co"># lmer filename ________________________________</span></span>
-<span id="cb162-11"><a href="ch07_RT-cue.html#cb162-11" aria-hidden="true" tabindex="-1"></a>model_savefname <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
-<span id="cb162-12"><a href="ch07_RT-cue.html#cb162-12" aria-hidden="true" tabindex="-1"></a>        analysis_dir,</span>
-<span id="cb162-13"><a href="ch07_RT-cue.html#cb162-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="st">&quot;lmer_task-&quot;</span>, taskname,</span>
-<span id="cb162-14"><a href="ch07_RT-cue.html#cb162-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;_rating-&quot;</span>, dv_keyword,</span>
-<span id="cb162-15"><a href="ch07_RT-cue.html#cb162-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;_&quot;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()), <span class="st">&quot;.txt&quot;</span>,</span>
-<span id="cb162-16"><a href="ch07_RT-cue.html#cb162-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb162-17"><a href="ch07_RT-cue.html#cb162-17" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb162-18"><a href="ch07_RT-cue.html#cb162-18" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb162-19"><a href="ch07_RT-cue.html#cb162-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb162-20"><a href="ch07_RT-cue.html#cb162-20" aria-hidden="true" tabindex="-1"></a><span class="co"># removing NA values ________________________________</span></span>
-<span id="cb162-21"><a href="ch07_RT-cue.html#cb162-21" aria-hidden="true" tabindex="-1"></a>data_clean <span class="ot">=</span> data[<span class="sc">!</span><span class="fu">is.na</span>(data<span class="sc">$</span>event03_correct),]</span>
-<span id="cb162-22"><a href="ch07_RT-cue.html#cb162-22" aria-hidden="true" tabindex="-1"></a>data_clean<span class="sc">$</span>subject <span class="ot">=</span> <span class="fu">factor</span>(data_clean<span class="sc">$</span>src_subject_id)</span>
-<span id="cb162-23"><a href="ch07_RT-cue.html#cb162-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb162-24"><a href="ch07_RT-cue.html#cb162-24" aria-hidden="true" tabindex="-1"></a><span class="co"># lmer model ________________________________</span></span>
-<span id="cb162-25"><a href="ch07_RT-cue.html#cb162-25" aria-hidden="true" tabindex="-1"></a><span class="fu">sink</span>(model_savefname)</span>
-<span id="cb162-26"><a href="ch07_RT-cue.html#cb162-26" aria-hidden="true" tabindex="-1"></a>model_onefactor <span class="ot">&lt;-</span> <span class="fu">lmer</span>(event03_RT <span class="sc">~</span> param_cue_type <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> subject), <span class="at">data =</span> data_clean)</span>
-<span id="cb162-27"><a href="ch07_RT-cue.html#cb162-27" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_onefactor)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="ch07_RT-cue.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters ________________________________</span></span>
+<span id="cb100-2"><a href="ch07_RT-cue.html#cb100-2" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
+<span id="cb100-3"><a href="ch07_RT-cue.html#cb100-3" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_cue_type&quot;</span></span>
+<span id="cb100-4"><a href="ch07_RT-cue.html#cb100-4" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event03_RT&quot;</span></span>
+<span id="cb100-5"><a href="ch07_RT-cue.html#cb100-5" aria-hidden="true" tabindex="-1"></a>dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;RT&quot;</span></span>
+<span id="cb100-6"><a href="ch07_RT-cue.html#cb100-6" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb100-7"><a href="ch07_RT-cue.html#cb100-7" aria-hidden="true" tabindex="-1"></a>taskname <span class="ot">&lt;-</span> <span class="st">&quot;cognitive&quot;</span></span>
+<span id="cb100-8"><a href="ch07_RT-cue.html#cb100-8" aria-hidden="true" tabindex="-1"></a>ylim <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
+<span id="cb100-9"><a href="ch07_RT-cue.html#cb100-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb100-10"><a href="ch07_RT-cue.html#cb100-10" aria-hidden="true" tabindex="-1"></a><span class="co"># lmer filename ________________________________</span></span>
+<span id="cb100-11"><a href="ch07_RT-cue.html#cb100-11" aria-hidden="true" tabindex="-1"></a>model_savefname <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
+<span id="cb100-12"><a href="ch07_RT-cue.html#cb100-12" aria-hidden="true" tabindex="-1"></a>        analysis_dir,</span>
+<span id="cb100-13"><a href="ch07_RT-cue.html#cb100-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="st">&quot;lmer_task-&quot;</span>, taskname,</span>
+<span id="cb100-14"><a href="ch07_RT-cue.html#cb100-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;_rating-&quot;</span>, dv_keyword,</span>
+<span id="cb100-15"><a href="ch07_RT-cue.html#cb100-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;_&quot;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()), <span class="st">&quot;.txt&quot;</span>,</span>
+<span id="cb100-16"><a href="ch07_RT-cue.html#cb100-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb100-17"><a href="ch07_RT-cue.html#cb100-17" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb100-18"><a href="ch07_RT-cue.html#cb100-18" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb100-19"><a href="ch07_RT-cue.html#cb100-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb100-20"><a href="ch07_RT-cue.html#cb100-20" aria-hidden="true" tabindex="-1"></a><span class="co"># removing NA values ________________________________</span></span>
+<span id="cb100-21"><a href="ch07_RT-cue.html#cb100-21" aria-hidden="true" tabindex="-1"></a>data_clean <span class="ot">=</span> data[<span class="sc">!</span><span class="fu">is.na</span>(data<span class="sc">$</span>event03_correct),]</span>
+<span id="cb100-22"><a href="ch07_RT-cue.html#cb100-22" aria-hidden="true" tabindex="-1"></a>data_clean<span class="sc">$</span>subject <span class="ot">=</span> <span class="fu">factor</span>(data_clean<span class="sc">$</span>src_subject_id)</span>
+<span id="cb100-23"><a href="ch07_RT-cue.html#cb100-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb100-24"><a href="ch07_RT-cue.html#cb100-24" aria-hidden="true" tabindex="-1"></a><span class="co"># lmer model ________________________________</span></span>
+<span id="cb100-25"><a href="ch07_RT-cue.html#cb100-25" aria-hidden="true" tabindex="-1"></a><span class="fu">sink</span>(model_savefname)</span>
+<span id="cb100-26"><a href="ch07_RT-cue.html#cb100-26" aria-hidden="true" tabindex="-1"></a>model_onefactor <span class="ot">&lt;-</span> <span class="fu">lmer</span>(event03_RT <span class="sc">~</span> param_cue_type <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> subject), <span class="at">data =</span> data_clean)</span>
+<span id="cb100-27"><a href="ch07_RT-cue.html#cb100-27" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_onefactor)</span></code></pre></div>
 <pre><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
 ## lmerModLmerTest]
 ## Formula: event03_RT ~ param_cue_type + (1 | subject)
@@ -616,49 +576,49 @@ This Rmarkdown tests the cue effect (high vs. low) on Reaction time and perform
 ## Correlation of Fixed Effects:
 ##             (Intr)
 ## prm_c_typl_ -0.225</code></pre>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="ch07_RT-cue.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sink</span>()</span>
-<span id="cb164-2"><a href="ch07_RT-cue.html#cb164-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb164-3"><a href="ch07_RT-cue.html#cb164-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb164-4"><a href="ch07_RT-cue.html#cb164-4" aria-hidden="true" tabindex="-1"></a>fixEffect <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">fixef</span>(model_onefactor))</span>
-<span id="cb164-5"><a href="ch07_RT-cue.html#cb164-5" aria-hidden="true" tabindex="-1"></a>randEffect <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">ranef</span>(model_onefactor))</span>
-<span id="cb164-6"><a href="ch07_RT-cue.html#cb164-6" aria-hidden="true" tabindex="-1"></a>cooksd <span class="ot">&lt;-</span> <span class="fu">cooks.distance</span>(model_onefactor)</span>
-<span id="cb164-7"><a href="ch07_RT-cue.html#cb164-7" aria-hidden="true" tabindex="-1"></a>influential <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(cooksd)[</span>
-<span id="cb164-8"><a href="ch07_RT-cue.html#cb164-8" aria-hidden="true" tabindex="-1"></a>    (cooksd <span class="sc">&gt;</span> (<span class="dv">4</span> <span class="sc">/</span> <span class="fu">as.numeric</span>(<span class="fu">length</span>(<span class="fu">unique</span>(data_clean<span class="sc">$</span>subject)))))])</span>
-<span id="cb164-9"><a href="ch07_RT-cue.html#cb164-9" aria-hidden="true" tabindex="-1"></a>data_screen <span class="ot">&lt;-</span> data_clean[<span class="sc">-</span>influential, ]</span>
-<span id="cb164-10"><a href="ch07_RT-cue.html#cb164-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb164-11"><a href="ch07_RT-cue.html#cb164-11" aria-hidden="true" tabindex="-1"></a><span class="co"># summary statistics for plots ________________________________</span></span>
-<span id="cb164-12"><a href="ch07_RT-cue.html#cb164-12" aria-hidden="true" tabindex="-1"></a>subjectwise <span class="ot">&lt;-</span> <span class="fu">meanSummary</span>(data_screen, <span class="fu">c</span>(subject, iv), dv)</span>
-<span id="cb164-13"><a href="ch07_RT-cue.html#cb164-13" aria-hidden="true" tabindex="-1"></a>groupwise <span class="ot">&lt;-</span> <span class="fu">summarySEwithin</span>(</span>
-<span id="cb164-14"><a href="ch07_RT-cue.html#cb164-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> subjectwise,</span>
-<span id="cb164-15"><a href="ch07_RT-cue.html#cb164-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">measurevar =</span> <span class="st">&quot;mean_per_sub&quot;</span>, <span class="co"># variable created from above</span></span>
-<span id="cb164-16"><a href="ch07_RT-cue.html#cb164-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">withinvars =</span> <span class="fu">c</span>(iv), <span class="co"># iv</span></span>
-<span id="cb164-17"><a href="ch07_RT-cue.html#cb164-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">idvar =</span> <span class="st">&quot;subject&quot;</span></span>
-<span id="cb164-18"><a href="ch07_RT-cue.html#cb164-18" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="ch07_RT-cue.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sink</span>()</span>
+<span id="cb102-2"><a href="ch07_RT-cue.html#cb102-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-3"><a href="ch07_RT-cue.html#cb102-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-4"><a href="ch07_RT-cue.html#cb102-4" aria-hidden="true" tabindex="-1"></a>fixEffect <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">fixef</span>(model_onefactor))</span>
+<span id="cb102-5"><a href="ch07_RT-cue.html#cb102-5" aria-hidden="true" tabindex="-1"></a>randEffect <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">ranef</span>(model_onefactor))</span>
+<span id="cb102-6"><a href="ch07_RT-cue.html#cb102-6" aria-hidden="true" tabindex="-1"></a>cooksd <span class="ot">&lt;-</span> <span class="fu">cooks.distance</span>(model_onefactor)</span>
+<span id="cb102-7"><a href="ch07_RT-cue.html#cb102-7" aria-hidden="true" tabindex="-1"></a>influential <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(cooksd)[</span>
+<span id="cb102-8"><a href="ch07_RT-cue.html#cb102-8" aria-hidden="true" tabindex="-1"></a>    (cooksd <span class="sc">&gt;</span> (<span class="dv">4</span> <span class="sc">/</span> <span class="fu">as.numeric</span>(<span class="fu">length</span>(<span class="fu">unique</span>(data_clean<span class="sc">$</span>subject)))))])</span>
+<span id="cb102-9"><a href="ch07_RT-cue.html#cb102-9" aria-hidden="true" tabindex="-1"></a>data_screen <span class="ot">&lt;-</span> data_clean[<span class="sc">-</span>influential, ]</span>
+<span id="cb102-10"><a href="ch07_RT-cue.html#cb102-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-11"><a href="ch07_RT-cue.html#cb102-11" aria-hidden="true" tabindex="-1"></a><span class="co"># summary statistics for plots ________________________________</span></span>
+<span id="cb102-12"><a href="ch07_RT-cue.html#cb102-12" aria-hidden="true" tabindex="-1"></a>subjectwise <span class="ot">&lt;-</span> <span class="fu">meanSummary</span>(data_screen, <span class="fu">c</span>(subject, iv), dv)</span>
+<span id="cb102-13"><a href="ch07_RT-cue.html#cb102-13" aria-hidden="true" tabindex="-1"></a>groupwise <span class="ot">&lt;-</span> <span class="fu">summarySEwithin</span>(</span>
+<span id="cb102-14"><a href="ch07_RT-cue.html#cb102-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> subjectwise,</span>
+<span id="cb102-15"><a href="ch07_RT-cue.html#cb102-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">measurevar =</span> <span class="st">&quot;mean_per_sub&quot;</span>, <span class="co"># variable created from above</span></span>
+<span id="cb102-16"><a href="ch07_RT-cue.html#cb102-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">withinvars =</span> <span class="fu">c</span>(iv), <span class="co"># iv</span></span>
+<span id="cb102-17"><a href="ch07_RT-cue.html#cb102-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">idvar =</span> <span class="st">&quot;subject&quot;</span></span>
+<span id="cb102-18"><a href="ch07_RT-cue.html#cb102-18" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
 <pre><code>## Automatically converting the following non-factors to factors: param_cue_type</code></pre>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="ch07_RT-cue.html#cb166-1" aria-hidden="true" tabindex="-1"></a>subjectwise_mean <span class="ot">&lt;-</span> <span class="st">&quot;mean_per_sub&quot;</span>;    group_mean <span class="ot">&lt;-</span> <span class="st">&quot;mean_per_sub_norm_mean&quot;</span></span>
-<span id="cb166-2"><a href="ch07_RT-cue.html#cb166-2" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> <span class="st">&quot;se&quot;</span>;    subject <span class="ot">&lt;-</span> <span class="st">&quot;subject&quot;</span></span>
-<span id="cb166-3"><a href="ch07_RT-cue.html#cb166-3" aria-hidden="true" tabindex="-1"></a>ggtitle <span class="ot">&lt;-</span> <span class="fu">paste</span>(taskname, <span class="st">&quot; - Reaction Time (s)&quot;</span>);    title <span class="ot">&lt;-</span> <span class="fu">paste</span>(taskname, <span class="st">&quot; - RT&quot;</span>)</span>
-<span id="cb166-4"><a href="ch07_RT-cue.html#cb166-4" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span>;    ylab <span class="ot">&lt;-</span> <span class="st">&quot;Reaction Time (s)&quot;</span>;    </span>
-<span id="cb166-5"><a href="ch07_RT-cue.html#cb166-5" aria-hidden="true" tabindex="-1"></a>w <span class="ot">=</span> <span class="dv">5</span>; h <span class="ot">=</span> <span class="dv">3</span>; dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;RT&quot;</span></span>
-<span id="cb166-6"><a href="ch07_RT-cue.html#cb166-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">startsWith</span>(dv_keyword, <span class="fu">c</span>(<span class="st">&quot;expect&quot;</span>, <span class="st">&quot;Expect&quot;</span>)))) {</span>
-<span id="cb166-7"><a href="ch07_RT-cue.html#cb166-7" aria-hidden="true" tabindex="-1"></a>        color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#1B9E77&quot;</span>, <span class="st">&quot;#D95F02&quot;</span>)</span>
-<span id="cb166-8"><a href="ch07_RT-cue.html#cb166-8" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb166-9"><a href="ch07_RT-cue.html#cb166-9" aria-hidden="true" tabindex="-1"></a>        color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#4575B4&quot;</span>, <span class="st">&quot;#D73027&quot;</span>)</span>
-<span id="cb166-10"><a href="ch07_RT-cue.html#cb166-10" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb166-11"><a href="ch07_RT-cue.html#cb166-11" aria-hidden="true" tabindex="-1"></a>plot_savefname <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
-<span id="cb166-12"><a href="ch07_RT-cue.html#cb166-12" aria-hidden="true" tabindex="-1"></a>        analysis_dir,</span>
-<span id="cb166-13"><a href="ch07_RT-cue.html#cb166-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="st">&quot;raincloud_task-&quot;</span>, taskname,</span>
-<span id="cb166-14"><a href="ch07_RT-cue.html#cb166-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;_dv-&quot;</span>, dv_keyword,</span>
-<span id="cb166-15"><a href="ch07_RT-cue.html#cb166-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;_&quot;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()), <span class="st">&quot;.png&quot;</span>,</span>
-<span id="cb166-16"><a href="ch07_RT-cue.html#cb166-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb166-17"><a href="ch07_RT-cue.html#cb166-17" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb166-18"><a href="ch07_RT-cue.html#cb166-18" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb166-19"><a href="ch07_RT-cue.html#cb166-19" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_rainclouds_onefactor</span>(</span>
-<span id="cb166-20"><a href="ch07_RT-cue.html#cb166-20" aria-hidden="true" tabindex="-1"></a>        subjectwise, groupwise,</span>
-<span id="cb166-21"><a href="ch07_RT-cue.html#cb166-21" aria-hidden="true" tabindex="-1"></a>        iv, subjectwise_mean, group_mean, se, subject,</span>
-<span id="cb166-22"><a href="ch07_RT-cue.html#cb166-22" aria-hidden="true" tabindex="-1"></a>        ggtitle, title, xlab, ylab, task_name, ylim,</span>
-<span id="cb166-23"><a href="ch07_RT-cue.html#cb166-23" aria-hidden="true" tabindex="-1"></a>        w, h, dv_keyword, color, plot_savefname</span>
-<span id="cb166-24"><a href="ch07_RT-cue.html#cb166-24" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="ch07_RT-cue.html#cb104-1" aria-hidden="true" tabindex="-1"></a>subjectwise_mean <span class="ot">&lt;-</span> <span class="st">&quot;mean_per_sub&quot;</span>;    group_mean <span class="ot">&lt;-</span> <span class="st">&quot;mean_per_sub_norm_mean&quot;</span></span>
+<span id="cb104-2"><a href="ch07_RT-cue.html#cb104-2" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> <span class="st">&quot;se&quot;</span>;    subject <span class="ot">&lt;-</span> <span class="st">&quot;subject&quot;</span></span>
+<span id="cb104-3"><a href="ch07_RT-cue.html#cb104-3" aria-hidden="true" tabindex="-1"></a>ggtitle <span class="ot">&lt;-</span> <span class="fu">paste</span>(taskname, <span class="st">&quot; - Reaction Time (s)&quot;</span>);    title <span class="ot">&lt;-</span> <span class="fu">paste</span>(taskname, <span class="st">&quot; - RT&quot;</span>)</span>
+<span id="cb104-4"><a href="ch07_RT-cue.html#cb104-4" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span>;    ylab <span class="ot">&lt;-</span> <span class="st">&quot;Reaction Time (s)&quot;</span>;    </span>
+<span id="cb104-5"><a href="ch07_RT-cue.html#cb104-5" aria-hidden="true" tabindex="-1"></a>w <span class="ot">=</span> <span class="dv">5</span>; h <span class="ot">=</span> <span class="dv">3</span>; dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;RT&quot;</span></span>
+<span id="cb104-6"><a href="ch07_RT-cue.html#cb104-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">startsWith</span>(dv_keyword, <span class="fu">c</span>(<span class="st">&quot;expect&quot;</span>, <span class="st">&quot;Expect&quot;</span>)))) {</span>
+<span id="cb104-7"><a href="ch07_RT-cue.html#cb104-7" aria-hidden="true" tabindex="-1"></a>        color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#1B9E77&quot;</span>, <span class="st">&quot;#D95F02&quot;</span>)</span>
+<span id="cb104-8"><a href="ch07_RT-cue.html#cb104-8" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb104-9"><a href="ch07_RT-cue.html#cb104-9" aria-hidden="true" tabindex="-1"></a>        color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#4575B4&quot;</span>, <span class="st">&quot;#D73027&quot;</span>)</span>
+<span id="cb104-10"><a href="ch07_RT-cue.html#cb104-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb104-11"><a href="ch07_RT-cue.html#cb104-11" aria-hidden="true" tabindex="-1"></a>plot_savefname <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
+<span id="cb104-12"><a href="ch07_RT-cue.html#cb104-12" aria-hidden="true" tabindex="-1"></a>        analysis_dir,</span>
+<span id="cb104-13"><a href="ch07_RT-cue.html#cb104-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="st">&quot;raincloud_task-&quot;</span>, taskname,</span>
+<span id="cb104-14"><a href="ch07_RT-cue.html#cb104-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;_dv-&quot;</span>, dv_keyword,</span>
+<span id="cb104-15"><a href="ch07_RT-cue.html#cb104-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;_&quot;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()), <span class="st">&quot;.png&quot;</span>,</span>
+<span id="cb104-16"><a href="ch07_RT-cue.html#cb104-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb104-17"><a href="ch07_RT-cue.html#cb104-17" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb104-18"><a href="ch07_RT-cue.html#cb104-18" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb104-19"><a href="ch07_RT-cue.html#cb104-19" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_rainclouds_onefactor</span>(</span>
+<span id="cb104-20"><a href="ch07_RT-cue.html#cb104-20" aria-hidden="true" tabindex="-1"></a>        subjectwise, groupwise,</span>
+<span id="cb104-21"><a href="ch07_RT-cue.html#cb104-21" aria-hidden="true" tabindex="-1"></a>        iv, subjectwise_mean, group_mean, se, subject,</span>
+<span id="cb104-22"><a href="ch07_RT-cue.html#cb104-22" aria-hidden="true" tabindex="-1"></a>        ggtitle, title, xlab, ylab, task_name, ylim,</span>
+<span id="cb104-23"><a href="ch07_RT-cue.html#cb104-23" aria-hidden="true" tabindex="-1"></a>        w, h, dv_keyword, color, plot_savefname</span>
+<span id="cb104-24"><a href="ch07_RT-cue.html#cb104-24" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
 <pre><code>## Warning in geom_line(data = subjectwise, aes(group = .data[[subject]], y
 ## = .data[[subjectwise_mean]], : Ignoring unknown aesthetics: fill</code></pre>
 <pre><code>## Warning in FUN(X[[i]], ...): NAs introduced by coercion
@@ -678,45 +638,45 @@ This Rmarkdown tests the cue effect (high vs. low) on Reaction time and perform
 <pre><code>## Warning: Removed 210 rows containing missing values (`geom_line()`).</code></pre>
 <pre><code>## Warning: Removed 210 rows containing missing values (`geom_point()`).</code></pre>
 <p><img src="07_iv-cue_dv-RT_FIX_files/figure-html/m1_cue_effect_on_RT_6-1.png" width="672" /></p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="ch07_RT-cue.html#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random effects ________________________________</span></span>
-<span id="cb179-2"><a href="ch07_RT-cue.html#cb179-2" aria-hidden="true" tabindex="-1"></a>randEffect <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">ranef</span>(model_onefactor))</span>
-<span id="cb179-3"><a href="ch07_RT-cue.html#cb179-3" aria-hidden="true" tabindex="-1"></a>fixEffect <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">fixef</span>(model_onefactor))</span>
-<span id="cb179-4"><a href="ch07_RT-cue.html#cb179-4" aria-hidden="true" tabindex="-1"></a>randEffect<span class="sc">$</span>newcoef <span class="ot">&lt;-</span> <span class="fu">mapvalues</span>(randEffect<span class="sc">$</span>term,</span>
-<span id="cb179-5"><a href="ch07_RT-cue.html#cb179-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">from =</span> <span class="fu">c</span>(<span class="st">&quot;(Intercept)&quot;</span>, </span>
-<span id="cb179-6"><a href="ch07_RT-cue.html#cb179-6" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;param_cue_typelow_cue&quot;</span></span>
-<span id="cb179-7"><a href="ch07_RT-cue.html#cb179-7" aria-hidden="true" tabindex="-1"></a>             ),</span>
-<span id="cb179-8"><a href="ch07_RT-cue.html#cb179-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">to =</span> <span class="fu">c</span>(<span class="st">&quot;rand_intercept&quot;</span>, <span class="st">&quot;rand_cue&quot;</span>)</span>
-<span id="cb179-9"><a href="ch07_RT-cue.html#cb179-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="ch07_RT-cue.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random effects ________________________________</span></span>
+<span id="cb117-2"><a href="ch07_RT-cue.html#cb117-2" aria-hidden="true" tabindex="-1"></a>randEffect <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">ranef</span>(model_onefactor))</span>
+<span id="cb117-3"><a href="ch07_RT-cue.html#cb117-3" aria-hidden="true" tabindex="-1"></a>fixEffect <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">fixef</span>(model_onefactor))</span>
+<span id="cb117-4"><a href="ch07_RT-cue.html#cb117-4" aria-hidden="true" tabindex="-1"></a>randEffect<span class="sc">$</span>newcoef <span class="ot">&lt;-</span> <span class="fu">mapvalues</span>(randEffect<span class="sc">$</span>term,</span>
+<span id="cb117-5"><a href="ch07_RT-cue.html#cb117-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">from =</span> <span class="fu">c</span>(<span class="st">&quot;(Intercept)&quot;</span>, </span>
+<span id="cb117-6"><a href="ch07_RT-cue.html#cb117-6" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;param_cue_typelow_cue&quot;</span></span>
+<span id="cb117-7"><a href="ch07_RT-cue.html#cb117-7" aria-hidden="true" tabindex="-1"></a>             ),</span>
+<span id="cb117-8"><a href="ch07_RT-cue.html#cb117-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">to =</span> <span class="fu">c</span>(<span class="st">&quot;rand_intercept&quot;</span>, <span class="st">&quot;rand_cue&quot;</span>)</span>
+<span id="cb117-9"><a href="ch07_RT-cue.html#cb117-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## The following `from` values were not present in `x`: param_cue_typelow_cue</code></pre>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="ch07_RT-cue.html#cb181-1" aria-hidden="true" tabindex="-1"></a>rand_subset <span class="ot">&lt;-</span> <span class="fu">subset</span>(randEffect, <span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(grpvar, term, condsd))</span>
-<span id="cb181-2"><a href="ch07_RT-cue.html#cb181-2" aria-hidden="true" tabindex="-1"></a>wide_rand <span class="ot">&lt;-</span> <span class="fu">spread</span>(rand_subset, <span class="at">key =</span> newcoef, <span class="at">value =</span> condval)</span>
-<span id="cb181-3"><a href="ch07_RT-cue.html#cb181-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb181-4"><a href="ch07_RT-cue.html#cb181-4" aria-hidden="true" tabindex="-1"></a>wide_fix <span class="ot">&lt;-</span> <span class="fu">do.call</span>(</span>
-<span id="cb181-5"><a href="ch07_RT-cue.html#cb181-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rbind&quot;</span>,</span>
-<span id="cb181-6"><a href="ch07_RT-cue.html#cb181-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">replicate</span>(<span class="fu">nrow</span>(wide_rand),</span>
-<span id="cb181-7"><a href="ch07_RT-cue.html#cb181-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">as.data.frame</span>(<span class="fu">t</span>(<span class="fu">as.matrix</span>(fixEffect))),</span>
-<span id="cb181-8"><a href="ch07_RT-cue.html#cb181-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">simplify =</span> <span class="cn">FALSE</span></span>
-<span id="cb181-9"><a href="ch07_RT-cue.html#cb181-9" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb181-10"><a href="ch07_RT-cue.html#cb181-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb181-11"><a href="ch07_RT-cue.html#cb181-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(wide_fix) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb181-12"><a href="ch07_RT-cue.html#cb181-12" aria-hidden="true" tabindex="-1"></a>new_wide_fix <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">rename</span>(wide_fix,</span>
-<span id="cb181-13"><a href="ch07_RT-cue.html#cb181-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">fix_intercept =</span> <span class="st">`</span><span class="at">(Intercept)</span><span class="st">`</span>,</span>
-<span id="cb181-14"><a href="ch07_RT-cue.html#cb181-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">fix_cue =</span> <span class="st">`</span><span class="at">param_cue_typelow_cue</span><span class="st">`</span>,</span>
-<span id="cb181-15"><a href="ch07_RT-cue.html#cb181-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb181-16"><a href="ch07_RT-cue.html#cb181-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb181-17"><a href="ch07_RT-cue.html#cb181-17" aria-hidden="true" tabindex="-1"></a>total <span class="ot">&lt;-</span> <span class="fu">cbind</span>(wide_rand, new_wide_fix)</span>
-<span id="cb181-18"><a href="ch07_RT-cue.html#cb181-18" aria-hidden="true" tabindex="-1"></a>total<span class="sc">$</span>task <span class="ot">&lt;-</span> taskname</span>
-<span id="cb181-19"><a href="ch07_RT-cue.html#cb181-19" aria-hidden="true" tabindex="-1"></a>new_total <span class="ot">&lt;-</span> total <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(task, <span class="fu">everything</span>())</span>
-<span id="cb181-20"><a href="ch07_RT-cue.html#cb181-20" aria-hidden="true" tabindex="-1"></a>new_total <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">rename</span>(total, <span class="at">subj =</span> grp)</span>
-<span id="cb181-21"><a href="ch07_RT-cue.html#cb181-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb181-22"><a href="ch07_RT-cue.html#cb181-22" aria-hidden="true" tabindex="-1"></a>rand_savefname <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
-<span id="cb181-23"><a href="ch07_RT-cue.html#cb181-23" aria-hidden="true" tabindex="-1"></a>    analysis_dir,</span>
-<span id="cb181-24"><a href="ch07_RT-cue.html#cb181-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(<span class="st">&quot;randeffect_task-&quot;</span>, taskname, <span class="st">&quot;_&quot;</span>,</span>
-<span id="cb181-25"><a href="ch07_RT-cue.html#cb181-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()), <span class="st">&quot;_outlier-cooksd.csv&quot;</span>,</span>
-<span id="cb181-26"><a href="ch07_RT-cue.html#cb181-26" aria-hidden="true" tabindex="-1"></a>        <span class="at">sep =</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb181-27"><a href="ch07_RT-cue.html#cb181-27" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb181-28"><a href="ch07_RT-cue.html#cb181-28" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb181-29"><a href="ch07_RT-cue.html#cb181-29" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(new_total, rand_savefname, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="ch07_RT-cue.html#cb119-1" aria-hidden="true" tabindex="-1"></a>rand_subset <span class="ot">&lt;-</span> <span class="fu">subset</span>(randEffect, <span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(grpvar, term, condsd))</span>
+<span id="cb119-2"><a href="ch07_RT-cue.html#cb119-2" aria-hidden="true" tabindex="-1"></a>wide_rand <span class="ot">&lt;-</span> <span class="fu">spread</span>(rand_subset, <span class="at">key =</span> newcoef, <span class="at">value =</span> condval)</span>
+<span id="cb119-3"><a href="ch07_RT-cue.html#cb119-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb119-4"><a href="ch07_RT-cue.html#cb119-4" aria-hidden="true" tabindex="-1"></a>wide_fix <span class="ot">&lt;-</span> <span class="fu">do.call</span>(</span>
+<span id="cb119-5"><a href="ch07_RT-cue.html#cb119-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rbind&quot;</span>,</span>
+<span id="cb119-6"><a href="ch07_RT-cue.html#cb119-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">replicate</span>(<span class="fu">nrow</span>(wide_rand),</span>
+<span id="cb119-7"><a href="ch07_RT-cue.html#cb119-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">as.data.frame</span>(<span class="fu">t</span>(<span class="fu">as.matrix</span>(fixEffect))),</span>
+<span id="cb119-8"><a href="ch07_RT-cue.html#cb119-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">simplify =</span> <span class="cn">FALSE</span></span>
+<span id="cb119-9"><a href="ch07_RT-cue.html#cb119-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb119-10"><a href="ch07_RT-cue.html#cb119-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb119-11"><a href="ch07_RT-cue.html#cb119-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(wide_fix) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb119-12"><a href="ch07_RT-cue.html#cb119-12" aria-hidden="true" tabindex="-1"></a>new_wide_fix <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">rename</span>(wide_fix,</span>
+<span id="cb119-13"><a href="ch07_RT-cue.html#cb119-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">fix_intercept =</span> <span class="st">`</span><span class="at">(Intercept)</span><span class="st">`</span>,</span>
+<span id="cb119-14"><a href="ch07_RT-cue.html#cb119-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">fix_cue =</span> <span class="st">`</span><span class="at">param_cue_typelow_cue</span><span class="st">`</span>,</span>
+<span id="cb119-15"><a href="ch07_RT-cue.html#cb119-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb119-16"><a href="ch07_RT-cue.html#cb119-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb119-17"><a href="ch07_RT-cue.html#cb119-17" aria-hidden="true" tabindex="-1"></a>total <span class="ot">&lt;-</span> <span class="fu">cbind</span>(wide_rand, new_wide_fix)</span>
+<span id="cb119-18"><a href="ch07_RT-cue.html#cb119-18" aria-hidden="true" tabindex="-1"></a>total<span class="sc">$</span>task <span class="ot">&lt;-</span> taskname</span>
+<span id="cb119-19"><a href="ch07_RT-cue.html#cb119-19" aria-hidden="true" tabindex="-1"></a>new_total <span class="ot">&lt;-</span> total <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(task, <span class="fu">everything</span>())</span>
+<span id="cb119-20"><a href="ch07_RT-cue.html#cb119-20" aria-hidden="true" tabindex="-1"></a>new_total <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">rename</span>(total, <span class="at">subj =</span> grp)</span>
+<span id="cb119-21"><a href="ch07_RT-cue.html#cb119-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb119-22"><a href="ch07_RT-cue.html#cb119-22" aria-hidden="true" tabindex="-1"></a>rand_savefname <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
+<span id="cb119-23"><a href="ch07_RT-cue.html#cb119-23" aria-hidden="true" tabindex="-1"></a>    analysis_dir,</span>
+<span id="cb119-24"><a href="ch07_RT-cue.html#cb119-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(<span class="st">&quot;randeffect_task-&quot;</span>, taskname, <span class="st">&quot;_&quot;</span>,</span>
+<span id="cb119-25"><a href="ch07_RT-cue.html#cb119-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()), <span class="st">&quot;_outlier-cooksd.csv&quot;</span>,</span>
+<span id="cb119-26"><a href="ch07_RT-cue.html#cb119-26" aria-hidden="true" tabindex="-1"></a>        <span class="at">sep =</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb119-27"><a href="ch07_RT-cue.html#cb119-27" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb119-28"><a href="ch07_RT-cue.html#cb119-28" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb119-29"><a href="ch07_RT-cue.html#cb119-29" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(new_total, rand_savefname, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 </div>
 <div id="model-1-1" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> model 1-1<a href="ch07_RT-cue.html#model-1-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -923,7 +883,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07_iv-cue_dv-RT_FIX.Rmd",
+"link": "https://github.com/jungheejung/cue_expectancy/edit/BRANCH/07_iv-cue_dv-RT_FIX.Rmd",
 "text": "Edit"
 },
 "history": {

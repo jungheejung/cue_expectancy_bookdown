@@ -64,6 +64,8 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -152,14 +154,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [ beh] expectation ~ cue</a>
+<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [beh] expectation ~ cue</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="ch2_expect.html"><a href="ch2_expect.html#pain"><i class="fa fa-check"></i><b>2.1</b> Pain</a></li>
 <li class="chapter" data-level="2.2" data-path="ch2_expect.html"><a href="ch2_expect.html#vicarious"><i class="fa fa-check"></i><b>2.2</b> Vicarious</a></li>
 <li class="chapter" data-level="2.3" data-path="ch2_expect.html"><a href="ch2_expect.html#cognitive"><i class="fa fa-check"></i><b>2.3</b> Cognitive</a></li>
 <li class="chapter" data-level="2.4" data-path="ch2_expect.html"><a href="ch2_expect.html#individual-difference-analysis"><i class="fa fa-check"></i><b>2.4</b> Individual difference analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [ beh ] outcome ~ cue</a>
+<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [beh] outcome ~ cue</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="ch03_cue.html"><a href="ch03_cue.html#pain-1"><i class="fa fa-check"></i><b>3.1</b> Pain</a></li>
 <li class="chapter" data-level="3.2" data-path="ch03_cue.html"><a href="ch03_cue.html#vicarious-1"><i class="fa fa-check"></i><b>3.2</b> Vicarious</a></li>
@@ -167,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-random-cue-effects"><i class="fa fa-check"></i><b>3.4</b> Individual differences analysis: random cue effects</a></li>
 <li class="chapter" data-level="3.5" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-2-random-intercept-random-slopes-of-cue-effect"><i class="fa fa-check"></i><b>3.5</b> Individual differences analysis 2: random intercept + random slopes of cue effect</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [ beh ] outcome ~ stimulus_intensity</a>
+<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [beh] outcome ~ stimulus_intensity</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#pain-2"><i class="fa fa-check"></i><b>4.1</b> Pain</a></li>
 <li class="chapter" data-level="4.2" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#vicarious-2"><i class="fa fa-check"></i><b>4.2</b> Vicarious</a></li>
@@ -176,16 +178,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#lineplot"><i class="fa fa-check"></i><b>4.5</b> Lineplot</a></li>
 <li class="chapter" data-level="4.6" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#individual-differences-in-outcome-rating-cue-effect"><i class="fa fa-check"></i><b>4.6</b> individual differences in outcome rating cue effect</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> outcome_rating ~ cue * stim</a>
+<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> [beh] outcome_rating ~ cue * stim</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#what-is-the-purpose-of-this-notebook-3"><i class="fa fa-check"></i><b>5.1</b> What is the purpose of this notebook?</a></li>
-<li class="chapter" data-level="5.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.2</b> model 03 iv-cuecontrast dv-actual</a>
+<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.1</b> model 03 iv-cuecontrast dv-actual</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.2.1</b> model 03 3-2. individual difference</a></li>
-<li class="chapter" data-level="5.2.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.2.2</b> model 04 iv-cue-stim dv-actual</a></li>
-<li class="chapter" data-level="5.2.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.2.3</b> model 04 4-2 individual differences in cue effects</a></li>
-<li class="chapter" data-level="5.2.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.2.4</b> model 04 4-3 scatter plot</a></li>
-<li class="chapter" data-level="5.2.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.2.5</b> model 04 4-4 lineplot</a></li>
+<li class="chapter" data-level="5.1.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.1.1</b> model 03 3-2. individual difference</a></li>
+<li class="chapter" data-level="5.1.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.1.2</b> model 04 iv-cue-stim dv-actual</a></li>
+<li class="chapter" data-level="5.1.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.1.3</b> model 04 4-2 individual differences in cue effects</a></li>
+<li class="chapter" data-level="5.1.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.1.4</b> model 04 4-3 scatter plot</a></li>
+<li class="chapter" data-level="5.1.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.1.5</b> model 04 4-4 lineplot</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html"><i class="fa fa-check"></i><b>6</b> expect-actual ~ cue * trial</a>
@@ -196,18 +197,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#do-current-expectation-ratings-predict-outcome-ratings"><i class="fa fa-check"></i><b>6.4</b> Do current expectation ratings predict outcome ratings?</a></li>
 <li class="chapter" data-level="6.5" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#additional-analysis"><i class="fa fa-check"></i><b>6.5</b> Additional analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> RT ~ cue</a>
+<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> [beh] RT ~ cue</a>
 <ul>
-<li class="chapter" data-level="7.0.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#parameters"><i class="fa fa-check"></i><b>7.0.1</b> parameters</a></li>
-<li class="chapter" data-level="7.0.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-data"><i class="fa fa-check"></i><b>7.0.2</b> 1) plot RT data</a></li>
-<li class="chapter" data-level="7.0.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-distribution-per-participant"><i class="fa fa-check"></i><b>7.0.3</b> plot RT distribution per participant</a></li>
-<li class="chapter" data-level="7.0.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#exclude-participants-with-rt-of-5-seconds"><i class="fa fa-check"></i><b>7.0.4</b> exclude participants with RT of 5 seconds</a></li>
 <li class="chapter" data-level="7.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1"><i class="fa fa-check"></i><b>7.1</b> model 1:</a></li>
 <li class="chapter" data-level="7.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-1"><i class="fa fa-check"></i><b>7.2</b> model 1-1</a></li>
 <li class="chapter" data-level="7.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-2"><i class="fa fa-check"></i><b>7.3</b> model 1-2:</a></li>
 <li class="chapter" data-level="7.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-2"><i class="fa fa-check"></i><b>7.4</b> model 2:</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [fMRI] RT ~ cue * stim</a>
+<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [beh] RT ~ cue * stim</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#overview-model-05-iv-cue-dv-rt-summary"><i class="fa fa-check"></i><b>8.1</b> Overview model 05 iv-cue dv-RT summary</a></li>
 <li class="chapter" data-level="8.2" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#prepare-data-and-preprocess"><i class="fa fa-check"></i><b>8.2</b> Prepare data and preprocess</a></li>
@@ -238,22 +235,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.1" data-path="ch10_icc.html"><a href="ch10_icc.html#functions"><i class="fa fa-check"></i><b>10.1</b> Functions</a></li>
 <li class="chapter" data-level="10.2" data-path="ch10_icc.html"><a href="ch10_icc.html#todo"><i class="fa fa-check"></i><b>10.2</b> TODO:</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> N-1 outcome rating ~ N expectation rating</a>
+<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> [beh] N-1 outcome rating ~ N expectation rating</a>
 <ul>
-<li class="chapter" data-level="11.0.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#done"><i class="fa fa-check"></i><b>11.0.1</b> DONE</a></li>
-<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#overview-2"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>11.2</b> Do previous outcome ratings predict current expectation ratings?</a></li>
-<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#additional-analysis-1"><i class="fa fa-check"></i><b>11.3</b> Additional analysis</a></li>
-<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.4</b> Let’s demean the ratings.</a></li>
-<li class="chapter" data-level="11.5" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.5</b> DEMEAN AND THEN DISCRETIZE</a></li>
+<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#expectation_rating-n-1_outcome_rating"><i class="fa fa-check"></i><b>11.1</b> expectation_rating ~ N-1_outcome_rating</a></li>
+<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#current-expectation_rating-n-1_outcomerating-cue"><i class="fa fa-check"></i><b>11.2</b> Current expectation_rating ~ N-1_outcomerating * cue</a></li>
+<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.3</b> Let’s demean the ratings.</a></li>
+<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.4</b> DEMEAN AND THEN DISCRETIZE</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
+<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> [beh] (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings-1"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
+<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
 <li class="chapter" data-level="12.2" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-these-models-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>12.2</b> Do these models differ as a function of cue?</a></li>
 <li class="chapter" data-level="12.3" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#demean-and-discretize"><i class="fa fa-check"></i><b>12.3</b> Demean and discretize</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> outcome ~ expect Jayazeri (2018)</a>
+<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> [beh] outcome ~ expect Jayazeri (2018)</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#overview-4"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
 <li class="chapter" data-level="13.2" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#do-expectation-ratings-predict-current-outcome-ratings-does-this-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>13.2</b> Do expectation ratings predict current outcome ratings? Does this differ as a function of cue?</a></li>
@@ -267,7 +262,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="13.6" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#not-splitting-into-cue-groups"><i class="fa fa-check"></i><b>13.6</b> not splitting into cue groups</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [ beh ] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
+<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [beh] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="ch14_factorize.html"><a href="ch14_factorize.html#original-motivation"><i class="fa fa-check"></i><b>14.1</b> Original motivation:</a></li>
 <li class="chapter" data-level="14.2" data-path="ch14_factorize.html"><a href="ch14_factorize.html#pain-3"><i class="fa fa-check"></i><b>14.2</b> Pain</a>
@@ -343,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="22.5" data-path="nps_stim.html"><a href="nps_stim.html#vicarious-6"><i class="fa fa-check"></i><b>22.5</b> Vicarious</a></li>
 <li class="chapter" data-level="22.6" data-path="nps_stim.html"><a href="nps_stim.html#cognitive-6"><i class="fa fa-check"></i><b>22.6</b> Cognitive</a></li>
 </ul></li>
-<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> biomarker NPS ~ cue * stim (2022)</a>
+<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> [fMRI] biomarker NPS ~ cue * stim (2022)</a>
 <ul>
 <li class="chapter" data-level="23.1" data-path="nps_22.html"><a href="nps_22.html#load-libraries"><i class="fa fa-check"></i><b>23.1</b> load libraries</a>
 <ul>
@@ -354,80 +349,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="23.4" data-path="nps_22.html"><a href="nps_22.html#vps-cue-effect"><i class="fa fa-check"></i><b>23.4</b> VPS cue effect</a></li>
 <li class="chapter" data-level="23.5" data-path="nps_22.html"><a href="nps_22.html#vps-stim-effect"><i class="fa fa-check"></i><b>23.5</b> VPS stim effect</a></li>
 </ul></li>
-<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
+<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> [fMRI] NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
 <li class="chapter" data-level="25" data-path="nps_stim_task.html"><a href="nps_stim_task.html"><i class="fa fa-check"></i><b>25</b> NPSdummy ~ stim * task (contrast-scaled)</a>
 <ul>
 <li class="chapter" data-level="25.1" data-path="nps_stim_task.html"><a href="nps_stim_task.html#raincloud-plots-1"><i class="fa fa-check"></i><b>25.1</b> Raincloud plots</a></li>
 <li class="chapter" data-level="25.2" data-path="nps_stim_task.html"><a href="nps_stim_task.html#line-plots-1"><i class="fa fa-check"></i><b>25.2</b> Line plots</a></li>
 </ul></li>
-<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [ fMRI ] Pain signature ~ single trial</a>
+<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [fMRI] NPS ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pvc-all-task-comparison"><i class="fa fa-check"></i><b>26.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>26.2</b> Pain only Stim x cue interaction</a>
+<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>26.1</b> NPS ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-paintask-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>26.2</b> NPS ~ paintask: 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-2"><i class="fa fa-check"></i><b>26.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-intensity-cohens-d-1.287"><i class="fa fa-check"></i><b>26.2.3</b> NPS stimulus intensity Cohen’s d = 1.287</a></li>
-<li class="chapter" data-level="26.2.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-cue-effect-size-stim_d-1.16-cue_d-0.45"><i class="fa fa-check"></i><b>26.2.4</b> NPS stimulus &amp; cue effect size: stim_d = 1.16, cue_d = 0.45</a></li>
-<li class="chapter" data-level="26.2.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#lineplots"><i class="fa fa-check"></i><b>26.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="26.2.6" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-1-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.6</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.7" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-3-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.7</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.8" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-4-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.8</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-ver-1-nps-stimulus_intensity"><i class="fa fa-check"></i><b>26.2.1</b> Linear model ver 1: NPS ~ stimulus_intensity</a></li>
+<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-ver-2-nps-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>26.2.2</b> Linear model ver 2: NPS ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#cue-3-stimulus_intensity-expectation_rating"><i class="fa fa-check"></i><b>26.2.3</b> 2 cue * 3 stimulus_intensity * expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-outcome-ratings-nps"><i class="fa fa-check"></i><b>26.3</b> Pain only: Outcome ratings &amp; NPS</a>
+<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>26.3</b> NPS ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-outcome_rating"><i class="fa fa-check"></i><b>26.4</b> NPS ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="26.3.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-cue"><i class="fa fa-check"></i><b>26.3.1</b> outcome ratings * cue</a></li>
-<li class="chapter" data-level="26.3.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-stim-cue"><i class="fa fa-check"></i><b>26.3.2</b> outcome ratings * stim * cue</a></li>
+<li class="chapter" data-level="26.4.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome_rating-cue"><i class="fa fa-check"></i><b>26.4.1</b> outcome_rating * cue</a></li>
+<li class="chapter" data-level="26.4.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome_ratings-stimulus_intensity-cue"><i class="fa fa-check"></i><b>26.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>26.4</b> Pain only: Expectation ratings &amp; NPS</a></li>
+<li class="chapter" data-level="26.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-expectation_rating"><i class="fa fa-check"></i><b>26.5</b> NPS ~ expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] Vicarious signature ~ single trial</a>
+<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] VPS ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#pvc-all-task-comparison-1"><i class="fa fa-check"></i><b>27.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>27.2</b> Vicarious only Stim x cue interaction</a>
+<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>27.1</b> VPS ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-vicarious-task-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>27.2</b> VPS ~ vicarious task: 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-3"><i class="fa fa-check"></i><b>27.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-intensity-cohens-d-0.2131521"><i class="fa fa-check"></i><b>27.2.3</b> VPS stimulus intensity Cohen’s d = 0.2131521</a></li>
-<li class="chapter" data-level="27.2.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-cue-effect-size-stim_d-0.217-cue_d-0.013"><i class="fa fa-check"></i><b>27.2.4</b> VPS stimulus &amp; cue effect size: stim_d = 0.217, cue_d = 0.013</a></li>
-<li class="chapter" data-level="27.2.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#lineplots-1"><i class="fa fa-check"></i><b>27.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="27.2.6" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-with-stim-x-cue-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
-<li class="chapter" data-level="27.2.7" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-1-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.8" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-3-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.9" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-4-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-ver-1-vps-stimulus_intensity"><i class="fa fa-check"></i><b>27.2.1</b> Linear model ver 1: VPS ~ stimulus_intensity</a></li>
+<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-ver-2-vps-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>27.2.2</b> Linear model ver 2: VPS ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#cue-x-3-stimulus-intensity-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.3</b> 2 Cue x 3 Stimulus intensity x Expectation rating</a></li>
 </ul></li>
-<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-outcome-ratings-vps"><i class="fa fa-check"></i><b>27.3</b> Vicarious only: Outcome ratings &amp; VPS</a>
+<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>27.3</b> VPS ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-outcome_rating"><i class="fa fa-check"></i><b>27.4</b> VPS ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="27.3.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome-ratings-cue-1"><i class="fa fa-check"></i><b>27.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="27.4.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome_ratings-cue"><i class="fa fa-check"></i><b>27.4.1</b> outcome_ratings * cue</a></li>
+<li class="chapter" data-level="27.4.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome_ratings-stimulus_intensity-cue-1"><i class="fa fa-check"></i><b>27.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-expectation-ratings-vps"><i class="fa fa-check"></i><b>27.4</b> Vicarious only: Expectation ratings &amp; VPS</a></li>
+<li class="chapter" data-level="27.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-expectation_rating"><i class="fa fa-check"></i><b>27.5</b> VPS ~ expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Cognitive signature ~ single trial</a>
+<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Kragel2018 ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#pvc-all-task-comparison-2"><i class="fa fa-check"></i><b>28.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>28.2</b> Cognitive only Stim x cue interaction</a>
+<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>28.1</b> Kragel2018 ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>28.2</b> Kragel2018 ~ 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-4"><i class="fa fa-check"></i><b>28.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cog-stimulus-intensity-cohens-d-0.72"><i class="fa fa-check"></i><b>28.2.3</b> Cog stimulus intensity Cohen’s d = 0.72</a></li>
-<li class="chapter" data-level="28.2.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-stimulus-cue-effect-size-stim_d-0.73-cue_d-0.069"><i class="fa fa-check"></i><b>28.2.4</b> Cognitive stimulus &amp; cue effect size: stim_d = 0.73, cue_d = 0.069</a></li>
-<li class="chapter" data-level="28.2.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#lineplots-2"><i class="fa fa-check"></i><b>28.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="28.2.6" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-with-stim-x-cue-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
-<li class="chapter" data-level="28.2.7" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-1-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.8" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-3-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.9" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-4-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-ver-1-kragel2018-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>28.2.1</b> Linear model ver 1: Kragel2018 ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-ver-2-kragel2018-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>28.2.2</b> Linear model ver 2: Kragel2018 ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cue-x-3-stimulus-intensity-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.3</b> 2 Cue x 3 Stimulus intensity x Expectation rating</a></li>
 </ul></li>
-<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-outcome-ratings-kragel-2018"><i class="fa fa-check"></i><b>28.3</b> Cognitive only: Outcome ratings &amp; Kragel 2018</a>
+<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>28.3</b> Kragel2018 ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-outcome_rating"><i class="fa fa-check"></i><b>28.4</b> Kragel2018 ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="28.3.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome-ratings-cue-2"><i class="fa fa-check"></i><b>28.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="28.4.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome_ratings-cue-1"><i class="fa fa-check"></i><b>28.4.1</b> outcome_ratings * cue</a></li>
+<li class="chapter" data-level="28.4.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome_ratings-stimulus_intensity-cue-2"><i class="fa fa-check"></i><b>28.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>28.4</b> Cognitive only: Expectation ratings &amp; NPS</a></li>
+<li class="chapter" data-level="28.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-expectation_rating"><i class="fa fa-check"></i><b>28.5</b> Kragel2018 ~ expectation_rating</a></li>
 </ul></li>
 <li class="chapter" data-level="29" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html"><i class="fa fa-check"></i><b>29</b> [fMRI] Single trial correlation between cue and stim</a>
 <ul>
-<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#stack-data"><i class="fa fa-check"></i><b>29.1</b> Stack data</a></li>
-<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.2</b> plot correlation (one-sample-t)</a></li>
-<li class="chapter" data-level="29.3" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.3</b> Lineplot</a></li>
+<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.1</b> plot correlation (one-sample-t)</a></li>
+<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.2</b> Lineplot</a></li>
 </ul></li>
 <li class="chapter" data-level="30" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html"><i class="fa fa-check"></i><b>30</b> [fMRI] Signature effect size ~ single trial</a>
 <ul>
@@ -435,30 +417,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="30.2" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#contrastt-stim-intensity"><i class="fa fa-check"></i><b>30.2</b> contrastt (stim intensity)</a></li>
 <li class="chapter" data-level="30.3" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#layer-in-metadata"><i class="fa fa-check"></i><b>30.3</b> layer in metadata</a></li>
 </ul></li>
-<li class="chapter" data-level="31" data-path="ch40_vif.html"><a href="ch40_vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
-<li class="chapter" data-level="32" data-path="load-in-the-datamatrix-and-calculate-the-vif.html"><a href="load-in-the-datamatrix-and-calculate-the-vif.html"><i class="fa fa-check"></i><b>32</b> load in the datamatrix and calculate the vif</a></li>
-<li class="chapter" data-level="33" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>33</b> vif</a></li>
-<li class="chapter" data-level="34" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html"><i class="fa fa-check"></i><b>34</b> [fMRI] Cognitive signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="34.1" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#load-behavioral-data-2"><i class="fa fa-check"></i><b>34.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="34.2" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#dfmerge-stats"><i class="fa fa-check"></i><b>34.2</b> dfmerge stats</a></li>
-<li class="chapter" data-level="34.3" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#expect-nps-as-a-function-of-cue"><i class="fa fa-check"></i><b>34.3</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="34.4" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#x3-stimcue"><i class="fa fa-check"></i><b>34.4</b> 2x3 stim*cue</a></li>
-<li class="chapter" data-level="34.5" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#lineplot-2"><i class="fa fa-check"></i><b>34.5</b> lineplot</a></li>
-</ul></li>
-<li class="chapter" data-level="35" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html"><i class="fa fa-check"></i><b>35</b> [fMRI] Vicarious signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="35.1" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#load-behavioral-data-3"><i class="fa fa-check"></i><b>35.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="35.2" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#expect-nps-as-a-function-of-cue-1"><i class="fa fa-check"></i><b>35.2</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="35.3" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#x3-stimcue-1"><i class="fa fa-check"></i><b>35.3</b> 2x3 stim*cue</a></li>
-</ul></li>
-<li class="chapter" data-level="36" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html"><i class="fa fa-check"></i><b>36</b> [fMRI] Pain signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="36.1" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#load-behavioral-data-4"><i class="fa fa-check"></i><b>36.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="36.2" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#expect-nps-as-a-function-of-cue-2"><i class="fa fa-check"></i><b>36.2</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="36.3" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#x3-stimcue-2"><i class="fa fa-check"></i><b>36.3</b> 2x3 stim*cue</a></li>
-<li class="chapter" data-level="36.4" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#lineplots-3"><i class="fa fa-check"></i><b>36.4</b> lineplots</a></li>
-</ul></li>
+<li class="chapter" data-level="31" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -652,203 +611,203 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="for-loop-for-all-the-pvc-dummy-codes-1" class="section level2 hasAnchor" number="21.2">
 <h2><span class="header-section-number">21.2</span> For loop for all the pvc dummy codes<a href="ch32_nps_dummy.html#for-loop-for-all-the-pvc-dummy-codes-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb766"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb766-1"><a href="ch32_nps_dummy.html#cb766-1" aria-hidden="true" tabindex="-1"></a>main_dir <span class="ot">=</span> <span class="fu">dirname</span>(<span class="fu">dirname</span>(<span class="fu">getwd</span>()))</span>
-<span id="cb766-2"><a href="ch32_nps_dummy.html#cb766-2" aria-hidden="true" tabindex="-1"></a>color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Pain &gt; rest&quot;</span> <span class="ot">=</span> <span class="st">&quot;#941100&quot;</span>,</span>
-<span id="cb766-3"><a href="ch32_nps_dummy.html#cb766-3" aria-hidden="true" tabindex="-1"></a>           <span class="st">&quot;Vicarious &gt; rest&quot;</span> <span class="ot">=</span> <span class="st">&quot;#008F51&quot;</span>,</span>
-<span id="cb766-4"><a href="ch32_nps_dummy.html#cb766-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">&quot;Cog &gt; rest&quot;</span> <span class="ot">=</span> <span class="st">&quot;#011891&quot;</span>)</span>
-<span id="cb766-5"><a href="ch32_nps_dummy.html#cb766-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (contrast_name <span class="cf">in</span> <span class="fu">c</span>(  <span class="st">&quot;stimlin_high_gt_low&quot;</span>,  <span class="st">&quot;stimquad_med_gt_other&quot;</span>,  <span class="st">&quot;cue_int_stimlin&quot;</span>,  <span class="st">&quot;cue_int_stimquad&quot;</span>)) {</span>
-<span id="cb766-6"><a href="ch32_nps_dummy.html#cb766-6" aria-hidden="true" tabindex="-1"></a>  merge_df <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
-<span id="cb766-7"><a href="ch32_nps_dummy.html#cb766-7" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
-<span id="cb766-8"><a href="ch32_nps_dummy.html#cb766-8" aria-hidden="true" tabindex="-1"></a>  groupwise <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
-<span id="cb766-9"><a href="ch32_nps_dummy.html#cb766-9" aria-hidden="true" tabindex="-1"></a>  subjectwise <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
-<span id="cb766-10"><a href="ch32_nps_dummy.html#cb766-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-11"><a href="ch32_nps_dummy.html#cb766-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (conname <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&#39;P_simple&#39;</span>, <span class="st">&#39;V_simple&#39;</span>, <span class="st">&#39;C_simple&#39;</span>)) {</span>
-<span id="cb766-12"><a href="ch32_nps_dummy.html#cb766-12" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
-<span id="cb766-13"><a href="ch32_nps_dummy.html#cb766-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(contrast_name, conname))</span>
-<span id="cb766-14"><a href="ch32_nps_dummy.html#cb766-14" aria-hidden="true" tabindex="-1"></a>    npsdir <span class="ot">=</span> <span class="fu">file.path</span>(</span>
-<span id="cb766-15"><a href="ch32_nps_dummy.html#cb766-15" aria-hidden="true" tabindex="-1"></a>      main_dir,</span>
-<span id="cb766-16"><a href="ch32_nps_dummy.html#cb766-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;analysis&#39;</span>,</span>
-<span id="cb766-17"><a href="ch32_nps_dummy.html#cb766-17" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;fmri&#39;</span>,</span>
-<span id="cb766-18"><a href="ch32_nps_dummy.html#cb766-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;spm&#39;</span>,</span>
-<span id="cb766-19"><a href="ch32_nps_dummy.html#cb766-19" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;univariate&#39;</span>,</span>
-<span id="cb766-20"><a href="ch32_nps_dummy.html#cb766-20" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;model01_6cond&#39;</span>,</span>
-<span id="cb766-21"><a href="ch32_nps_dummy.html#cb766-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;extract_nps&#39;</span></span>
-<span id="cb766-22"><a href="ch32_nps_dummy.html#cb766-22" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb766-23"><a href="ch32_nps_dummy.html#cb766-23" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="fu">Sys.glob</span>(<span class="fu">file.path</span>(</span>
-<span id="cb766-24"><a href="ch32_nps_dummy.html#cb766-24" aria-hidden="true" tabindex="-1"></a>      npsdir,</span>
-<span id="cb766-25"><a href="ch32_nps_dummy.html#cb766-25" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(</span>
-<span id="cb766-26"><a href="ch32_nps_dummy.html#cb766-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;extract-nps_model01-6cond_con_*&#39;</span>,</span>
-<span id="cb766-27"><a href="ch32_nps_dummy.html#cb766-27" aria-hidden="true" tabindex="-1"></a>        conname,</span>
-<span id="cb766-28"><a href="ch32_nps_dummy.html#cb766-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;_&#39;</span>,</span>
-<span id="cb766-29"><a href="ch32_nps_dummy.html#cb766-29" aria-hidden="true" tabindex="-1"></a>        contrast_name,</span>
-<span id="cb766-30"><a href="ch32_nps_dummy.html#cb766-30" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;.csv&#39;</span></span>
-<span id="cb766-31"><a href="ch32_nps_dummy.html#cb766-31" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb766-32"><a href="ch32_nps_dummy.html#cb766-32" aria-hidden="true" tabindex="-1"></a>    )))</span>
-<span id="cb766-33"><a href="ch32_nps_dummy.html#cb766-33" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>conname <span class="ot">=</span> <span class="fu">char</span>(conname)</span>
-<span id="cb766-34"><a href="ch32_nps_dummy.html#cb766-34" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-35"><a href="ch32_nps_dummy.html#cb766-35" aria-hidden="true" tabindex="-1"></a>    merge_df <span class="ot">=</span> <span class="fu">rbind</span>(merge_df, df)</span>
-<span id="cb766-36"><a href="ch32_nps_dummy.html#cb766-36" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb766-37"><a href="ch32_nps_dummy.html#cb766-37" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-38"><a href="ch32_nps_dummy.html#cb766-38" aria-hidden="true" tabindex="-1"></a>  merge_df <span class="ot">=</span> <span class="fu">as.data.frame</span>(merge_df)</span>
-<span id="cb766-39"><a href="ch32_nps_dummy.html#cb766-39" aria-hidden="true" tabindex="-1"></a>  merge_df<span class="sc">$</span>contrast <span class="ot">&lt;-</span></span>
-<span id="cb766-40"><a href="ch32_nps_dummy.html#cb766-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">recode_factor</span>(</span>
-<span id="cb766-41"><a href="ch32_nps_dummy.html#cb766-41" aria-hidden="true" tabindex="-1"></a>      merge_df<span class="sc">$</span>conname,</span>
-<span id="cb766-42"><a href="ch32_nps_dummy.html#cb766-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">P_simple =</span> <span class="st">&quot;Pain &gt; rest&quot;</span>,</span>
-<span id="cb766-43"><a href="ch32_nps_dummy.html#cb766-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">V_simple =</span> <span class="st">&quot;Vicarious &gt; rest&quot;</span>,</span>
-<span id="cb766-44"><a href="ch32_nps_dummy.html#cb766-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">C_simple =</span> <span class="st">&quot;Cog &gt; rest&quot;</span></span>
-<span id="cb766-45"><a href="ch32_nps_dummy.html#cb766-45" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb766-46"><a href="ch32_nps_dummy.html#cb766-46" aria-hidden="true" tabindex="-1"></a>  merge_df<span class="sc">$</span>contrast <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(merge_df<span class="sc">$</span>contrast)</span>
-<span id="cb766-47"><a href="ch32_nps_dummy.html#cb766-47" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print(summary(model.nps))</span></span>
-<span id="cb766-48"><a href="ch32_nps_dummy.html#cb766-48" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-49"><a href="ch32_nps_dummy.html#cb766-49" aria-hidden="true" tabindex="-1"></a>  <span class="co"># parameters __________________________________________________________________</span></span>
-<span id="cb766-50"><a href="ch32_nps_dummy.html#cb766-50" aria-hidden="true" tabindex="-1"></a>  model <span class="ot">=</span> <span class="st">&#39;nps&#39;</span></span>
-<span id="cb766-51"><a href="ch32_nps_dummy.html#cb766-51" aria-hidden="true" tabindex="-1"></a>  model_keyword <span class="ot">=</span> <span class="st">&quot;nps&quot;</span></span>
-<span id="cb766-52"><a href="ch32_nps_dummy.html#cb766-52" aria-hidden="true" tabindex="-1"></a>  subjectwise_mean <span class="ot">=</span> <span class="st">&quot;mean_per_sub&quot;</span></span>
-<span id="cb766-53"><a href="ch32_nps_dummy.html#cb766-53" aria-hidden="true" tabindex="-1"></a>  group_mean <span class="ot">=</span> <span class="st">&quot;mean_per_sub_norm_mean&quot;</span></span>
-<span id="cb766-54"><a href="ch32_nps_dummy.html#cb766-54" aria-hidden="true" tabindex="-1"></a>  iv <span class="ot">=</span> <span class="st">&quot;contrast&quot;</span></span>
-<span id="cb766-55"><a href="ch32_nps_dummy.html#cb766-55" aria-hidden="true" tabindex="-1"></a>  ylim <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">800</span>, <span class="dv">800</span>)</span>
-<span id="cb766-56"><a href="ch32_nps_dummy.html#cb766-56" aria-hidden="true" tabindex="-1"></a>  se <span class="ot">=</span> <span class="st">&quot;se&quot;</span></span>
-<span id="cb766-57"><a href="ch32_nps_dummy.html#cb766-57" aria-hidden="true" tabindex="-1"></a>  subject <span class="ot">=</span> <span class="st">&quot;subject&quot;</span></span>
-<span id="cb766-58"><a href="ch32_nps_dummy.html#cb766-58" aria-hidden="true" tabindex="-1"></a>  ggtitle <span class="ot">=</span> <span class="fu">paste0</span>(model_keyword,</span>
-<span id="cb766-59"><a href="ch32_nps_dummy.html#cb766-59" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot; :: extracted NPS value for taskwise contrast&quot;</span>)</span>
-<span id="cb766-60"><a href="ch32_nps_dummy.html#cb766-60" aria-hidden="true" tabindex="-1"></a>  legend_title <span class="ot">=</span> <span class="st">&quot;Contrasts&quot;</span></span>
-<span id="cb766-61"><a href="ch32_nps_dummy.html#cb766-61" aria-hidden="true" tabindex="-1"></a>  xlab <span class="ot">=</span> <span class="st">&quot;contrasts &quot;</span></span>
-<span id="cb766-62"><a href="ch32_nps_dummy.html#cb766-62" aria-hidden="true" tabindex="-1"></a>  ylab <span class="ot">=</span> <span class="st">&quot;NPS dotproduct </span><span class="sc">\n</span><span class="st">metric and functionality&quot;</span></span>
-<span id="cb766-63"><a href="ch32_nps_dummy.html#cb766-63" aria-hidden="true" tabindex="-1"></a>  dv <span class="ot">=</span> <span class="st">&quot;nps&quot;</span></span>
-<span id="cb766-64"><a href="ch32_nps_dummy.html#cb766-64" aria-hidden="true" tabindex="-1"></a>  dv_keyword <span class="ot">=</span> <span class="st">&quot;nps_dot_product&quot;</span></span>
-<span id="cb766-65"><a href="ch32_nps_dummy.html#cb766-65" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-66"><a href="ch32_nps_dummy.html#cb766-66" aria-hidden="true" tabindex="-1"></a>  classwise <span class="ot">&lt;-</span> <span class="fu">meanSummary</span>(merge_df,</span>
-<span id="cb766-67"><a href="ch32_nps_dummy.html#cb766-67" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">c</span>(subject, iv), dv)</span>
-<span id="cb766-68"><a href="ch32_nps_dummy.html#cb766-68" aria-hidden="true" tabindex="-1"></a>  groupwise <span class="ot">&lt;-</span> <span class="fu">summarySEwithin</span>(<span class="at">data =</span> classwise,</span>
-<span id="cb766-69"><a href="ch32_nps_dummy.html#cb766-69" aria-hidden="true" tabindex="-1"></a>                               <span class="at">measurevar =</span> <span class="st">&quot;mean_per_sub&quot;</span>,</span>
-<span id="cb766-70"><a href="ch32_nps_dummy.html#cb766-70" aria-hidden="true" tabindex="-1"></a>                               <span class="at">withinvars =</span> <span class="fu">c</span>(iv))</span>
-<span id="cb766-71"><a href="ch32_nps_dummy.html#cb766-71" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-72"><a href="ch32_nps_dummy.html#cb766-72" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-73"><a href="ch32_nps_dummy.html#cb766-73" aria-hidden="true" tabindex="-1"></a>  subjectwise <span class="ot">=</span> <span class="fu">subset</span>(classwise, <span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(sd))</span>
-<span id="cb766-74"><a href="ch32_nps_dummy.html#cb766-74" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-75"><a href="ch32_nps_dummy.html#cb766-75" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-76"><a href="ch32_nps_dummy.html#cb766-76" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-77"><a href="ch32_nps_dummy.html#cb766-77" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-78"><a href="ch32_nps_dummy.html#cb766-78" aria-hidden="true" tabindex="-1"></a>  p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> subjectwise,</span>
-<span id="cb766-79"><a href="ch32_nps_dummy.html#cb766-79" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(</span>
-<span id="cb766-80"><a href="ch32_nps_dummy.html#cb766-80" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> .data[[subjectwise_mean]],</span>
-<span id="cb766-81"><a href="ch32_nps_dummy.html#cb766-81" aria-hidden="true" tabindex="-1"></a>                 <span class="at">x =</span> <span class="fu">factor</span>(.data[[iv]]),</span>
-<span id="cb766-82"><a href="ch32_nps_dummy.html#cb766-82" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="fu">factor</span>(.data[[iv]])</span>
-<span id="cb766-83"><a href="ch32_nps_dummy.html#cb766-83" aria-hidden="true" tabindex="-1"></a>               )) <span class="sc">+</span></span>
-<span id="cb766-84"><a href="ch32_nps_dummy.html#cb766-84" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-85"><a href="ch32_nps_dummy.html#cb766-85" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_half_violin</span>(</span>
-<span id="cb766-86"><a href="ch32_nps_dummy.html#cb766-86" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(<span class="at">fill =</span> <span class="fu">factor</span>(.data[[iv]])),</span>
-<span id="cb766-87"><a href="ch32_nps_dummy.html#cb766-87" aria-hidden="true" tabindex="-1"></a>      <span class="at">side =</span> <span class="st">&#39;r&#39;</span>,</span>
-<span id="cb766-88"><a href="ch32_nps_dummy.html#cb766-88" aria-hidden="true" tabindex="-1"></a>      <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>,</span>
-<span id="cb766-89"><a href="ch32_nps_dummy.html#cb766-89" aria-hidden="true" tabindex="-1"></a>      <span class="at">adjust =</span> <span class="fl">0.5</span>,</span>
-<span id="cb766-90"><a href="ch32_nps_dummy.html#cb766-90" aria-hidden="true" tabindex="-1"></a>      <span class="at">trim =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb766-91"><a href="ch32_nps_dummy.html#cb766-91" aria-hidden="true" tabindex="-1"></a>      <span class="at">alpha =</span> .<span class="dv">3</span>,</span>
-<span id="cb766-92"><a href="ch32_nps_dummy.html#cb766-92" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> <span class="cn">NA</span></span>
-<span id="cb766-93"><a href="ch32_nps_dummy.html#cb766-93" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb766-94"><a href="ch32_nps_dummy.html#cb766-94" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-95"><a href="ch32_nps_dummy.html#cb766-95" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(</span>
-<span id="cb766-96"><a href="ch32_nps_dummy.html#cb766-96" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> subjectwise,</span>
-<span id="cb766-97"><a href="ch32_nps_dummy.html#cb766-97" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(</span>
-<span id="cb766-98"><a href="ch32_nps_dummy.html#cb766-98" aria-hidden="true" tabindex="-1"></a>        <span class="at">group =</span> .data[[subject]],</span>
-<span id="cb766-99"><a href="ch32_nps_dummy.html#cb766-99" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(.data[[iv]])) <span class="sc">-</span> .<span class="dv">15</span> ,</span>
-<span id="cb766-100"><a href="ch32_nps_dummy.html#cb766-100" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> .data[[subjectwise_mean]],</span>
-<span id="cb766-101"><a href="ch32_nps_dummy.html#cb766-101" aria-hidden="true" tabindex="-1"></a>        <span class="at">fill =</span> <span class="fu">factor</span>(.data[[iv]])</span>
-<span id="cb766-102"><a href="ch32_nps_dummy.html#cb766-102" aria-hidden="true" tabindex="-1"></a>      ),</span>
-<span id="cb766-103"><a href="ch32_nps_dummy.html#cb766-103" aria-hidden="true" tabindex="-1"></a>      <span class="at">linetype =</span> <span class="st">&quot;solid&quot;</span>,</span>
-<span id="cb766-104"><a href="ch32_nps_dummy.html#cb766-104" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">&quot;grey&quot;</span>,</span>
-<span id="cb766-105"><a href="ch32_nps_dummy.html#cb766-105" aria-hidden="true" tabindex="-1"></a>      <span class="at">alpha =</span> .<span class="dv">3</span></span>
-<span id="cb766-106"><a href="ch32_nps_dummy.html#cb766-106" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb766-107"><a href="ch32_nps_dummy.html#cb766-107" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-108"><a href="ch32_nps_dummy.html#cb766-108" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(</span>
-<span id="cb766-109"><a href="ch32_nps_dummy.html#cb766-109" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(</span>
-<span id="cb766-110"><a href="ch32_nps_dummy.html#cb766-110" aria-hidden="true" tabindex="-1"></a>        <span class="co"># group = .data[[subject]],</span></span>
-<span id="cb766-111"><a href="ch32_nps_dummy.html#cb766-111" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(.data[[iv]])) <span class="sc">-</span> .<span class="dv">15</span> ,</span>
-<span id="cb766-112"><a href="ch32_nps_dummy.html#cb766-112" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> .data[[subjectwise_mean]],</span>
-<span id="cb766-113"><a href="ch32_nps_dummy.html#cb766-113" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="fu">factor</span>(.data[[iv]])</span>
-<span id="cb766-114"><a href="ch32_nps_dummy.html#cb766-114" aria-hidden="true" tabindex="-1"></a>      ),</span>
-<span id="cb766-115"><a href="ch32_nps_dummy.html#cb766-115" aria-hidden="true" tabindex="-1"></a>      <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> .<span class="dv">05</span>),</span>
-<span id="cb766-116"><a href="ch32_nps_dummy.html#cb766-116" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">2</span>,</span>
-<span id="cb766-117"><a href="ch32_nps_dummy.html#cb766-117" aria-hidden="true" tabindex="-1"></a>      <span class="at">alpha =</span> <span class="fl">0.7</span>,</span>
-<span id="cb766-118"><a href="ch32_nps_dummy.html#cb766-118" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb766-119"><a href="ch32_nps_dummy.html#cb766-119" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-120"><a href="ch32_nps_dummy.html#cb766-120" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_half_boxplot</span>(</span>
-<span id="cb766-121"><a href="ch32_nps_dummy.html#cb766-121" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> subjectwise,</span>
-<span id="cb766-122"><a href="ch32_nps_dummy.html#cb766-122" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(<span class="at">x =</span> .data[[iv]],</span>
-<span id="cb766-123"><a href="ch32_nps_dummy.html#cb766-123" aria-hidden="true" tabindex="-1"></a>          <span class="at">y =</span> .data[[subjectwise_mean]],</span>
-<span id="cb766-124"><a href="ch32_nps_dummy.html#cb766-124" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill =</span> .data[[iv]]),</span>
-<span id="cb766-125"><a href="ch32_nps_dummy.html#cb766-125" aria-hidden="true" tabindex="-1"></a>      <span class="at">side =</span> <span class="st">&quot;r&quot;</span>,</span>
-<span id="cb766-126"><a href="ch32_nps_dummy.html#cb766-126" aria-hidden="true" tabindex="-1"></a>      <span class="at">outlier.shape =</span> <span class="cn">NA</span>,</span>
-<span id="cb766-127"><a href="ch32_nps_dummy.html#cb766-127" aria-hidden="true" tabindex="-1"></a>      <span class="at">alpha =</span> <span class="fl">0.8</span>,</span>
-<span id="cb766-128"><a href="ch32_nps_dummy.html#cb766-128" aria-hidden="true" tabindex="-1"></a>      <span class="at">width =</span> .<span class="dv">1</span>,</span>
-<span id="cb766-129"><a href="ch32_nps_dummy.html#cb766-129" aria-hidden="true" tabindex="-1"></a>      <span class="at">notch =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb766-130"><a href="ch32_nps_dummy.html#cb766-130" aria-hidden="true" tabindex="-1"></a>      <span class="at">notchwidth =</span> <span class="dv">0</span>,</span>
-<span id="cb766-131"><a href="ch32_nps_dummy.html#cb766-131" aria-hidden="true" tabindex="-1"></a>      <span class="at">varwidth =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb766-132"><a href="ch32_nps_dummy.html#cb766-132" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>,</span>
-<span id="cb766-133"><a href="ch32_nps_dummy.html#cb766-133" aria-hidden="true" tabindex="-1"></a>      <span class="at">errorbar.draw =</span> <span class="cn">FALSE</span></span>
-<span id="cb766-134"><a href="ch32_nps_dummy.html#cb766-134" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb766-135"><a href="ch32_nps_dummy.html#cb766-135" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-136"><a href="ch32_nps_dummy.html#cb766-136" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_errorbar</span>(</span>
-<span id="cb766-137"><a href="ch32_nps_dummy.html#cb766-137" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> groupwise,</span>
-<span id="cb766-138"><a href="ch32_nps_dummy.html#cb766-138" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(</span>
-<span id="cb766-139"><a href="ch32_nps_dummy.html#cb766-139" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">as.numeric</span>(.data[[iv]]) <span class="sc">+</span> .<span class="dv">1</span>,</span>
-<span id="cb766-140"><a href="ch32_nps_dummy.html#cb766-140" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">as.numeric</span>(.data[[group_mean]]),</span>
-<span id="cb766-141"><a href="ch32_nps_dummy.html#cb766-141" aria-hidden="true" tabindex="-1"></a>        <span class="at">fill =</span> <span class="fu">factor</span>(.data[[iv]]),</span>
-<span id="cb766-142"><a href="ch32_nps_dummy.html#cb766-142" aria-hidden="true" tabindex="-1"></a>        <span class="at">ymin =</span> .data[[group_mean]] <span class="sc">-</span> .data[[se]],</span>
-<span id="cb766-143"><a href="ch32_nps_dummy.html#cb766-143" aria-hidden="true" tabindex="-1"></a>        <span class="at">ymax =</span> .data[[group_mean]] <span class="sc">+</span> .data[[se]]</span>
-<span id="cb766-144"><a href="ch32_nps_dummy.html#cb766-144" aria-hidden="true" tabindex="-1"></a>      ),</span>
-<span id="cb766-145"><a href="ch32_nps_dummy.html#cb766-145" aria-hidden="true" tabindex="-1"></a>      <span class="at">width =</span> .<span class="dv">05</span></span>
-<span id="cb766-146"><a href="ch32_nps_dummy.html#cb766-146" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb766-147"><a href="ch32_nps_dummy.html#cb766-147" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-148"><a href="ch32_nps_dummy.html#cb766-148" aria-hidden="true" tabindex="-1"></a>    <span class="co"># legend stuff ________________________________________________________</span></span>
-<span id="cb766-149"><a href="ch32_nps_dummy.html#cb766-149" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-150"><a href="ch32_nps_dummy.html#cb766-150" aria-hidden="true" tabindex="-1"></a>    <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb766-151"><a href="ch32_nps_dummy.html#cb766-151" aria-hidden="true" tabindex="-1"></a>    <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> legend_title)) <span class="sc">+</span></span>
-<span id="cb766-152"><a href="ch32_nps_dummy.html#cb766-152" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> color) <span class="sc">+</span></span>
-<span id="cb766-153"><a href="ch32_nps_dummy.html#cb766-153" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> color) <span class="sc">+</span></span>
-<span id="cb766-154"><a href="ch32_nps_dummy.html#cb766-154" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span>(ggtitle) <span class="sc">+</span></span>
-<span id="cb766-155"><a href="ch32_nps_dummy.html#cb766-155" aria-hidden="true" tabindex="-1"></a>    <span class="co"># scale_x_discrete() +</span></span>
-<span id="cb766-156"><a href="ch32_nps_dummy.html#cb766-156" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb766-157"><a href="ch32_nps_dummy.html#cb766-157" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(xlab) <span class="sc">+</span></span>
-<span id="cb766-158"><a href="ch32_nps_dummy.html#cb766-158" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(ylab) <span class="sc">+</span></span>
-<span id="cb766-159"><a href="ch32_nps_dummy.html#cb766-159" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylim</span>(ylim) <span class="sc">+</span></span>
-<span id="cb766-160"><a href="ch32_nps_dummy.html#cb766-160" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic2</span>() <span class="sc">+</span></span>
-<span id="cb766-161"><a href="ch32_nps_dummy.html#cb766-161" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">aspect.ratio =</span> <span class="dv">6</span> <span class="sc">/</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb766-162"><a href="ch32_nps_dummy.html#cb766-162" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
-<span id="cb766-163"><a href="ch32_nps_dummy.html#cb766-163" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
-<span id="cb766-164"><a href="ch32_nps_dummy.html#cb766-164" aria-hidden="true" tabindex="-1"></a>      <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">&quot;DejaVu Sans&quot;</span>),</span>
-<span id="cb766-165"><a href="ch32_nps_dummy.html#cb766-165" aria-hidden="true" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
-<span id="cb766-166"><a href="ch32_nps_dummy.html#cb766-166" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb766-167"><a href="ch32_nps_dummy.html#cb766-167" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb766-168"><a href="ch32_nps_dummy.html#cb766-168" aria-hidden="true" tabindex="-1"></a>  <span class="co"># plot description ________________________________________________________</span></span>
-<span id="cb766-169"><a href="ch32_nps_dummy.html#cb766-169" aria-hidden="true" tabindex="-1"></a>  p1 <span class="ot">&lt;-</span> p1 <span class="sc">+</span></span>
-<span id="cb766-170"><a href="ch32_nps_dummy.html#cb766-170" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb766-171"><a href="ch32_nps_dummy.html#cb766-171" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;contrast: &quot;</span>, contrast_name),</span>
-<span id="cb766-172"><a href="ch32_nps_dummy.html#cb766-172" aria-hidden="true" tabindex="-1"></a>      <span class="at">subtitle =</span> <span class="st">&quot;Do NPS dot products differ as a function of task for the contrast?&quot;</span>,</span>
-<span id="cb766-173"><a href="ch32_nps_dummy.html#cb766-173" aria-hidden="true" tabindex="-1"></a>      <span class="at">caption =</span> <span class="st">&quot;Blue = fitted linear slope per participant; Green: 1:1 slope&quot;</span></span>
-<span id="cb766-174"><a href="ch32_nps_dummy.html#cb766-174" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb766-175"><a href="ch32_nps_dummy.html#cb766-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(p1)</span>
-<span id="cb766-176"><a href="ch32_nps_dummy.html#cb766-176" aria-hidden="true" tabindex="-1"></a>  savedir <span class="ot">=</span> <span class="fu">file.path</span>(</span>
-<span id="cb766-177"><a href="ch32_nps_dummy.html#cb766-177" aria-hidden="true" tabindex="-1"></a>    main_dir,</span>
-<span id="cb766-178"><a href="ch32_nps_dummy.html#cb766-178" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;analysis&#39;</span>,</span>
-<span id="cb766-179"><a href="ch32_nps_dummy.html#cb766-179" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;mixedeffect&#39;</span>,</span>
-<span id="cb766-180"><a href="ch32_nps_dummy.html#cb766-180" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;model10_iv-cue-stim_dv-nps&#39;</span>,</span>
-<span id="cb766-181"><a href="ch32_nps_dummy.html#cb766-181" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>())</span>
-<span id="cb766-182"><a href="ch32_nps_dummy.html#cb766-182" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb766-183"><a href="ch32_nps_dummy.html#cb766-183" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(savedir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb766-184"><a href="ch32_nps_dummy.html#cb766-184" aria-hidden="true" tabindex="-1"></a>  save_fname <span class="ot">&lt;-</span></span>
-<span id="cb766-185"><a href="ch32_nps_dummy.html#cb766-185" aria-hidden="true" tabindex="-1"></a>    <span class="fu">file.path</span>(</span>
-<span id="cb766-186"><a href="ch32_nps_dummy.html#cb766-186" aria-hidden="true" tabindex="-1"></a>      savedir,</span>
-<span id="cb766-187"><a href="ch32_nps_dummy.html#cb766-187" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(<span class="st">&#39;extract-nps_iv-&#39;</span>,iv,<span class="st">&#39;_dv-&#39;</span>,dv_keyword,<span class="st">&#39;_con-&#39;</span>,contrast_name,<span class="st">&#39;.png&#39;</span>)</span>
-<span id="cb766-188"><a href="ch32_nps_dummy.html#cb766-188" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb766-189"><a href="ch32_nps_dummy.html#cb766-189" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(</span>
-<span id="cb766-190"><a href="ch32_nps_dummy.html#cb766-190" aria-hidden="true" tabindex="-1"></a>    save_fname,</span>
-<span id="cb766-191"><a href="ch32_nps_dummy.html#cb766-191" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot =</span> p1,</span>
-<span id="cb766-192"><a href="ch32_nps_dummy.html#cb766-192" aria-hidden="true" tabindex="-1"></a>    <span class="co"># width = w,</span></span>
-<span id="cb766-193"><a href="ch32_nps_dummy.html#cb766-193" aria-hidden="true" tabindex="-1"></a>    <span class="at">unit =</span> <span class="st">&quot;in&quot;</span>,</span>
-<span id="cb766-194"><a href="ch32_nps_dummy.html#cb766-194" aria-hidden="true" tabindex="-1"></a>    <span class="at">dpi =</span> <span class="dv">600</span>,</span>
-<span id="cb766-195"><a href="ch32_nps_dummy.html#cb766-195" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale =</span> <span class="fl">2.5</span></span>
-<span id="cb766-196"><a href="ch32_nps_dummy.html#cb766-196" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb766-197"><a href="ch32_nps_dummy.html#cb766-197" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb569-1"><a href="ch32_nps_dummy.html#cb569-1" aria-hidden="true" tabindex="-1"></a>main_dir <span class="ot">=</span> <span class="fu">dirname</span>(<span class="fu">dirname</span>(<span class="fu">getwd</span>()))</span>
+<span id="cb569-2"><a href="ch32_nps_dummy.html#cb569-2" aria-hidden="true" tabindex="-1"></a>color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Pain &gt; rest&quot;</span> <span class="ot">=</span> <span class="st">&quot;#941100&quot;</span>,</span>
+<span id="cb569-3"><a href="ch32_nps_dummy.html#cb569-3" aria-hidden="true" tabindex="-1"></a>           <span class="st">&quot;Vicarious &gt; rest&quot;</span> <span class="ot">=</span> <span class="st">&quot;#008F51&quot;</span>,</span>
+<span id="cb569-4"><a href="ch32_nps_dummy.html#cb569-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">&quot;Cog &gt; rest&quot;</span> <span class="ot">=</span> <span class="st">&quot;#011891&quot;</span>)</span>
+<span id="cb569-5"><a href="ch32_nps_dummy.html#cb569-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (contrast_name <span class="cf">in</span> <span class="fu">c</span>(  <span class="st">&quot;stimlin_high_gt_low&quot;</span>,  <span class="st">&quot;stimquad_med_gt_other&quot;</span>,  <span class="st">&quot;cue_int_stimlin&quot;</span>,  <span class="st">&quot;cue_int_stimquad&quot;</span>)) {</span>
+<span id="cb569-6"><a href="ch32_nps_dummy.html#cb569-6" aria-hidden="true" tabindex="-1"></a>  merge_df <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
+<span id="cb569-7"><a href="ch32_nps_dummy.html#cb569-7" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
+<span id="cb569-8"><a href="ch32_nps_dummy.html#cb569-8" aria-hidden="true" tabindex="-1"></a>  groupwise <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
+<span id="cb569-9"><a href="ch32_nps_dummy.html#cb569-9" aria-hidden="true" tabindex="-1"></a>  subjectwise <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
+<span id="cb569-10"><a href="ch32_nps_dummy.html#cb569-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-11"><a href="ch32_nps_dummy.html#cb569-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (conname <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&#39;P_simple&#39;</span>, <span class="st">&#39;V_simple&#39;</span>, <span class="st">&#39;C_simple&#39;</span>)) {</span>
+<span id="cb569-12"><a href="ch32_nps_dummy.html#cb569-12" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">=</span> <span class="fu">data.frame</span>()</span>
+<span id="cb569-13"><a href="ch32_nps_dummy.html#cb569-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(contrast_name, conname))</span>
+<span id="cb569-14"><a href="ch32_nps_dummy.html#cb569-14" aria-hidden="true" tabindex="-1"></a>    npsdir <span class="ot">=</span> <span class="fu">file.path</span>(</span>
+<span id="cb569-15"><a href="ch32_nps_dummy.html#cb569-15" aria-hidden="true" tabindex="-1"></a>      main_dir,</span>
+<span id="cb569-16"><a href="ch32_nps_dummy.html#cb569-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;analysis&#39;</span>,</span>
+<span id="cb569-17"><a href="ch32_nps_dummy.html#cb569-17" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;fmri&#39;</span>,</span>
+<span id="cb569-18"><a href="ch32_nps_dummy.html#cb569-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;spm&#39;</span>,</span>
+<span id="cb569-19"><a href="ch32_nps_dummy.html#cb569-19" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;univariate&#39;</span>,</span>
+<span id="cb569-20"><a href="ch32_nps_dummy.html#cb569-20" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;model01_6cond&#39;</span>,</span>
+<span id="cb569-21"><a href="ch32_nps_dummy.html#cb569-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;extract_nps&#39;</span></span>
+<span id="cb569-22"><a href="ch32_nps_dummy.html#cb569-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb569-23"><a href="ch32_nps_dummy.html#cb569-23" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="fu">Sys.glob</span>(<span class="fu">file.path</span>(</span>
+<span id="cb569-24"><a href="ch32_nps_dummy.html#cb569-24" aria-hidden="true" tabindex="-1"></a>      npsdir,</span>
+<span id="cb569-25"><a href="ch32_nps_dummy.html#cb569-25" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(</span>
+<span id="cb569-26"><a href="ch32_nps_dummy.html#cb569-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;extract-nps_model01-6cond_con_*&#39;</span>,</span>
+<span id="cb569-27"><a href="ch32_nps_dummy.html#cb569-27" aria-hidden="true" tabindex="-1"></a>        conname,</span>
+<span id="cb569-28"><a href="ch32_nps_dummy.html#cb569-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;_&#39;</span>,</span>
+<span id="cb569-29"><a href="ch32_nps_dummy.html#cb569-29" aria-hidden="true" tabindex="-1"></a>        contrast_name,</span>
+<span id="cb569-30"><a href="ch32_nps_dummy.html#cb569-30" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;.csv&#39;</span></span>
+<span id="cb569-31"><a href="ch32_nps_dummy.html#cb569-31" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb569-32"><a href="ch32_nps_dummy.html#cb569-32" aria-hidden="true" tabindex="-1"></a>    )))</span>
+<span id="cb569-33"><a href="ch32_nps_dummy.html#cb569-33" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>conname <span class="ot">=</span> <span class="fu">char</span>(conname)</span>
+<span id="cb569-34"><a href="ch32_nps_dummy.html#cb569-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-35"><a href="ch32_nps_dummy.html#cb569-35" aria-hidden="true" tabindex="-1"></a>    merge_df <span class="ot">=</span> <span class="fu">rbind</span>(merge_df, df)</span>
+<span id="cb569-36"><a href="ch32_nps_dummy.html#cb569-36" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb569-37"><a href="ch32_nps_dummy.html#cb569-37" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-38"><a href="ch32_nps_dummy.html#cb569-38" aria-hidden="true" tabindex="-1"></a>  merge_df <span class="ot">=</span> <span class="fu">as.data.frame</span>(merge_df)</span>
+<span id="cb569-39"><a href="ch32_nps_dummy.html#cb569-39" aria-hidden="true" tabindex="-1"></a>  merge_df<span class="sc">$</span>contrast <span class="ot">&lt;-</span></span>
+<span id="cb569-40"><a href="ch32_nps_dummy.html#cb569-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">recode_factor</span>(</span>
+<span id="cb569-41"><a href="ch32_nps_dummy.html#cb569-41" aria-hidden="true" tabindex="-1"></a>      merge_df<span class="sc">$</span>conname,</span>
+<span id="cb569-42"><a href="ch32_nps_dummy.html#cb569-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">P_simple =</span> <span class="st">&quot;Pain &gt; rest&quot;</span>,</span>
+<span id="cb569-43"><a href="ch32_nps_dummy.html#cb569-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">V_simple =</span> <span class="st">&quot;Vicarious &gt; rest&quot;</span>,</span>
+<span id="cb569-44"><a href="ch32_nps_dummy.html#cb569-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">C_simple =</span> <span class="st">&quot;Cog &gt; rest&quot;</span></span>
+<span id="cb569-45"><a href="ch32_nps_dummy.html#cb569-45" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb569-46"><a href="ch32_nps_dummy.html#cb569-46" aria-hidden="true" tabindex="-1"></a>  merge_df<span class="sc">$</span>contrast <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(merge_df<span class="sc">$</span>contrast)</span>
+<span id="cb569-47"><a href="ch32_nps_dummy.html#cb569-47" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print(summary(model.nps))</span></span>
+<span id="cb569-48"><a href="ch32_nps_dummy.html#cb569-48" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-49"><a href="ch32_nps_dummy.html#cb569-49" aria-hidden="true" tabindex="-1"></a>  <span class="co"># parameters __________________________________________________________________</span></span>
+<span id="cb569-50"><a href="ch32_nps_dummy.html#cb569-50" aria-hidden="true" tabindex="-1"></a>  model <span class="ot">=</span> <span class="st">&#39;nps&#39;</span></span>
+<span id="cb569-51"><a href="ch32_nps_dummy.html#cb569-51" aria-hidden="true" tabindex="-1"></a>  model_keyword <span class="ot">=</span> <span class="st">&quot;nps&quot;</span></span>
+<span id="cb569-52"><a href="ch32_nps_dummy.html#cb569-52" aria-hidden="true" tabindex="-1"></a>  subjectwise_mean <span class="ot">=</span> <span class="st">&quot;mean_per_sub&quot;</span></span>
+<span id="cb569-53"><a href="ch32_nps_dummy.html#cb569-53" aria-hidden="true" tabindex="-1"></a>  group_mean <span class="ot">=</span> <span class="st">&quot;mean_per_sub_norm_mean&quot;</span></span>
+<span id="cb569-54"><a href="ch32_nps_dummy.html#cb569-54" aria-hidden="true" tabindex="-1"></a>  iv <span class="ot">=</span> <span class="st">&quot;contrast&quot;</span></span>
+<span id="cb569-55"><a href="ch32_nps_dummy.html#cb569-55" aria-hidden="true" tabindex="-1"></a>  ylim <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">800</span>, <span class="dv">800</span>)</span>
+<span id="cb569-56"><a href="ch32_nps_dummy.html#cb569-56" aria-hidden="true" tabindex="-1"></a>  se <span class="ot">=</span> <span class="st">&quot;se&quot;</span></span>
+<span id="cb569-57"><a href="ch32_nps_dummy.html#cb569-57" aria-hidden="true" tabindex="-1"></a>  subject <span class="ot">=</span> <span class="st">&quot;subject&quot;</span></span>
+<span id="cb569-58"><a href="ch32_nps_dummy.html#cb569-58" aria-hidden="true" tabindex="-1"></a>  ggtitle <span class="ot">=</span> <span class="fu">paste0</span>(model_keyword,</span>
+<span id="cb569-59"><a href="ch32_nps_dummy.html#cb569-59" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot; :: extracted NPS value for taskwise contrast&quot;</span>)</span>
+<span id="cb569-60"><a href="ch32_nps_dummy.html#cb569-60" aria-hidden="true" tabindex="-1"></a>  legend_title <span class="ot">=</span> <span class="st">&quot;Contrasts&quot;</span></span>
+<span id="cb569-61"><a href="ch32_nps_dummy.html#cb569-61" aria-hidden="true" tabindex="-1"></a>  xlab <span class="ot">=</span> <span class="st">&quot;contrasts &quot;</span></span>
+<span id="cb569-62"><a href="ch32_nps_dummy.html#cb569-62" aria-hidden="true" tabindex="-1"></a>  ylab <span class="ot">=</span> <span class="st">&quot;NPS dotproduct </span><span class="sc">\n</span><span class="st">metric and functionality&quot;</span></span>
+<span id="cb569-63"><a href="ch32_nps_dummy.html#cb569-63" aria-hidden="true" tabindex="-1"></a>  dv <span class="ot">=</span> <span class="st">&quot;nps&quot;</span></span>
+<span id="cb569-64"><a href="ch32_nps_dummy.html#cb569-64" aria-hidden="true" tabindex="-1"></a>  dv_keyword <span class="ot">=</span> <span class="st">&quot;nps_dot_product&quot;</span></span>
+<span id="cb569-65"><a href="ch32_nps_dummy.html#cb569-65" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-66"><a href="ch32_nps_dummy.html#cb569-66" aria-hidden="true" tabindex="-1"></a>  classwise <span class="ot">&lt;-</span> <span class="fu">meanSummary</span>(merge_df,</span>
+<span id="cb569-67"><a href="ch32_nps_dummy.html#cb569-67" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">c</span>(subject, iv), dv)</span>
+<span id="cb569-68"><a href="ch32_nps_dummy.html#cb569-68" aria-hidden="true" tabindex="-1"></a>  groupwise <span class="ot">&lt;-</span> <span class="fu">summarySEwithin</span>(<span class="at">data =</span> classwise,</span>
+<span id="cb569-69"><a href="ch32_nps_dummy.html#cb569-69" aria-hidden="true" tabindex="-1"></a>                               <span class="at">measurevar =</span> <span class="st">&quot;mean_per_sub&quot;</span>,</span>
+<span id="cb569-70"><a href="ch32_nps_dummy.html#cb569-70" aria-hidden="true" tabindex="-1"></a>                               <span class="at">withinvars =</span> <span class="fu">c</span>(iv))</span>
+<span id="cb569-71"><a href="ch32_nps_dummy.html#cb569-71" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-72"><a href="ch32_nps_dummy.html#cb569-72" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-73"><a href="ch32_nps_dummy.html#cb569-73" aria-hidden="true" tabindex="-1"></a>  subjectwise <span class="ot">=</span> <span class="fu">subset</span>(classwise, <span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(sd))</span>
+<span id="cb569-74"><a href="ch32_nps_dummy.html#cb569-74" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-75"><a href="ch32_nps_dummy.html#cb569-75" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-76"><a href="ch32_nps_dummy.html#cb569-76" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-77"><a href="ch32_nps_dummy.html#cb569-77" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-78"><a href="ch32_nps_dummy.html#cb569-78" aria-hidden="true" tabindex="-1"></a>  p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> subjectwise,</span>
+<span id="cb569-79"><a href="ch32_nps_dummy.html#cb569-79" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(</span>
+<span id="cb569-80"><a href="ch32_nps_dummy.html#cb569-80" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> .data[[subjectwise_mean]],</span>
+<span id="cb569-81"><a href="ch32_nps_dummy.html#cb569-81" aria-hidden="true" tabindex="-1"></a>                 <span class="at">x =</span> <span class="fu">factor</span>(.data[[iv]]),</span>
+<span id="cb569-82"><a href="ch32_nps_dummy.html#cb569-82" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="fu">factor</span>(.data[[iv]])</span>
+<span id="cb569-83"><a href="ch32_nps_dummy.html#cb569-83" aria-hidden="true" tabindex="-1"></a>               )) <span class="sc">+</span></span>
+<span id="cb569-84"><a href="ch32_nps_dummy.html#cb569-84" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-85"><a href="ch32_nps_dummy.html#cb569-85" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_half_violin</span>(</span>
+<span id="cb569-86"><a href="ch32_nps_dummy.html#cb569-86" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(<span class="at">fill =</span> <span class="fu">factor</span>(.data[[iv]])),</span>
+<span id="cb569-87"><a href="ch32_nps_dummy.html#cb569-87" aria-hidden="true" tabindex="-1"></a>      <span class="at">side =</span> <span class="st">&#39;r&#39;</span>,</span>
+<span id="cb569-88"><a href="ch32_nps_dummy.html#cb569-88" aria-hidden="true" tabindex="-1"></a>      <span class="at">position =</span> <span class="st">&#39;dodge&#39;</span>,</span>
+<span id="cb569-89"><a href="ch32_nps_dummy.html#cb569-89" aria-hidden="true" tabindex="-1"></a>      <span class="at">adjust =</span> <span class="fl">0.5</span>,</span>
+<span id="cb569-90"><a href="ch32_nps_dummy.html#cb569-90" aria-hidden="true" tabindex="-1"></a>      <span class="at">trim =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb569-91"><a href="ch32_nps_dummy.html#cb569-91" aria-hidden="true" tabindex="-1"></a>      <span class="at">alpha =</span> .<span class="dv">3</span>,</span>
+<span id="cb569-92"><a href="ch32_nps_dummy.html#cb569-92" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> <span class="cn">NA</span></span>
+<span id="cb569-93"><a href="ch32_nps_dummy.html#cb569-93" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb569-94"><a href="ch32_nps_dummy.html#cb569-94" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-95"><a href="ch32_nps_dummy.html#cb569-95" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(</span>
+<span id="cb569-96"><a href="ch32_nps_dummy.html#cb569-96" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> subjectwise,</span>
+<span id="cb569-97"><a href="ch32_nps_dummy.html#cb569-97" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(</span>
+<span id="cb569-98"><a href="ch32_nps_dummy.html#cb569-98" aria-hidden="true" tabindex="-1"></a>        <span class="at">group =</span> .data[[subject]],</span>
+<span id="cb569-99"><a href="ch32_nps_dummy.html#cb569-99" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(.data[[iv]])) <span class="sc">-</span> .<span class="dv">15</span> ,</span>
+<span id="cb569-100"><a href="ch32_nps_dummy.html#cb569-100" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> .data[[subjectwise_mean]],</span>
+<span id="cb569-101"><a href="ch32_nps_dummy.html#cb569-101" aria-hidden="true" tabindex="-1"></a>        <span class="at">fill =</span> <span class="fu">factor</span>(.data[[iv]])</span>
+<span id="cb569-102"><a href="ch32_nps_dummy.html#cb569-102" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb569-103"><a href="ch32_nps_dummy.html#cb569-103" aria-hidden="true" tabindex="-1"></a>      <span class="at">linetype =</span> <span class="st">&quot;solid&quot;</span>,</span>
+<span id="cb569-104"><a href="ch32_nps_dummy.html#cb569-104" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">&quot;grey&quot;</span>,</span>
+<span id="cb569-105"><a href="ch32_nps_dummy.html#cb569-105" aria-hidden="true" tabindex="-1"></a>      <span class="at">alpha =</span> .<span class="dv">3</span></span>
+<span id="cb569-106"><a href="ch32_nps_dummy.html#cb569-106" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb569-107"><a href="ch32_nps_dummy.html#cb569-107" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-108"><a href="ch32_nps_dummy.html#cb569-108" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(</span>
+<span id="cb569-109"><a href="ch32_nps_dummy.html#cb569-109" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(</span>
+<span id="cb569-110"><a href="ch32_nps_dummy.html#cb569-110" aria-hidden="true" tabindex="-1"></a>        <span class="co"># group = .data[[subject]],</span></span>
+<span id="cb569-111"><a href="ch32_nps_dummy.html#cb569-111" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">as.numeric</span>(<span class="fu">as.factor</span>(.data[[iv]])) <span class="sc">-</span> .<span class="dv">15</span> ,</span>
+<span id="cb569-112"><a href="ch32_nps_dummy.html#cb569-112" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> .data[[subjectwise_mean]],</span>
+<span id="cb569-113"><a href="ch32_nps_dummy.html#cb569-113" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="fu">factor</span>(.data[[iv]])</span>
+<span id="cb569-114"><a href="ch32_nps_dummy.html#cb569-114" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb569-115"><a href="ch32_nps_dummy.html#cb569-115" aria-hidden="true" tabindex="-1"></a>      <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> .<span class="dv">05</span>),</span>
+<span id="cb569-116"><a href="ch32_nps_dummy.html#cb569-116" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">2</span>,</span>
+<span id="cb569-117"><a href="ch32_nps_dummy.html#cb569-117" aria-hidden="true" tabindex="-1"></a>      <span class="at">alpha =</span> <span class="fl">0.7</span>,</span>
+<span id="cb569-118"><a href="ch32_nps_dummy.html#cb569-118" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb569-119"><a href="ch32_nps_dummy.html#cb569-119" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-120"><a href="ch32_nps_dummy.html#cb569-120" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_half_boxplot</span>(</span>
+<span id="cb569-121"><a href="ch32_nps_dummy.html#cb569-121" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> subjectwise,</span>
+<span id="cb569-122"><a href="ch32_nps_dummy.html#cb569-122" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(<span class="at">x =</span> .data[[iv]],</span>
+<span id="cb569-123"><a href="ch32_nps_dummy.html#cb569-123" aria-hidden="true" tabindex="-1"></a>          <span class="at">y =</span> .data[[subjectwise_mean]],</span>
+<span id="cb569-124"><a href="ch32_nps_dummy.html#cb569-124" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill =</span> .data[[iv]]),</span>
+<span id="cb569-125"><a href="ch32_nps_dummy.html#cb569-125" aria-hidden="true" tabindex="-1"></a>      <span class="at">side =</span> <span class="st">&quot;r&quot;</span>,</span>
+<span id="cb569-126"><a href="ch32_nps_dummy.html#cb569-126" aria-hidden="true" tabindex="-1"></a>      <span class="at">outlier.shape =</span> <span class="cn">NA</span>,</span>
+<span id="cb569-127"><a href="ch32_nps_dummy.html#cb569-127" aria-hidden="true" tabindex="-1"></a>      <span class="at">alpha =</span> <span class="fl">0.8</span>,</span>
+<span id="cb569-128"><a href="ch32_nps_dummy.html#cb569-128" aria-hidden="true" tabindex="-1"></a>      <span class="at">width =</span> .<span class="dv">1</span>,</span>
+<span id="cb569-129"><a href="ch32_nps_dummy.html#cb569-129" aria-hidden="true" tabindex="-1"></a>      <span class="at">notch =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb569-130"><a href="ch32_nps_dummy.html#cb569-130" aria-hidden="true" tabindex="-1"></a>      <span class="at">notchwidth =</span> <span class="dv">0</span>,</span>
+<span id="cb569-131"><a href="ch32_nps_dummy.html#cb569-131" aria-hidden="true" tabindex="-1"></a>      <span class="at">varwidth =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb569-132"><a href="ch32_nps_dummy.html#cb569-132" aria-hidden="true" tabindex="-1"></a>      <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb569-133"><a href="ch32_nps_dummy.html#cb569-133" aria-hidden="true" tabindex="-1"></a>      <span class="at">errorbar.draw =</span> <span class="cn">FALSE</span></span>
+<span id="cb569-134"><a href="ch32_nps_dummy.html#cb569-134" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb569-135"><a href="ch32_nps_dummy.html#cb569-135" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-136"><a href="ch32_nps_dummy.html#cb569-136" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_errorbar</span>(</span>
+<span id="cb569-137"><a href="ch32_nps_dummy.html#cb569-137" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> groupwise,</span>
+<span id="cb569-138"><a href="ch32_nps_dummy.html#cb569-138" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(</span>
+<span id="cb569-139"><a href="ch32_nps_dummy.html#cb569-139" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">as.numeric</span>(.data[[iv]]) <span class="sc">+</span> .<span class="dv">1</span>,</span>
+<span id="cb569-140"><a href="ch32_nps_dummy.html#cb569-140" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">as.numeric</span>(.data[[group_mean]]),</span>
+<span id="cb569-141"><a href="ch32_nps_dummy.html#cb569-141" aria-hidden="true" tabindex="-1"></a>        <span class="at">fill =</span> <span class="fu">factor</span>(.data[[iv]]),</span>
+<span id="cb569-142"><a href="ch32_nps_dummy.html#cb569-142" aria-hidden="true" tabindex="-1"></a>        <span class="at">ymin =</span> .data[[group_mean]] <span class="sc">-</span> .data[[se]],</span>
+<span id="cb569-143"><a href="ch32_nps_dummy.html#cb569-143" aria-hidden="true" tabindex="-1"></a>        <span class="at">ymax =</span> .data[[group_mean]] <span class="sc">+</span> .data[[se]]</span>
+<span id="cb569-144"><a href="ch32_nps_dummy.html#cb569-144" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb569-145"><a href="ch32_nps_dummy.html#cb569-145" aria-hidden="true" tabindex="-1"></a>      <span class="at">width =</span> .<span class="dv">05</span></span>
+<span id="cb569-146"><a href="ch32_nps_dummy.html#cb569-146" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb569-147"><a href="ch32_nps_dummy.html#cb569-147" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-148"><a href="ch32_nps_dummy.html#cb569-148" aria-hidden="true" tabindex="-1"></a>    <span class="co"># legend stuff ________________________________________________________</span></span>
+<span id="cb569-149"><a href="ch32_nps_dummy.html#cb569-149" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-150"><a href="ch32_nps_dummy.html#cb569-150" aria-hidden="true" tabindex="-1"></a>    <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb569-151"><a href="ch32_nps_dummy.html#cb569-151" aria-hidden="true" tabindex="-1"></a>    <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> legend_title)) <span class="sc">+</span></span>
+<span id="cb569-152"><a href="ch32_nps_dummy.html#cb569-152" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> color) <span class="sc">+</span></span>
+<span id="cb569-153"><a href="ch32_nps_dummy.html#cb569-153" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> color) <span class="sc">+</span></span>
+<span id="cb569-154"><a href="ch32_nps_dummy.html#cb569-154" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span>(ggtitle) <span class="sc">+</span></span>
+<span id="cb569-155"><a href="ch32_nps_dummy.html#cb569-155" aria-hidden="true" tabindex="-1"></a>    <span class="co"># scale_x_discrete() +</span></span>
+<span id="cb569-156"><a href="ch32_nps_dummy.html#cb569-156" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb569-157"><a href="ch32_nps_dummy.html#cb569-157" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(xlab) <span class="sc">+</span></span>
+<span id="cb569-158"><a href="ch32_nps_dummy.html#cb569-158" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(ylab) <span class="sc">+</span></span>
+<span id="cb569-159"><a href="ch32_nps_dummy.html#cb569-159" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylim</span>(ylim) <span class="sc">+</span></span>
+<span id="cb569-160"><a href="ch32_nps_dummy.html#cb569-160" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic2</span>() <span class="sc">+</span></span>
+<span id="cb569-161"><a href="ch32_nps_dummy.html#cb569-161" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">aspect.ratio =</span> <span class="dv">6</span> <span class="sc">/</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb569-162"><a href="ch32_nps_dummy.html#cb569-162" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb569-163"><a href="ch32_nps_dummy.html#cb569-163" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb569-164"><a href="ch32_nps_dummy.html#cb569-164" aria-hidden="true" tabindex="-1"></a>      <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">&quot;DejaVu Sans&quot;</span>),</span>
+<span id="cb569-165"><a href="ch32_nps_dummy.html#cb569-165" aria-hidden="true" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
+<span id="cb569-166"><a href="ch32_nps_dummy.html#cb569-166" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb569-167"><a href="ch32_nps_dummy.html#cb569-167" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb569-168"><a href="ch32_nps_dummy.html#cb569-168" aria-hidden="true" tabindex="-1"></a>  <span class="co"># plot description ________________________________________________________</span></span>
+<span id="cb569-169"><a href="ch32_nps_dummy.html#cb569-169" aria-hidden="true" tabindex="-1"></a>  p1 <span class="ot">&lt;-</span> p1 <span class="sc">+</span></span>
+<span id="cb569-170"><a href="ch32_nps_dummy.html#cb569-170" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb569-171"><a href="ch32_nps_dummy.html#cb569-171" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;contrast: &quot;</span>, contrast_name),</span>
+<span id="cb569-172"><a href="ch32_nps_dummy.html#cb569-172" aria-hidden="true" tabindex="-1"></a>      <span class="at">subtitle =</span> <span class="st">&quot;Do NPS dot products differ as a function of task for the contrast?&quot;</span>,</span>
+<span id="cb569-173"><a href="ch32_nps_dummy.html#cb569-173" aria-hidden="true" tabindex="-1"></a>      <span class="at">caption =</span> <span class="st">&quot;Blue = fitted linear slope per participant; Green: 1:1 slope&quot;</span></span>
+<span id="cb569-174"><a href="ch32_nps_dummy.html#cb569-174" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb569-175"><a href="ch32_nps_dummy.html#cb569-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(p1)</span>
+<span id="cb569-176"><a href="ch32_nps_dummy.html#cb569-176" aria-hidden="true" tabindex="-1"></a>  savedir <span class="ot">=</span> <span class="fu">file.path</span>(</span>
+<span id="cb569-177"><a href="ch32_nps_dummy.html#cb569-177" aria-hidden="true" tabindex="-1"></a>    main_dir,</span>
+<span id="cb569-178"><a href="ch32_nps_dummy.html#cb569-178" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;analysis&#39;</span>,</span>
+<span id="cb569-179"><a href="ch32_nps_dummy.html#cb569-179" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;mixedeffect&#39;</span>,</span>
+<span id="cb569-180"><a href="ch32_nps_dummy.html#cb569-180" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;model10_iv-cue-stim_dv-nps&#39;</span>,</span>
+<span id="cb569-181"><a href="ch32_nps_dummy.html#cb569-181" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>())</span>
+<span id="cb569-182"><a href="ch32_nps_dummy.html#cb569-182" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb569-183"><a href="ch32_nps_dummy.html#cb569-183" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(savedir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb569-184"><a href="ch32_nps_dummy.html#cb569-184" aria-hidden="true" tabindex="-1"></a>  save_fname <span class="ot">&lt;-</span></span>
+<span id="cb569-185"><a href="ch32_nps_dummy.html#cb569-185" aria-hidden="true" tabindex="-1"></a>    <span class="fu">file.path</span>(</span>
+<span id="cb569-186"><a href="ch32_nps_dummy.html#cb569-186" aria-hidden="true" tabindex="-1"></a>      savedir,</span>
+<span id="cb569-187"><a href="ch32_nps_dummy.html#cb569-187" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(<span class="st">&#39;extract-nps_iv-&#39;</span>,iv,<span class="st">&#39;_dv-&#39;</span>,dv_keyword,<span class="st">&#39;_con-&#39;</span>,contrast_name,<span class="st">&#39;.png&#39;</span>)</span>
+<span id="cb569-188"><a href="ch32_nps_dummy.html#cb569-188" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb569-189"><a href="ch32_nps_dummy.html#cb569-189" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(</span>
+<span id="cb569-190"><a href="ch32_nps_dummy.html#cb569-190" aria-hidden="true" tabindex="-1"></a>    save_fname,</span>
+<span id="cb569-191"><a href="ch32_nps_dummy.html#cb569-191" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot =</span> p1,</span>
+<span id="cb569-192"><a href="ch32_nps_dummy.html#cb569-192" aria-hidden="true" tabindex="-1"></a>    <span class="co"># width = w,</span></span>
+<span id="cb569-193"><a href="ch32_nps_dummy.html#cb569-193" aria-hidden="true" tabindex="-1"></a>    <span class="at">unit =</span> <span class="st">&quot;in&quot;</span>,</span>
+<span id="cb569-194"><a href="ch32_nps_dummy.html#cb569-194" aria-hidden="true" tabindex="-1"></a>    <span class="at">dpi =</span> <span class="dv">600</span>,</span>
+<span id="cb569-195"><a href="ch32_nps_dummy.html#cb569-195" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale =</span> <span class="fl">2.5</span></span>
+<span id="cb569-196"><a href="ch32_nps_dummy.html#cb569-196" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb569-197"><a href="ch32_nps_dummy.html#cb569-197" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;stimlin_high_gt_low P_simple&quot;
 ## [1] &quot;stimlin_high_gt_low V_simple&quot;
 ## [1] &quot;stimlin_high_gt_low C_simple&quot;</code></pre>
@@ -919,7 +878,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/32-iv-cue-stim_dv-nps_dummy.Rmd",
+"link": "https://github.com/jungheejung/cue_expectancy/edit/BRANCH/32-iv-cue-stim_dv-nps_dummy.Rmd",
 "text": "Edit"
 },
 "history": {

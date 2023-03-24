@@ -1,7 +1,9 @@
-# [ beh ] outcome ~ stimulus_intensity {#ch04_outcome-stim}
+# [beh] outcome ~ stimulus_intensity {#ch04_outcome-stim}
 
 ## What is the purpose of this notebook? {.unlisted .unnumbered}
+
 Here, I plot the outcome ratings as a function of stimulus intensity 
+
 * Main model: `lmer(outcome_rating ~ stim)` 
 * Main question: do outcome ratings differ as a function of stimulus intensity? We should expect to see a linear effect of stimulus intensity.
 * If there is a main effect of cue on expectation ratings, does this cue effect differ depending on task type?
@@ -186,6 +188,11 @@ dir.create(analysis_dir, showWarnings = FALSE, recursive = TRUE)
 ```
 ## Coordinate system already present. Adding new coordinate system, which will
 ## replace the existing one.
+```
+
+<img src="04_iv-stim_dv-actual_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+
+```
 ## boundary (singular) fit: see help('isSingular')
 ```
 
@@ -237,6 +244,8 @@ dir.create(analysis_dir, showWarnings = FALSE, recursive = TRUE)
 ## replace the existing one.
 ```
 
+<img src="04_iv-stim_dv-actual_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="04_iv-stim_dv-actual_files/figure-html/unnamed-chunk-1-3.png" width="672" />
+
 ## Lineplot
 
 ```r
@@ -266,7 +275,9 @@ plot_filename = file.path(analysis_dir,
 ggsave(plot_filename, width = 15, height = 6)
 ```
 
+
 ## individual differences in outcome rating cue effect 
+
 [ INSERT DESCRIPTION ]
 
 

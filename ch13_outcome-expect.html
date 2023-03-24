@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 13 outcome ~ expect Jayazeri (2018) | behavioral_ICC</title>
+  <title>Chapter 13 [beh] outcome ~ expect Jayazeri (2018) | behavioral_ICC</title>
   <meta name="description" content="<p>This is a logbook of all the mixed model analyses in one setting.
 set in the _output.yml file.
 The HTML output format for this example is bookdown::gitbook,</p>" />
   <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 13 outcome ~ expect Jayazeri (2018) | behavioral_ICC" />
+  <meta property="og:title" content="Chapter 13 [beh] outcome ~ expect Jayazeri (2018) | behavioral_ICC" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a logbook of all the mixed model analyses in one setting.
@@ -19,7 +19,7 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 13 outcome ~ expect Jayazeri (2018) | behavioral_ICC" />
+  <meta name="twitter:title" content="Chapter 13 [beh] outcome ~ expect Jayazeri (2018) | behavioral_ICC" />
   
   <meta name="twitter:description" content="<p>This is a logbook of all the mixed model analyses in one setting.
 set in the _output.yml file.
@@ -64,6 +64,8 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -152,14 +154,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [ beh] expectation ~ cue</a>
+<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [beh] expectation ~ cue</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="ch2_expect.html"><a href="ch2_expect.html#pain"><i class="fa fa-check"></i><b>2.1</b> Pain</a></li>
 <li class="chapter" data-level="2.2" data-path="ch2_expect.html"><a href="ch2_expect.html#vicarious"><i class="fa fa-check"></i><b>2.2</b> Vicarious</a></li>
 <li class="chapter" data-level="2.3" data-path="ch2_expect.html"><a href="ch2_expect.html#cognitive"><i class="fa fa-check"></i><b>2.3</b> Cognitive</a></li>
 <li class="chapter" data-level="2.4" data-path="ch2_expect.html"><a href="ch2_expect.html#individual-difference-analysis"><i class="fa fa-check"></i><b>2.4</b> Individual difference analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [ beh ] outcome ~ cue</a>
+<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [beh] outcome ~ cue</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="ch03_cue.html"><a href="ch03_cue.html#pain-1"><i class="fa fa-check"></i><b>3.1</b> Pain</a></li>
 <li class="chapter" data-level="3.2" data-path="ch03_cue.html"><a href="ch03_cue.html#vicarious-1"><i class="fa fa-check"></i><b>3.2</b> Vicarious</a></li>
@@ -167,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-random-cue-effects"><i class="fa fa-check"></i><b>3.4</b> Individual differences analysis: random cue effects</a></li>
 <li class="chapter" data-level="3.5" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-2-random-intercept-random-slopes-of-cue-effect"><i class="fa fa-check"></i><b>3.5</b> Individual differences analysis 2: random intercept + random slopes of cue effect</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [ beh ] outcome ~ stimulus_intensity</a>
+<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [beh] outcome ~ stimulus_intensity</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#pain-2"><i class="fa fa-check"></i><b>4.1</b> Pain</a></li>
 <li class="chapter" data-level="4.2" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#vicarious-2"><i class="fa fa-check"></i><b>4.2</b> Vicarious</a></li>
@@ -176,16 +178,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#lineplot"><i class="fa fa-check"></i><b>4.5</b> Lineplot</a></li>
 <li class="chapter" data-level="4.6" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#individual-differences-in-outcome-rating-cue-effect"><i class="fa fa-check"></i><b>4.6</b> individual differences in outcome rating cue effect</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> outcome_rating ~ cue * stim</a>
+<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> [beh] outcome_rating ~ cue * stim</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#what-is-the-purpose-of-this-notebook-3"><i class="fa fa-check"></i><b>5.1</b> What is the purpose of this notebook?</a></li>
-<li class="chapter" data-level="5.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.2</b> model 03 iv-cuecontrast dv-actual</a>
+<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.1</b> model 03 iv-cuecontrast dv-actual</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.2.1</b> model 03 3-2. individual difference</a></li>
-<li class="chapter" data-level="5.2.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.2.2</b> model 04 iv-cue-stim dv-actual</a></li>
-<li class="chapter" data-level="5.2.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.2.3</b> model 04 4-2 individual differences in cue effects</a></li>
-<li class="chapter" data-level="5.2.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.2.4</b> model 04 4-3 scatter plot</a></li>
-<li class="chapter" data-level="5.2.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.2.5</b> model 04 4-4 lineplot</a></li>
+<li class="chapter" data-level="5.1.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.1.1</b> model 03 3-2. individual difference</a></li>
+<li class="chapter" data-level="5.1.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.1.2</b> model 04 iv-cue-stim dv-actual</a></li>
+<li class="chapter" data-level="5.1.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.1.3</b> model 04 4-2 individual differences in cue effects</a></li>
+<li class="chapter" data-level="5.1.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.1.4</b> model 04 4-3 scatter plot</a></li>
+<li class="chapter" data-level="5.1.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.1.5</b> model 04 4-4 lineplot</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html"><i class="fa fa-check"></i><b>6</b> expect-actual ~ cue * trial</a>
@@ -196,18 +197,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#do-current-expectation-ratings-predict-outcome-ratings"><i class="fa fa-check"></i><b>6.4</b> Do current expectation ratings predict outcome ratings?</a></li>
 <li class="chapter" data-level="6.5" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#additional-analysis"><i class="fa fa-check"></i><b>6.5</b> Additional analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> RT ~ cue</a>
+<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> [beh] RT ~ cue</a>
 <ul>
-<li class="chapter" data-level="7.0.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#parameters"><i class="fa fa-check"></i><b>7.0.1</b> parameters</a></li>
-<li class="chapter" data-level="7.0.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-data"><i class="fa fa-check"></i><b>7.0.2</b> 1) plot RT data</a></li>
-<li class="chapter" data-level="7.0.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-distribution-per-participant"><i class="fa fa-check"></i><b>7.0.3</b> plot RT distribution per participant</a></li>
-<li class="chapter" data-level="7.0.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#exclude-participants-with-rt-of-5-seconds"><i class="fa fa-check"></i><b>7.0.4</b> exclude participants with RT of 5 seconds</a></li>
 <li class="chapter" data-level="7.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1"><i class="fa fa-check"></i><b>7.1</b> model 1:</a></li>
 <li class="chapter" data-level="7.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-1"><i class="fa fa-check"></i><b>7.2</b> model 1-1</a></li>
 <li class="chapter" data-level="7.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-2"><i class="fa fa-check"></i><b>7.3</b> model 1-2:</a></li>
 <li class="chapter" data-level="7.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-2"><i class="fa fa-check"></i><b>7.4</b> model 2:</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [fMRI] RT ~ cue * stim</a>
+<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [beh] RT ~ cue * stim</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#overview-model-05-iv-cue-dv-rt-summary"><i class="fa fa-check"></i><b>8.1</b> Overview model 05 iv-cue dv-RT summary</a></li>
 <li class="chapter" data-level="8.2" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#prepare-data-and-preprocess"><i class="fa fa-check"></i><b>8.2</b> Prepare data and preprocess</a></li>
@@ -238,22 +235,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.1" data-path="ch10_icc.html"><a href="ch10_icc.html#functions"><i class="fa fa-check"></i><b>10.1</b> Functions</a></li>
 <li class="chapter" data-level="10.2" data-path="ch10_icc.html"><a href="ch10_icc.html#todo"><i class="fa fa-check"></i><b>10.2</b> TODO:</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> N-1 outcome rating ~ N expectation rating</a>
+<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> [beh] N-1 outcome rating ~ N expectation rating</a>
 <ul>
-<li class="chapter" data-level="11.0.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#done"><i class="fa fa-check"></i><b>11.0.1</b> DONE</a></li>
-<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#overview-2"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>11.2</b> Do previous outcome ratings predict current expectation ratings?</a></li>
-<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#additional-analysis-1"><i class="fa fa-check"></i><b>11.3</b> Additional analysis</a></li>
-<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.4</b> Let’s demean the ratings.</a></li>
-<li class="chapter" data-level="11.5" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.5</b> DEMEAN AND THEN DISCRETIZE</a></li>
+<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#expectation_rating-n-1_outcome_rating"><i class="fa fa-check"></i><b>11.1</b> expectation_rating ~ N-1_outcome_rating</a></li>
+<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#current-expectation_rating-n-1_outcomerating-cue"><i class="fa fa-check"></i><b>11.2</b> Current expectation_rating ~ N-1_outcomerating * cue</a></li>
+<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.3</b> Let’s demean the ratings.</a></li>
+<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.4</b> DEMEAN AND THEN DISCRETIZE</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
+<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> [beh] (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings-1"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
+<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
 <li class="chapter" data-level="12.2" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-these-models-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>12.2</b> Do these models differ as a function of cue?</a></li>
 <li class="chapter" data-level="12.3" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#demean-and-discretize"><i class="fa fa-check"></i><b>12.3</b> Demean and discretize</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> outcome ~ expect Jayazeri (2018)</a>
+<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> [beh] outcome ~ expect Jayazeri (2018)</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#overview-4"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
 <li class="chapter" data-level="13.2" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#do-expectation-ratings-predict-current-outcome-ratings-does-this-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>13.2</b> Do expectation ratings predict current outcome ratings? Does this differ as a function of cue?</a></li>
@@ -267,7 +262,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="13.6" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#not-splitting-into-cue-groups"><i class="fa fa-check"></i><b>13.6</b> not splitting into cue groups</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [ beh ] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
+<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [beh] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="ch14_factorize.html"><a href="ch14_factorize.html#original-motivation"><i class="fa fa-check"></i><b>14.1</b> Original motivation:</a></li>
 <li class="chapter" data-level="14.2" data-path="ch14_factorize.html"><a href="ch14_factorize.html#pain-3"><i class="fa fa-check"></i><b>14.2</b> Pain</a>
@@ -343,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="22.5" data-path="nps_stim.html"><a href="nps_stim.html#vicarious-6"><i class="fa fa-check"></i><b>22.5</b> Vicarious</a></li>
 <li class="chapter" data-level="22.6" data-path="nps_stim.html"><a href="nps_stim.html#cognitive-6"><i class="fa fa-check"></i><b>22.6</b> Cognitive</a></li>
 </ul></li>
-<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> biomarker NPS ~ cue * stim (2022)</a>
+<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> [fMRI] biomarker NPS ~ cue * stim (2022)</a>
 <ul>
 <li class="chapter" data-level="23.1" data-path="nps_22.html"><a href="nps_22.html#load-libraries"><i class="fa fa-check"></i><b>23.1</b> load libraries</a>
 <ul>
@@ -354,80 +349,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="23.4" data-path="nps_22.html"><a href="nps_22.html#vps-cue-effect"><i class="fa fa-check"></i><b>23.4</b> VPS cue effect</a></li>
 <li class="chapter" data-level="23.5" data-path="nps_22.html"><a href="nps_22.html#vps-stim-effect"><i class="fa fa-check"></i><b>23.5</b> VPS stim effect</a></li>
 </ul></li>
-<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
+<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> [fMRI] NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
 <li class="chapter" data-level="25" data-path="nps_stim_task.html"><a href="nps_stim_task.html"><i class="fa fa-check"></i><b>25</b> NPSdummy ~ stim * task (contrast-scaled)</a>
 <ul>
 <li class="chapter" data-level="25.1" data-path="nps_stim_task.html"><a href="nps_stim_task.html#raincloud-plots-1"><i class="fa fa-check"></i><b>25.1</b> Raincloud plots</a></li>
 <li class="chapter" data-level="25.2" data-path="nps_stim_task.html"><a href="nps_stim_task.html#line-plots-1"><i class="fa fa-check"></i><b>25.2</b> Line plots</a></li>
 </ul></li>
-<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [ fMRI ] Pain signature ~ single trial</a>
+<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [fMRI] NPS ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pvc-all-task-comparison"><i class="fa fa-check"></i><b>26.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>26.2</b> Pain only Stim x cue interaction</a>
+<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>26.1</b> NPS ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-paintask-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>26.2</b> NPS ~ paintask: 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-2"><i class="fa fa-check"></i><b>26.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-intensity-cohens-d-1.287"><i class="fa fa-check"></i><b>26.2.3</b> NPS stimulus intensity Cohen’s d = 1.287</a></li>
-<li class="chapter" data-level="26.2.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-cue-effect-size-stim_d-1.16-cue_d-0.45"><i class="fa fa-check"></i><b>26.2.4</b> NPS stimulus &amp; cue effect size: stim_d = 1.16, cue_d = 0.45</a></li>
-<li class="chapter" data-level="26.2.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#lineplots"><i class="fa fa-check"></i><b>26.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="26.2.6" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-1-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.6</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.7" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-3-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.7</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.8" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-4-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.8</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-ver-1-nps-stimulus_intensity"><i class="fa fa-check"></i><b>26.2.1</b> Linear model ver 1: NPS ~ stimulus_intensity</a></li>
+<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-ver-2-nps-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>26.2.2</b> Linear model ver 2: NPS ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#cue-3-stimulus_intensity-expectation_rating"><i class="fa fa-check"></i><b>26.2.3</b> 2 cue * 3 stimulus_intensity * expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-outcome-ratings-nps"><i class="fa fa-check"></i><b>26.3</b> Pain only: Outcome ratings &amp; NPS</a>
+<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>26.3</b> NPS ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-outcome_rating"><i class="fa fa-check"></i><b>26.4</b> NPS ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="26.3.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-cue"><i class="fa fa-check"></i><b>26.3.1</b> outcome ratings * cue</a></li>
-<li class="chapter" data-level="26.3.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-stim-cue"><i class="fa fa-check"></i><b>26.3.2</b> outcome ratings * stim * cue</a></li>
+<li class="chapter" data-level="26.4.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome_rating-cue"><i class="fa fa-check"></i><b>26.4.1</b> outcome_rating * cue</a></li>
+<li class="chapter" data-level="26.4.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome_ratings-stimulus_intensity-cue"><i class="fa fa-check"></i><b>26.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>26.4</b> Pain only: Expectation ratings &amp; NPS</a></li>
+<li class="chapter" data-level="26.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-expectation_rating"><i class="fa fa-check"></i><b>26.5</b> NPS ~ expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] Vicarious signature ~ single trial</a>
+<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] VPS ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#pvc-all-task-comparison-1"><i class="fa fa-check"></i><b>27.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>27.2</b> Vicarious only Stim x cue interaction</a>
+<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>27.1</b> VPS ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-vicarious-task-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>27.2</b> VPS ~ vicarious task: 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-3"><i class="fa fa-check"></i><b>27.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-intensity-cohens-d-0.2131521"><i class="fa fa-check"></i><b>27.2.3</b> VPS stimulus intensity Cohen’s d = 0.2131521</a></li>
-<li class="chapter" data-level="27.2.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-cue-effect-size-stim_d-0.217-cue_d-0.013"><i class="fa fa-check"></i><b>27.2.4</b> VPS stimulus &amp; cue effect size: stim_d = 0.217, cue_d = 0.013</a></li>
-<li class="chapter" data-level="27.2.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#lineplots-1"><i class="fa fa-check"></i><b>27.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="27.2.6" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-with-stim-x-cue-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
-<li class="chapter" data-level="27.2.7" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-1-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.8" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-3-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.9" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-4-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-ver-1-vps-stimulus_intensity"><i class="fa fa-check"></i><b>27.2.1</b> Linear model ver 1: VPS ~ stimulus_intensity</a></li>
+<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-ver-2-vps-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>27.2.2</b> Linear model ver 2: VPS ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#cue-x-3-stimulus-intensity-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.3</b> 2 Cue x 3 Stimulus intensity x Expectation rating</a></li>
 </ul></li>
-<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-outcome-ratings-vps"><i class="fa fa-check"></i><b>27.3</b> Vicarious only: Outcome ratings &amp; VPS</a>
+<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>27.3</b> VPS ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-outcome_rating"><i class="fa fa-check"></i><b>27.4</b> VPS ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="27.3.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome-ratings-cue-1"><i class="fa fa-check"></i><b>27.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="27.4.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome_ratings-cue"><i class="fa fa-check"></i><b>27.4.1</b> outcome_ratings * cue</a></li>
+<li class="chapter" data-level="27.4.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome_ratings-stimulus_intensity-cue-1"><i class="fa fa-check"></i><b>27.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-expectation-ratings-vps"><i class="fa fa-check"></i><b>27.4</b> Vicarious only: Expectation ratings &amp; VPS</a></li>
+<li class="chapter" data-level="27.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-expectation_rating"><i class="fa fa-check"></i><b>27.5</b> VPS ~ expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Cognitive signature ~ single trial</a>
+<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Kragel2018 ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#pvc-all-task-comparison-2"><i class="fa fa-check"></i><b>28.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>28.2</b> Cognitive only Stim x cue interaction</a>
+<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>28.1</b> Kragel2018 ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>28.2</b> Kragel2018 ~ 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-4"><i class="fa fa-check"></i><b>28.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cog-stimulus-intensity-cohens-d-0.72"><i class="fa fa-check"></i><b>28.2.3</b> Cog stimulus intensity Cohen’s d = 0.72</a></li>
-<li class="chapter" data-level="28.2.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-stimulus-cue-effect-size-stim_d-0.73-cue_d-0.069"><i class="fa fa-check"></i><b>28.2.4</b> Cognitive stimulus &amp; cue effect size: stim_d = 0.73, cue_d = 0.069</a></li>
-<li class="chapter" data-level="28.2.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#lineplots-2"><i class="fa fa-check"></i><b>28.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="28.2.6" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-with-stim-x-cue-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
-<li class="chapter" data-level="28.2.7" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-1-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.8" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-3-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.9" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-4-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-ver-1-kragel2018-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>28.2.1</b> Linear model ver 1: Kragel2018 ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-ver-2-kragel2018-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>28.2.2</b> Linear model ver 2: Kragel2018 ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cue-x-3-stimulus-intensity-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.3</b> 2 Cue x 3 Stimulus intensity x Expectation rating</a></li>
 </ul></li>
-<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-outcome-ratings-kragel-2018"><i class="fa fa-check"></i><b>28.3</b> Cognitive only: Outcome ratings &amp; Kragel 2018</a>
+<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>28.3</b> Kragel2018 ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-outcome_rating"><i class="fa fa-check"></i><b>28.4</b> Kragel2018 ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="28.3.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome-ratings-cue-2"><i class="fa fa-check"></i><b>28.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="28.4.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome_ratings-cue-1"><i class="fa fa-check"></i><b>28.4.1</b> outcome_ratings * cue</a></li>
+<li class="chapter" data-level="28.4.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome_ratings-stimulus_intensity-cue-2"><i class="fa fa-check"></i><b>28.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>28.4</b> Cognitive only: Expectation ratings &amp; NPS</a></li>
+<li class="chapter" data-level="28.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-expectation_rating"><i class="fa fa-check"></i><b>28.5</b> Kragel2018 ~ expectation_rating</a></li>
 </ul></li>
 <li class="chapter" data-level="29" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html"><i class="fa fa-check"></i><b>29</b> [fMRI] Single trial correlation between cue and stim</a>
 <ul>
-<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#stack-data"><i class="fa fa-check"></i><b>29.1</b> Stack data</a></li>
-<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.2</b> plot correlation (one-sample-t)</a></li>
-<li class="chapter" data-level="29.3" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.3</b> Lineplot</a></li>
+<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.1</b> plot correlation (one-sample-t)</a></li>
+<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.2</b> Lineplot</a></li>
 </ul></li>
 <li class="chapter" data-level="30" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html"><i class="fa fa-check"></i><b>30</b> [fMRI] Signature effect size ~ single trial</a>
 <ul>
@@ -435,30 +417,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="30.2" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#contrastt-stim-intensity"><i class="fa fa-check"></i><b>30.2</b> contrastt (stim intensity)</a></li>
 <li class="chapter" data-level="30.3" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#layer-in-metadata"><i class="fa fa-check"></i><b>30.3</b> layer in metadata</a></li>
 </ul></li>
-<li class="chapter" data-level="31" data-path="ch40_vif.html"><a href="ch40_vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
-<li class="chapter" data-level="32" data-path="load-in-the-datamatrix-and-calculate-the-vif.html"><a href="load-in-the-datamatrix-and-calculate-the-vif.html"><i class="fa fa-check"></i><b>32</b> load in the datamatrix and calculate the vif</a></li>
-<li class="chapter" data-level="33" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>33</b> vif</a></li>
-<li class="chapter" data-level="34" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html"><i class="fa fa-check"></i><b>34</b> [fMRI] Cognitive signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="34.1" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#load-behavioral-data-2"><i class="fa fa-check"></i><b>34.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="34.2" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#dfmerge-stats"><i class="fa fa-check"></i><b>34.2</b> dfmerge stats</a></li>
-<li class="chapter" data-level="34.3" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#expect-nps-as-a-function-of-cue"><i class="fa fa-check"></i><b>34.3</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="34.4" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#x3-stimcue"><i class="fa fa-check"></i><b>34.4</b> 2x3 stim*cue</a></li>
-<li class="chapter" data-level="34.5" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#lineplot-2"><i class="fa fa-check"></i><b>34.5</b> lineplot</a></li>
-</ul></li>
-<li class="chapter" data-level="35" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html"><i class="fa fa-check"></i><b>35</b> [fMRI] Vicarious signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="35.1" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#load-behavioral-data-3"><i class="fa fa-check"></i><b>35.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="35.2" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#expect-nps-as-a-function-of-cue-1"><i class="fa fa-check"></i><b>35.2</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="35.3" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#x3-stimcue-1"><i class="fa fa-check"></i><b>35.3</b> 2x3 stim*cue</a></li>
-</ul></li>
-<li class="chapter" data-level="36" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html"><i class="fa fa-check"></i><b>36</b> [fMRI] Pain signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="36.1" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#load-behavioral-data-4"><i class="fa fa-check"></i><b>36.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="36.2" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#expect-nps-as-a-function-of-cue-2"><i class="fa fa-check"></i><b>36.2</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="36.3" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#x3-stimcue-2"><i class="fa fa-check"></i><b>36.3</b> 2x3 stim*cue</a></li>
-<li class="chapter" data-level="36.4" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#lineplots-3"><i class="fa fa-check"></i><b>36.4</b> lineplots</a></li>
-</ul></li>
+<li class="chapter" data-level="31" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -480,7 +439,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="ch13_outcome-expect" class="section level1 hasAnchor" number="13">
-<h1><span class="header-section-number">Chapter 13</span> outcome ~ expect Jayazeri (2018)<a href="ch13_outcome-expect.html#ch13_outcome-expect" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 13</span> [beh] outcome ~ expect Jayazeri (2018)<a href="ch13_outcome-expect.html#ch13_outcome-expect" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <pre><code>date: &#39;2022-09-13&#39;
 updated: &#39;2023-02-07&#39;</code></pre>
 <div id="todo-1" class="section level3 unlisted unnumbered hasAnchor">
@@ -500,20 +459,20 @@ updated: &#39;2023-02-07&#39;</code></pre>
 <li>Instead of (N-1), we’ll be using the cue and the expectation ratings to explain the outcome ratings</li>
 </ul>
 <p>load data and combine participant data</p>
-<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="ch13_outcome-expect.html#cb618-1" aria-hidden="true" tabindex="-1"></a>main_dir <span class="ot">=</span> <span class="fu">dirname</span>(<span class="fu">dirname</span>(<span class="fu">getwd</span>()))</span>
-<span id="cb618-2"><a href="ch13_outcome-expect.html#cb618-2" aria-hidden="true" tabindex="-1"></a>datadir <span class="ot">=</span> <span class="fu">file.path</span>(main_dir, <span class="st">&#39;data&#39;</span>, <span class="st">&#39;beh&#39;</span>, <span class="st">&#39;beh02_preproc&#39;</span>)</span>
-<span id="cb618-3"><a href="ch13_outcome-expect.html#cb618-3" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters _____________________________________ # nolint</span></span>
-<span id="cb618-4"><a href="ch13_outcome-expect.html#cb618-4" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
-<span id="cb618-5"><a href="ch13_outcome-expect.html#cb618-5" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_cue_type&quot;</span></span>
-<span id="cb618-6"><a href="ch13_outcome-expect.html#cb618-6" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event04_actual_angle&quot;</span></span>
-<span id="cb618-7"><a href="ch13_outcome-expect.html#cb618-7" aria-hidden="true" tabindex="-1"></a>dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;outcome_rating&quot;</span></span>
-<span id="cb618-8"><a href="ch13_outcome-expect.html#cb618-8" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb618-9"><a href="ch13_outcome-expect.html#cb618-9" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">&quot;ratings (degree)&quot;</span></span>
-<span id="cb618-10"><a href="ch13_outcome-expect.html#cb618-10" aria-hidden="true" tabindex="-1"></a>subject <span class="ot">&lt;-</span> <span class="st">&quot;subject&quot;</span></span>
-<span id="cb618-11"><a href="ch13_outcome-expect.html#cb618-11" aria-hidden="true" tabindex="-1"></a>exclude <span class="ot">&lt;-</span> <span class="st">&quot;sub-0999|sub-0001|sub-0002|sub-0003|sub-0004|sub-0005|sub-0006|sub-0007|sub-0008|sub-0009|sub-0010|sub-0011&quot;</span></span>
-<span id="cb618-12"><a href="ch13_outcome-expect.html#cb618-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb618-13"><a href="ch13_outcome-expect.html#cb618-13" aria-hidden="true" tabindex="-1"></a>analysis_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(main_dir, <span class="st">&quot;analysis&quot;</span>, <span class="st">&quot;mixedeffect&quot;</span>, <span class="st">&quot;model13_iv-cue-expect_dv-outcome&quot;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()))</span>
-<span id="cb618-14"><a href="ch13_outcome-expect.html#cb618-14" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(analysis_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="ch13_outcome-expect.html#cb423-1" aria-hidden="true" tabindex="-1"></a>main_dir <span class="ot">=</span> <span class="fu">dirname</span>(<span class="fu">dirname</span>(<span class="fu">getwd</span>()))</span>
+<span id="cb423-2"><a href="ch13_outcome-expect.html#cb423-2" aria-hidden="true" tabindex="-1"></a>datadir <span class="ot">=</span> <span class="fu">file.path</span>(main_dir, <span class="st">&#39;data&#39;</span>, <span class="st">&#39;beh&#39;</span>, <span class="st">&#39;beh02_preproc&#39;</span>)</span>
+<span id="cb423-3"><a href="ch13_outcome-expect.html#cb423-3" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters _____________________________________ # nolint</span></span>
+<span id="cb423-4"><a href="ch13_outcome-expect.html#cb423-4" aria-hidden="true" tabindex="-1"></a>subject_varkey <span class="ot">&lt;-</span> <span class="st">&quot;src_subject_id&quot;</span></span>
+<span id="cb423-5"><a href="ch13_outcome-expect.html#cb423-5" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="st">&quot;param_cue_type&quot;</span></span>
+<span id="cb423-6"><a href="ch13_outcome-expect.html#cb423-6" aria-hidden="true" tabindex="-1"></a>dv <span class="ot">&lt;-</span> <span class="st">&quot;event04_actual_angle&quot;</span></span>
+<span id="cb423-7"><a href="ch13_outcome-expect.html#cb423-7" aria-hidden="true" tabindex="-1"></a>dv_keyword <span class="ot">&lt;-</span> <span class="st">&quot;outcome_rating&quot;</span></span>
+<span id="cb423-8"><a href="ch13_outcome-expect.html#cb423-8" aria-hidden="true" tabindex="-1"></a>xlab <span class="ot">&lt;-</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb423-9"><a href="ch13_outcome-expect.html#cb423-9" aria-hidden="true" tabindex="-1"></a>ylab <span class="ot">&lt;-</span> <span class="st">&quot;ratings (degree)&quot;</span></span>
+<span id="cb423-10"><a href="ch13_outcome-expect.html#cb423-10" aria-hidden="true" tabindex="-1"></a>subject <span class="ot">&lt;-</span> <span class="st">&quot;subject&quot;</span></span>
+<span id="cb423-11"><a href="ch13_outcome-expect.html#cb423-11" aria-hidden="true" tabindex="-1"></a>exclude <span class="ot">&lt;-</span> <span class="st">&quot;sub-0999|sub-0001|sub-0002|sub-0003|sub-0004|sub-0005|sub-0006|sub-0007|sub-0008|sub-0009|sub-0010|sub-0011&quot;</span></span>
+<span id="cb423-12"><a href="ch13_outcome-expect.html#cb423-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb423-13"><a href="ch13_outcome-expect.html#cb423-13" aria-hidden="true" tabindex="-1"></a>analysis_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(main_dir, <span class="st">&quot;analysis&quot;</span>, <span class="st">&quot;mixedeffect&quot;</span>, <span class="st">&quot;model13_iv-cue-expect_dv-outcome&quot;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()))</span>
+<span id="cb423-14"><a href="ch13_outcome-expect.html#cb423-14" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(analysis_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
 <div id="do-expectation-ratings-predict-current-outcome-ratings-does-this-differ-as-a-function-of-cue" class="section level2 hasAnchor" number="13.2">
 <h2><span class="header-section-number">13.2</span> Do expectation ratings predict current outcome ratings? Does this differ as a function of cue?<a href="ch13_outcome-expect.html#do-expectation-ratings-predict-current-outcome-ratings-does-this-differ-as-a-function-of-cue" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -596,19 +555,19 @@ YES, it is</li>
 <li>confirm that df discrete has 10 levels per participant</li>
 <li>the number of counts per frequency can differ</li>
 </ul>
-<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="ch13_outcome-expect.html#cb620-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span>df_dropna <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(src_subject_id) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">n</span>()<span class="sc">&gt;=</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>()</span>
-<span id="cb620-2"><a href="ch13_outcome-expect.html#cb620-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb620-3"><a href="ch13_outcome-expect.html#cb620-3" aria-hidden="true" tabindex="-1"></a>df_discrete <span class="ot">=</span> k <span class="sc">%&gt;%</span></span>
-<span id="cb620-4"><a href="ch13_outcome-expect.html#cb620-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id) <span class="sc">%&gt;%</span></span>
-<span id="cb620-5"><a href="ch13_outcome-expect.html#cb620-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bin =</span> <span class="fu">cut_interval</span>(event04_actual_angle, <span class="at">n =</span> <span class="dv">10</span>),</span>
-<span id="cb620-6"><a href="ch13_outcome-expect.html#cb620-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">outcomelevels =</span> <span class="fu">as.numeric</span>(<span class="fu">cut_interval</span>(event04_actual_angle, <span class="at">n =</span> <span class="dv">10</span>)))</span>
-<span id="cb620-7"><a href="ch13_outcome-expect.html#cb620-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb620-8"><a href="ch13_outcome-expect.html#cb620-8" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> df_discrete <span class="sc">%&gt;%</span> </span>
-<span id="cb620-9"><a href="ch13_outcome-expect.html#cb620-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id,outcomelevels) <span class="sc">%&gt;%</span> </span>
-<span id="cb620-10"><a href="ch13_outcome-expect.html#cb620-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tally</span>()</span>
-<span id="cb620-11"><a href="ch13_outcome-expect.html#cb620-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb620-12"><a href="ch13_outcome-expect.html#cb620-12" aria-hidden="true" tabindex="-1"></a>dset1 <span class="ot">&lt;-</span> <span class="fu">head</span>(res)</span>
-<span id="cb620-13"><a href="ch13_outcome-expect.html#cb620-13" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(dset1, <span class="at">format =</span> <span class="st">&quot;html&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="ch13_outcome-expect.html#cb425-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span>df_dropna <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(src_subject_id) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">n</span>()<span class="sc">&gt;=</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>()</span>
+<span id="cb425-2"><a href="ch13_outcome-expect.html#cb425-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb425-3"><a href="ch13_outcome-expect.html#cb425-3" aria-hidden="true" tabindex="-1"></a>df_discrete <span class="ot">=</span> k <span class="sc">%&gt;%</span></span>
+<span id="cb425-4"><a href="ch13_outcome-expect.html#cb425-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id) <span class="sc">%&gt;%</span></span>
+<span id="cb425-5"><a href="ch13_outcome-expect.html#cb425-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bin =</span> <span class="fu">cut_interval</span>(event04_actual_angle, <span class="at">n =</span> <span class="dv">10</span>),</span>
+<span id="cb425-6"><a href="ch13_outcome-expect.html#cb425-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">outcomelevels =</span> <span class="fu">as.numeric</span>(<span class="fu">cut_interval</span>(event04_actual_angle, <span class="at">n =</span> <span class="dv">10</span>)))</span>
+<span id="cb425-7"><a href="ch13_outcome-expect.html#cb425-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb425-8"><a href="ch13_outcome-expect.html#cb425-8" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> df_discrete <span class="sc">%&gt;%</span> </span>
+<span id="cb425-9"><a href="ch13_outcome-expect.html#cb425-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(src_subject_id,outcomelevels) <span class="sc">%&gt;%</span> </span>
+<span id="cb425-10"><a href="ch13_outcome-expect.html#cb425-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tally</span>()</span>
+<span id="cb425-11"><a href="ch13_outcome-expect.html#cb425-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb425-12"><a href="ch13_outcome-expect.html#cb425-12" aria-hidden="true" tabindex="-1"></a>dset1 <span class="ot">&lt;-</span> <span class="fu">head</span>(res)</span>
+<span id="cb425-13"><a href="ch13_outcome-expect.html#cb425-13" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(dset1, <span class="at">format =</span> <span class="st">&quot;html&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr>
@@ -775,7 +734,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/13_iv-cue-trial_dv-expectjayazeri.Rmd",
+"link": "https://github.com/jungheejung/cue_expectancy/edit/BRANCH/13_iv-cue-trial_dv-expectjayazeri.Rmd",
 "text": "Edit"
 },
 "history": {

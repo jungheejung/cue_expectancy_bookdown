@@ -64,6 +64,8 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -152,14 +154,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [ beh] expectation ~ cue</a>
+<li class="chapter" data-level="2" data-path="ch2_expect.html"><a href="ch2_expect.html"><i class="fa fa-check"></i><b>2</b> [beh] expectation ~ cue</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="ch2_expect.html"><a href="ch2_expect.html#pain"><i class="fa fa-check"></i><b>2.1</b> Pain</a></li>
 <li class="chapter" data-level="2.2" data-path="ch2_expect.html"><a href="ch2_expect.html#vicarious"><i class="fa fa-check"></i><b>2.2</b> Vicarious</a></li>
 <li class="chapter" data-level="2.3" data-path="ch2_expect.html"><a href="ch2_expect.html#cognitive"><i class="fa fa-check"></i><b>2.3</b> Cognitive</a></li>
 <li class="chapter" data-level="2.4" data-path="ch2_expect.html"><a href="ch2_expect.html#individual-difference-analysis"><i class="fa fa-check"></i><b>2.4</b> Individual difference analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [ beh ] outcome ~ cue</a>
+<li class="chapter" data-level="3" data-path="ch03_cue.html"><a href="ch03_cue.html"><i class="fa fa-check"></i><b>3</b> [beh] outcome ~ cue</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="ch03_cue.html"><a href="ch03_cue.html#pain-1"><i class="fa fa-check"></i><b>3.1</b> Pain</a></li>
 <li class="chapter" data-level="3.2" data-path="ch03_cue.html"><a href="ch03_cue.html#vicarious-1"><i class="fa fa-check"></i><b>3.2</b> Vicarious</a></li>
@@ -167,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-random-cue-effects"><i class="fa fa-check"></i><b>3.4</b> Individual differences analysis: random cue effects</a></li>
 <li class="chapter" data-level="3.5" data-path="ch03_cue.html"><a href="ch03_cue.html#individual-differences-analysis-2-random-intercept-random-slopes-of-cue-effect"><i class="fa fa-check"></i><b>3.5</b> Individual differences analysis 2: random intercept + random slopes of cue effect</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [ beh ] outcome ~ stimulus_intensity</a>
+<li class="chapter" data-level="4" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html"><i class="fa fa-check"></i><b>4</b> [beh] outcome ~ stimulus_intensity</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#pain-2"><i class="fa fa-check"></i><b>4.1</b> Pain</a></li>
 <li class="chapter" data-level="4.2" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#vicarious-2"><i class="fa fa-check"></i><b>4.2</b> Vicarious</a></li>
@@ -176,16 +178,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#lineplot"><i class="fa fa-check"></i><b>4.5</b> Lineplot</a></li>
 <li class="chapter" data-level="4.6" data-path="ch04_outcome-stim.html"><a href="ch04_outcome-stim.html#individual-differences-in-outcome-rating-cue-effect"><i class="fa fa-check"></i><b>4.6</b> individual differences in outcome rating cue effect</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> outcome_rating ~ cue * stim</a>
+<li class="chapter" data-level="5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html"><i class="fa fa-check"></i><b>5</b> [beh] outcome_rating ~ cue * stim</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#what-is-the-purpose-of-this-notebook-3"><i class="fa fa-check"></i><b>5.1</b> What is the purpose of this notebook?</a></li>
-<li class="chapter" data-level="5.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.2</b> model 03 iv-cuecontrast dv-actual</a>
+<li class="chapter" data-level="5.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-iv-cuecontrast-dv-actual"><i class="fa fa-check"></i><b>5.1</b> model 03 iv-cuecontrast dv-actual</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.2.1</b> model 03 3-2. individual difference</a></li>
-<li class="chapter" data-level="5.2.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.2.2</b> model 04 iv-cue-stim dv-actual</a></li>
-<li class="chapter" data-level="5.2.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.2.3</b> model 04 4-2 individual differences in cue effects</a></li>
-<li class="chapter" data-level="5.2.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.2.4</b> model 04 4-3 scatter plot</a></li>
-<li class="chapter" data-level="5.2.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.2.5</b> model 04 4-4 lineplot</a></li>
+<li class="chapter" data-level="5.1.1" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-03-3-2.-individual-difference"><i class="fa fa-check"></i><b>5.1.1</b> model 03 3-2. individual difference</a></li>
+<li class="chapter" data-level="5.1.2" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-iv-cue-stim-dv-actual"><i class="fa fa-check"></i><b>5.1.2</b> model 04 iv-cue-stim dv-actual</a></li>
+<li class="chapter" data-level="5.1.3" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-2-individual-differences-in-cue-effects"><i class="fa fa-check"></i><b>5.1.3</b> model 04 4-2 individual differences in cue effects</a></li>
+<li class="chapter" data-level="5.1.4" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-3-scatter-plot"><i class="fa fa-check"></i><b>5.1.4</b> model 04 4-3 scatter plot</a></li>
+<li class="chapter" data-level="5.1.5" data-path="ch05_outcome-cueXstim.html"><a href="ch05_outcome-cueXstim.html#model-04-4-4-lineplot"><i class="fa fa-check"></i><b>5.1.5</b> model 04 4-4 lineplot</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html"><i class="fa fa-check"></i><b>6</b> expect-actual ~ cue * trial</a>
@@ -196,18 +197,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#do-current-expectation-ratings-predict-outcome-ratings"><i class="fa fa-check"></i><b>6.4</b> Do current expectation ratings predict outcome ratings?</a></li>
 <li class="chapter" data-level="6.5" data-path="ch06_Jepma.html"><a href="ch06_Jepma.html#additional-analysis"><i class="fa fa-check"></i><b>6.5</b> Additional analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> RT ~ cue</a>
+<li class="chapter" data-level="7" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html"><i class="fa fa-check"></i><b>7</b> [beh] RT ~ cue</a>
 <ul>
-<li class="chapter" data-level="7.0.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#parameters"><i class="fa fa-check"></i><b>7.0.1</b> parameters</a></li>
-<li class="chapter" data-level="7.0.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-data"><i class="fa fa-check"></i><b>7.0.2</b> 1) plot RT data</a></li>
-<li class="chapter" data-level="7.0.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#plot-rt-distribution-per-participant"><i class="fa fa-check"></i><b>7.0.3</b> plot RT distribution per participant</a></li>
-<li class="chapter" data-level="7.0.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#exclude-participants-with-rt-of-5-seconds"><i class="fa fa-check"></i><b>7.0.4</b> exclude participants with RT of 5 seconds</a></li>
 <li class="chapter" data-level="7.1" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1"><i class="fa fa-check"></i><b>7.1</b> model 1:</a></li>
 <li class="chapter" data-level="7.2" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-1"><i class="fa fa-check"></i><b>7.2</b> model 1-1</a></li>
 <li class="chapter" data-level="7.3" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-1-2"><i class="fa fa-check"></i><b>7.3</b> model 1-2:</a></li>
 <li class="chapter" data-level="7.4" data-path="ch07_RT-cue.html"><a href="ch07_RT-cue.html#model-2"><i class="fa fa-check"></i><b>7.4</b> model 2:</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [fMRI] RT ~ cue * stim</a>
+<li class="chapter" data-level="8" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html"><i class="fa fa-check"></i><b>8</b> [beh] RT ~ cue * stim</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#overview-model-05-iv-cue-dv-rt-summary"><i class="fa fa-check"></i><b>8.1</b> Overview model 05 iv-cue dv-RT summary</a></li>
 <li class="chapter" data-level="8.2" data-path="ch08_RT-cueXstim.html"><a href="ch08_RT-cueXstim.html#prepare-data-and-preprocess"><i class="fa fa-check"></i><b>8.2</b> Prepare data and preprocess</a></li>
@@ -238,22 +235,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.1" data-path="ch10_icc.html"><a href="ch10_icc.html#functions"><i class="fa fa-check"></i><b>10.1</b> Functions</a></li>
 <li class="chapter" data-level="10.2" data-path="ch10_icc.html"><a href="ch10_icc.html#todo"><i class="fa fa-check"></i><b>10.2</b> TODO:</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> N-1 outcome rating ~ N expectation rating</a>
+<li class="chapter" data-level="11" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html"><i class="fa fa-check"></i><b>11</b> [beh] N-1 outcome rating ~ N expectation rating</a>
 <ul>
-<li class="chapter" data-level="11.0.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#done"><i class="fa fa-check"></i><b>11.0.1</b> DONE</a></li>
-<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#overview-2"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>11.2</b> Do previous outcome ratings predict current expectation ratings?</a></li>
-<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#additional-analysis-1"><i class="fa fa-check"></i><b>11.3</b> Additional analysis</a></li>
-<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.4</b> Let’s demean the ratings.</a></li>
-<li class="chapter" data-level="11.5" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.5</b> DEMEAN AND THEN DISCRETIZE</a></li>
+<li class="chapter" data-level="11.1" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#expectation_rating-n-1_outcome_rating"><i class="fa fa-check"></i><b>11.1</b> expectation_rating ~ N-1_outcome_rating</a></li>
+<li class="chapter" data-level="11.2" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#current-expectation_rating-n-1_outcomerating-cue"><i class="fa fa-check"></i><b>11.2</b> Current expectation_rating ~ N-1_outcomerating * cue</a></li>
+<li class="chapter" data-level="11.3" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#lets-demean-the-ratings."><i class="fa fa-check"></i><b>11.3</b> Let’s demean the ratings.</a></li>
+<li class="chapter" data-level="11.4" data-path="ch11_n-1outcome.html"><a href="ch11_n-1outcome.html#demean-and-then-discretize"><i class="fa fa-check"></i><b>11.4</b> DEMEAN AND THEN DISCRETIZE</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
+<li class="chapter" data-level="12" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html"><i class="fa fa-check"></i><b>12</b> [beh] (N-2) shifted outcome ratings ~ (N) expectation ratings; Jayazeri (2018)</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings-1"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
+<li class="chapter" data-level="12.1" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-previous-outcome-ratings-predict-current-expectation-ratings"><i class="fa fa-check"></i><b>12.1</b> Do previous outcome ratings predict current expectation ratings?</a></li>
 <li class="chapter" data-level="12.2" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#do-these-models-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>12.2</b> Do these models differ as a function of cue?</a></li>
 <li class="chapter" data-level="12.3" data-path="ch12_n-1outcome.html"><a href="ch12_n-1outcome.html#demean-and-discretize"><i class="fa fa-check"></i><b>12.3</b> Demean and discretize</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> outcome ~ expect Jayazeri (2018)</a>
+<li class="chapter" data-level="13" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html"><i class="fa fa-check"></i><b>13</b> [beh] outcome ~ expect Jayazeri (2018)</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#overview-4"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
 <li class="chapter" data-level="13.2" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#do-expectation-ratings-predict-current-outcome-ratings-does-this-differ-as-a-function-of-cue"><i class="fa fa-check"></i><b>13.2</b> Do expectation ratings predict current outcome ratings? Does this differ as a function of cue?</a></li>
@@ -267,7 +262,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="13.6" data-path="ch13_outcome-expect.html"><a href="ch13_outcome-expect.html#not-splitting-into-cue-groups"><i class="fa fa-check"></i><b>13.6</b> not splitting into cue groups</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [ beh ] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
+<li class="chapter" data-level="14" data-path="ch14_factorize.html"><a href="ch14_factorize.html"><i class="fa fa-check"></i><b>14</b> [beh] outcome ~ cue * stim * expectrating * n-1outcomerating</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="ch14_factorize.html"><a href="ch14_factorize.html#original-motivation"><i class="fa fa-check"></i><b>14.1</b> Original motivation:</a></li>
 <li class="chapter" data-level="14.2" data-path="ch14_factorize.html"><a href="ch14_factorize.html#pain-3"><i class="fa fa-check"></i><b>14.2</b> Pain</a>
@@ -343,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="22.5" data-path="nps_stim.html"><a href="nps_stim.html#vicarious-6"><i class="fa fa-check"></i><b>22.5</b> Vicarious</a></li>
 <li class="chapter" data-level="22.6" data-path="nps_stim.html"><a href="nps_stim.html#cognitive-6"><i class="fa fa-check"></i><b>22.6</b> Cognitive</a></li>
 </ul></li>
-<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> biomarker NPS ~ cue * stim (2022)</a>
+<li class="chapter" data-level="23" data-path="nps_22.html"><a href="nps_22.html"><i class="fa fa-check"></i><b>23</b> [fMRI] biomarker NPS ~ cue * stim (2022)</a>
 <ul>
 <li class="chapter" data-level="23.1" data-path="nps_22.html"><a href="nps_22.html#load-libraries"><i class="fa fa-check"></i><b>23.1</b> load libraries</a>
 <ul>
@@ -354,80 +349,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="23.4" data-path="nps_22.html"><a href="nps_22.html#vps-cue-effect"><i class="fa fa-check"></i><b>23.4</b> VPS cue effect</a></li>
 <li class="chapter" data-level="23.5" data-path="nps_22.html"><a href="nps_22.html#vps-stim-effect"><i class="fa fa-check"></i><b>23.5</b> VPS stim effect</a></li>
 </ul></li>
-<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
+<li class="chapter" data-level="24" data-path="nps_stim_error.html"><a href="nps_stim_error.html"><i class="fa fa-check"></i><b>24</b> [fMRI] NPSdummy ~ stim * task (contrast-notscaled-error)</a></li>
 <li class="chapter" data-level="25" data-path="nps_stim_task.html"><a href="nps_stim_task.html"><i class="fa fa-check"></i><b>25</b> NPSdummy ~ stim * task (contrast-scaled)</a>
 <ul>
 <li class="chapter" data-level="25.1" data-path="nps_stim_task.html"><a href="nps_stim_task.html#raincloud-plots-1"><i class="fa fa-check"></i><b>25.1</b> Raincloud plots</a></li>
 <li class="chapter" data-level="25.2" data-path="nps_stim_task.html"><a href="nps_stim_task.html#line-plots-1"><i class="fa fa-check"></i><b>25.2</b> Line plots</a></li>
 </ul></li>
-<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [ fMRI ] Pain signature ~ single trial</a>
+<li class="chapter" data-level="26" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html"><i class="fa fa-check"></i><b>26</b> [fMRI] NPS ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pvc-all-task-comparison"><i class="fa fa-check"></i><b>26.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>26.2</b> Pain only Stim x cue interaction</a>
+<li class="chapter" data-level="26.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>26.1</b> NPS ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="26.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-paintask-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>26.2</b> NPS ~ paintask: 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-2"><i class="fa fa-check"></i><b>26.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-intensity-cohens-d-1.287"><i class="fa fa-check"></i><b>26.2.3</b> NPS stimulus intensity Cohen’s d = 1.287</a></li>
-<li class="chapter" data-level="26.2.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-stimulus-cue-effect-size-stim_d-1.16-cue_d-0.45"><i class="fa fa-check"></i><b>26.2.4</b> NPS stimulus &amp; cue effect size: stim_d = 1.16, cue_d = 0.45</a></li>
-<li class="chapter" data-level="26.2.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#lineplots"><i class="fa fa-check"></i><b>26.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="26.2.6" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-1-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.6</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.7" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-3-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.7</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="26.2.8" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#session-4-2x3-stimulus-intensity-cue"><i class="fa fa-check"></i><b>26.2.8</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="26.2.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-ver-1-nps-stimulus_intensity"><i class="fa fa-check"></i><b>26.2.1</b> Linear model ver 1: NPS ~ stimulus_intensity</a></li>
+<li class="chapter" data-level="26.2.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#linear-model-ver-2-nps-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>26.2.2</b> Linear model ver 2: NPS ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="26.2.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#cue-3-stimulus_intensity-expectation_rating"><i class="fa fa-check"></i><b>26.2.3</b> 2 cue * 3 stimulus_intensity * expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-outcome-ratings-nps"><i class="fa fa-check"></i><b>26.3</b> Pain only: Outcome ratings &amp; NPS</a>
+<li class="chapter" data-level="26.3" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>26.3</b> NPS ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-outcome_rating"><i class="fa fa-check"></i><b>26.4</b> NPS ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="26.3.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-cue"><i class="fa fa-check"></i><b>26.3.1</b> outcome ratings * cue</a></li>
-<li class="chapter" data-level="26.3.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome-ratings-stim-cue"><i class="fa fa-check"></i><b>26.3.2</b> outcome ratings * stim * cue</a></li>
+<li class="chapter" data-level="26.4.1" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome_rating-cue"><i class="fa fa-check"></i><b>26.4.1</b> outcome_rating * cue</a></li>
+<li class="chapter" data-level="26.4.2" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#outcome_ratings-stimulus_intensity-cue"><i class="fa fa-check"></i><b>26.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="26.4" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#pain-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>26.4</b> Pain only: Expectation ratings &amp; NPS</a></li>
+<li class="chapter" data-level="26.5" data-path="ch35_singletrial_P.html"><a href="ch35_singletrial_P.html#nps-expectation_rating"><i class="fa fa-check"></i><b>26.5</b> NPS ~ expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] Vicarious signature ~ single trial</a>
+<li class="chapter" data-level="27" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html"><i class="fa fa-check"></i><b>27</b> [fMRI] VPS ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#pvc-all-task-comparison-1"><i class="fa fa-check"></i><b>27.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>27.2</b> Vicarious only Stim x cue interaction</a>
+<li class="chapter" data-level="27.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>27.1</b> VPS ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="27.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-vicarious-task-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>27.2</b> VPS ~ vicarious task: 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-3"><i class="fa fa-check"></i><b>27.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-intensity-cohens-d-0.2131521"><i class="fa fa-check"></i><b>27.2.3</b> VPS stimulus intensity Cohen’s d = 0.2131521</a></li>
-<li class="chapter" data-level="27.2.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-stimulus-cue-effect-size-stim_d-0.217-cue_d-0.013"><i class="fa fa-check"></i><b>27.2.4</b> VPS stimulus &amp; cue effect size: stim_d = 0.217, cue_d = 0.013</a></li>
-<li class="chapter" data-level="27.2.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#lineplots-1"><i class="fa fa-check"></i><b>27.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="27.2.6" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-with-stim-x-cue-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
-<li class="chapter" data-level="27.2.7" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-1-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.8" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-3-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="27.2.9" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#session-4-2x3-stimulus-intensity-cue-1"><i class="fa fa-check"></i><b>27.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="27.2.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-ver-1-vps-stimulus_intensity"><i class="fa fa-check"></i><b>27.2.1</b> Linear model ver 1: VPS ~ stimulus_intensity</a></li>
+<li class="chapter" data-level="27.2.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#linear-model-ver-2-vps-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>27.2.2</b> Linear model ver 2: VPS ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="27.2.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#cue-x-3-stimulus-intensity-x-expectation-rating"><i class="fa fa-check"></i><b>27.2.3</b> 2 Cue x 3 Stimulus intensity x Expectation rating</a></li>
 </ul></li>
-<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-outcome-ratings-vps"><i class="fa fa-check"></i><b>27.3</b> Vicarious only: Outcome ratings &amp; VPS</a>
+<li class="chapter" data-level="27.3" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>27.3</b> VPS ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-outcome_rating"><i class="fa fa-check"></i><b>27.4</b> VPS ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="27.3.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome-ratings-cue-1"><i class="fa fa-check"></i><b>27.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="27.4.1" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome_ratings-cue"><i class="fa fa-check"></i><b>27.4.1</b> outcome_ratings * cue</a></li>
+<li class="chapter" data-level="27.4.2" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#outcome_ratings-stimulus_intensity-cue-1"><i class="fa fa-check"></i><b>27.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="27.4" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vicarious-only-expectation-ratings-vps"><i class="fa fa-check"></i><b>27.4</b> Vicarious only: Expectation ratings &amp; VPS</a></li>
+<li class="chapter" data-level="27.5" data-path="ch36_singletrial_V.html"><a href="ch36_singletrial_V.html#vps-expectation_rating"><i class="fa fa-check"></i><b>27.5</b> VPS ~ expectation_rating</a></li>
 </ul></li>
-<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Cognitive signature ~ single trial</a>
+<li class="chapter" data-level="28" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html"><i class="fa fa-check"></i><b>28</b> [fMRI] Kragel2018 ~ singletrial</a>
 <ul>
-<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#pvc-all-task-comparison-2"><i class="fa fa-check"></i><b>28.1</b> PVC all task comparison</a></li>
-<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-stim-x-cue-interaction"><i class="fa fa-check"></i><b>28.2</b> Cognitive only Stim x cue interaction</a>
+<li class="chapter" data-level="28.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-3-task-3-stimulus_intensity"><i class="fa fa-check"></i><b>28.1</b> Kragel2018 ~ 3 task * 3 stimulus_intensity</a></li>
+<li class="chapter" data-level="28.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-2-cue-x-3-stimulus_intensity"><i class="fa fa-check"></i><b>28.2</b> Kragel2018 ~ 2 cue x 3 stimulus_intensity</a>
 <ul>
-<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.1</b> 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-4"><i class="fa fa-check"></i><b>28.2.2</b> Linear model</a></li>
-<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cog-stimulus-intensity-cohens-d-0.72"><i class="fa fa-check"></i><b>28.2.3</b> Cog stimulus intensity Cohen’s d = 0.72</a></li>
-<li class="chapter" data-level="28.2.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-stimulus-cue-effect-size-stim_d-0.73-cue_d-0.069"><i class="fa fa-check"></i><b>28.2.4</b> Cognitive stimulus &amp; cue effect size: stim_d = 0.73, cue_d = 0.069</a></li>
-<li class="chapter" data-level="28.2.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#lineplots-2"><i class="fa fa-check"></i><b>28.2.5</b> Lineplots</a></li>
-<li class="chapter" data-level="28.2.6" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-with-stim-x-cue-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.6</b> Linear model with Stim x Cue x Expectation rating</a></li>
-<li class="chapter" data-level="28.2.7" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-1-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.7</b> Session 1: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.8" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-3-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.8</b> Session 3: 2x3 stimulus intensity * cue</a></li>
-<li class="chapter" data-level="28.2.9" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#session-4-2x3-stimulus-intensity-cue-2"><i class="fa fa-check"></i><b>28.2.9</b> Session 4: 2x3 stimulus intensity * cue</a></li>
+<li class="chapter" data-level="28.2.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-ver-1-kragel2018-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>28.2.1</b> Linear model ver 1: Kragel2018 ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="28.2.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#linear-model-ver-2-kragel2018-stimulus_intenisy-cue"><i class="fa fa-check"></i><b>28.2.2</b> Linear model ver 2: Kragel2018 ~ stimulus_intenisy * cue</a></li>
+<li class="chapter" data-level="28.2.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cue-x-3-stimulus-intensity-x-expectation-rating-1"><i class="fa fa-check"></i><b>28.2.3</b> 2 Cue x 3 Stimulus intensity x Expectation rating</a></li>
 </ul></li>
-<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-outcome-ratings-kragel-2018"><i class="fa fa-check"></i><b>28.3</b> Cognitive only: Outcome ratings &amp; Kragel 2018</a>
+<li class="chapter" data-level="28.3" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-session-cue-stimulus_intensity"><i class="fa fa-check"></i><b>28.3</b> Kragel2018 ~ session * cue * stimulus_intensity</a></li>
+<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-outcome_rating"><i class="fa fa-check"></i><b>28.4</b> Kragel2018 ~ outcome_rating</a>
 <ul>
-<li class="chapter" data-level="28.3.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome-ratings-cue-2"><i class="fa fa-check"></i><b>28.3.1</b> outcome ratings * cue</a></li>
+<li class="chapter" data-level="28.4.1" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome_ratings-cue-1"><i class="fa fa-check"></i><b>28.4.1</b> outcome_ratings * cue</a></li>
+<li class="chapter" data-level="28.4.2" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#outcome_ratings-stimulus_intensity-cue-2"><i class="fa fa-check"></i><b>28.4.2</b> outcome_ratings * stimulus_intensity * cue</a></li>
 </ul></li>
-<li class="chapter" data-level="28.4" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#cognitive-only-expectation-ratings-nps"><i class="fa fa-check"></i><b>28.4</b> Cognitive only: Expectation ratings &amp; NPS</a></li>
+<li class="chapter" data-level="28.5" data-path="ch37_singletrial_C.html"><a href="ch37_singletrial_C.html#kragel2018-expectation_rating"><i class="fa fa-check"></i><b>28.5</b> Kragel2018 ~ expectation_rating</a></li>
 </ul></li>
 <li class="chapter" data-level="29" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html"><i class="fa fa-check"></i><b>29</b> [fMRI] Single trial correlation between cue and stim</a>
 <ul>
-<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#stack-data"><i class="fa fa-check"></i><b>29.1</b> Stack data</a></li>
-<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.2</b> plot correlation (one-sample-t)</a></li>
-<li class="chapter" data-level="29.3" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.3</b> Lineplot</a></li>
+<li class="chapter" data-level="29.1" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#plot-correlation-one-sample-t"><i class="fa fa-check"></i><b>29.1</b> plot correlation (one-sample-t)</a></li>
+<li class="chapter" data-level="29.2" data-path="ch38_singletrial_corr.html"><a href="ch38_singletrial_corr.html#lineplot-1"><i class="fa fa-check"></i><b>29.2</b> Lineplot</a></li>
 </ul></li>
 <li class="chapter" data-level="30" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html"><i class="fa fa-check"></i><b>30</b> [fMRI] Signature effect size ~ single trial</a>
 <ul>
@@ -435,30 +417,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="30.2" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#contrastt-stim-intensity"><i class="fa fa-check"></i><b>30.2</b> contrastt (stim intensity)</a></li>
 <li class="chapter" data-level="30.3" data-path="ch39_signature_effectsize.html"><a href="ch39_signature_effectsize.html#layer-in-metadata"><i class="fa fa-check"></i><b>30.3</b> layer in metadata</a></li>
 </ul></li>
-<li class="chapter" data-level="31" data-path="ch40_vif.html"><a href="ch40_vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
-<li class="chapter" data-level="32" data-path="load-in-the-datamatrix-and-calculate-the-vif.html"><a href="load-in-the-datamatrix-and-calculate-the-vif.html"><i class="fa fa-check"></i><b>32</b> load in the datamatrix and calculate the vif</a></li>
-<li class="chapter" data-level="33" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>33</b> vif</a></li>
-<li class="chapter" data-level="34" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html"><i class="fa fa-check"></i><b>34</b> [fMRI] Cognitive signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="34.1" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#load-behavioral-data-2"><i class="fa fa-check"></i><b>34.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="34.2" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#dfmerge-stats"><i class="fa fa-check"></i><b>34.2</b> dfmerge stats</a></li>
-<li class="chapter" data-level="34.3" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#expect-nps-as-a-function-of-cue"><i class="fa fa-check"></i><b>34.3</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="34.4" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#x3-stimcue"><i class="fa fa-check"></i><b>34.4</b> 2x3 stim*cue</a></li>
-<li class="chapter" data-level="34.5" data-path="ch99_singletrial_C.html"><a href="ch99_singletrial_C.html#lineplot-2"><i class="fa fa-check"></i><b>34.5</b> lineplot</a></li>
-</ul></li>
-<li class="chapter" data-level="35" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html"><i class="fa fa-check"></i><b>35</b> [fMRI] Vicarious signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="35.1" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#load-behavioral-data-3"><i class="fa fa-check"></i><b>35.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="35.2" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#expect-nps-as-a-function-of-cue-1"><i class="fa fa-check"></i><b>35.2</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="35.3" data-path="ch98_singletrial_V.html"><a href="ch98_singletrial_V.html#x3-stimcue-1"><i class="fa fa-check"></i><b>35.3</b> 2x3 stim*cue</a></li>
-</ul></li>
-<li class="chapter" data-level="36" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html"><i class="fa fa-check"></i><b>36</b> [fMRI] Pain signature ~ single trial</a>
-<ul>
-<li class="chapter" data-level="36.1" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#load-behavioral-data-4"><i class="fa fa-check"></i><b>36.1</b> load behavioral data</a></li>
-<li class="chapter" data-level="36.2" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#expect-nps-as-a-function-of-cue-2"><i class="fa fa-check"></i><b>36.2</b> expect &amp; NPS as a function of cue</a></li>
-<li class="chapter" data-level="36.3" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#x3-stimcue-2"><i class="fa fa-check"></i><b>36.3</b> 2x3 stim*cue</a></li>
-<li class="chapter" data-level="36.4" data-path="ch97_singletrial_P.html"><a href="ch97_singletrial_P.html#lineplots-3"><i class="fa fa-check"></i><b>36.4</b> lineplots</a></li>
-</ul></li>
+<li class="chapter" data-level="31" data-path="vif.html"><a href="vif.html"><i class="fa fa-check"></i><b>31</b> VIF</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -481,501 +440,121 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="ch10_icc" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">Chapter 10</span> [beh] outcome_rating ~ session (“behavioral ICC”)<a href="ch10_icc.html#ch10_icc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="ch10_icc.html#cb378-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
-<span id="cb378-2"><a href="ch10_icc.html#cb378-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code></pre></div>
-<pre><code>## Loading required package: carData</code></pre>
-<pre><code>## 
-## Attaching package: &#39;car&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:psych&#39;:
-## 
-##     logit</code></pre>
-<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="ch10_icc.html#cb382-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span></code></pre></div>
-<pre><code>## Loading required package: Matrix</code></pre>
-<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="ch10_icc.html#cb384-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmerTest)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;lmerTest&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:lme4&#39;:
-## 
-##     lmer</code></pre>
-<pre><code>## The following object is masked from &#39;package:stats&#39;:
-## 
-##     step</code></pre>
-<div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb388-1"><a href="ch10_icc.html#cb388-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plyr)</span>
-<span id="cb388-2"><a href="ch10_icc.html#cb388-2" aria-hidden="true" tabindex="-1"></a><span class="co">#library(dplyr)</span></span>
-<span id="cb388-3"><a href="ch10_icc.html#cb388-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;tidyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:Matrix&#39;:
-## 
-##     expand, pack, unpack</code></pre>
-<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb391-1"><a href="ch10_icc.html#cb391-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb391-2"><a href="ch10_icc.html#cb391-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;ggplot2&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:psych&#39;:
-## 
-##     %+%, alpha</code></pre>
-<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="ch10_icc.html#cb394-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
-<span id="cb394-2"><a href="ch10_icc.html#cb394-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb394-3"><a href="ch10_icc.html#cb394-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(TMB)</span></code></pre></div>
-<pre><code>## Warning in checkMatrixPackageVersion(): Package version inconsistency detected.
-## TMB was built with Matrix version 1.4.1
-## Current Matrix version is 1.5.1
-## Please re-install &#39;TMB&#39; from source using install.packages(&#39;TMB&#39;, type = &#39;source&#39;) or ask CRAN for a binary version of &#39;TMB&#39; matching CRAN&#39;s &#39;Matrix&#39; package</code></pre>
-<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="ch10_icc.html#cb396-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span></code></pre></div>
-<pre><code>## Install package &quot;strengejacke&quot; from GitHub (`devtools::install_github(&quot;strengejacke/strengejacke&quot;)`) to load all sj-packages at once!</code></pre>
-<div class="sourceCode" id="cb398"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb398-1"><a href="ch10_icc.html#cb398-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;ggpubr&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:plyr&#39;:
-## 
-##     mutate</code></pre>
-<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="ch10_icc.html#cb401-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
-<span id="cb401-2"><a href="ch10_icc.html#cb401-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(merTools)</span></code></pre></div>
-<pre><code>## Loading required package: arm</code></pre>
-<pre><code>## Loading required package: MASS</code></pre>
-<pre><code>## 
-## arm (Version 1.13-1, built: 2022-8-25)</code></pre>
-<pre><code>## Working directory is /Users/h/Dropbox (Dartmouth College)/projects_dropbox/social_influence_analysis/scripts/step02_R_bookdown</code></pre>
-<pre><code>## 
-## Attaching package: &#39;arm&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:car&#39;:
-## 
-##     logit</code></pre>
-<pre><code>## The following objects are masked from &#39;package:psych&#39;:
-## 
-##     logit, rescale, sim</code></pre>
-<pre><code>## 
-## Attaching package: &#39;merTools&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:psych&#39;:
-## 
-##     ICC</code></pre>
-<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="ch10_icc.html#cb411-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjstats) <span class="co">#to get ICC</span></span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;sjstats&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:psych&#39;:
-## 
-##     phi</code></pre>
-<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="ch10_icc.html#cb414-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;broom&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:sjstats&#39;:
-## 
-##     bootstrap</code></pre>
-<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="ch10_icc.html#cb417-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>## ── Attaching packages
-## ───────────────────────────────────────
-## tidyverse 1.3.2 ──</code></pre>
-<pre><code>## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
-## ✔ readr   2.1.2      ✔ forcats 0.5.2 
-## ✔ purrr   1.0.1      
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ ggplot2::%+%()     masks psych::%+%()
-## ✖ ggplot2::alpha()   masks psych::alpha()
-## ✖ dplyr::arrange()   masks plyr::arrange()
-## ✖ broom::bootstrap() masks sjstats::bootstrap()
-## ✖ dplyr::combine()   masks gridExtra::combine()
-## ✖ purrr::compact()   masks plyr::compact()
-## ✖ dplyr::count()     masks plyr::count()
-## ✖ tidyr::expand()    masks Matrix::expand()
-## ✖ dplyr::failwith()  masks plyr::failwith()
-## ✖ dplyr::filter()    masks stats::filter()
-## ✖ dplyr::id()        masks plyr::id()
-## ✖ dplyr::lag()       masks stats::lag()
-## ✖ dplyr::mutate()    masks ggpubr::mutate(), plyr::mutate()
-## ✖ tidyr::pack()      masks Matrix::pack()
-## ✖ dplyr::recode()    masks car::recode()
-## ✖ dplyr::rename()    masks plyr::rename()
-## ✖ dplyr::select()    masks MASS::select()
-## ✖ purrr::some()      masks car::some()
-## ✖ dplyr::summarise() masks plyr::summarise()
-## ✖ dplyr::summarize() masks plyr::summarize()
-## ✖ tidyr::unpack()    masks Matrix::unpack()</code></pre>
-<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb420-1"><a href="ch10_icc.html#cb420-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span></code></pre></div>
-<pre><code>## Registered S3 method overwritten by &#39;GGally&#39;:
-##   method from   
-##   +.gg   ggplot2</code></pre>
-<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="ch10_icc.html#cb422-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RCurl)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;RCurl&#39;
-## 
-## The following object is masked from &#39;package:tidyr&#39;:
-## 
-##     complete</code></pre>
-<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="ch10_icc.html#cb424-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstanarm)</span></code></pre></div>
-<pre><code>## Loading required package: Rcpp
-## This is rstanarm version 2.21.3
-## - See https://mc-stan.org/rstanarm/articles/priors for changes to default priors!
-## - Default priors may change, so it&#39;s safest to specify priors, even if equivalent to the defaults.
-## - For execution on a local, multicore CPU with excess RAM we recommend calling
-##   options(mc.cores = parallel::detectCores())
-## 
-## Attaching package: &#39;rstanarm&#39;
-## 
-## The following object is masked from &#39;package:sjstats&#39;:
-## 
-##     se
-## 
-## The following objects are masked from &#39;package:arm&#39;:
-## 
-##     invlogit, logit
-## 
-## The following object is masked from &#39;package:car&#39;:
-## 
-##     logit
-## 
-## The following object is masked from &#39;package:psych&#39;:
-## 
-##     logit</code></pre>
-<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="ch10_icc.html#cb426-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;reshape&#39;
-## 
-## The following object is masked from &#39;package:dplyr&#39;:
-## 
-##     rename
-## 
-## The following objects are masked from &#39;package:tidyr&#39;:
-## 
-##     expand, smiths
-## 
-## The following objects are masked from &#39;package:plyr&#39;:
-## 
-##     rename, round_any
-## 
-## The following object is masked from &#39;package:Matrix&#39;:
-## 
-##     expand</code></pre>
-<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="ch10_icc.html#cb428-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;boot&#39;
-## 
-## The following object is masked from &#39;package:rstanarm&#39;:
-## 
-##     logit
-## 
-## The following object is masked from &#39;package:arm&#39;:
-## 
-##     logit
-## 
-## The following object is masked from &#39;package:car&#39;:
-## 
-##     logit
-## 
-## The following object is masked from &#39;package:psych&#39;:
-## 
-##     logit</code></pre>
-<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb430-1"><a href="ch10_icc.html#cb430-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(afex)</span></code></pre></div>
-<pre><code>## ************
-## Welcome to afex. For support visit: http://afex.singmann.science/
-## - Functions for ANOVAs: aov_car(), aov_ez(), and aov_4()
-## - Methods for calculating p-values with mixed(): &#39;S&#39;, &#39;KR&#39;, &#39;LRT&#39;, and &#39;PB&#39;
-## - &#39;afex_aov&#39; and &#39;mixed&#39; objects can be passed to emmeans() for follow-up tests
-## - NEWS: emmeans() for ANOVA models now uses model = &#39;multivariate&#39; as default.
-## - Get and set global package options with: afex_options()
-## - Set orthogonal sum-to-zero contrasts globally: set_sum_contrasts()
-## - For example analyses see: browseVignettes(&quot;afex&quot;)
-## ************
-## 
-## Attaching package: &#39;afex&#39;
-## 
-## The following object is masked from &#39;package:lme4&#39;:
-## 
-##     lmer</code></pre>
-<div class="sourceCode" id="cb432"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb432-1"><a href="ch10_icc.html#cb432-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;cowplot&#39;
-## 
-## The following object is masked from &#39;package:reshape&#39;:
-## 
-##     stamp
-## 
-## The following object is masked from &#39;package:ggpubr&#39;:
-## 
-##     get_legend
-## 
-## The following objects are masked from &#39;package:sjPlot&#39;:
-## 
-##     plot_grid, save_plot</code></pre>
-<div class="sourceCode" id="cb434"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb434-1"><a href="ch10_icc.html#cb434-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb434-2"><a href="ch10_icc.html#cb434-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span></code></pre></div>
-<pre><code>## This is lavaan 0.6-12
-## lavaan is FREE software! Please report any bugs.
-## 
-## Attaching package: &#39;lavaan&#39;
-## 
-## The following object is masked from &#39;package:psych&#39;:
-## 
-##     cor2cov</code></pre>
-<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb436-1"><a href="ch10_icc.html#cb436-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
-<span id="cb436-2"><a href="ch10_icc.html#cb436-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb436-3"><a href="ch10_icc.html#cb436-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caTools)</span>
-<span id="cb436-4"><a href="ch10_icc.html#cb436-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bitops)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;bitops&#39;
-## 
-## The following object is masked from &#39;package:Matrix&#39;:
-## 
-##     %&amp;%</code></pre>
-<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="ch10_icc.html#cb438-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb438-2"><a href="ch10_icc.html#cb438-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
-<span id="cb438-3"><a href="ch10_icc.html#cb438-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb438-4"><a href="ch10_icc.html#cb438-4" aria-hidden="true" tabindex="-1"></a><span class="co"># library(PupillometryR)</span></span>
-<span id="cb438-5"><a href="ch10_icc.html#cb438-5" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&#39;http://psych.colorado.edu/~jclab/R/mcSummaryLm.R&#39;</span>)</span>
-<span id="cb438-6"><a href="ch10_icc.html#cb438-6" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;/Users/h/Documents/projects_local/RainCloudPlots/tutorial_R/R_rainclouds.R&quot;</span>)</span>
-<span id="cb438-7"><a href="ch10_icc.html#cb438-7" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;/Users/h/Documents/projects_local/RainCloudPlots/tutorial_R/summarySE.R&quot;</span>)</span>
-<span id="cb438-8"><a href="ch10_icc.html#cb438-8" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;/Users/h/Documents/projects_local/RainCloudPlots/tutorial_R/simulateData.R&quot;</span>)</span>
-<span id="cb438-9"><a href="ch10_icc.html#cb438-9" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;https://gist.githubusercontent.com/benmarwick/2a1bb0133ff568cbe28d/raw/fb53bd97121f7f9ce947837ef1a4c65a73bffb3f/geom_flat_violin.R&quot;</span>)</span>
-<span id="cb438-10"><a href="ch10_icc.html#cb438-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(r2mlm)</span></code></pre></div>
-<pre><code>## Loading required package: nlme
-## 
-## Attaching package: &#39;nlme&#39;
-## 
-## The following object is masked from &#39;package:dplyr&#39;:
-## 
-##     collapse
-## 
-## The following object is masked from &#39;package:lme4&#39;:
-## 
-##     lmList</code></pre>
-<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="ch10_icc.html#cb440-1" aria-hidden="true" tabindex="-1"></a>file.sources <span class="ot">=</span> <span class="fu">list.files</span>(<span class="fu">c</span>(<span class="st">&quot;/Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils&quot;</span>),</span>
-<span id="cb440-2"><a href="ch10_icc.html#cb440-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">pattern=</span><span class="st">&quot;*.R&quot;</span>, </span>
-<span id="cb440-3"><a href="ch10_icc.html#cb440-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">full.names=</span><span class="cn">TRUE</span>, </span>
-<span id="cb440-4"><a href="ch10_icc.html#cb440-4" aria-hidden="true" tabindex="-1"></a>                          <span class="at">ignore.case=</span><span class="cn">TRUE</span>)</span>
-<span id="cb440-5"><a href="ch10_icc.html#cb440-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(file.sources,source,.GlobalEnv)</span></code></pre></div>
-<pre><code>##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/ggplot_hline_bartoshuk.R
-## value   ?                                                                                                          
-## visible FALSE                                                                                                      
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/lmer_onefactor_cooksd_fix.R
-## value   ?                                                                                                             
-## visible FALSE                                                                                                         
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/lmer_onefactor_cooksd_randomintercept_fix.R
-## value   ?                                                                                                                             
-## visible FALSE                                                                                                                         
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/lmer_onefactor_cooksd_randomintercept.R
-## value   ?                                                                                                                         
-## visible FALSE                                                                                                                     
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/lmer_onefactor_cooksd.R
-## value   ?                                                                                                         
-## visible FALSE                                                                                                     
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/lmer_twofactor_cooksd_fix.R
-## value   ?                                                                                                             
-## visible FALSE                                                                                                         
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/lmer_twofactor_cooksd.R
-## value   ?                                                                                                         
-## visible FALSE                                                                                                     
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/load_task_social_df.R
-## value   ?                                                                                                       
-## visible FALSE                                                                                                   
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/load_tasksocial_ses.R
-## value   ?                                                                                                       
-## visible FALSE                                                                                                   
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/meanSummary_2dv.R
-## value   ?                                                                                                   
-## visible FALSE                                                                                               
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/meanSummary.R
-## value   ?                                                                                               
-## visible FALSE                                                                                           
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/normdatawithin.R
-## value   ?                                                                                                  
-## visible FALSE                                                                                              
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/NPS_load_df.R
-## value   ?                                                                                               
-## visible FALSE                                                                                           
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/NPS_simple_contrast.R
-## value   ?                                                                                                       
-## visible FALSE                                                                                                   
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/NPS_summary_for_plots.R
-## value   ?                                                                                                         
-## visible FALSE                                                                                                     
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_binned_rating.R
-## value   ?                                                                                                      
-## visible FALSE                                                                                                  
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_errorbar.R
-## value   ?                                                                                                 
-## visible FALSE                                                                                             
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_geompointrange_onefactor.R
-## value   ?                                                                                                                 
-## visible FALSE                                                                                                             
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_ggplot_correlation.R
-## value   ?                                                                                                           
-## visible FALSE                                                                                                       
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_halfrainclouds_onefactor.R
-## value   ?                                                                                                                 
-## visible FALSE                                                                                                             
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_halfrainclouds_sigmoid.R
-## value   ?                                                                                                               
-## visible FALSE                                                                                                           
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_halfrainclouds_twofactor.R
-## value   ?                                                                                                                 
-## visible FALSE                                                                                                             
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_lineplot_onefactor.R
-## value   ?                                                                                                           
-## visible FALSE                                                                                                       
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_lineplot_twofactor.R
-## value   ?                                                                                                           
-## visible FALSE                                                                                                       
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_rainclouds_onefactor.R
-## value   ?                                                                                                             
-## visible FALSE                                                                                                         
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_rainclouds_twofactor.R
-## value   ?                                                                                                             
-## visible FALSE                                                                                                         
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_signature_twofactor.R
-## value   ?                                                                                                            
-## visible FALSE                                                                                                        
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/plot_twovariable.R
-## value   ?                                                                                                    
-## visible FALSE                                                                                                
-##         /Users/h/Dropbox/projects_dropbox/social_influence_analysis/scripts/step02_R/utils/summarySEwithin.R
-## value   ?                                                                                                   
-## visible FALSE</code></pre>
 <div id="functions" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Functions<a href="ch10_icc.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)/#Helper%20functions" class="uri">http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)/#Helper%20functions</a></p>
 <p>combined expect_df / run_cue_lmer / meanSummary / plot_expect_rainclouds</p>
-<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="ch10_icc.html#cb442-1" aria-hidden="true" tabindex="-1"></a>raincloud_theme <span class="ot">=</span> <span class="fu">theme</span>(</span>
-<span id="cb442-2"><a href="ch10_icc.html#cb442-2" aria-hidden="true" tabindex="-1"></a><span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
-<span id="cb442-3"><a href="ch10_icc.html#cb442-3" aria-hidden="true" tabindex="-1"></a><span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
-<span id="cb442-4"><a href="ch10_icc.html#cb442-4" aria-hidden="true" tabindex="-1"></a><span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
-<span id="cb442-5"><a href="ch10_icc.html#cb442-5" aria-hidden="true" tabindex="-1"></a><span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
-<span id="cb442-6"><a href="ch10_icc.html#cb442-6" aria-hidden="true" tabindex="-1"></a><span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
-<span id="cb442-7"><a href="ch10_icc.html#cb442-7" aria-hidden="true" tabindex="-1"></a><span class="at">legend.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">16</span>),</span>
-<span id="cb442-8"><a href="ch10_icc.html#cb442-8" aria-hidden="true" tabindex="-1"></a><span class="at">legend.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">16</span>),</span>
-<span id="cb442-9"><a href="ch10_icc.html#cb442-9" aria-hidden="true" tabindex="-1"></a><span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>,</span>
-<span id="cb442-10"><a href="ch10_icc.html#cb442-10" aria-hidden="true" tabindex="-1"></a><span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">lineheight=</span>.<span class="dv">8</span>, <span class="at">face=</span><span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">16</span>),</span>
-<span id="cb442-11"><a href="ch10_icc.html#cb442-11" aria-hidden="true" tabindex="-1"></a><span class="at">panel.border =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb442-12"><a href="ch10_icc.html#cb442-12" aria-hidden="true" tabindex="-1"></a><span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb442-13"><a href="ch10_icc.html#cb442-13" aria-hidden="true" tabindex="-1"></a><span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb442-14"><a href="ch10_icc.html#cb442-14" aria-hidden="true" tabindex="-1"></a><span class="at">axis.line.x =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&#39;black&#39;</span>, <span class="at">size=</span><span class="fl">0.5</span>, <span class="at">linetype=</span><span class="st">&#39;solid&#39;</span>),</span>
-<span id="cb442-15"><a href="ch10_icc.html#cb442-15" aria-hidden="true" tabindex="-1"></a><span class="at">axis.line.y =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&#39;black&#39;</span>, <span class="at">size=</span><span class="fl">0.5</span>, <span class="at">linetype=</span><span class="st">&#39;solid&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="ch10_icc.html#cb313-1" aria-hidden="true" tabindex="-1"></a>raincloud_theme <span class="ot">=</span> <span class="fu">theme</span>(</span>
+<span id="cb313-2"><a href="ch10_icc.html#cb313-2" aria-hidden="true" tabindex="-1"></a><span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb313-3"><a href="ch10_icc.html#cb313-3" aria-hidden="true" tabindex="-1"></a><span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
+<span id="cb313-4"><a href="ch10_icc.html#cb313-4" aria-hidden="true" tabindex="-1"></a><span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
+<span id="cb313-5"><a href="ch10_icc.html#cb313-5" aria-hidden="true" tabindex="-1"></a><span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb313-6"><a href="ch10_icc.html#cb313-6" aria-hidden="true" tabindex="-1"></a><span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb313-7"><a href="ch10_icc.html#cb313-7" aria-hidden="true" tabindex="-1"></a><span class="at">legend.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">16</span>),</span>
+<span id="cb313-8"><a href="ch10_icc.html#cb313-8" aria-hidden="true" tabindex="-1"></a><span class="at">legend.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">16</span>),</span>
+<span id="cb313-9"><a href="ch10_icc.html#cb313-9" aria-hidden="true" tabindex="-1"></a><span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>,</span>
+<span id="cb313-10"><a href="ch10_icc.html#cb313-10" aria-hidden="true" tabindex="-1"></a><span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">lineheight=</span>.<span class="dv">8</span>, <span class="at">face=</span><span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">16</span>),</span>
+<span id="cb313-11"><a href="ch10_icc.html#cb313-11" aria-hidden="true" tabindex="-1"></a><span class="at">panel.border =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb313-12"><a href="ch10_icc.html#cb313-12" aria-hidden="true" tabindex="-1"></a><span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb313-13"><a href="ch10_icc.html#cb313-13" aria-hidden="true" tabindex="-1"></a><span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb313-14"><a href="ch10_icc.html#cb313-14" aria-hidden="true" tabindex="-1"></a><span class="at">axis.line.x =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&#39;black&#39;</span>, <span class="at">size=</span><span class="fl">0.5</span>, <span class="at">linetype=</span><span class="st">&#39;solid&#39;</span>),</span>
+<span id="cb313-15"><a href="ch10_icc.html#cb313-15" aria-hidden="true" tabindex="-1"></a><span class="at">axis.line.y =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&#39;black&#39;</span>, <span class="at">size=</span><span class="fl">0.5</span>, <span class="at">linetype=</span><span class="st">&#39;solid&#39;</span>))</span></code></pre></div>
 <pre><code>## Warning: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
 ## ℹ Please use the `linewidth` argument instead.</code></pre>
-<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="ch10_icc.html#cb444-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">=</span> <span class="dv">5</span></span>
-<span id="cb444-2"><a href="ch10_icc.html#cb444-2" aria-hidden="true" tabindex="-1"></a>h <span class="ot">=</span> <span class="dv">3</span></span></code></pre></div>
-<div class="sourceCode" id="cb445"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb445-1"><a href="ch10_icc.html#cb445-1" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters</span></span>
-<span id="cb445-2"><a href="ch10_icc.html#cb445-2" aria-hidden="true" tabindex="-1"></a>TASKNAME <span class="ot">=</span> <span class="st">&#39;cognitive&#39;</span></span>
-<span id="cb445-3"><a href="ch10_icc.html#cb445-3" aria-hidden="true" tabindex="-1"></a>SUBJECT_VARKEY <span class="ot">=</span> <span class="st">&quot;src_subject_id&quot;</span></span>
-<span id="cb445-4"><a href="ch10_icc.html#cb445-4" aria-hidden="true" tabindex="-1"></a>IV <span class="ot">=</span> <span class="st">&quot;param_cue_type&quot;</span></span>
-<span id="cb445-5"><a href="ch10_icc.html#cb445-5" aria-hidden="true" tabindex="-1"></a>DV <span class="ot">=</span> <span class="st">&quot;event02_expect_angle&quot;</span></span>
-<span id="cb445-6"><a href="ch10_icc.html#cb445-6" aria-hidden="true" tabindex="-1"></a>DV_KEYWORD <span class="ot">=</span> <span class="st">&quot;expect&quot;</span></span>
-<span id="cb445-7"><a href="ch10_icc.html#cb445-7" aria-hidden="true" tabindex="-1"></a>XLAB <span class="ot">=</span> <span class="st">&quot;&quot;</span>; YLAB <span class="ot">=</span> <span class="st">&quot;ratings (degree)&quot;</span>; </span>
-<span id="cb445-8"><a href="ch10_icc.html#cb445-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb445-9"><a href="ch10_icc.html#cb445-9" aria-hidden="true" tabindex="-1"></a>GGTITLE <span class="ot">=</span> <span class="fu">paste</span>(TASKNAME, <span class="st">&quot; - Expectation Rating (degree)&quot;</span>)</span>
-<span id="cb445-10"><a href="ch10_icc.html#cb445-10" aria-hidden="true" tabindex="-1"></a>TITLE <span class="ot">=</span> <span class="fu">paste</span>(TASKNAME, <span class="st">&quot; - Expect&quot;</span>)</span>
-<span id="cb445-11"><a href="ch10_icc.html#cb445-11" aria-hidden="true" tabindex="-1"></a>SUBJECT <span class="ot">=</span> <span class="st">&quot;subject&quot;</span></span>
-<span id="cb445-12"><a href="ch10_icc.html#cb445-12" aria-hidden="true" tabindex="-1"></a>EXCLUDE <span class="ot">=</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb445-13"><a href="ch10_icc.html#cb445-13" aria-hidden="true" tabindex="-1"></a>main_dir <span class="ot">=</span> <span class="fu">dirname</span>(<span class="fu">dirname</span>(<span class="fu">getwd</span>()))</span>
-<span id="cb445-14"><a href="ch10_icc.html#cb445-14" aria-hidden="true" tabindex="-1"></a>datadir <span class="ot">=</span> <span class="fu">file.path</span>(main_dir, <span class="st">&#39;data&#39;</span>, <span class="st">&#39;beh&#39;</span>, <span class="st">&#39;beh02_preproc&#39;</span>)</span>
-<span id="cb445-15"><a href="ch10_icc.html#cb445-15" aria-hidden="true" tabindex="-1"></a>analysis_dir <span class="ot">=</span><span class="fu">file.path</span>(main_dir,<span class="st">&#39;analysis&#39;</span>, <span class="st">&#39;mixedeffect&#39;</span>, <span class="st">&#39;model04_behavioral-ICC&#39;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()))</span>
-<span id="cb445-16"><a href="ch10_icc.html#cb445-16" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(analysis_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb445-17"><a href="ch10_icc.html#cb445-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (TASKNAME <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;pain&quot;</span>, <span class="st">&quot;vicarious&quot;</span>, <span class="st">&quot;cognitive&quot;</span>)){</span>
-<span id="cb445-18"><a href="ch10_icc.html#cb445-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb445-19"><a href="ch10_icc.html#cb445-19" aria-hidden="true" tabindex="-1"></a>SAVE_FNAME <span class="ot">=</span> <span class="fu">file.path</span>(analysis_dir, <span class="fu">paste</span>(<span class="st">&#39;lmer_task-&#39;</span>, TASKNAME, <span class="st">&#39;_rating-&#39;</span>,DV_KEYWORD,<span class="st">&#39;_&#39;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()),<span class="st">&#39;.txt&#39;</span>,<span class="at">sep =</span> <span class="st">&#39;&#39;</span>))</span>
-<span id="cb445-20"><a href="ch10_icc.html#cb445-20" aria-hidden="true" tabindex="-1"></a>DATA <span class="ot">=</span> <span class="fu">expect_df</span>(TASKNAME, SUBJECT_VARKEY, IV, DV, EXCLUDE )</span>
-<span id="cb445-21"><a href="ch10_icc.html#cb445-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="ch10_icc.html#cb446-1" aria-hidden="true" tabindex="-1"></a>FILENAME <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">&#39;*_task-social_*-&#39;</span> ,TASKNAME, <span class="st">&#39;_beh.csv&#39;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
-<span id="cb446-2"><a href="ch10_icc.html#cb446-2" aria-hidden="true" tabindex="-1"></a>common_path <span class="ot">=</span> <span class="fu">Sys.glob</span>(<span class="fu">file.path</span>(main_dir,<span class="st">&#39;data&#39;</span>, <span class="st">&#39;beh&#39;</span>, <span class="st">&#39;beh02_preproc&#39;</span>, <span class="st">&#39;sub-*&#39;</span>,<span class="st">&#39;ses-*&#39;</span>,FILENAME))</span>
-<span id="cb446-3"><a href="ch10_icc.html#cb446-3" aria-hidden="true" tabindex="-1"></a>filter_path <span class="ot">=</span> common_path[<span class="sc">!</span><span class="fu">str_detect</span>(common_path,<span class="at">pattern=</span><span class="st">&quot;sub-0001|sub-0003|sub-0004|sub-0005|sub-0025&quot;</span>)]</span>
-<span id="cb446-4"><a href="ch10_icc.html#cb446-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb446-5"><a href="ch10_icc.html#cb446-5" aria-hidden="true" tabindex="-1"></a>DF <span class="ot">&lt;-</span> <span class="fu">do.call</span>(<span class="st">&quot;rbind&quot;</span>,<span class="fu">lapply</span>(filter_path,<span class="at">FUN=</span><span class="cf">function</span>(files){ <span class="fu">read.csv</span>(files)}))</span>
-<span id="cb446-6"><a href="ch10_icc.html#cb446-6" aria-hidden="true" tabindex="-1"></a>is.nan.data.frame <span class="ot">&lt;-</span> <span class="cf">function</span>(x)</span>
-<span id="cb446-7"><a href="ch10_icc.html#cb446-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(cbind, <span class="fu">lapply</span>(x, is.nan))</span>
-<span id="cb446-8"><a href="ch10_icc.html#cb446-8" aria-hidden="true" tabindex="-1"></a>DF[<span class="fu">is.nan</span>(DF)] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb446-9"><a href="ch10_icc.html#cb446-9" aria-hidden="true" tabindex="-1"></a>DF <span class="ot">=</span> <span class="fu">as.data.frame</span>(DF)</span>
-<span id="cb446-10"><a href="ch10_icc.html#cb446-10" aria-hidden="true" tabindex="-1"></a><span class="co"># subjects as factor</span></span>
-<span id="cb446-11"><a href="ch10_icc.html#cb446-11" aria-hidden="true" tabindex="-1"></a>DF<span class="sc">$</span>subject <span class="ot">=</span> <span class="fu">factor</span>(DF<span class="sc">$</span>src_subject_id)</span></code></pre></div>
-<div class="sourceCode" id="cb447"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb447-1"><a href="ch10_icc.html#cb447-1" aria-hidden="true" tabindex="-1"></a><span class="co"># subjectwise = meanSummary(DF, c(src_subject_id, session_id), event04_actual_angle)</span></span>
-<span id="cb447-2"><a href="ch10_icc.html#cb447-2" aria-hidden="true" tabindex="-1"></a><span class="co"># groupwise = summarySEwithin(data=subjectwise, </span></span>
-<span id="cb447-3"><a href="ch10_icc.html#cb447-3" aria-hidden="true" tabindex="-1"></a><span class="co">#                   measurevar = &quot;mean_per_sub&quot;, # variable created from above</span></span>
-<span id="cb447-4"><a href="ch10_icc.html#cb447-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                     withinvars = c(IV), # IV</span></span>
-<span id="cb447-5"><a href="ch10_icc.html#cb447-5" aria-hidden="true" tabindex="-1"></a><span class="co">#                     idvar = &quot;subject&quot;)</span></span>
-<span id="cb447-6"><a href="ch10_icc.html#cb447-6" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb447-7"><a href="ch10_icc.html#cb447-7" aria-hidden="true" tabindex="-1"></a>main_dir <span class="ot">=</span> <span class="st">&#39;/Users/h/Dropbox/projects_dropbox/social_influence_analysis&#39;</span></span>
-<span id="cb447-8"><a href="ch10_icc.html#cb447-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (TASKNAME <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;pain&quot;</span>,<span class="st">&quot;vicarious&quot;</span>,<span class="st">&quot;cognitive&quot;</span>)){</span>
-<span id="cb447-9"><a href="ch10_icc.html#cb447-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(TASKNAME)</span>
-<span id="cb447-10"><a href="ch10_icc.html#cb447-10" aria-hidden="true" tabindex="-1"></a>  DV_KEYWORD <span class="ot">=</span> <span class="st">&quot;actual-rating&quot;</span></span>
-<span id="cb447-11"><a href="ch10_icc.html#cb447-11" aria-hidden="true" tabindex="-1"></a>FILENAME <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">&#39;*_task-social_*-&#39;</span> ,TASKNAME, <span class="st">&#39;_beh.csv&#39;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
-<span id="cb447-12"><a href="ch10_icc.html#cb447-12" aria-hidden="true" tabindex="-1"></a>common_path <span class="ot">=</span> <span class="fu">Sys.glob</span>(<span class="fu">file.path</span>(main_dir,<span class="st">&#39;data&#39;</span>, <span class="st">&#39;beh&#39;</span>, <span class="st">&#39;beh02_preproc&#39;</span>, <span class="st">&#39;sub-*&#39;</span>,<span class="st">&#39;ses-*&#39;</span>,FILENAME))</span>
-<span id="cb447-13"><a href="ch10_icc.html#cb447-13" aria-hidden="true" tabindex="-1"></a>filter_path <span class="ot">=</span> common_path[<span class="sc">!</span><span class="fu">str_detect</span>(common_path,<span class="at">pattern=</span><span class="st">&quot;sub-0001|sub-0003|sub-0004|sub-0005|sub-0025&quot;</span>)]</span>
-<span id="cb447-14"><a href="ch10_icc.html#cb447-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-15"><a href="ch10_icc.html#cb447-15" aria-hidden="true" tabindex="-1"></a>DF <span class="ot">&lt;-</span> <span class="fu">do.call</span>(<span class="st">&quot;rbind&quot;</span>,<span class="fu">lapply</span>(filter_path,<span class="at">FUN=</span><span class="cf">function</span>(files){ <span class="fu">read.csv</span>(files)}))</span>
-<span id="cb447-16"><a href="ch10_icc.html#cb447-16" aria-hidden="true" tabindex="-1"></a>is.nan.data.frame <span class="ot">&lt;-</span> <span class="cf">function</span>(x)</span>
-<span id="cb447-17"><a href="ch10_icc.html#cb447-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(cbind, <span class="fu">lapply</span>(x, is.nan))</span>
-<span id="cb447-18"><a href="ch10_icc.html#cb447-18" aria-hidden="true" tabindex="-1"></a>DF[<span class="fu">is.nan</span>(DF)] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb447-19"><a href="ch10_icc.html#cb447-19" aria-hidden="true" tabindex="-1"></a>DF <span class="ot">=</span> <span class="fu">as.data.frame</span>(DF)</span>
-<span id="cb447-20"><a href="ch10_icc.html#cb447-20" aria-hidden="true" tabindex="-1"></a><span class="co"># subjects as factor</span></span>
-<span id="cb447-21"><a href="ch10_icc.html#cb447-21" aria-hidden="true" tabindex="-1"></a>DF<span class="sc">$</span>subject <span class="ot">=</span> <span class="fu">factor</span>(DF<span class="sc">$</span>src_subject_id)</span>
-<span id="cb447-22"><a href="ch10_icc.html#cb447-22" aria-hidden="true" tabindex="-1"></a>SUBJECT <span class="ot">=</span> <span class="st">&quot;src_subject_id&quot;</span></span>
-<span id="cb447-23"><a href="ch10_icc.html#cb447-23" aria-hidden="true" tabindex="-1"></a>IV <span class="ot">=</span> <span class="st">&quot;session_id&quot;</span></span>
-<span id="cb447-24"><a href="ch10_icc.html#cb447-24" aria-hidden="true" tabindex="-1"></a>DV <span class="ot">=</span> <span class="st">&quot;event04_actual_angle&quot;</span></span>
-<span id="cb447-25"><a href="ch10_icc.html#cb447-25" aria-hidden="true" tabindex="-1"></a>DF[<span class="fu">is.nan</span>(DF)]<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb447-26"><a href="ch10_icc.html#cb447-26" aria-hidden="true" tabindex="-1"></a>subjectwise_ses <span class="ot">=</span> <span class="fu">meanSummary</span>(DF, <span class="fu">c</span>(<span class="st">&quot;subject&quot;</span>, IV), DV)</span>
-<span id="cb447-27"><a href="ch10_icc.html#cb447-27" aria-hidden="true" tabindex="-1"></a>subjectwise_ses[<span class="fu">is.nan</span>(subjectwise_ses)]<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb447-28"><a href="ch10_icc.html#cb447-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-29"><a href="ch10_icc.html#cb447-29" aria-hidden="true" tabindex="-1"></a><span class="co"># long to wide</span></span>
-<span id="cb447-30"><a href="ch10_icc.html#cb447-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-31"><a href="ch10_icc.html#cb447-31" aria-hidden="true" tabindex="-1"></a>ses_beh <span class="ot">=</span> <span class="fu">subset</span>(subjectwise_ses,<span class="at">select =</span> <span class="fu">c</span>(<span class="st">&quot;subject&quot;</span>, <span class="st">&quot;session_id&quot;</span>, <span class="st">&quot;mean_per_sub&quot;</span>))</span>
-<span id="cb447-32"><a href="ch10_icc.html#cb447-32" aria-hidden="true" tabindex="-1"></a>ses_beh[<span class="fu">is.nan</span>(ses_beh)]<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb447-33"><a href="ch10_icc.html#cb447-33" aria-hidden="true" tabindex="-1"></a>ses_beh_wide <span class="ot">=</span> <span class="fu">reshape</span>(ses_beh, <span class="at">idvar =</span> <span class="st">&quot;subject&quot;</span>, <span class="at">timevar =</span> <span class="st">&quot;session_id&quot;</span>, <span class="at">direction =</span> <span class="st">&quot;wide&quot;</span>)</span>
-<span id="cb447-34"><a href="ch10_icc.html#cb447-34" aria-hidden="true" tabindex="-1"></a>sub_ses <span class="ot">=</span> ses_beh_wide[<span class="fu">rowSums</span>(<span class="fu">is.na</span>(ses_beh_wide[,<span class="sc">-</span><span class="dv">1</span>])) <span class="sc">!=</span> <span class="fu">ncol</span>(ses_beh_wide[,<span class="sc">-</span><span class="dv">1</span>]), ]</span>
-<span id="cb447-35"><a href="ch10_icc.html#cb447-35" aria-hidden="true" tabindex="-1"></a>sub_13 <span class="ot">=</span> sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.1&quot;</span>, <span class="st">&quot;mean_per_sub.3&quot;</span>)]</span>
-<span id="cb447-36"><a href="ch10_icc.html#cb447-36" aria-hidden="true" tabindex="-1"></a>c13 <span class="ot">=</span> psych<span class="sc">::</span><span class="fu">ICC</span>(sub_13[<span class="fu">complete.cases</span>(sub_13),])</span>
-<span id="cb447-37"><a href="ch10_icc.html#cb447-37" aria-hidden="true" tabindex="-1"></a>icc13 <span class="ot">=</span> irr<span class="sc">::</span><span class="fu">icc</span>(</span>
-<span id="cb447-38"><a href="ch10_icc.html#cb447-38" aria-hidden="true" tabindex="-1"></a>  sub_13[<span class="fu">complete.cases</span>(sub_13),], <span class="at">model =</span> <span class="st">&quot;twoway&quot;</span>, </span>
-<span id="cb447-39"><a href="ch10_icc.html#cb447-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;agreement&quot;</span>, <span class="at">unit =</span> <span class="st">&quot;average&quot;</span></span>
-<span id="cb447-40"><a href="ch10_icc.html#cb447-40" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb447-41"><a href="ch10_icc.html#cb447-41" aria-hidden="true" tabindex="-1"></a>icc13_text <span class="ot">=</span> c13<span class="sc">$</span>results<span class="sc">$</span>ICC[<span class="dv">5</span>]<span class="co"># icc13_text = c13$results$ICC[5]</span></span>
-<span id="cb447-42"><a href="ch10_icc.html#cb447-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-43"><a href="ch10_icc.html#cb447-43" aria-hidden="true" tabindex="-1"></a>c34 <span class="ot">=</span> psych<span class="sc">::</span><span class="fu">ICC</span>(sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.3&quot;</span>, <span class="st">&quot;mean_per_sub.4&quot;</span>)])</span>
-<span id="cb447-44"><a href="ch10_icc.html#cb447-44" aria-hidden="true" tabindex="-1"></a>icc34 <span class="ot">=</span> irr<span class="sc">::</span><span class="fu">icc</span>(</span>
-<span id="cb447-45"><a href="ch10_icc.html#cb447-45" aria-hidden="true" tabindex="-1"></a>  sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.3&quot;</span>, <span class="st">&quot;mean_per_sub.4&quot;</span>)], <span class="at">model =</span> <span class="st">&quot;twoway&quot;</span>, </span>
-<span id="cb447-46"><a href="ch10_icc.html#cb447-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;agreement&quot;</span>, <span class="at">unit =</span> <span class="st">&quot;average&quot;</span></span>
-<span id="cb447-47"><a href="ch10_icc.html#cb447-47" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb447-48"><a href="ch10_icc.html#cb447-48" aria-hidden="true" tabindex="-1"></a>icc34_text <span class="ot">=</span> c34<span class="sc">$</span>results<span class="sc">$</span>ICC[<span class="dv">5</span>]</span>
-<span id="cb447-49"><a href="ch10_icc.html#cb447-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-50"><a href="ch10_icc.html#cb447-50" aria-hidden="true" tabindex="-1"></a>c41 <span class="ot">=</span> psych<span class="sc">::</span><span class="fu">ICC</span>(sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.4&quot;</span>, <span class="st">&quot;mean_per_sub.1&quot;</span>)])</span>
-<span id="cb447-51"><a href="ch10_icc.html#cb447-51" aria-hidden="true" tabindex="-1"></a>ses41 <span class="ot">=</span> irr<span class="sc">::</span><span class="fu">icc</span>(</span>
-<span id="cb447-52"><a href="ch10_icc.html#cb447-52" aria-hidden="true" tabindex="-1"></a>  sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.4&quot;</span>, <span class="st">&quot;mean_per_sub.1&quot;</span>)], <span class="at">model =</span> <span class="st">&quot;twoway&quot;</span>, </span>
-<span id="cb447-53"><a href="ch10_icc.html#cb447-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;agreement&quot;</span>, <span class="at">unit =</span> <span class="st">&quot;average&quot;</span></span>
-<span id="cb447-54"><a href="ch10_icc.html#cb447-54" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb447-55"><a href="ch10_icc.html#cb447-55" aria-hidden="true" tabindex="-1"></a>icc41_text <span class="ot">=</span> c41<span class="sc">$</span>results<span class="sc">$</span>ICC[<span class="dv">5</span>]</span>
-<span id="cb447-56"><a href="ch10_icc.html#cb447-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-57"><a href="ch10_icc.html#cb447-57" aria-hidden="true" tabindex="-1"></a>beh13 <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="at">data =</span> sub_ses, <span class="fu">aes</span>(<span class="at">x =</span> mean_per_sub<span class="fl">.1</span>, <span class="at">y =</span> mean_per_sub<span class="fl">.3</span>)) <span class="sc">+</span></span>
-<span id="cb447-58"><a href="ch10_icc.html#cb447-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb447-59"><a href="ch10_icc.html#cb447-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
-<span id="cb447-60"><a href="ch10_icc.html#cb447-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;sesion 1&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;session 3&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">150</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">200</span>) <span class="sc">+</span></span>
-<span id="cb447-61"><a href="ch10_icc.html#cb447-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb447-62"><a href="ch10_icc.html#cb447-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))  <span class="sc">+</span></span>
-<span id="cb447-63"><a href="ch10_icc.html#cb447-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">120</span>, <span class="at">y =</span> <span class="dv">200</span>, </span>
-<span id="cb447-64"><a href="ch10_icc.html#cb447-64" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">paste</span>(<span class="st">&quot;ICC = &quot;</span>,<span class="fu">format</span>(icc13_text, <span class="at">digits =</span> <span class="dv">2</span>),<span class="at">sep =</span> <span class="st">&quot;&quot;</span>)),</span>
-<span id="cb447-65"><a href="ch10_icc.html#cb447-65" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>)</span>
-<span id="cb447-66"><a href="ch10_icc.html#cb447-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-67"><a href="ch10_icc.html#cb447-67" aria-hidden="true" tabindex="-1"></a>beh34 <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="at">data =</span> sub_ses, <span class="fu">aes</span>(<span class="at">x =</span> mean_per_sub<span class="fl">.3</span>, <span class="at">y =</span> mean_per_sub<span class="fl">.4</span>)) <span class="sc">+</span></span>
-<span id="cb447-68"><a href="ch10_icc.html#cb447-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb447-69"><a href="ch10_icc.html#cb447-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
-<span id="cb447-70"><a href="ch10_icc.html#cb447-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;session 3&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;session 4&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">150</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">200</span>) <span class="sc">+</span></span>
-<span id="cb447-71"><a href="ch10_icc.html#cb447-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb447-72"><a href="ch10_icc.html#cb447-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))  <span class="sc">+</span></span>
-<span id="cb447-73"><a href="ch10_icc.html#cb447-73" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">120</span>, <span class="at">y =</span> <span class="dv">200</span>, </span>
-<span id="cb447-74"><a href="ch10_icc.html#cb447-74" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">paste</span>(<span class="st">&quot;ICC = &quot;</span>,<span class="fu">format</span>(icc34_text, <span class="at">digits =</span> <span class="dv">2</span>),<span class="at">sep =</span> <span class="st">&quot;&quot;</span>)),</span>
-<span id="cb447-75"><a href="ch10_icc.html#cb447-75" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>)</span>
-<span id="cb447-76"><a href="ch10_icc.html#cb447-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-77"><a href="ch10_icc.html#cb447-77" aria-hidden="true" tabindex="-1"></a>beh41 <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="at">data =</span> sub_ses, <span class="fu">aes</span>(<span class="at">x =</span> mean_per_sub<span class="fl">.4</span>, <span class="at">y =</span> mean_per_sub<span class="fl">.1</span>)) <span class="sc">+</span></span>
-<span id="cb447-78"><a href="ch10_icc.html#cb447-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb447-79"><a href="ch10_icc.html#cb447-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
-<span id="cb447-80"><a href="ch10_icc.html#cb447-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;session 4&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;session 1&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">150</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">200</span>) <span class="sc">+</span></span>
-<span id="cb447-81"><a href="ch10_icc.html#cb447-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> </span>
-<span id="cb447-82"><a href="ch10_icc.html#cb447-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))  <span class="sc">+</span></span>
-<span id="cb447-83"><a href="ch10_icc.html#cb447-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">120</span>, <span class="at">y =</span> <span class="dv">200</span>, </span>
-<span id="cb447-84"><a href="ch10_icc.html#cb447-84" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">paste</span>(<span class="st">&quot;ICC = &quot;</span>,<span class="fu">format</span>(icc41_text, <span class="at">digits =</span> <span class="dv">2</span>),<span class="at">sep =</span> <span class="st">&quot;&quot;</span>)),</span>
-<span id="cb447-85"><a href="ch10_icc.html#cb447-85" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>)</span>
-<span id="cb447-86"><a href="ch10_icc.html#cb447-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-87"><a href="ch10_icc.html#cb447-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb447-88"><a href="ch10_icc.html#cb447-88" aria-hidden="true" tabindex="-1"></a>ggpubr<span class="sc">::</span><span class="fu">ggarrange</span>(beh13,beh34,beh41,<span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">common.legend =</span> <span class="cn">FALSE</span>,<span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb447-89"><a href="ch10_icc.html#cb447-89" aria-hidden="true" tabindex="-1"></a>plot_filename <span class="ot">=</span> <span class="fu">file.path</span>(main_dir, <span class="st">&#39;analysis&#39;</span>,<span class="st">&#39;mixedeffect&#39;</span>,<span class="st">&#39;model04_behavioral-ICC&#39;</span>, <span class="fu">paste</span>(<span class="st">&#39;socialinfluence_task-&#39;</span>,TASKNAME,<span class="st">&#39;_&#39;</span>,DV_KEYWORD,<span class="st">&#39;_icc&#39;</span>,<span class="st">&#39;_&#39;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()),<span class="st">&#39;.png&#39;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>))</span>
-<span id="cb447-90"><a href="ch10_icc.html#cb447-90" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(plot_filename, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">3</span>)</span>
-<span id="cb447-91"><a href="ch10_icc.html#cb447-91" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="ch10_icc.html#cb315-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb315-2"><a href="ch10_icc.html#cb315-2" aria-hidden="true" tabindex="-1"></a>h <span class="ot">=</span> <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="ch10_icc.html#cb316-1" aria-hidden="true" tabindex="-1"></a><span class="co"># subjectwise = meanSummary(DF, c(src_subject_id, session_id), event04_actual_angle)</span></span>
+<span id="cb316-2"><a href="ch10_icc.html#cb316-2" aria-hidden="true" tabindex="-1"></a><span class="co"># groupwise = summarySEwithin(data=subjectwise, </span></span>
+<span id="cb316-3"><a href="ch10_icc.html#cb316-3" aria-hidden="true" tabindex="-1"></a><span class="co">#                   measurevar = &quot;mean_per_sub&quot;, # variable created from above</span></span>
+<span id="cb316-4"><a href="ch10_icc.html#cb316-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                     withinvars = c(IV), # IV</span></span>
+<span id="cb316-5"><a href="ch10_icc.html#cb316-5" aria-hidden="true" tabindex="-1"></a><span class="co">#                     idvar = &quot;subject&quot;)</span></span>
+<span id="cb316-6"><a href="ch10_icc.html#cb316-6" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb316-7"><a href="ch10_icc.html#cb316-7" aria-hidden="true" tabindex="-1"></a>main_dir <span class="ot">=</span> <span class="st">&#39;/Users/h/Dropbox/projects_dropbox/social_influence_analysis&#39;</span></span>
+<span id="cb316-8"><a href="ch10_icc.html#cb316-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (TASKNAME <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;pain&quot;</span>,<span class="st">&quot;vicarious&quot;</span>,<span class="st">&quot;cognitive&quot;</span>)){</span>
+<span id="cb316-9"><a href="ch10_icc.html#cb316-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(TASKNAME)</span>
+<span id="cb316-10"><a href="ch10_icc.html#cb316-10" aria-hidden="true" tabindex="-1"></a>  DV_KEYWORD <span class="ot">=</span> <span class="st">&quot;actual-rating&quot;</span></span>
+<span id="cb316-11"><a href="ch10_icc.html#cb316-11" aria-hidden="true" tabindex="-1"></a>FILENAME <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">&#39;*_task-social_*-&#39;</span> ,TASKNAME, <span class="st">&#39;_beh.csv&#39;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb316-12"><a href="ch10_icc.html#cb316-12" aria-hidden="true" tabindex="-1"></a>common_path <span class="ot">=</span> <span class="fu">Sys.glob</span>(<span class="fu">file.path</span>(main_dir,<span class="st">&#39;data&#39;</span>, <span class="st">&#39;beh&#39;</span>, <span class="st">&#39;beh02_preproc&#39;</span>, <span class="st">&#39;sub-*&#39;</span>,<span class="st">&#39;ses-*&#39;</span>,FILENAME))</span>
+<span id="cb316-13"><a href="ch10_icc.html#cb316-13" aria-hidden="true" tabindex="-1"></a>filter_path <span class="ot">=</span> common_path[<span class="sc">!</span><span class="fu">str_detect</span>(common_path,<span class="at">pattern=</span><span class="st">&quot;sub-0001|sub-0003|sub-0004|sub-0005|sub-0025&quot;</span>)]</span>
+<span id="cb316-14"><a href="ch10_icc.html#cb316-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-15"><a href="ch10_icc.html#cb316-15" aria-hidden="true" tabindex="-1"></a>DF <span class="ot">&lt;-</span> <span class="fu">do.call</span>(<span class="st">&quot;rbind&quot;</span>,<span class="fu">lapply</span>(filter_path,<span class="at">FUN=</span><span class="cf">function</span>(files){ <span class="fu">read.csv</span>(files)}))</span>
+<span id="cb316-16"><a href="ch10_icc.html#cb316-16" aria-hidden="true" tabindex="-1"></a>is.nan.data.frame <span class="ot">&lt;-</span> <span class="cf">function</span>(x)</span>
+<span id="cb316-17"><a href="ch10_icc.html#cb316-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(cbind, <span class="fu">lapply</span>(x, is.nan))</span>
+<span id="cb316-18"><a href="ch10_icc.html#cb316-18" aria-hidden="true" tabindex="-1"></a>DF[<span class="fu">is.nan</span>(DF)] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb316-19"><a href="ch10_icc.html#cb316-19" aria-hidden="true" tabindex="-1"></a>DF <span class="ot">=</span> <span class="fu">as.data.frame</span>(DF)</span>
+<span id="cb316-20"><a href="ch10_icc.html#cb316-20" aria-hidden="true" tabindex="-1"></a><span class="co"># subjects as factor</span></span>
+<span id="cb316-21"><a href="ch10_icc.html#cb316-21" aria-hidden="true" tabindex="-1"></a>DF<span class="sc">$</span>subject <span class="ot">=</span> <span class="fu">factor</span>(DF<span class="sc">$</span>src_subject_id)</span>
+<span id="cb316-22"><a href="ch10_icc.html#cb316-22" aria-hidden="true" tabindex="-1"></a>SUBJECT <span class="ot">=</span> <span class="st">&quot;src_subject_id&quot;</span></span>
+<span id="cb316-23"><a href="ch10_icc.html#cb316-23" aria-hidden="true" tabindex="-1"></a>IV <span class="ot">=</span> <span class="st">&quot;session_id&quot;</span></span>
+<span id="cb316-24"><a href="ch10_icc.html#cb316-24" aria-hidden="true" tabindex="-1"></a>DV <span class="ot">=</span> <span class="st">&quot;event04_actual_angle&quot;</span></span>
+<span id="cb316-25"><a href="ch10_icc.html#cb316-25" aria-hidden="true" tabindex="-1"></a>DF[<span class="fu">is.nan</span>(DF)]<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb316-26"><a href="ch10_icc.html#cb316-26" aria-hidden="true" tabindex="-1"></a>subjectwise_ses <span class="ot">=</span> <span class="fu">meanSummary</span>(DF, <span class="fu">c</span>(<span class="st">&quot;subject&quot;</span>, IV), DV)</span>
+<span id="cb316-27"><a href="ch10_icc.html#cb316-27" aria-hidden="true" tabindex="-1"></a>subjectwise_ses[<span class="fu">is.nan</span>(subjectwise_ses)]<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb316-28"><a href="ch10_icc.html#cb316-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-29"><a href="ch10_icc.html#cb316-29" aria-hidden="true" tabindex="-1"></a><span class="co"># long to wide</span></span>
+<span id="cb316-30"><a href="ch10_icc.html#cb316-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-31"><a href="ch10_icc.html#cb316-31" aria-hidden="true" tabindex="-1"></a>ses_beh <span class="ot">=</span> <span class="fu">subset</span>(subjectwise_ses,<span class="at">select =</span> <span class="fu">c</span>(<span class="st">&quot;subject&quot;</span>, <span class="st">&quot;session_id&quot;</span>, <span class="st">&quot;mean_per_sub&quot;</span>))</span>
+<span id="cb316-32"><a href="ch10_icc.html#cb316-32" aria-hidden="true" tabindex="-1"></a>ses_beh[<span class="fu">is.nan</span>(ses_beh)]<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb316-33"><a href="ch10_icc.html#cb316-33" aria-hidden="true" tabindex="-1"></a>ses_beh_wide <span class="ot">=</span> <span class="fu">reshape</span>(ses_beh, <span class="at">idvar =</span> <span class="st">&quot;subject&quot;</span>, <span class="at">timevar =</span> <span class="st">&quot;session_id&quot;</span>, <span class="at">direction =</span> <span class="st">&quot;wide&quot;</span>)</span>
+<span id="cb316-34"><a href="ch10_icc.html#cb316-34" aria-hidden="true" tabindex="-1"></a>sub_ses <span class="ot">=</span> ses_beh_wide[<span class="fu">rowSums</span>(<span class="fu">is.na</span>(ses_beh_wide[,<span class="sc">-</span><span class="dv">1</span>])) <span class="sc">!=</span> <span class="fu">ncol</span>(ses_beh_wide[,<span class="sc">-</span><span class="dv">1</span>]), ]</span>
+<span id="cb316-35"><a href="ch10_icc.html#cb316-35" aria-hidden="true" tabindex="-1"></a>sub_13 <span class="ot">=</span> sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.1&quot;</span>, <span class="st">&quot;mean_per_sub.3&quot;</span>)]</span>
+<span id="cb316-36"><a href="ch10_icc.html#cb316-36" aria-hidden="true" tabindex="-1"></a>c13 <span class="ot">=</span> psych<span class="sc">::</span><span class="fu">ICC</span>(sub_13[<span class="fu">complete.cases</span>(sub_13),])</span>
+<span id="cb316-37"><a href="ch10_icc.html#cb316-37" aria-hidden="true" tabindex="-1"></a>icc13 <span class="ot">=</span> irr<span class="sc">::</span><span class="fu">icc</span>(</span>
+<span id="cb316-38"><a href="ch10_icc.html#cb316-38" aria-hidden="true" tabindex="-1"></a>  sub_13[<span class="fu">complete.cases</span>(sub_13),], <span class="at">model =</span> <span class="st">&quot;twoway&quot;</span>, </span>
+<span id="cb316-39"><a href="ch10_icc.html#cb316-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;agreement&quot;</span>, <span class="at">unit =</span> <span class="st">&quot;average&quot;</span></span>
+<span id="cb316-40"><a href="ch10_icc.html#cb316-40" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb316-41"><a href="ch10_icc.html#cb316-41" aria-hidden="true" tabindex="-1"></a>icc13_text <span class="ot">=</span> c13<span class="sc">$</span>results<span class="sc">$</span>ICC[<span class="dv">5</span>]<span class="co"># icc13_text = c13$results$ICC[5]</span></span>
+<span id="cb316-42"><a href="ch10_icc.html#cb316-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-43"><a href="ch10_icc.html#cb316-43" aria-hidden="true" tabindex="-1"></a>c34 <span class="ot">=</span> psych<span class="sc">::</span><span class="fu">ICC</span>(sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.3&quot;</span>, <span class="st">&quot;mean_per_sub.4&quot;</span>)])</span>
+<span id="cb316-44"><a href="ch10_icc.html#cb316-44" aria-hidden="true" tabindex="-1"></a>icc34 <span class="ot">=</span> irr<span class="sc">::</span><span class="fu">icc</span>(</span>
+<span id="cb316-45"><a href="ch10_icc.html#cb316-45" aria-hidden="true" tabindex="-1"></a>  sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.3&quot;</span>, <span class="st">&quot;mean_per_sub.4&quot;</span>)], <span class="at">model =</span> <span class="st">&quot;twoway&quot;</span>, </span>
+<span id="cb316-46"><a href="ch10_icc.html#cb316-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;agreement&quot;</span>, <span class="at">unit =</span> <span class="st">&quot;average&quot;</span></span>
+<span id="cb316-47"><a href="ch10_icc.html#cb316-47" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb316-48"><a href="ch10_icc.html#cb316-48" aria-hidden="true" tabindex="-1"></a>icc34_text <span class="ot">=</span> c34<span class="sc">$</span>results<span class="sc">$</span>ICC[<span class="dv">5</span>]</span>
+<span id="cb316-49"><a href="ch10_icc.html#cb316-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-50"><a href="ch10_icc.html#cb316-50" aria-hidden="true" tabindex="-1"></a>c41 <span class="ot">=</span> psych<span class="sc">::</span><span class="fu">ICC</span>(sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.4&quot;</span>, <span class="st">&quot;mean_per_sub.1&quot;</span>)])</span>
+<span id="cb316-51"><a href="ch10_icc.html#cb316-51" aria-hidden="true" tabindex="-1"></a>ses41 <span class="ot">=</span> irr<span class="sc">::</span><span class="fu">icc</span>(</span>
+<span id="cb316-52"><a href="ch10_icc.html#cb316-52" aria-hidden="true" tabindex="-1"></a>  sub_ses[,<span class="fu">c</span>(<span class="st">&quot;mean_per_sub.4&quot;</span>, <span class="st">&quot;mean_per_sub.1&quot;</span>)], <span class="at">model =</span> <span class="st">&quot;twoway&quot;</span>, </span>
+<span id="cb316-53"><a href="ch10_icc.html#cb316-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">&quot;agreement&quot;</span>, <span class="at">unit =</span> <span class="st">&quot;average&quot;</span></span>
+<span id="cb316-54"><a href="ch10_icc.html#cb316-54" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb316-55"><a href="ch10_icc.html#cb316-55" aria-hidden="true" tabindex="-1"></a>icc41_text <span class="ot">=</span> c41<span class="sc">$</span>results<span class="sc">$</span>ICC[<span class="dv">5</span>]</span>
+<span id="cb316-56"><a href="ch10_icc.html#cb316-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-57"><a href="ch10_icc.html#cb316-57" aria-hidden="true" tabindex="-1"></a>beh13 <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="at">data =</span> sub_ses, <span class="fu">aes</span>(<span class="at">x =</span> mean_per_sub<span class="fl">.1</span>, <span class="at">y =</span> mean_per_sub<span class="fl">.3</span>)) <span class="sc">+</span></span>
+<span id="cb316-58"><a href="ch10_icc.html#cb316-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb316-59"><a href="ch10_icc.html#cb316-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb316-60"><a href="ch10_icc.html#cb316-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;sesion 1&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;session 3&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">150</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">200</span>) <span class="sc">+</span></span>
+<span id="cb316-61"><a href="ch10_icc.html#cb316-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb316-62"><a href="ch10_icc.html#cb316-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))  <span class="sc">+</span></span>
+<span id="cb316-63"><a href="ch10_icc.html#cb316-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">120</span>, <span class="at">y =</span> <span class="dv">200</span>, </span>
+<span id="cb316-64"><a href="ch10_icc.html#cb316-64" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">paste</span>(<span class="st">&quot;ICC = &quot;</span>,<span class="fu">format</span>(icc13_text, <span class="at">digits =</span> <span class="dv">2</span>),<span class="at">sep =</span> <span class="st">&quot;&quot;</span>)),</span>
+<span id="cb316-65"><a href="ch10_icc.html#cb316-65" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>)</span>
+<span id="cb316-66"><a href="ch10_icc.html#cb316-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-67"><a href="ch10_icc.html#cb316-67" aria-hidden="true" tabindex="-1"></a>beh34 <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="at">data =</span> sub_ses, <span class="fu">aes</span>(<span class="at">x =</span> mean_per_sub<span class="fl">.3</span>, <span class="at">y =</span> mean_per_sub<span class="fl">.4</span>)) <span class="sc">+</span></span>
+<span id="cb316-68"><a href="ch10_icc.html#cb316-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb316-69"><a href="ch10_icc.html#cb316-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb316-70"><a href="ch10_icc.html#cb316-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;session 3&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;session 4&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">150</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">200</span>) <span class="sc">+</span></span>
+<span id="cb316-71"><a href="ch10_icc.html#cb316-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb316-72"><a href="ch10_icc.html#cb316-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))  <span class="sc">+</span></span>
+<span id="cb316-73"><a href="ch10_icc.html#cb316-73" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">120</span>, <span class="at">y =</span> <span class="dv">200</span>, </span>
+<span id="cb316-74"><a href="ch10_icc.html#cb316-74" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">paste</span>(<span class="st">&quot;ICC = &quot;</span>,<span class="fu">format</span>(icc34_text, <span class="at">digits =</span> <span class="dv">2</span>),<span class="at">sep =</span> <span class="st">&quot;&quot;</span>)),</span>
+<span id="cb316-75"><a href="ch10_icc.html#cb316-75" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>)</span>
+<span id="cb316-76"><a href="ch10_icc.html#cb316-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-77"><a href="ch10_icc.html#cb316-77" aria-hidden="true" tabindex="-1"></a>beh41 <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="at">data =</span> sub_ses, <span class="fu">aes</span>(<span class="at">x =</span> mean_per_sub<span class="fl">.4</span>, <span class="at">y =</span> mean_per_sub<span class="fl">.1</span>)) <span class="sc">+</span></span>
+<span id="cb316-78"><a href="ch10_icc.html#cb316-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb316-79"><a href="ch10_icc.html#cb316-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb316-80"><a href="ch10_icc.html#cb316-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;session 4&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;session 1&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">150</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">200</span>) <span class="sc">+</span></span>
+<span id="cb316-81"><a href="ch10_icc.html#cb316-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span> </span>
+<span id="cb316-82"><a href="ch10_icc.html#cb316-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))  <span class="sc">+</span></span>
+<span id="cb316-83"><a href="ch10_icc.html#cb316-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">120</span>, <span class="at">y =</span> <span class="dv">200</span>, </span>
+<span id="cb316-84"><a href="ch10_icc.html#cb316-84" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">paste</span>(<span class="st">&quot;ICC = &quot;</span>,<span class="fu">format</span>(icc41_text, <span class="at">digits =</span> <span class="dv">2</span>),<span class="at">sep =</span> <span class="st">&quot;&quot;</span>)),</span>
+<span id="cb316-85"><a href="ch10_icc.html#cb316-85" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>)</span>
+<span id="cb316-86"><a href="ch10_icc.html#cb316-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-87"><a href="ch10_icc.html#cb316-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb316-88"><a href="ch10_icc.html#cb316-88" aria-hidden="true" tabindex="-1"></a>g<span class="ot">&lt;-</span>ggpubr<span class="sc">::</span><span class="fu">ggarrange</span>(beh13,beh34,beh41,<span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">common.legend =</span> <span class="cn">FALSE</span>,<span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
+<span id="cb316-89"><a href="ch10_icc.html#cb316-89" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(g)</span>
+<span id="cb316-90"><a href="ch10_icc.html#cb316-90" aria-hidden="true" tabindex="-1"></a>plot_filename <span class="ot">=</span> <span class="fu">file.path</span>(main_dir, <span class="st">&#39;analysis&#39;</span>,<span class="st">&#39;mixedeffect&#39;</span>,<span class="st">&#39;model04_behavioral-ICC&#39;</span>, <span class="fu">paste</span>(<span class="st">&#39;socialinfluence_task-&#39;</span>,TASKNAME,<span class="st">&#39;_&#39;</span>,DV_KEYWORD,<span class="st">&#39;_icc&#39;</span>,<span class="st">&#39;_&#39;</span>, <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>()),<span class="st">&#39;.png&#39;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>))</span>
+<span id="cb316-91"><a href="ch10_icc.html#cb316-91" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(plot_filename, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">3</span>)</span>
+<span id="cb316-92"><a href="ch10_icc.html#cb316-92" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;pain&quot;</code></pre>
 <pre><code>## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
@@ -997,6 +576,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 21 rows containing non-finite values (`stat_smooth()`).</code></pre>
 <pre><code>## Warning: Removed 21 rows containing missing values (`geom_point()`).</code></pre>
+<p><img src="10_iv-session_dv-outcome_behavioral-ICC_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <pre><code>## [1] &quot;cognitive&quot;</code></pre>
 <pre><code>## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
 <pre><code>## Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
@@ -1011,6 +591,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 20 rows containing non-finite values (`stat_smooth()`).</code></pre>
 <pre><code>## Warning: Removed 20 rows containing missing values (`geom_point()`).</code></pre>
+<p><img src="10_iv-session_dv-outcome_behavioral-ICC_files/figure-html/unnamed-chunk-4-2.png" width="672" /><img src="10_iv-session_dv-outcome_behavioral-ICC_files/figure-html/unnamed-chunk-4-3.png" width="672" /></p>
 </div>
 <div id="todo" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> TODO:<a href="ch10_icc.html#todo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -1060,7 +641,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/10_iv-session_dv-outcome_behavioral-ICC.Rmd",
+"link": "https://github.com/jungheejung/cue_expectancy/edit/BRANCH/10_iv-session_dv-outcome_behavioral-ICC.Rmd",
 "text": "Edit"
 },
 "history": {
