@@ -1,4 +1,4 @@
-# [fMRI] Signature effect size ~ single trial {#ch39_signature_effectsize}
+# signature effect size ~ single trial {#ch39_signature_effectsize}
 
 ```
 author: "Heejung Jung"

@@ -1,4 +1,4 @@
-# [beh] outcome ~ expect Jayazeri (2018) {#ch13_outcome-expect}
+# outcome ~ expect Jayazeri (2018) {#ch13_outcome-expect}
 
 ```
 date: '2022-09-13'

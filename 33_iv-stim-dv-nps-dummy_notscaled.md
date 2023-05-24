@@ -107,6 +107,14 @@ pain_nps
 
 
 ```
+## $$
+## \begin{aligned}
+##   \operatorname{nps}_{i}  &\sim N \left(\mu, \sigma^2 \right) \\
+##     \mu &=\alpha_{j[i]} + \beta_{1}(\operatorname{cue\_con}) + \beta_{2}(\operatorname{stim\_con\_linear}) + \beta_{3}(\operatorname{stim\_con\_quad}) + \beta_{4}(\operatorname{cue\_con} \times \operatorname{stim\_con\_linear}) + \beta_{5}(\operatorname{cue\_con} \times \operatorname{stim\_con\_quad}) \\
+##     \alpha_{j}  &\sim N \left(\mu_{\alpha_{j}}, \sigma^2_{\alpha_{j}} \right)
+##     \text{, for subject j = 1,} \dots \text{,J}
+## \end{aligned}
+## $$
 ## [1] "model:  Nps-Dotproduct  ratings -  pain"
 ## Linear mixed model fit by REML. t-tests use Satterthwaite's method [
 ## lmerModLmerTest]
@@ -142,7 +150,15 @@ pain_nps
 ## stim_cn_lnr   0.000  0.000                                 
 ## stim_con_qd   0.000  0.000  0.000                          
 ## c_cn:stm_cn_l 0.000  0.000  0.000    0.000                 
-## c_cn:stm_cn_q 0.000  0.000  0.000    0.000    0.000
+## c_cn:stm_cn_q 0.000  0.000  0.000    0.000    0.000        
+## $$
+## \begin{aligned}
+##   \operatorname{nps}_{i}  &\sim N \left(\mu, \sigma^2 \right) \\
+##     \mu &=\alpha_{j[i]} + \beta_{1}(\operatorname{cue\_con}) + \beta_{2}(\operatorname{stim\_con\_linear}) + \beta_{3}(\operatorname{stim\_con\_quad}) + \beta_{4}(\operatorname{cue\_con} \times \operatorname{stim\_con\_linear}) + \beta_{5}(\operatorname{cue\_con} \times \operatorname{stim\_con\_quad}) \\
+##     \alpha_{j}  &\sim N \left(\mu_{\alpha_{j}}, \sigma^2_{\alpha_{j}} \right)
+##     \text{, for subject j = 1,} \dots \text{,J}
+## \end{aligned}
+## $$
 ```
 
 
@@ -226,6 +242,14 @@ pain_nps
 ```
 
 ```
+## $$
+## \begin{aligned}
+##   \operatorname{npspos}_{i}  &\sim N \left(\mu, \sigma^2 \right) \\
+##     \mu &=\alpha_{j[i]} + \beta_{1}(\operatorname{cue\_con}) + \beta_{2}(\operatorname{stim\_con\_linear}) + \beta_{3}(\operatorname{stim\_con\_quad}) + \beta_{4}(\operatorname{cue\_con} \times \operatorname{stim\_con\_linear}) + \beta_{5}(\operatorname{cue\_con} \times \operatorname{stim\_con\_quad}) \\
+##     \alpha_{j}  &\sim N \left(\mu_{\alpha_{j}}, \sigma^2_{\alpha_{j}} \right)
+##     \text{, for subject j = 1,} \dots \text{,J}
+## \end{aligned}
+## $$
 ## [1] "model:  Npspos  ratings -  pain"
 ## Linear mixed model fit by REML. t-tests use Satterthwaite's method [
 ## lmerModLmerTest]
@@ -261,7 +285,15 @@ pain_nps
 ## stim_cn_lnr   0.000  0.000                                 
 ## stim_con_qd   0.000  0.000  0.000                          
 ## c_cn:stm_cn_l 0.000  0.000  0.000    0.000                 
-## c_cn:stm_cn_q 0.000  0.000  0.000    0.000    0.000
+## c_cn:stm_cn_q 0.000  0.000  0.000    0.000    0.000        
+## $$
+## \begin{aligned}
+##   \operatorname{npspos}_{i}  &\sim N \left(\mu, \sigma^2 \right) \\
+##     \mu &=\alpha_{j[i]} + \beta_{1}(\operatorname{cue\_con}) + \beta_{2}(\operatorname{stim\_con\_linear}) + \beta_{3}(\operatorname{stim\_con\_quad}) + \beta_{4}(\operatorname{cue\_con} \times \operatorname{stim\_con\_linear}) + \beta_{5}(\operatorname{cue\_con} \times \operatorname{stim\_con\_quad}) \\
+##     \alpha_{j}  &\sim N \left(\mu_{\alpha_{j}}, \sigma^2_{\alpha_{j}} \right)
+##     \text{, for subject j = 1,} \dots \text{,J}
+## \end{aligned}
+## $$
 ```
 
 
@@ -277,6 +309,14 @@ pain_nps
 ```
 
 ```
+## $$
+## \begin{aligned}
+##   \operatorname{npspos}_{i}  &\sim N \left(\mu, \sigma^2 \right) \\
+##     \mu &=\alpha_{j[i]} + \beta_{1}(\operatorname{cue\_con}) + \beta_{2}(\operatorname{stim\_con\_linear}) + \beta_{3}(\operatorname{stim\_con\_quad}) + \beta_{4}(\operatorname{cue\_con} \times \operatorname{stim\_con\_linear}) + \beta_{5}(\operatorname{cue\_con} \times \operatorname{stim\_con\_quad}) \\
+##     \alpha_{j}  &\sim N \left(\mu_{\alpha_{j}}, \sigma^2_{\alpha_{j}} \right)
+##     \text{, for subject j = 1,} \dots \text{,J}
+## \end{aligned}
+## $$
 ## [1] "model:  Npspos  ratings -  cognitive"
 ## Linear mixed model fit by REML. t-tests use Satterthwaite's method [
 ## lmerModLmerTest]
@@ -312,7 +352,15 @@ pain_nps
 ## stim_cn_lnr   0.000  0.000                                 
 ## stim_con_qd   0.000  0.000  0.000                          
 ## c_cn:stm_cn_l 0.000  0.000  0.000    0.000                 
-## c_cn:stm_cn_q 0.000  0.000  0.000    0.000    0.000
+## c_cn:stm_cn_q 0.000  0.000  0.000    0.000    0.000        
+## $$
+## \begin{aligned}
+##   \operatorname{npspos}_{i}  &\sim N \left(\mu, \sigma^2 \right) \\
+##     \mu &=\alpha_{j[i]} + \beta_{1}(\operatorname{cue\_con}) + \beta_{2}(\operatorname{stim\_con\_linear}) + \beta_{3}(\operatorname{stim\_con\_quad}) + \beta_{4}(\operatorname{cue\_con} \times \operatorname{stim\_con\_linear}) + \beta_{5}(\operatorname{cue\_con} \times \operatorname{stim\_con\_quad}) \\
+##     \alpha_{j}  &\sim N \left(\mu_{\alpha_{j}}, \sigma^2_{\alpha_{j}} \right)
+##     \text{, for subject j = 1,} \dots \text{,J}
+## \end{aligned}
+## $$
 ```
 
 
